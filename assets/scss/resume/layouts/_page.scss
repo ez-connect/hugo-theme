@@ -1,0 +1,43 @@
+.container {
+  margin-left: auto;
+  margin-right: auto;
+
+  padding: 2rem;
+
+  border: 1px solid rgba(0, 0, 0, 0.025);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+
+  @media (min-width: $width-sm) {
+    max-width: 540px;
+  }
+
+  @media (min-width: $width-md) {
+    max-width: 720px;
+  }
+
+  @media (min-width: $width-lg) {
+    max-width: 960px;
+
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .left {
+    @media (min-width: $width-md) {
+      flex: 8;
+      padding-right: 1.5rem;
+    }
+  }
+
+  .right {
+    @media (min-width: $width-md) {
+      flex: 4;
+      padding-left: 1.5rem;
+      border-left: 1px solid rgba(0, 0, 0, 0.08);
+    }
+  }
+}
+
+.footer {
+  text-align: center;
+}

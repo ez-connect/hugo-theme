@@ -1,0 +1,24 @@
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  .card {
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border-bottom: 0.5px solid $divider-color;
+
+    text-decoration: none;
+    color: $text-color;
+
+    img {
+      max-width: 12rem;
+      max-height: 12rem;
+
+      padding: 1rem;
+    }
+  }
+}

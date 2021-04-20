@@ -1,0 +1,10 @@
+<div class="item">
+  <h3>LANGUAGES</h3>
+
+  <ul>
+    {{ range $item := .Params.languages }}
+    <li>{{ $item.name }} ({{ $item.level }})</li>
+    {{ end }}
+  </ul>
+
+</div>

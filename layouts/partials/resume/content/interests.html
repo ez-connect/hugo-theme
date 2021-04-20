@@ -1,0 +1,10 @@
+<div class="item">
+  <h3>INTERESTS</h3>
+
+  <ul>
+    {{ range $item := .Params.interests }}
+    <li>{{ $item }}</li>
+    {{ end }}
+  </ul>
+
+</div>

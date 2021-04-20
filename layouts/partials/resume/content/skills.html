@@ -1,0 +1,13 @@
+<div class="item">
+  <h3>SKILLS</h3>
+
+  {{ range $item := .Params.skills }}
+  <strong>{{ $item.title }}</strong>
+
+  <ul>
+    {{ range $name := $item.details }}
+    <li>{{ $name }}</li>
+    {{ end }}
+  </ul>
+  {{ end }}
+</div>

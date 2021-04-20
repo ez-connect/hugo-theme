@@ -1,0 +1,18 @@
+{{ $profile := .Params.profile }}
+{{ $contact := .Params.contact }}
+
+<div class="content">
+  <div class="left">
+    {{ partial "resume/content/experiences" . }}
+    {{ partial "resume/content/projects" . }}
+  </div>
+
+  <div class="right">
+    {{ partial "resume/content/skills" . }}
+    {{ partial "resume/content/educations" . }}
+    {{ partial "resume/content/awards" . }}
+    {{ partial "resume/content/languages" . }}
+    {{ partial "resume/content/interests" . }}
+  </div>
+
+</div>

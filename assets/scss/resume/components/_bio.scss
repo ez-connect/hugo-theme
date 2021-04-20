@@ -1,0 +1,24 @@
+.bio {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  font-size: 0.875rem;
+
+  img {
+    margin: auto;
+    max-width: 8rem;
+    max-height: 8rem;
+
+    @media (min-width: $width-md) {
+      flex: 2;
+      padding-right: 2rem;
+    }
+  }
+
+  p {
+    @media (min-width: $width-md) {
+      flex: 10;
+    }
+  }
+}

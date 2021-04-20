@@ -1,0 +1,10 @@
+<div class="item">
+  <h3>AWARDS</h3>
+
+  {{ range $item := .Params.awards }}
+  <strong>{{ $item.name }}</strong>
+  <ul>
+    <li>{{ $item.body }}</li>
+  </ul>
+  {{ end }}
+</div>

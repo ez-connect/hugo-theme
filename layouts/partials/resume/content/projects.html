@@ -1,0 +1,12 @@
+<div class="item">
+  <h3>PROJECTS</h3>
+
+  {{ range $item := .Params.projects }}
+  <div class="experience-title">
+    <strong>{{ $item.title }}</strong>
+    <small>{{ $item.meta }}</small>
+  </div>
+
+  <p>{{ $item.detail }}</p>
+  {{ end }}
+</div>

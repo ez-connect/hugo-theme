@@ -1,0 +1,30 @@
+<div class="header">
+  <div class="left">
+    <h2>{{ .Params.name }}</h2>
+    <div class="job">{{ .Params.position }}</div>
+  </div>
+
+  <div class="right">
+    <ul>
+      <li>
+        {{ partial "svg/phone-square.svg" }}
+        {{ .Params.tel }}
+      </li>
+      <li>
+        {{ partial "svg/envelope.svg" }}
+        {{ .Params.email }}
+      </li>
+      <li>
+        {{ partial "svg/globe.svg" }}
+        {{ .Params.webpage }}
+      </li>
+      <li>
+        {{ partial "svg/map-marker-alt.svg" }}
+        {{ .Params.address }}
+      </li>
+    </ul>
+  </div>
+
+</div>
+
+<hr />

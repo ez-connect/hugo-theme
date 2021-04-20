@@ -1,0 +1,16 @@
+{{ define "main" }}
+<div class="container">
+  <div class="card-list">
+    {{ range .Site.RegularPages }}
+    <a class="card" href="{{ .RelPermalink }}">
+      <img src="{{ .Params.avatar }}" />
+
+      <strong>{{ .Params.profile.name }}</strong>
+      <div>{{ .Params.profile.position }}</div>
+      {{ .Content }}
+    </a>
+
+    {{ end }}
+  </div>
+</div>
+{{ end }}

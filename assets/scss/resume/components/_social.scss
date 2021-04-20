@@ -1,0 +1,15 @@
+.social {
+  text-align: center;
+
+  a {
+    padding-left: 0.25rem ;
+    padding-right: 0.25rem;
+    text-decoration: none;
+  }
+
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: $text-color;
+  }
+}

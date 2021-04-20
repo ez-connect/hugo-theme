@@ -1,0 +1,12 @@
+{{ define "main" }}
+
+<div class="container">
+  {{ partial "resume/header" . }}
+  {{ partial "resume/bio" . }}
+  {{ partial "resume/content" . }}
+  {{ partial "resume/social" . }}
+</div>
+
+{{ partial "resume/footer" . }}
+
+{{ end }}

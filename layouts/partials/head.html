@@ -1,0 +1,25 @@
+<!-- Title -->
+{{ if eq .Kind "page" }}
+<title>{{ .Params.name }} - {{ .Params.position }}</title>
+{{ else }}
+<title>{{ .Site.Title }}</title>
+{{ end }}
+
+<!-- Meta -->
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="{{ .Site.Params.description }}" />
+
+<link rel="shortcut icon" href="favicon.ico" />
+
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900"
+  rel="stylesheet"
+/>
+
+<!-- Theme CSS -->
+
+{{ $css := resources.Get "scss/app.scss" | resources.ToCSS }}
+<link rel="stylesheet" href="{{ $css.Permalink }}">

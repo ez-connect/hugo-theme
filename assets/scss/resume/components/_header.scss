@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  flex-wrap: wrap;
+
+  .left {
+    .job {
+      font-size: 1.25rem;
+      font-weight: 300;
+    }
+  }
+
+  .right {
+    ul {
+      padding-inline-start: 0;
+      font-size: 0.75rem;
+    }
+
+    ul > li {
+      display: flex;
+      align-items: center;
+
+      svg {
+        text-align: center;
+        width: 0.75rem;
+        padding-right: 0.5rem;
+      }
+    }
+  }
+}
