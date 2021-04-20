@@ -1,0 +1,14 @@
+{
+  "name": "hugo-theme",
+  "version": "0.0.1",
+  "description": "Built with Hugo",
+  "main": "index.js",
+  "repository": "git@github.com:ez-connect/hugo-theme.git",
+  "author": "Ez-Connect",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "postcss": "^8.2.10",
+    "postcss-cli": "^8.3.1"
+  }
+}
