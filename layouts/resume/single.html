@@ -1,12 +1,11 @@
 {{ define "main" }}
 
-<div class="container">
-  {{ partial "resume/header" . }}
-  {{ partial "resume/bio" . }}
-  {{ partial "resume/content" . }}
-  {{ partial "resume/social" . }}
-</div>
-
-{{ partial "resume/footer" . }}
+  <article class="resume">
+    {{ partial "resume/profile" . }}
+    {{ partial "resume/bio" . }}
+    {{ partial "resume/content" . }}
+    {{ partial "resume/social" . }}
+  </article>
+  {{ partial "resume/footer" . }}
 
 {{ end }}

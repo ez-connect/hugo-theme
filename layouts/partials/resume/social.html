@@ -1,6 +1,6 @@
 {{ $social := .Params.social }}
 
-<div class="social">
+<section class="social">
 {{ with $social }}
   <hr />
 
@@ -35,11 +35,11 @@
   {{ end }}
 
   {{ with $social.instagram }}
-  <a href="{{ . }}">
-    {{ partial "svg/instagram-square.svg" }}
-  </a>
-{{ end }}
+    <a href="{{ . }}">
+      {{ partial "svg/instagram-square.svg" }}
+    </a>
+  {{ end }}
 
 {{ end }}
 
-</div>
+</section>

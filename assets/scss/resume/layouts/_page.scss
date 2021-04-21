@@ -1,4 +1,4 @@
-.container {
+.resume {
   margin-left: auto;
   margin-right: auto;
 
@@ -35,6 +35,27 @@
       padding-left: 1.5rem;
       border-left: 1px solid rgba(0, 0, 0, 0.08);
     }
+  }
+
+  h2,
+  h3 {
+    color: $primary-color-dark;
+  }
+
+  h2 {
+    font-size: 2.75rem;
+    font-weight: 900;
+    letter-spacing: 0.4rem;
+
+    margin-block: 0;
+  }
+
+  h3 {
+    border-left: 0.4rem solid;
+    padding-left: 0.5rem;
+
+    font-size: 1.125rem;
+    letter-spacing: 0.15rem;
   }
 }
 

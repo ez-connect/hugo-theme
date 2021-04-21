@@ -2,11 +2,11 @@
   <h3>EDUCATION</h3>
 
   {{ range $item := .Params.educations }}
-  <strong>{{ $item.degree }}</strong>
+    <strong>{{ $item.degree }}</strong>
 
-  <ul>
-    <li>{{ $item.university }}</li>
-    <li><small>{{ $item.dates }}</small></li>
-  </ul>
+    <ul>
+      <li>{{ $item.university }}</li>
+      <li><small>{{ $item.dates }}</small></li>
+    </ul>
   {{ end }}
 </div>
