@@ -1,0 +1,32 @@
+.menu {
+  display: flex;
+  font-weight: 500;
+
+  ul {
+    list-style-type: none;
+    padding-inline-start: 0;
+  }
+
+  li {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+  }
+
+  .category {
+    text-transform: uppercase;
+
+    ul {
+      border-color: $divider-color !important;
+      border-left: 2px solid;
+      text-transform: none;
+      color: $text-light-color;
+    }
+  }
+
+  .active {
+    border-color: $primary-light-color !important;
+    border-left: 2px solid;
+    color: $primary-light-color;
+  }
+}
