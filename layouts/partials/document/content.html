@@ -1,0 +1,13 @@
+<article class="document">
+  <section>
+    <h1>{{ .Title }}</h1>
+    {{ if .Description }}
+      <p class="description">{{ .Description }}</p>
+    {{ end }}
+    <hr />
+  </section>
+
+  <section>
+    {{ .Content }}
+  </section>
+</article>
