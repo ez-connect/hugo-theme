@@ -8,15 +8,15 @@
     <ul>
       <li>
         {{ partial "svg/phone-square.svg" }}
-        {{ .Params.tel }}
+        <a href="tel:{{ .Params.tel }}">{{ .Params.tel }}</a>
       </li>
       <li>
         {{ partial "svg/envelope.svg" }}
-        {{ .Params.email }}
+        <a href="mailto:{{ .Params.email }}">{{ .Params.email }}</a>
       </li>
       <li>
         {{ partial "svg/globe.svg" }}
-        {{ .Params.webpage }}
+        <a href="{{ .Params.webpage }}">{{ .Params.webpage }}</a>
       </li>
       <li>
         {{ partial "svg/map-marker-alt.svg" }}
