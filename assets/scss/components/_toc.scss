@@ -1,0 +1,22 @@
+.toc {
+  position: sticky;
+
+  font-weight: 500;
+  font-size: $font-size-sx;
+  color: $text-muted-color;
+
+  li {
+    padding-inline-start: 1rem;
+  }
+
+  a {
+    color: $text-muted-color;
+  }
+
+  svg {
+    width: $font-size-sm;
+    height: $font-size-sm;
+    fill: $text-muted-color;
+  }
+}
+
