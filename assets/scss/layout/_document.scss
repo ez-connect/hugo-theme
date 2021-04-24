@@ -1,0 +1,34 @@
+.document {
+  display: flex;
+  margin: auto;
+
+  @media (min-width: $width-sm) {
+    max-width: 540px;
+  }
+
+  @media (min-width: $width-md) {
+    max-width: 720px;
+  }
+
+  @media (min-width: $width-lg) {
+    max-width: 960px;
+  }
+
+  .sidebar {
+    flex: 3;
+    // background: $surface-color;
+    height: 100vh;
+
+    @media (max-width: $width-md) {
+      display: none;
+    }
+  }
+
+  .content-container {
+    padding: 1rem;
+
+    @media (min-width: $width-md) {
+      flex: 9;
+    }
+  }
+}

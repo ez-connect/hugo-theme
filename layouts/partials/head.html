@@ -15,5 +15,5 @@
 
 <!-- Theme CSS -->
 
-{{ $css := resources.Get "scss/app.scss" | resources.ToCSS }}
+{{ $css := resources.Get "scss/main.scss" | resources.ToCSS }}
 <link rel="stylesheet" href="{{ $css.Permalink }}">

@@ -1,3 +1,11 @@
 {{ define "main" }}
-  {{ partial "document/content" . }}
+  <div class="document">
+    <div class="sidebar">
+      {{ partial "document/menu" . }}
+    </div>
+
+    <div class="content-container">
+      {{ partial "document/content" . }}
+    </div>
+</div>
 {{ end }}
