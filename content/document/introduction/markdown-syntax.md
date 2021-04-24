@@ -1,10 +1,12 @@
 ---
-title: Topic 1
+title: Markdown syntax
 description: Mauris elementum felis purus, a gravida leo sodales ac. Phasellus et tempus purus. Cras nibh tellus, convallis at mollis a, egestas ac sem. Donec erat mauris, tempor id accumsan id, facilisis non sapien.
-category:
-  name:
+menu:
+  document:
+    parent: introduction
 weight: 999
 date: 2021-04-20T22:37:54+07:00
+lastmod: 2021-04-20T22:37:54+07:00
 contributors: []
 ---
 

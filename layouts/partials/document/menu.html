@@ -1,13 +1,28 @@
+<!-- https://gohugo.io/content-management/menus/ -->
+{{ $page := . }}
+{{ $menus := .Site.Menus.document }}
+
 <div class="menu">
-  <ul>
-    <li>Getting Started</li>
-    <li>Import Existing Project</li>
-    <li class="category">
-      Plugins
-      <ul>
-        <li class="active">Webpack</li>
-        <li>Compile</li>
-      </ul>
-    </li>
-  </ul>
+  {{ range (where $menus "HasChildren" false) }}
+    <p><a href="{{ .URL }}">{{- .Name -}} </a></p>
+  {{ end }}
+
+  {{ range (where $menus "HasChildren" true) }}
+    <p class="category">{{- .Name -}}</p>
+
+    {{ range .Children }}
+      {{ if not .HasChildren }}
+        <p><a href="{{ .URL }}">{{- .Name -}}</a></p>
+      {{ else }}
+      <div class="sub-category">
+        <p><a class="title" href="">{{ .Name -}}</a></p>
+        <div class="hide">
+          {{ range .Children }}
+            <p><a class="item" href="{{ .URL }}">{{- .Name -}}</a></p>
+          {{ end }}
+      </div>
+      </div>
+      {{ end }}
+    {{ end }}
+  {{ end }}
 </div>

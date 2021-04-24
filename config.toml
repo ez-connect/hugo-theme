@@ -16,7 +16,7 @@ title = "My New Hugo Site"
     # [markup.goldmark.renderer]
     #   unsafe = true
   [markup.highlight]
-    codeFences = true
+    # codeFences = false
     guessSyntax = true
     # hl_Lines = ""
     # lineNoStart = 1
