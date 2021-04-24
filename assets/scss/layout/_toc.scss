@@ -1,0 +1,17 @@
+.toc-container {
+  padding-right: 1rem;
+
+  // &::before {
+  //   top: 2rem;
+  //   left: 0.5rem;
+  //   width: 1px;
+  //   bottom: 0;
+  //   content: '';
+  //   position: absolute;
+  //   background: $text-muted-color;
+  // }
+
+  @media (max-width: $width-md) {
+    display: none;
+  }
+}
