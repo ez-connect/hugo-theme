@@ -1,52 +1,65 @@
-$colappsed-icon: url('data:image/svg+xml, <svg preserveAspectRatio="xMidYMid meet" height="1em" width="1em" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor" class="icon-7f6730be--text-3f89f380"><g><polyline points="9 18 15 12 9 6"></polyline></g></svg>');
+.document {
+  .menu {
+    font-weight: 500;
+    font-size: $font-size-sm;
+    line-height: 2rem;
+    padding-left: 1rem;
 
-.menu {
-  font-weight: 500;
-  font-size: $font-size-sm;
-  line-height: 1.5rem;
-  padding-left: 2rem;
+    .category {
+      font-weight: 700;
 
-  .category {
-    font-weight: 700;
-    color: $text-muted-color;
-    text-transform: uppercase;
-  }
+      p {
+        color: $text-muted-color;
+        text-transform: uppercase;
+        margin-block-end: 0;
+      }
 
-  .sub-category {
-    // display: block;
-    position: relative;
-
-    &::before {
-      top: 1.5rem;
-      left: 0;
-      width: 1px;
-      bottom: 0;
-      content: "";
-      position: absolute;
-      background: $text-muted-color;
-    }
-
-    .title {
-      &::after {
-        content: $colappsed-icon;
-        position: absolute;
-        right: 1rem;
+      .item {
+        display: block;
       }
     }
 
-    .item {
-      padding-left: 1rem;
-      color: $text-muted-color;
+    .sub-category {
+      display: block;
+      position: relative;
+
+      &::before {
+        top: 2rem;
+        left: 0;
+        width: 1px;
+        bottom: 0;
+        content: '';
+        position: absolute;
+        background: $text-muted-color;
+      }
+
+      .title {
+        &::after {
+          content: $colappsed-icon;
+          position: absolute;
+          right: 1rem;
+        }
+
+        &[aria-expanded='true'] {
+          &::after {
+            transform: rotate(90deg);
+          }
+        }
+      }
+
+      .item {
+        display: block;
+        padding-left: 1rem;
+        color: $text-muted-color;
+      }
     }
-  }
 
-  a {
-    color: $text-color;
-  }
+    a {
+      color: $text-color;
+    }
 
-  .active {
-    border-color: $primary-light-color !important;
-    border-left: 2px solid;
-    color: $primary-light-color;
+    .active {
+      color: $primary-light-color !important;
+    }
   }
 }

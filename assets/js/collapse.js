@@ -2,19 +2,23 @@
 // Collapse
 //
 function collapse() {
-  const items = document.querySelectorAll('.sub-category > p > .title');
+  const items = document.querySelectorAll('a[data-toggle=collapse]');
   console.log(items);
   for (const item of items) {
     item.onclick = function (e) {
       e.preventDefault();
-      const contentNode = e.target.parentNode.nextElementSibling;
-      const classes = contentNode.classList;
-      if (classes.contains('hide')) {
-        classes.remove('hide');
-        classes.add('show');
+      const targetId = e.target.getAttribute('data-target');
+      const isExpanded = e.target.getAttribute('aria-expanded');
+
+      const target = document.querySelector(targetId);
+      if (isExpanded == 'true') {
+        e.target.setAttribute('aria-expanded', false);
+        target.classList.remove('show');
+        target.classList.add('hide');
       } else {
-        classes.remove('show');
-        classes.add('hide');
+        e.target.setAttribute('aria-expanded', true);
+        target.classList.remove('hide');
+        target.classList.add('show');
       }
     };
   }
