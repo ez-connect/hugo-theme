@@ -1,20 +1,28 @@
 .document {
   display: flex;
+  flex-direction: column;
   margin: auto;
 
-  @media (min-width: $width-sm) {
-    max-width: 540px;
+  // @media (min-width: $width-sm) {
+  //   max-width: 540px;
+  // }
+
+  // @media (min-width: $width-md) {
+  //   max-width: 720px;
+  // }
+
+  // @media (min-width: $width-lg) {
+  //   display: flex;
+  //   max-width: 960px;
+  // }
+
+  // Includes menu, content, toc
+  .container {
+    display: flex;
+    margin: 2rem;
   }
 
-  @media (min-width: $width-md) {
-    max-width: 720px;
-  }
-
-  @media (min-width: $width-lg) {
-    max-width: 960px;
-  }
-
-  .sidebar {
+  .menu-container {
     flex: 3;
     // background: $surface-color;
     height: 100vh;
@@ -25,8 +33,6 @@
   }
 
   .content-container {
-    padding: 1rem;
-
     @media (min-width: $width-md) {
       flex: 9;
     }
