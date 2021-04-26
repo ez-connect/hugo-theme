@@ -9,9 +9,9 @@
   </div>
 
   <ul class="link">
-    <li><a href="/blog">Blog</a></li>
-    <li><a href="/resume">Resume</a></li>
-    <li><a href="https://github.com/ez-connect/hugo-theme">GitHub</a></li>
+    {{ range .Site.Data.nav.document }}
+      <li><a href="{{ .href }}">{{ .name }}</a></li>
+    {{ end }}
   </ul>
 
   <div class="search">

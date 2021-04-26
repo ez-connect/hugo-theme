@@ -19,20 +19,31 @@
   // Includes menu, content, toc
   .container {
     display: flex;
-    margin: 2rem;
   }
 
   .menu-container {
-    flex: 3;
-    // background: $surface-color;
+    padding-left: 3rem;
+    padding-right: 2rem;
+    padding-top: 3rem;
+    background: $surface-color;
     height: 100vh;
 
     @media (max-width: $width-md) {
+      flex: 1;
       display: none;
+    }
+
+    @media (min-width: $width-md) {
+      display: block;
+      flex: 3;
     }
   }
 
   .content-container {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 1rem;
+
     @media (min-width: $width-md) {
       flex: 9;
     }
