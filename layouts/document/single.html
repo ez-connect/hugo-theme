@@ -1,15 +1,20 @@
 {{ define "main" }}
   <div class="document">
-    <div class="sidebar">
-      {{ partial "document/menu" . }}
-    </div>
+    {{ partial "document/nav" . }}
 
-    <div class="content-container">
-      {{ partial "document/content" . }}
-    </div>
+    <div class="container">
+      <div class="menu-container">
+        {{ partial "document/menu" . }}
+      </div>
 
-    <div class="toc-container">
-      {{ partial "toc" . }}
+      <div class="content-container">
+        {{ partial "document/content" . }}
+      </div>
+
+      <div class="toc-container">
+        {{ partial "toc" . }}
+      </div>
+
     </div>
-</div>
+  </div>
 {{ end }}

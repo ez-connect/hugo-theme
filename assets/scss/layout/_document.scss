@@ -1,31 +1,48 @@
 .document {
   display: flex;
+  flex-direction: column;
   margin: auto;
 
-  @media (min-width: $width-sm) {
-    max-width: 540px;
+  // @media (min-width: $width-sm) {
+  //   max-width: 540px;
+  // }
+
+  // @media (min-width: $width-md) {
+  //   max-width: 720px;
+  // }
+
+  // @media (min-width: $width-lg) {
+  //   display: flex;
+  //   max-width: 960px;
+  // }
+
+  // Includes menu, content, toc
+  .container {
+    display: flex;
   }
 
-  @media (min-width: $width-md) {
-    max-width: 720px;
-  }
-
-  @media (min-width: $width-lg) {
-    max-width: 960px;
-  }
-
-  .sidebar {
-    flex: 3;
-    // background: $surface-color;
+  .menu-container {
+    padding-left: 3rem;
+    padding-right: 2rem;
+    padding-top: 3rem;
+    background: $surface-color;
     height: 100vh;
 
     @media (max-width: $width-md) {
+      flex: 1;
       display: none;
+    }
+
+    @media (min-width: $width-md) {
+      display: block;
+      flex: 3;
     }
   }
 
   .content-container {
-    padding: 1rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 1rem;
 
     @media (min-width: $width-md) {
       flex: 9;

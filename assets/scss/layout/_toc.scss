@@ -1,5 +1,6 @@
 .toc-container {
-  padding-right: 1rem;
+  display: none;
+  padding-top: 3rem;
 
   // &::before {
   //   top: 2rem;
@@ -11,7 +12,8 @@
   //   background: $text-muted-color;
   // }
 
-  @media (max-width: $width-md) {
-    display: none;
+  @media (min-width: $width-lg) {
+    display: flex;
+    flex: 2;
   }
 }

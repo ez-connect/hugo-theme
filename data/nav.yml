@@ -1,0 +1,9 @@
+document:
+  - name: Blog
+    href: /blog
+  - name: Job
+    href: /job
+  - name: Resume
+    href: /resume
+  - name: GitHub
+    href: https://github.com/ez-connect/hugo-theme
