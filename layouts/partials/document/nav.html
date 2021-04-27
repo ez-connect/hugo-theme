@@ -1,12 +1,9 @@
 <div class="nav">
-  <div class="logo">
-    <div class="collapse-menu">
-      <a href="#">{{ partial "svg/bars.svg" . }}</a>
-    </div>
-
+  <div  class="logo">
+    <a class="collapse-menu" href="#">{{ partial "svg/bars.svg" . }}</a>
     <img alt="Ez-Connect" src="https://d33wubrfki0l68.cloudfront.net/c38c7334cc3f23585738e40334284fddcaf03d5e/2e17c/images/hugo-logo-wide.svg" />
     <a href="/"><strong>Ez-Connect</strong></a>
-  </div>
+  </div >
 
   <ul class="link">
     {{ range .Site.Data.nav.document }}
@@ -14,8 +11,8 @@
     {{ end }}
   </ul>
 
-  <div class="search">
+  <a class="search" href="/search">
     {{ partial "svg/search.svg" . }}
-    <input type="text" id="q" name="q" placeholder="Search...">
-  </div>
+    <span>Search...</span>
+  </a >
 </div>

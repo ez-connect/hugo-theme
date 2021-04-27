@@ -1,23 +1,23 @@
-.content {
-  display: flex;
-  flex-wrap: wrap;
-
-  .left {
-    .experience-title {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-  }
-
-  .right {
-    .item {
-      ul {
-        list-style: none;
-        padding-inline-start: 0;
+.resume {
+  .content {
+    flex: 1;
+    .left {
+      .experience-title {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
       }
+    }
 
-      padding-bottom: 1rem;
+    .right {
+      .item {
+        ul {
+          list-style: none;
+          padding-inline-start: 0;
+        }
+
+        padding-bottom: 1rem;
+      }
     }
   }
 }

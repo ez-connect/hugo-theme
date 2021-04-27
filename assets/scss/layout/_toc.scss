@@ -1,6 +1,9 @@
 .toc-container {
   display: none;
-  padding-top: 3rem;
+  position: fixed;
+  top: 8rem;
+  right: 1rem;
+  // padding-top: 3rem;
 
   // &::before {
   //   top: 2rem;
@@ -13,7 +16,7 @@
   // }
 
   @media (min-width: $width-lg) {
-    display: flex;
-    flex: 2;
+    display: block;
+    width: $right-width;
   }
 }
