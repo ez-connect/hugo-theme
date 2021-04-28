@@ -1,18 +1,13 @@
 {{ define "main" }}
-  <div class="document">
+  <div class="blog">
     {{ partial "nav" . }}
 
     <div class="menu-container">
-      {{ partial "document/menu" . }}
+      {{ partial "blog/menu" . }}
     </div>
 
     <div class="content-container">
       {{ partial "content" . }}
     </div>
-
-    <div class="toc-container">
-      {{ partial "toc" . }}
-    </div>
-
   </div>
 {{ end }}

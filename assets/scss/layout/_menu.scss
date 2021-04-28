@@ -6,6 +6,8 @@
   background: $surface-color;
   height: 100%;
   box-sizing: border-box;
+  // border-right: solid $divider-color;
+  // border-width: 1px;
 
   @media (max-width: $width-md) {
     display: none;
