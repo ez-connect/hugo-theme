@@ -1,13 +1,16 @@
-<div class="nav">
+{{ $nav := .Site.Data.nav }}
+{{ $links := index $nav.links .Section }}
+
+<nav class="nav">
   <div  class="logo">
     <a class="collapse-menu" href="#">{{ partial "svg/bars.svg" . }}</a>
-    <img alt="Ez-Connect" src="https://d33wubrfki0l68.cloudfront.net/c38c7334cc3f23585738e40334284fddcaf03d5e/2e17c/images/hugo-logo-wide.svg" />
-    <a href="/"><strong>Ez-Connect</strong></a>
+    <img alt="{{ $nav.logo.name }}" src="{{ $nav.logo.url }}" />
+    <a href="/"><strong>{{ $nav.title }}</strong></a>
   </div >
 
   <ul class="link">
-    {{ range .Site.Data.nav.document }}
-      <li><a href="{{ .href }}">{{ .name }}</a></li>
+    {{ range $links.items }}
+      <li><a href="{{ .url }}">{{ .name }}</a></li>
     {{ end }}
   </ul>
 
@@ -15,4 +18,4 @@
     {{ partial "svg/search.svg" . }}
     <span>Search...</span>
   </a >
-</div>
+</nav>

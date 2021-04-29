@@ -12,11 +12,15 @@
 @import 'layout/menu';
 @import 'layout/toc';
 @import 'layout/content';
+@import 'layout/footer';
+
 @import 'layout/resume';
 
 @import 'components/toc';
 @import 'components/document/content';
 @import 'components/document/menu';
+
+@import 'components/blog/jumbotron';
 
 @import 'components/resume/bio';
 @import 'components/resume/content';

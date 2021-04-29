@@ -12,11 +12,11 @@
   //   bottom: 0;
   //   content: '';
   //   position: absolute;
-  //   background: $text-muted-color;
+  //   background: $text-color-muted;
   // }
 
   @media (min-width: $width-lg) {
     display: block;
-    width: $right-width;
+    width: $document-width-right;
   }
 }

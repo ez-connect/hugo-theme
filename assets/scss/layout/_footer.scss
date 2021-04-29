@@ -1,0 +1,19 @@
+.footer {
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 12rem;
+  margin-top: 4rem;
+  padding-top: 2rem;
+  background: $primary-color-dark;
+  color: $background-color;
+  font-size: $font-size-sm;
+
+  p {
+    text-align: center;
+  }
+
+  .logo {
+    height: 2rem;
+  }
+}

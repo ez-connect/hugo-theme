@@ -31,7 +31,7 @@ hr {
 }
 
 a {
-  color: $primary-light-color;
+  color: $primary-color-light;
   text-decoration: none;
 
   &:hover {
@@ -59,7 +59,7 @@ blockquote {
   margin-inline-start: 0;
   margin-inline-end: 0;
 
-  border-color: $primary-light-color !important;
+  border-color: $primary-color-light !important;
   border-left: 4px solid;
   border-radius: 3px;
   padding-top: 0.25rem;

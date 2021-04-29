@@ -3,15 +3,15 @@
 $background-color: #FFFFFF;
 $surface-color: #F5F7F9;
 
-$primary-dark-color: #252A31;
 $primary-color: #1D3055;
-$primary-light-color: #6896EE;
+$primary-color-dark: #252A31;
+$primary-color-light: #6896EE;
 
 $divider-color: #E6ECF1;
 
 $text-color: #242A31;
-$text-light-color: #74818D;
-$text-muted-color: #9DAAB6;
+$text-color-light: #74818D;
+$text-color-muted: #9DAAB6;
 
 $font-size-sm: 0.875rem;
 $font-size-sx: 0.75rem;
@@ -22,10 +22,18 @@ $width-md: 768px; // medium devices, portrail tables & large phones
 $width-lg: 992px; // large, laptops/ desktops
 $width-xl: 1200px; // extra large, laptops / desktops
 
-// Layout
-$left-width: 25%;
-$middle-width: 60%;
-$right-width: 15%;
+// Nav
+$nav-height: 4rem;
+
+// Document
+$document-width-left: 25%;
+$document-width-middle: 60%;
+$document-width-right: 15%;
+
+// Blog
+$blog-width-left: 30%;
+$blog-width-middle: 55%;
+$blog-width-right: 15%;
 
 // Icons
 $colappsed-icon: url('data:image/svg+xml, <svg preserveAspectRatio="xMidYMid meet" height="1em" width="1em" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor" class="icon-7f6730be--text-3f89f380"><g><polyline points="9 18 15 12 9 6"></polyline></g></svg>');

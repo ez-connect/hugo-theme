@@ -1,6 +1,6 @@
 ---
 name: Simon Doe
-avatar: images/avatar.png
+avatar: avatar.png
 position: Senior Software Engineer
 tel: 0123 4567 890
 email: name@example.com
@@ -12,7 +12,7 @@ social:
   github: https://github.com
   gitlab: https://gitlab.com
   linkedin: https://linkedin.com
-  twitter: https://twitter.com
+  twitter: https://twitterP.com
   facebook: https://facebook.com
   instagram: https://instagram.com
 

@@ -3,12 +3,14 @@
     font-weight: 500;
     font-size: $font-size-sm;
     line-height: 2rem;
+    max-width: 200px;
+    margin-left: auto;
 
     .category {
       font-weight: 700;
 
       p {
-        color: $text-muted-color;
+        color: $text-color-muted;
         text-transform: uppercase;
         margin-block-end: 0;
       }
@@ -29,14 +31,14 @@
         bottom: 0;
         content: '';
         position: absolute;
-        background: $text-muted-color;
+        background: $text-color-muted;
       }
 
       .title {
         &::after {
           content: $colappsed-icon;
           position: absolute;
-          right: 1rem;
+          right: 0;
         }
 
         &[aria-expanded='true'] {
@@ -49,7 +51,7 @@
       .item {
         display: block;
         padding-left: 1rem;
-        color: $text-muted-color;
+        color: $text-color-muted;
       }
     }
 
@@ -58,7 +60,7 @@
     }
 
     .active {
-      color: $primary-light-color !important;
+      color: $primary-color-light !important;
     }
   }
 }
