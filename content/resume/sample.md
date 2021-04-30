@@ -1,5 +1,5 @@
 ---
-name: Simon Doe
+title: Simon Doe
 avatar: avatar.png
 position: Senior Software Engineer
 tel: 0123 4567 890
@@ -21,19 +21,17 @@ experiences:
   - title: Senior Software Engineer
     dates: 2019 - Present
     company: Google
-    detail:
-      summary: Role description goes here ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Donec pede justo, fringilla vel. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis.
-      items:
+    detail: >-
+      Role description goes here ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Donec pede justo, fringilla vel. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis.
         - Lorem ipsum dolor sit amet, consectetuer.
         - Aenean commodo ligula eget dolor.
         - Etiam ultricies nisi vel augue.
   - title: Lead Software Developer
     dates: 2016 - 2019
     company: Apple
-    detail:
-      summary: Lorem ipsum dolor sit amet, consectetuer.
-      items:
-        - Aenean commodo ligula eget dolor.
+    detail: >-
+      Lorem ipsum dolor sit amet, consectetuer.
+      - Aenean commodo ligula eget dolor.
 
 # Projects
 projects:
@@ -47,7 +45,7 @@ projects:
 # Skills
 skills:
   - title: Technical
-    details:
+    items: |-
       - JavaScript/Angular/React/Vue
       - Python/Ruby/PHP
       - Node.js/ASP.NET
@@ -56,7 +54,7 @@ skills:
       - Design and implement database structures
       - Lead and deliver complex software systems
   - title: Professional
-    details:
+    items: |-
       - Effective communication
       - Team player
       - Strong problem solver
@@ -88,7 +86,7 @@ languages:
     level: Professional
 
 # Interests
-interests:
+interests: |-
   - Climbing
   - Snowboarding
   - Photography
