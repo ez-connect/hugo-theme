@@ -5,6 +5,10 @@
 {{ $count := .Site.Params.recentCount | default 10 }}
 
 <div class="menu">
+  {{ if eq .Kind "page" }}
+  xxx
+  {{ end }}
+
   <h3 class="spanborder"><span>Tags</span></h3>
 
   <ul>

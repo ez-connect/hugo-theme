@@ -16,5 +16,8 @@
     height: $font-size-sm;
     fill: $text-color-muted;
   }
-}
 
+  .active {
+    color: $primary-color-light;
+  }
+}

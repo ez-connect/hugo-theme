@@ -1,12 +1,18 @@
+.document,
+.blog {
+  .menu-container {
+    box-sizing: border-box;
+    padding-top: 2rem;
+  }
+}
+
 .document {
   .menu-container {
     position: fixed;
     padding-left: 3rem;
     padding-right: 2rem;
-    padding-top: 6rem;
     background: $surface-color;
     height: 100%;
-    box-sizing: border-box;
     // border-right: solid $divider-color;
     // border-width: 1px;
 
@@ -23,7 +29,6 @@
 
 .blog {
   .menu-container {
-    box-sizing: border-box;
     padding-left: 1rem;
 
     @media (max-width: $width-md) {
@@ -33,7 +38,7 @@
 
     @media (min-width: $width-md) {
       position: absolute;
-      top: $nav-height + $blog-jumbotron-height;
+      top: $nav-height + $blog-jumbotron-height + 2rem;
       left: 70%;
       right: 0;
       box-sizing: border-box;

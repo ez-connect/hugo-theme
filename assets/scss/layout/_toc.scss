@@ -1,22 +1,29 @@
-.toc-container {
-  display: none;
-  position: fixed;
-  top: 8rem;
-  right: 1rem;
-  // padding-top: 3rem;
+.document,
+.blog {
+  .toc-container {
+    box-sizing: border-box;
+    display: none;
+    position: fixed;
+    padding-left: 1rem;
+    top: $nav-height + 2rem;
+    right: 1rem;
+  }
+}
 
-  // &::before {
-  //   top: 2rem;
-  //   left: 0.5rem;
-  //   width: 1px;
-  //   bottom: 0;
-  //   content: '';
-  //   position: absolute;
-  //   background: $text-color-muted;
-  // }
+.document {
+  .toc-container {
+    @media (min-width: $width-lg) {
+      display: block;
+      width: $document-width-right;
+    }
+  }
+}
 
-  @media (min-width: $width-lg) {
-    display: block;
-    width: $document-width-right;
+.blog {
+  .toc-container {
+    @media (min-width: $width-md) {
+      display: block;
+      width: $blog-width-right;
+    }
   }
 }

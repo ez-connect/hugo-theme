@@ -3,5 +3,8 @@
 //
 
 document.addEventListener('DOMContentLoaded', function () {
-  timeago.render(document.querySelectorAll('.timeago'));
+  const items = document.querySelectorAll('.timeago');
+  if (items.length > 0) {
+    timeago.render(items);
+  }
 });
