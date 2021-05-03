@@ -5,19 +5,11 @@
 {{ $count := .Site.Params.recentCount | default 10 }}
 
 <div class="menu">
-  <h2>RECENT POSTS</h2>
-
-  {{ range first $count $pages }}
-    <a href="{{ .RelPermalink }}">{{ .Name }}</a>
-  {{ end }}
-
-  <hr />
-
-  <h2>TAGS</h2>
+  <h3 class="spanborder"><span>Tags</span></h3>
 
   <ul>
     {{ range $key, $taxonomy := .Site.Taxonomies.tags }}
-      <a href="/tags/{{ $key }}">{{ $key }} ({{ len $taxonomy }})</a>
+      <li><a href="/tags/{{ $key }}">{{ $key }} ({{ len $taxonomy }})</a></li>
     {{ end }}
   </ul>
 

@@ -1,11 +1,10 @@
 ---
 title: Article 2
 description: Mauris elementum felis purus, a gravida leo sodales ac. Phasellus et tempus purus. Cras nibh tellus, convallis at mollis a, egestas ac sem. Donec erat mauris, tempor id accumsan id, facilisis non sapien.
-category:
 tags: [tag1, tag2]
 date: 2021-04-28T07:31:07+07:00
 lastmod: 2021-04-28T07:31:07+07:00
-contributors: []
+contributors: [Vinh]
 ---
 
 ## Heading 2

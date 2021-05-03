@@ -1,0 +1,18 @@
+<p>
+  <small>
+    Posted
+    <span class="timeago" datetime="{{ .PublishDate }}">{{ .PublishDate }}</span>
+    by
+
+    {{ if .Params.contributors -}}
+      {{ range $index, $contributor := .Params.contributors }}
+        {{ $path := printf "/%s/%s" "contributor" (urlize .) }}
+        {{ if gt $index 0 }} • {{ end }}
+        <a href="{{ $path }}">{{ . }}</a>
+      {{ end }}
+    {{ end }}
+
+    &nbsp;&hyphen;&nbsp;
+    {{ .ReadingTime -}}&nbsp;min read
+  </small>
+</p>

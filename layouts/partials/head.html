@@ -13,7 +13,7 @@
 
 <link rel="shortcut icon" href="favicon.ico" />
 
-<!-- Theme CSS -->
-
-{{ $css := resources.Get "scss/main.scss" | resources.ToCSS }}
+<!-- CSS -->
+{{ $options := (dict "targetPath" "css/main.css" "outputStyle" "compressed" "enableSourceMap" true) }}
+{{ $css := resources.Get "scss/main.scss" | resources.ToCSS $options }}
 <link rel="stylesheet" href="{{ $css.Permalink }}">

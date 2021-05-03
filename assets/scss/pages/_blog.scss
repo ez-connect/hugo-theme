@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 12rem;
+    height: $blog-jumbotron-height;
     background: $primary-color;
     padding-top: $nav-height;
 
@@ -17,4 +17,9 @@
       height: 100%;
     }
   }
+
+  .menu {
+    font-weight: 600;
+  }
 }
+

@@ -4,30 +4,9 @@
 
 @import 'utils/variables';
 
-@import 'base/reset';
-@import 'base/global';
-@import 'base/typography';
-
-@import 'layout/nav';
-@import 'layout/menu';
-@import 'layout/toc';
-@import 'layout/content';
-@import 'layout/footer';
-
-@import 'layout/resume';
+@import 'base/index';
+@import 'layout/index';
+@import 'pages/index';
 
 @import 'components/toc';
-@import 'components/document/content';
-@import 'components/document/menu';
-
-@import 'components/blog/jumbotron';
-
-@import 'components/resume/bio';
-@import 'components/resume/content';
-@import 'components/resume/header';
-@import 'components/resume/social';
-
-@import 'pages/document';
-@import 'pages/resume_index';
-@import 'pages/resume';
-
+@import 'components/resume/index';

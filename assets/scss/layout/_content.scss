@@ -1,16 +1,17 @@
 .document,
 .blog {
   .content-container {
-    flex-grow: 1;
     box-sizing: border-box;
     padding-left: 1rem;
     padding-right: 1rem;
-    padding-top: 6rem;
+    min-height: 80vh;
   }
 }
 
 .document {
   .content-container {
+    padding-top: 6rem;
+
     @media (min-width: $width-md) {
       margin-left: $document-width-left;
       padding-left: 2rem;
@@ -25,14 +26,13 @@
 
 .blog {
   .content-container {
-    @media (min-width: $width-md) {
-      // margin-left: $blog-width-left;
-      padding-left: 2rem;
-      padding-right: 2rem;
+
+    @media (max-width: $width-md) {
+      width: 100%;
     }
 
-    @media (min-width: $width-lg) {
-      width: $blog-width-middle;
+    @media (min-width: $width-md) {
+      width: $blog-width-left;
     }
   }
 }

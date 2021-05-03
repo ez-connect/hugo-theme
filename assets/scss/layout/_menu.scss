@@ -23,22 +23,22 @@
 
 .blog {
   .menu-container {
-    position: fixed;
-    padding-left: 3rem;
-    padding-right: 2rem;
-    padding-top: 6rem;
-    height: 100%;
     box-sizing: border-box;
-    border-right: solid $divider-color;
-    border-width: 1px;
+    padding-left: 1rem;
 
     @media (max-width: $width-md) {
-      display: none;
+      padding-right: 1rem;
+      width: 100%;
     }
 
     @media (min-width: $width-md) {
-      display: block !important;
-      width: $blog-width-left;
+      position: absolute;
+      top: $nav-height + $blog-jumbotron-height;
+      left: 70%;
+      right: 0;
+      box-sizing: border-box;
+      padding-left: 2rem;
+      margin-left: auto;
     }
   }
 }

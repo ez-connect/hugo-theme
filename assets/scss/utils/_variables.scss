@@ -13,8 +13,10 @@ $text-color: #242A31;
 $text-color-light: #74818D;
 $text-color-muted: #9DAAB6;
 
+$font-size: 1rem;
 $font-size-sm: 0.875rem;
 $font-size-sx: 0.75rem;
+$font-size-lg: 1.25rem;
 
 // Breakpoints
 $width-sm: 576px; // small devices (phones)
@@ -31,9 +33,9 @@ $document-width-middle: 60%;
 $document-width-right: 15%;
 
 // Blog
-$blog-width-left: 30%;
-$blog-width-middle: 55%;
-$blog-width-right: 15%;
+$blog-jumbotron-height: 12rem;
+$blog-width-left: 70%;
+$blog-width-right: 30%;
 
 // Icons
 $colappsed-icon: url('data:image/svg+xml, <svg preserveAspectRatio="xMidYMid meet" height="1em" width="1em" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor" class="icon-7f6730be--text-3f89f380"><g><polyline points="9 18 15 12 9 6"></polyline></g></svg>');

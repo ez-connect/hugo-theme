@@ -1,0 +1,12 @@
+<h3 class="spanborder"><span>Latest</span></h3>
+
+{{ range where .Site.RegularPages "Section" "blog" }}
+  <article>
+    <a href="{{ .RelPermalink }}">
+      <h2>{{ .Name }}</h2>
+    </a>
+    <p>{{ .Summary }}...</p>
+
+    {{ partial "blog/meta" . }}
+  </article>
+{{ end }}
