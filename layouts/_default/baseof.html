@@ -5,8 +5,12 @@
   </head>
 
   <body>
+    {{ partial "nav" . }}
+
     {{ block "main" . }}
     {{ end }}
+
+    {{ partial "footer" . }}
 
     {{ partial "js" . }}
   </body>

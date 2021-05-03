@@ -5,3 +5,22 @@
 .show {
   display: block !important;
 }
+
+.spanborder {
+  border-bottom: 1px solid $divider-color;
+  margin-bottom: 2rem;
+
+  span {
+    display: inline-block;
+    border-bottom: 1px solid $text-color;
+    margin-bottom: -1px;
+    padding-bottom: 1rem;
+  }
+}
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: -250px;
+  visibility: hidden;
+}

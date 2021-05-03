@@ -1,0 +1,14 @@
+{{ define "main" }}
+  <div class="blog">
+    {{ partial "blog/jumbotron" . }}
+
+    <div class="content-container">
+      {{ partial "blog/item-list" . }}
+    </div>
+
+    <div class="menu-container">
+      {{ partial "blog/menu" . }}
+    </div>
+
+  </div>
+{{ end }}

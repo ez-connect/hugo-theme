@@ -1,0 +1,27 @@
+.notfound {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  max-width: 520px;
+  width: 100%;
+  text-align: center;
+  line-height: 1.4;
+  transform: translate(-50%, -50%);
+
+  h1 {
+    font-size: 146px;
+    font-weight: 700;
+    margin: 0;
+    color: $primary-color;
+    z-index: 0;
+  }
+
+  a {
+    display: inline-block;
+    background-color: $primary-color;
+    color: $background-color;
+    border-radius: 2rem;
+    padding: 1rem 2rem;
+    transition: 0.2s all;
+  }
+}

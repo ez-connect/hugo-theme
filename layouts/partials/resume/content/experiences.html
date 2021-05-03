@@ -7,12 +7,6 @@
       <small>{{ $item.company }} | {{ $item.dates }}</small>
     </div>
 
-    <p>{{ $item.detail.summary }}</p>
-
-    <ul>
-      {{ range $item := $item.detail.items }}
-        <li>{{ $item }}</li>
-      {{ end }}
-    </ul>
+    <p>{{ markdownify  $item.detail }}</p>
   {{ end }}
 </div>

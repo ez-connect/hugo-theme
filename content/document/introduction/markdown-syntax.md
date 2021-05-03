@@ -59,7 +59,7 @@ Quote break.
 
 ### Image
 
-![alt text](/images/avatar.png)
+![alt text](/avatar.png)
 
 ## Extended Syntax
 

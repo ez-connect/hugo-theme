@@ -1,0 +1,20 @@
+<!-- https://gohugo.io/content-management/menus/ -->
+{{ $menus := .Site.Menus.document }}
+
+{{ $pages := where .Site.RegularPages "Section" "blog" }}
+{{ $count := .Site.Params.recentCount | default 10 }}
+
+<div class="menu">
+  {{ if eq .Kind "page" }}
+  xxx
+  {{ end }}
+
+  <h3 class="spanborder"><span>Tags</span></h3>
+
+  <ul>
+    {{ range $key, $taxonomy := .Site.Taxonomies.tags }}
+      <li><a href="/tags/{{ $key }}">{{ $key }} ({{ len $taxonomy }})</a></li>
+    {{ end }}
+  </ul>
+
+</div>

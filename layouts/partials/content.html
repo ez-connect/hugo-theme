@@ -1,6 +1,8 @@
 <article class="content">
   <section>
     <h1>{{ .Title }}</h1>
+    {{ partial "meta" . }}
+
     {{ if .Description }}
       <p class="description">{{ .Description }}</p>
     {{ end }}

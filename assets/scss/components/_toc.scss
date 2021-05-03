@@ -1,20 +1,23 @@
 .toc {
   font-weight: 500;
   font-size: $font-size-sx;
-  color: $text-muted-color;
+  color: $text-color-muted;
 
   li {
     padding-inline-start: 1rem;
   }
 
   a {
-    color: $text-muted-color;
+    color: $text-color-muted;
   }
 
   svg {
     width: $font-size-sm;
     height: $font-size-sm;
-    fill: $text-muted-color;
+    fill: $text-color-muted;
+  }
+
+  .active {
+    color: $primary-color-light;
   }
 }
-

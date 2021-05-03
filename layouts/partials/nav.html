@@ -1,0 +1,21 @@
+{{ $nav := .Site.Data.nav }}
+{{ $links := index $nav .Section }}
+
+<nav class="nav">
+  <div  class="logo">
+    <a class="collapse-menu" href="#">{{ partial "svg/bars.svg" . }}</a>
+    <img alt="{{ $nav.logo.name }}" src="{{ $nav.logo.url }}" />
+    <a href="/"><strong>{{ $nav.title }}</strong></a>
+  </div >
+
+  <ul class="link">
+    {{ range $links.items }}
+      <li><a href="{{ .url }}">{{ .name }}</a></li>
+    {{ end }}
+  </ul>
+
+  <a class="search" href="/search">
+    {{ partial "svg/search.svg" . }}
+    <span>Search...</span>
+  </a >
+</nav>
