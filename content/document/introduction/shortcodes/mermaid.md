@@ -10,8 +10,115 @@ lastmod: 2021-04-23T21:31:45+07:00
 contributors: []
 ---
 
-## Heading 2
+**[Mermaid](https://mermaid-js.github.io/mermaid/#/) lets you create diagrams using text and code**. This simplifies the maintenance of complex diagrams. It is a Javascript based diagramming and charting tool that renders Markdown-inspired text definitions to create and modify diagrams dynamically.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a turpis id tortor feugiat hendrerit. Sed vel consectetur quam, dictum consequat massa. Nunc in sollicitudin elit. Maecenas tellus sapien, volutpat a scelerisque nec, varius sit amet mauris. Aenean quam elit, tincidunt id sollicitudin ac, ornare a dui. Quisque ut risus vel lorem aliquet tempor luctus at erat. Proin nec ligula scelerisque, varius lacus non, vestibulum nisl. Sed dictum felis id libero facilisis consequat. Phasellus at eros orci.
+## Flowchart
 
-Nunc nulla dolor, viverra et egestas vitae, ornare ut enim. In pulvinar ligula id sapien placerat, et ullamcorper nunc laoreet. Maecenas nulla nibh, feugiat ac ultrices hendrerit, euismod eget ante. Nullam felis sem, imperdiet ut efficitur a, porta vel mauris. Ut euismod sollicitudin pharetra. Maecenas a massa porttitor, dapibus lectus ac, ultrices magna. Maecenas interdum a velit vel fringilla. Integer at magna eget risus ornare fermentum ac ornare quam. Aliquam non tellus tellus. Phasellus efficitur pretium augue, nec finibus lacus porttitor vel. Nullam a interdum diam. Duis placerat convallis arcu at rhoncus.
+{{<mermaid>}}
+graph LR
+  A[Hard edge] -->|Link text| B(Round edge)
+  B --> C{Decision}
+  C --> |One| D[Result one]
+  C --> |Two| E[Result two]
+{{</mermaid>}}
+
+## Sequence diagram
+
+{{<mermaid>}}
+sequenceDiagram
+  autonumber
+  Alice ->> John: Hello John, how are you?
+  loop Healthcheck
+    John ->> John: Fight against hypochondria
+  end
+  Note right of John: Rational thoughts!
+  John -->> Alice: Great!
+  John ->> Bob: How about you?
+  Bob -->> John: Jolly good!
+{{</mermaid>}}
+
+## Class diagram
+
+{{<mermaid>}}
+classDiagram
+  Animal <|-- Duck
+  Animal <|-- Fish
+  Animal <|-- Zebra
+  Animal : +int age
+  Animal : +String gender
+  Animal: +isMammal()
+  Animal: +mate()
+  class Duck{
+    +String beakColor
+    +swim()
+    +quack()
+  }
+  class Fish{
+    -int sizeInFeet
+    -canEat()
+  }
+  class Zebra{
+    +bool is_wild
+    +run()
+  }
+{{</mermaid>}}
+
+## State diagram
+
+{{<mermaid>}}
+stateDiagram-v2
+  [*] --> Active
+
+  state Active {
+    [*] --> NumLockOff
+    NumLockOff --> NumLockOn : EvNumLockPressed
+    NumLockOn --> NumLockOff : EvNumLockPressed
+    --
+    [*] --> CapsLockOff
+    CapsLockOff --> CapsLockOn : EvCapsLockPressed
+    CapsLockOn --> CapsLockOff : EvCapsLockPressed
+    --
+    [*] --> ScrollLockOff
+    ScrollLockOff --> ScrollLockOn : EvScrollLockPressed
+    ScrollLockOn --> ScrollLockOff : EvScrollLockPressed
+  }
+{{</mermaid>}}
+
+## User Journey Diagram
+
+{{<mermaid>}}
+journey
+  title My working day
+  section Go to work
+    Make tea: 5: Me
+    Go upstairs: 3: Me
+    Do work: 1: Me, Cat
+  section Go home
+    Go downstairs: 5: Me
+    Sit down: 5: Me
+{{</mermaid>}}
+
+## Gantt diagram
+
+{{<mermaid>}}
+gantt
+  title A Gantt Diagram
+  dateFormat  YYYY-MM-DD
+  section Section
+  A task           :a1, 2014-01-01, 30d
+  Another task     :after a1  , 20d
+  section Another
+  Task in sec      :2014-01-12  , 12d
+  another task     : 24d
+{{</mermaid>}}
+
+## Pie chart diagram
+
+{{<mermaid>}}
+pie title Pets adopted by volunteers
+  title Key elements in Product X
+  "Calcium" : 42.96
+  "Potassium" : 50.05
+  "Magnesium" : 10.01
+  "Iron" :  5
+{{</mermaid>}}

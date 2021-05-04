@@ -1,0 +1,4 @@
+<p class="plantuml{{ with .Get "class" }} {{ . }}{{ end }}">
+  {{ $data := replaceRE "(^\\s+```)" "" .Inner }}
+  {{- replaceRE "(```\\s+$)" "" $data -}}
+</p>
