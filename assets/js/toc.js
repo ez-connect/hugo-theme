@@ -32,7 +32,7 @@ document.addEventListener('scroll', function () {
 
     const heading = document.querySelector(e.getAttribute('href'));
     const pos = heading.getBoundingClientRect();
-    console.log(pos.top, window.pageYOffset, window.innerHeight);
+    // console.log(pos.top, window.pageYOffset, window.innerHeight);
     if (pos.y < window.pageYOffset) {
       activeItem = e;
     }
