@@ -8,9 +8,10 @@
 <!-- Assets -->
 {{ $documentMenu := resources.Get "js/document-menu.js" }}
 {{ $toc := resources.Get "js/toc.js" }}
+{{ $modal := resources.Get "js/modal.js" }}
 {{ $timeago := resources.Get "js/timeago.js" }}
 {{ $mermaid := resources.Get "js/mermaid.js" }}
 {{ $plantuml := resources.Get "js/plantuml.js" }}
 
-{{ $js := slice $documentMenu $toc $timeago $mermaid $plantuml | resources.Concat "main.js" }}
+{{ $js := slice $documentMenu $toc $modal $timeago $mermaid $plantuml | resources.Concat "main.js" }}
 <script src="{{ $js.Permalink }}"></script>
