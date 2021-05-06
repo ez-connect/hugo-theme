@@ -1,5 +1,11 @@
 {{ $nav := .Site.Data.nav }}
-{{ $links := index $nav .Section }}
+{{ $links := slice "" }}
+
+{{ if .IsHome }}
+  {{ $links = index $nav "home" }}
+{{ else }}
+  {{ $links = index $nav .Section }}
+{{ end }}
 
 <nav class="nav">
   <div  class="logo">

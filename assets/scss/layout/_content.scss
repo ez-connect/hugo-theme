@@ -1,15 +1,13 @@
-.document,
-.blog {
-  .content-container {
-    box-sizing: border-box;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    min-height: 80vh;
+.content-container {
+  min-height: 80vh;
+  box-sizing: border-box;
+  margin-top: $nav-height;
+  padding-left: 1rem;
+  padding-right: 1rem;
 
-    @media (min-width: $width-md) {
-      padding-left: 2rem;
-      padding-right: 2rem;
-    }
+  @media (min-width: $width-md) {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }
 

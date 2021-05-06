@@ -1,3 +1,16 @@
+home:
+  enable: true
+  items:
+    - name: Document
+      url: /document
+    - name: Blog
+      url: /blog
+    - name: Job
+      url: /job
+    - name: Resume
+      url: /resume
+    - name: GitHub
+      url: https://github.com/ez-connect/hugo-theme
 blog:
   enable: true
   items:
