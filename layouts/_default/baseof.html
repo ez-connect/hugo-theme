@@ -7,8 +7,10 @@
   <body>
     {{ partial "nav" . }}
 
-    {{ block "main" . }}
-    {{ end }}
+    <div class="container">
+      {{ block "main" . }}
+      {{ end }}
+    </div>
 
     {{ partial "footer" . }}
 

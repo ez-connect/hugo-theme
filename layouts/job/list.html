@@ -1,5 +1,5 @@
 {{ define "main" }}
-  <div class="job-list">
+  <div class="content-container job-list">
     {{ range where .Site.RegularPages "Section" "job" }}
       <article>
         <a href="{{ .RelPermalink }}">

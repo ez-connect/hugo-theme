@@ -1,13 +1,7 @@
 {{ define "main" }}
-  <article>
-    <a href="{{ .RelPermalink }}">
-      <h2>{{ .Name }}</h2>
-    </a>
-
+  <article class="job">
     <div class="content-container">
-      {{ .Content }}
+      {{ partial "content" . }}
     </div>
-
-    {{ partial "meta" . }}
   </article>
 {{ end }}
