@@ -24,16 +24,16 @@ $width-md: 768px; // medium devices, portrail tables & large phones
 $width-lg: 992px; // large, laptops/ desktops
 $width-xl: 1200px; // extra large, laptops / desktops
 
-// Nav
-$nav-height: 4rem;
+// Nav + TOC
+$nav-height: 64px;
+$toc-width: 15%;
 
 // Document
 $document-width-left: 25%;
 $document-width-middle: 60%;
-$document-width-right: 15%;
 
 // Blog
-$blog-jumbotron-height: 12rem;
+$blog-jumbotron-height: 48px;
 $blog-width-left: 70%;
 $blog-width-right: 30%;
 

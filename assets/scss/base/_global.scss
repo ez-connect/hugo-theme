@@ -16,12 +16,12 @@ svg {
 
 .spanborder {
   border-bottom: 1px solid $divider-color;
-  margin-bottom: 2rem;
+  margin-bottom: 32px;
 
   span {
     display: inline-block;
     border-bottom: 1px solid $text-color;
     margin-bottom: -1px;
-    padding-bottom: 1rem;
+    padding-bottom: 16px;
   }
 }

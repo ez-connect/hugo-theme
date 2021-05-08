@@ -1,15 +1,21 @@
-<article class="content">
-  <section>
-    <h1>{{ .Title }}</h1>
-    {{ partial "meta" . }}
+<div class="content">
+  <article>
+    <section>
+      <h1>{{ .Title }}</h1>
+      {{ partial "meta" . }}
 
-    {{ if .Description }}
+      {{ if .Description }}
       <p class="description">{{ .Description }}</p>
-    {{ end }}
-    <hr />
-  </section>
+      {{ end }}
+      <hr />
+    </section>
 
-  <section>
-    {{ .Content }}
-  </section>
-</article>
+    <section>
+      {{ .Content }}
+    </section>
+
+  </article>
+
+  {{ partial "toc" . }}
+
+</div>

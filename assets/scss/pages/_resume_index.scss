@@ -11,7 +11,7 @@
   // }
 
   .card {
-    padding: 2rem;
+    padding: 32px;
 
     display: flex;
     flex-direction: column;
@@ -23,10 +23,10 @@
     color: $text-color;
 
     img {
-      max-width: 12rem;
-      max-height: 12rem;
+      max-width: 192px;
+      max-height: 192px;
 
-      padding: 1rem;
+      padding: 16px;
     }
   }
 }

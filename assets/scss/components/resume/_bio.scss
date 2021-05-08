@@ -7,12 +7,12 @@
 
   img {
     margin: auto;
-    max-width: 8rem;
-    max-height: 8rem;
+    max-width: 128px;
+    max-height: 128px;
 
     @media (min-width: $width-md) {
       flex: 2;
-      padding-right: 2rem;
+      padding-right: 32px;
     }
   }
 

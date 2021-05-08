@@ -1,12 +1,10 @@
 {{ define "main" }}
-  <div class="blog">
-    <div class="content-container">
-      {{ partial "content" . }}
-    </div>
+  <article class="blog">
+    {{ partial "content" . }}
 
-    <div class="toc-container">
+    <section class="toc-container">
       {{ partial "toc" . }}
-    </div>
+    </section>
 
-  </div>
+  </article>
 {{ end }}
