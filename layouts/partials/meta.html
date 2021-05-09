@@ -1,14 +1,24 @@
 <small>
-  Posted
-  <span class="timeago" datetime="{{ .PublishDate }}">{{ .PublishDate }}</span>
-  by
+  {{ $createdby := .Params.createdby }}
+  {{ $updatedby := .Params.updatedby }}
+  {{ $hasChange := ne .Params.date .Params.lastmod }}
 
-  {{ if .Params.contributors -}}
-    {{ range $index, $contributor := .Params.contributors }}
-      {{ $path := printf "/%s/%s" "contributor" (urlize .) }}
-      {{ if gt $index 0 }} • {{ end }}
-      <a href="{{ $path }}">{{ . }}</a>
-    {{ end }}
+  {{ if $createdby }}
+    {{ $firstname := $createdby.firstname }}
+    {{ $lastname := default "" $createdby.lastname }}
+    {{ $path := printf "/%s/%s-%s" "contributor" $firstname $lastname }}
+    Created by <a href="{{ urlize $path }}">{{ $createdby.firstname }}</a>
+    <span class="timeago" datetime="{{ .Date }}">{{ .Date }}</span>
+  {{ end }}
+
+  {{ if and $hasChange $updatedby }}
+    &nbsp;&hyphen;&nbsp;
+
+    {{ $firstname := $updatedby.firstname }}
+    {{ $lastname := default "" $updatedby.lastname }}
+    {{ $path := printf "/%s/%s-%s" "contributor" $firstname $lastname }}
+    Updated by <a href="{{ urlize $path }}">{{ $createdby.firstname }}</a>
+    <span class="timeago" datetime="{{ .Date }}">{{ .Date }}</span>
   {{ end }}
 
   <span class="text-color-muted">

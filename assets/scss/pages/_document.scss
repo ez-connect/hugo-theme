@@ -75,3 +75,26 @@
   margin-left: $document-width-left;
   width: 100% - $document-width-left - $toc-width;
 }
+
+// Mobiles: hide menu and toc
+@media (max-width: $width-sm) {
+  .document__menu {
+    display: none;
+  }
+
+  .document__content {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+// Tablets: hide toc
+@media (max-width: $width-md) {
+  .document__content {
+    width: 100% - $document-width-left;
+  }
+
+  .toc {
+    display: none;
+  }
+}

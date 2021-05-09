@@ -7,7 +7,12 @@ menu:
 weight: 999
 date: 2021-04-23T21:31:39+07:00
 lastmod: 2021-04-23T21:31:39+07:00
-contributors: []
+createdby:
+  firstname: Vinh
+  lastname:
+updatedby:
+  firstname: Vinh
+  lastname:
 ---
 
 [**PlantUML**](https://plantuml.com/) is used to draw UML diagrams, using a simple and human readable text description.
