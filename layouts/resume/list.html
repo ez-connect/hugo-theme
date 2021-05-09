@@ -1,19 +1,16 @@
 {{ define "main" }}
-
   {{ $pages := where .Site.RegularPages "Section" "resume" }}
 
-  <div class="container">
-    <div class="card-list">
-      {{ range $pages }}
-      <a class="card" href="{{ .RelPermalink }}">
+  <div class="resume__list">
+    {{ range $pages }}
+      <a class="item" href="{{ .RelPermalink }}">
         <img src="/{{ .Params.avatar }}" />
 
         <strong>{{ .Params.name }}</strong>
         <div>{{ .Params.position }}</div>
         {{ .Content }}
       </a>
-
-      {{ end }}
-    </div>
+    {{ end }}
   </div>
+
 {{ end }}

@@ -2,9 +2,7 @@
   position: absolute;
   box-sizing: border-box;
   width: 100%;
-  min-height: 12rem;
-  margin-top: 4rem;
-  padding-top: 2rem;
+  padding: 32px;
   background: $primary-color-dark;
   color: $background-color;
   font-size: $font-size-sm;
@@ -14,6 +12,12 @@
   }
 
   .logo {
-    height: 2rem;
+    height: 32px;
+  }
+}
+
+@media print {
+  .footer {
+    display: none;
   }
 }

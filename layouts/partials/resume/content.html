@@ -1,13 +1,13 @@
 {{ $profile := .Params.profile }}
 {{ $contact := .Params.contact }}
 
-<section class="content">
-  <div class="left">
+<section class="resume__content">
+  <div class="resume__left">
     {{ partial "resume/content/experiences" . }}
     {{ partial "resume/content/projects" . }}
   </div>
 
-  <div class="right">
+  <div class="resume__right">
     {{ partial "resume/content/skills" . }}
     {{ partial "resume/content/educations" . }}
     {{ partial "resume/content/awards" . }}

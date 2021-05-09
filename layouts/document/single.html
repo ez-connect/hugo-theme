@@ -1,16 +1,7 @@
 {{ define "main" }}
-  <div class="document">
-    <div class="menu-container">
-      {{ partial "document/menu" . }}
-    </div>
+  {{ partial "document/menu" . }}
 
-    <div class="content-container">
-      {{ partial "content" . }}
-    </div>
-
-    <div class="toc-container">
-      {{ partial "toc" . }}
-    </div>
-
+  <div class="document__content">
+    {{ partial "content" . }}
   </div>
 {{ end }}

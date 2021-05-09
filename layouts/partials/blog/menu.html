@@ -4,17 +4,11 @@
 {{ $pages := where .Site.RegularPages "Section" "blog" }}
 {{ $count := .Site.Params.recentCount | default 10 }}
 
-<div class="menu">
-  {{ if eq .Kind "page" }}
-  xxx
-  {{ end }}
-
+<div class="blog__menu">
   <h3 class="spanborder"><span>Tags</span></h3>
 
-  <ul>
-    {{ range $key, $taxonomy := .Site.Taxonomies.tags }}
-      <li><a href="/tags/{{ $key }}">{{ $key }} ({{ len $taxonomy }})</a></li>
-    {{ end }}
-  </ul>
+  {{ range $key, $taxonomy := .Site.Taxonomies.tags }}
+    <p><a href="/tags/{{ $key }}">{{ $key }} ({{ len $taxonomy }})</a></p>
+  {{ end }}
 
 </div>

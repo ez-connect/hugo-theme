@@ -2,7 +2,7 @@
 {{ $page := . }}
 {{ $menus := .Site.Menus.document }}
 
-<div class="menu">
+<div class="document__menu">
   {{ range (where $menus "HasChildren" false) }}
     {{ $active := "" }}
     {{ if $page.IsMenuCurrent "document" . }}

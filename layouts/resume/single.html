@@ -1,11 +1,9 @@
 {{ define "main" }}
-
   <article class="resume">
     {{ partial "resume/profile" . }}
     {{ partial "resume/bio" . }}
+    <hr />
     {{ partial "resume/content" . }}
     {{ partial "resume/social" . }}
   </article>
-  {{ partial "resume/footer" . }}
-
 {{ end }}

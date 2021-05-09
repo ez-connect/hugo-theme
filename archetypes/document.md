@@ -8,7 +8,12 @@ menu:
 weight: 999
 date: {{ .Date }}
 lastmod: {{ .Date }}
-contributors: []
+createdby:
+  firstname: Vinh
+  lastname:
+updatedby:
+  firstname: Vinh
+  lastname:
 draft: true
 ---
 
