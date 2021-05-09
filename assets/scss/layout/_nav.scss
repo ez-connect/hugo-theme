@@ -21,20 +21,16 @@
   }
 
   .logo {
-    display: flex;
-    align-items: center;
     box-sizing: border-box;
+    display: flex;
+    // width: $document-menu-width;
+    align-items: center;
+    padding-right: 8px;
+    border-right: solid $text-color-muted;
+    border-width: 1px;
 
-    @media (max-width: $width-lg) {
-      flex: 1;
-      border-right: solid $text-color-muted;
-      border-width: 1px;
-    }
-
-    @media (min-width: $width-lg) {
-      width: $document-width-left;
-      border-right: solid $text-color-muted;
-      border-width: 1px;
+    @media (max-width: $width-sm) {
+      display: none;
     }
 
     img {
@@ -53,12 +49,12 @@
   }
 
   .link {
-    display: none;
+    display: flex;
+    flex: 1;
     padding-left: 32px;
 
-    @media (min-width: $width-lg) {
-      display: flex;
-      flex: 1;
+    @media (max-width: $width-sm) {
+      display: none;
     }
 
     li {

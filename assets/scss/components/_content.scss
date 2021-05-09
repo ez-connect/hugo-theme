@@ -1,6 +1,7 @@
 .content {
   box-sizing: border-box;
   display: flex;
+  width: 100% - $toc-width;
   padding: 32px;
 
   h1 {
@@ -8,3 +9,23 @@
     margin-block-end: 0;
   }
 }
+
+// Phones: hide toc
+@media (max-width: $width-sm) {
+  .content {
+    width: 100%;
+  }
+
+  .toc {
+    display: none;
+  }
+}
+
+// Tablets: hide toc
+@media (min-width: $width-sm) and (max-width: $width-md) {
+  .content {
+    width: 100% - $toc-width;
+  }
+}
+
+

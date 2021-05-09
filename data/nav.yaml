@@ -1,3 +1,7 @@
+logo:
+  name: hugo_logo_wide.svg
+  url: /uploads/hugo_logo_wide_7b43d25cae.svg
+title: Ez-Connect
 home:
   enable: true
   items:
@@ -11,14 +15,6 @@ home:
       url: /resume
     - name: GitHub
       url: https://github.com/ez-connect/hugo-theme
-blog:
-  enable: true
-  items:
-    - name: "2020"
-      url: /categories/2020
-    - name: "2021"
-      url: /categories/2021
-date: 2021-04-29T03:19:50.470Z
 document:
   enable: false
   items:
@@ -30,11 +26,12 @@ document:
       url: /resume
     - name: GitHub
       url: https://github.com/ez-connect/hugo-theme
-lastmod: 2021-04-30T15:36:19.130Z
-logo:
-  date: 2021-04-30T14:52:36.432Z
-  lastmod: 2021-04-30T14:52:36.448Z
-  name: hugo_logo_wide.svg
-  url: /uploads/hugo_logo_wide_7b43d25cae.svg
-publishdate: 2021-04-30T14:24:41.213Z
-title: Ez-Connect
+blog:
+  enable: true
+  items:
+    - name: Document
+      url: /document
+    - name: Job
+      url: /job
+    - name: Resume
+      url: /resume

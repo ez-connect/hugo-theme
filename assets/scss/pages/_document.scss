@@ -1,7 +1,7 @@
 .document__menu {
   box-sizing: border-box;
   position: fixed;
-  width: $document-width-left;
+  width: $document-menu-width;
   height: 100%;
 
   padding: 32px 16px 32px 32px;
@@ -72,8 +72,8 @@
 
 .document__content {
   box-sizing: border-box;
-  margin-left: $document-width-left;
-  width: 100% - $document-width-left - $toc-width;
+  margin-left: $document-menu-width;
+  width: 100% - $document-menu-width - $toc-width;
 }
 
 // Mobiles: hide menu and toc
@@ -91,10 +91,6 @@
 // Tablets: hide toc
 @media (max-width: $width-md) {
   .document__content {
-    width: 100% - $document-width-left;
-  }
-
-  .toc {
-    display: none;
+    width: 100% - $document-menu-width;
   }
 }
