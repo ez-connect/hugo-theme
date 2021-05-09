@@ -106,8 +106,6 @@ term
 
 ### Strikethrough
 
-## Task list
-
 ~~The world is flat.~~
 
 ### Task List
