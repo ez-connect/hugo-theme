@@ -89,7 +89,7 @@
 }
 
 // Tablets: hide toc
-@media (max-width: $width-md) {
+@media (min-width: $width-sm) and (max-width: $width-md) {
   .document__content {
     width: 100% - $document-menu-width;
   }

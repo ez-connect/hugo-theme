@@ -1,24 +1,5 @@
-//
-// Collapse menu
-//
-
+// Click a menu item to collapse / hide
 document.addEventListener('DOMContentLoaded', function () {
-  /// Click to open menu
-  const button = document.querySelector('.collapse-menu');
-  if (button != null) {
-    button.addEventListener('click', function () {
-      const menu = document.querySelector('.menu-container');
-      const classList = menu.classList;
-      if (classList.contains('show')) {
-        classList.remove('show');
-        classList.add('hide');
-      } else {
-        classList.remove('hide');
-        menu.classList.add('show');
-      }
-    });
-  }
-
   /// Click to expand a sub-category
   const items = document.querySelectorAll('a[data-toggle=collapse]');
   for (const item of items) {
