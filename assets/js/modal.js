@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
   modal.addEventListener('click', hideModal);
 
   // View images
-  const images = document.querySelectorAll('.content-container img');
+  const images = document.querySelectorAll('.main img');
   images.forEach(function (image) {
     image.addEventListener('click', function (e) {
       showModal(e.target);

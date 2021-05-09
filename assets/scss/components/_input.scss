@@ -1,0 +1,21 @@
+input {
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 8px;
+}
+
+textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 8px;
+}
+
+input[type='submit'] {
+  background: $primary-color;
+  color: $background-color;
+  font-weight: bold;
+  border: none;
+  padding: 12px;
+  width: 100%;
+}

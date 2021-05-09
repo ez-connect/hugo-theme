@@ -29,22 +29,14 @@
     border-right: solid $text-color-muted;
     border-width: 1px;
 
-    @media (max-width: $width-sm) {
-      display: none;
-    }
-
     img {
       height: 20px;
       padding-right: 8px;
     }
 
-    .collapse-menu {
+    .menu-btn {
       display: none;
       padding-right: 16px;
-
-      @media (max-width: $width-md) {
-        display: block;
-      }
     }
   }
 
@@ -52,10 +44,6 @@
     display: flex;
     flex: 1;
     padding-left: 32px;
-
-    @media (max-width: $width-sm) {
-      display: none;
-    }
 
     li {
       padding-right: 16px;
@@ -74,9 +62,28 @@
       display: none;
       color: $text-color-muted;
       padding-left: 8px;
+    }
+  }
+}
 
-      @media (min-width: $width-md) {
+@media (max-width: $width-sm) {
+  .nav {
+    .logo {
+      border: none;
+      flex: 1;
+
+      .menu-btn {
         display: block;
+      }
+    }
+
+    .link {
+      display: none;
+    }
+
+    .search {
+      .span {
+        display: none;
       }
     }
   }

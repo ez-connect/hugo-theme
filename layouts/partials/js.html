@@ -7,12 +7,13 @@
 
 <!-- Assets -->
 {{ $util := resources.Get "js/util.js" }}
-{{ $documentMenu := resources.Get "js/document-menu.js" }}
+{{ $nav := resources.Get "js/nav.js" }}
 {{ $toc := resources.Get "js/toc.js" }}
 {{ $modal := resources.Get "js/modal.js" }}
 {{ $timeago := resources.Get "js/timeago.js" }}
 {{ $mermaid := resources.Get "js/mermaid.js" }}
 {{ $plantuml := resources.Get "js/plantuml.js" }}
+{{ $document := resources.Get "js/document.js" }}
 
-{{ $js := slice $util $documentMenu $toc $modal $timeago $mermaid $plantuml | resources.Concat "main.js" }}
+{{ $js := slice $util $nav $toc $modal $timeago $mermaid $plantuml $document | resources.Concat "main.js" }}
 <script src="{{ $js.Permalink }}"></script>

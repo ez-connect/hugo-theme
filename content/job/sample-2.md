@@ -1,15 +1,14 @@
 ---
-title: {{ replace .Name "-" " " | title }}
+title: Senior Full-Stack Engineer
 description:
-date: {{ .Date }}
-lastmod: {{ .Date }}
+date: 2021-05-09T18:55:06+07:00
+lastmod: 2021-05-09T18:55:06+07:00
 createdby:
   firstname: Vinh
   lastname:
 updatedby:
   firstname: Vinh
   lastname:
-draft: true
 ---
 
 ## Salary Expectation

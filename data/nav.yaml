@@ -42,3 +42,10 @@ resume:
       url: /document
     - name: Blog
       url: /blog
+job:
+  enable: true
+  items:
+    - name: Document
+      url: /document
+    - name: Blog
+      url: /blog
