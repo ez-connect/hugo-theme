@@ -1,4 +1,4 @@
-<div class="item">
+<section>
   <h3>WORK EXPERIENCES</h3>
 
   {{ range $item := .Params.experiences }}
@@ -9,4 +9,4 @@
 
     <p>{{ markdownify  $item.detail }}</p>
   {{ end }}
-</div>
+</section>

@@ -1,8 +1,8 @@
-<div class="item">
+<section>
   <h3>SKILLS</h3>
 
   {{ range $skill := .Params.skills }}
     <strong>{{ $skill.title }}</strong>
     <p>{{ markdownify $skill.items }}</p>
   {{ end }}
-</div>
+</section>
