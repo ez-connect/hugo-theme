@@ -1,15 +1,15 @@
-.header {
+.resume__header {
   display: flex;
   flex-wrap: wrap;
 
-  .left {
+  .resume__left {
     .job {
       font-size: 1.25rem;
       font-weight: 300;
     }
   }
 
-  .right {
+  .resume__right {
     ul {
       padding-inline-start: 0;
       font-size: 0.75rem;
@@ -25,5 +25,11 @@
         padding-right: 8px;
       }
     }
+  }
+}
+
+@media (max-width: $width-sm) {
+  .resume__header {
+    display: block;
   }
 }

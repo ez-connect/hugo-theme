@@ -35,3 +35,10 @@ blog:
       url: /job
     - name: Resume
       url: /resume
+resume:
+  enable: true
+  items:
+    - name: Document
+      url: /document
+    - name: Blog
+      url: /blog

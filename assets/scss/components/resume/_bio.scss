@@ -1,24 +1,26 @@
-.bio {
+.resume__bio {
+  box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-
   font-size: 0.875rem;
 
   img {
+    box-sizing: border-box;
     margin: auto;
     max-width: 128px;
     max-height: 128px;
-
-    @media (min-width: $width-md) {
-      flex: 2;
-      padding-right: 32px;
-    }
   }
 
   p {
-    @media (min-width: $width-md) {
-      flex: 10;
+    box-sizing: border-box;
+    width: $resume-left-width;
+  }
+}
+
+@media (max-width: $width-sm) {
+  .resume__bio {
+    p {
+      width: 100%;
     }
   }
 }
