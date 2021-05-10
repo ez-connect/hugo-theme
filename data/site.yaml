@@ -1,3 +1,4 @@
+cms: http://localhost:1337
 contact:
   name: Ez-Connect
   address: 198 West 21th Street, Suite 721 New York NY 10016

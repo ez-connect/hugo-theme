@@ -14,6 +14,7 @@
 {{ $mermaid := resources.Get "js/mermaid.js" }}
 {{ $plantuml := resources.Get "js/plantuml.js" }}
 {{ $document := resources.Get "js/document.js" }}
+{{ $applicant := resources.Get "js/applicant.js" }}
 
-{{ $js := slice $util $nav $toc $modal $timeago $mermaid $plantuml $document | resources.Concat "main.js" }}
+{{ $js := slice $util $nav $toc $modal $timeago $mermaid $plantuml $document $applicant | resources.Concat "main.js" }}
 <script src="{{ $js.Permalink }}"></script>

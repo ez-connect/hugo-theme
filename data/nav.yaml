@@ -49,3 +49,14 @@ job:
       url: /document
     - name: Blog
       url: /blog
+applicant:
+  enable: true
+  items:
+    - name: Document
+      url: /document
+    - name: Blog
+      url: /blog
+    - name: Job
+      url: /job
+    - name: Resume
+      url: /resume
