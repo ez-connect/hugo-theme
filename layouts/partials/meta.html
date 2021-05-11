@@ -18,7 +18,7 @@
     {{ $lastname := default "" $updatedby.lastname }}
     {{ $path := printf "/%s/%s-%s" "contributor" $firstname $lastname }}
     Updated by <a href="{{ urlize $path }}">{{ $createdby.firstname }}</a>
-    <span class="timeago" datetime="{{ .Date }}">{{ .Date }}</span>
+    <span class="timeago" datetime="{{ .Date }}">{{ .Lastmod }}</span>
   {{ end }}
 
   <span class="text-color-muted">
