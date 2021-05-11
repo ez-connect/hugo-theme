@@ -9,14 +9,16 @@
 
   <div class="job__applicant">
     <div class="applicant">
-      <form>
+      <form id="applicantForm">
         <h2>Apply this job</h2>
-        <input type="text" name="name" placeholder="Your name">
-        <input type="tel" name="tel" placeholder="Your phone number">
+        <input type="text" name="title" placeholder="Your name">
+        <input type="tel" name="phone" placeholder="Your phone number">
         <input type="email" name="email" placeholder="Your email">
-        <textarea name="letter" rows="7" placeholder="Cover letter"></textarea>
-        <input type="file" name="cv" accept="application/pdf, application/zip">
-        <input type="submit" value="Send your CV">
+        <label for="editor">Cover letter & CV</label>
+        <div name="content" id="editor" data-placeholder="Cover letter"></div>
+        {{/*  <input type="file" name="cv" accept="application/pdf, application/zip">  */}}
+        <input id="applyJob" data-target="{{ .Site.Data.site.cms }}" type="button" value="Apply">
+        <small><div class="error"></div></small>
       </form>
     </div>
 

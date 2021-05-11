@@ -73,7 +73,7 @@
 .document__content {
   box-sizing: border-box;
   margin-left: $document-menu-width;
-  width: 100% - $document-menu-width - $toc-width;
+  width: 100% - $document-menu-width;
 }
 
 // Mobiles: hide menu and toc

@@ -6,6 +6,11 @@ svg {
   max-width: 100%;
 }
 
+label {
+  font-size: $font-size-sx;
+  color: $text-color-light;
+}
+
 .hide {
   display: none !important;
 }
@@ -24,4 +29,12 @@ svg {
     margin-bottom: -1px;
     padding-bottom: 16px;
   }
+}
+
+.success {
+  color: $success-color;
+}
+
+.error {
+  color: $error-color;
 }
