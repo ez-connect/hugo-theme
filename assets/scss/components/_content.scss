@@ -8,6 +8,11 @@
     margin-block-start: 0;
     margin-block-end: 0;
   }
+
+  article {
+    box-sizing: border-box;
+    width: 100%;
+  }
 }
 
 // Phones: hide toc

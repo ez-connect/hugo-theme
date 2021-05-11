@@ -3,6 +3,12 @@ input {
   width: 100%;
   margin-bottom: 16px;
   padding: 8px;
+  border: solid 1px $divider-color;
+
+  &:focus {
+    outline: solid 1px $primary-color;
+    border-radius: 0;
+  }
 }
 
 textarea {
@@ -11,6 +17,7 @@ textarea {
   padding: 8px;
 }
 
+input[type='button'],
 input[type='submit'] {
   background: $primary-color;
   color: $background-color;
