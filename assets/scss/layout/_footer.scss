@@ -1,18 +1,17 @@
 .footer {
-  position: absolute;
   box-sizing: border-box;
-  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
   padding: 32px;
   background: $primary-color-dark;
   color: $background-color;
-  font-size: $font-size-sm;
+  font-size: $font-size-sx;
 
-  p {
-    text-align: center;
-  }
-
-  .logo {
-    height: 32px;
+  a {
+    font-weight: bold;
+    color: $background-color;
   }
 }
 

@@ -1,12 +1,6 @@
 {{ $footer := .Site.Data.footer }}
 
 <footer class="footer">
-  <img class="logo" title="{{ $footer.logo.name }}" src="{{ $footer.logo.url }}">
-  <p>{{ $footer.copyright }}</p>
-
-  <div class="link">
-    {{ range $footer.links }}
-      <span>{{ .name }}</span>
-    {{ end }}
-  </div>
+  <span>{{ markdownify $footer.copyright }}</span>
+  <span>{{ markdownify $footer.credit }}</span>
 </footer>
