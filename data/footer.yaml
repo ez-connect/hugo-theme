@@ -1,10 +1,2 @@
-logo:
-  name: hugo_logo_wide.svg
-  url: /uploads/hugo_logo_wide_7b43d25cae.svg
 copyright: Copyright © Ez-Connect 2021 . All rights reserved.
 credit: Powered by [Hugo](https://gohugo.io) and [Ez-Connect](https://github.com/ez-connect/hugo-theme)
-links:
-  - name: LinkedIn
-    url: /#
-  - name: Facebook
-    url: /#
