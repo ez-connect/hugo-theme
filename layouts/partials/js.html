@@ -18,6 +18,7 @@
 {{ $util := resources.Get "js/util.js" }}
 {{ $nav := resources.Get "js/nav.js" }}
 {{ $toc := resources.Get "js/toc.js" }}
+{{ $content := resources.Get "js/content.js" }}
 {{ $modal := resources.Get "js/modal.js" }}
 {{ $timeago := resources.Get "js/timeago.js" }}
 {{ $mermaid := resources.Get "js/mermaid.js" }}
@@ -26,5 +27,5 @@
 {{ $document := resources.Get "js/document.js" }}
 {{ $applicant := resources.Get "js/applicant.js" }}
 
-{{ $js := slice $util $nav $toc $modal $timeago $mermaid $plantuml $quilljs $document $applicant | resources.Concat "main.js" }}
+{{ $js := slice $util $nav $toc $content $modal $timeago $mermaid $plantuml $quilljs $document $applicant | resources.Concat "main.js" }}
 <script src="{{ $js.Permalink }}"></script>

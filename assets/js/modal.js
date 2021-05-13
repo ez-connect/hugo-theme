@@ -23,6 +23,18 @@ function hideModal() {
   });
 }
 
+function showLoading() {
+  const loading = document.querySelector('.loading');
+  loading.classList.remove('hide');
+  loading.classList.add('show');
+}
+
+function hideLoading() {
+  const loading = document.querySelector('.loading');
+  loading.classList.remove('show');
+  loading.classList.add('hide');
+}
+
 document.addEventListener('DOMContentLoaded', function () {
   // Hide the modal on click
   const modal = document.querySelector('#modal');
