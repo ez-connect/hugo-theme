@@ -2,22 +2,13 @@
 // Auto Highlighting TOC
 //
 
-const _navHeight = document.querySelector('.nav').getBoundingClientRect()
-  .height;
-
 // Click on a TOC item
 document.addEventListener('DOMContentLoaded', function () {
   const items = document.querySelectorAll('#TableOfContents a');
   items.forEach(function (item) {
     item.addEventListener('click', function (e) {
       e.preventDefault();
-      const heading = document.querySelector(e.target.getAttribute('href'));
-      const pos = heading.getBoundingClientRect();
-      window.scrollTo({
-        top: pos.top + window.pageYOffset - _navHeight,
-        left: 0,
-        behavior: 'smooth',
-      });
+      scrollToElement(e.target.getAttribute('href'));
     });
   });
 });
@@ -36,11 +27,8 @@ function _setActive() {
 
     const heading = document.querySelector(e.getAttribute('href'));
     const pos = heading.getBoundingClientRect();
-    // if (heading.textContent == 'Basic Syntax') {
-    //   console.log(heading.textContent, pos.top);
-    // }
 
-    if (pos.y < _navHeight) {
+    if (pos.y < navHeight) {
       activeItem = e;
     }
   });
