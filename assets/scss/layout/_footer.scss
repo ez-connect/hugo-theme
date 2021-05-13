@@ -1,10 +1,13 @@
 .footer {
+  z-index: 1;
   box-sizing: border-box;
+  position: relative; // to active z-index, front of document menu
   display: flex;
   flex-wrap: wrap;
+  height: $footer-height;
   justify-content: space-between;
   align-items: center;
-  padding: 32px;
+  padding: 0 32px;
   background: $primary-color-dark;
   color: $background-color;
   font-size: $font-size-sx;
