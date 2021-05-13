@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const button = document.querySelector('#applyJob');
   button.addEventListener('click', async function (e) {
     e.preventDefault();
+    showLoading();
 
     const pathname = window.location.pathname;
     const matches = pathname.match(/.*-(\d+)\/$/);
@@ -46,16 +47,20 @@ document.addEventListener('DOMContentLoaded', function () {
       const messages = Object.entries(data.data.errors).map(function ([k, v]) {
         return `<li>${v}</li>`;
       });
+
       error.innerHTML = `
         <strong>${data.error}</strong>
         <ul>
           ${messages.join('')}
         </ul>
       `;
+
+      hideLoading();
     } catch (err) {
       error.classList.remove('success');
       error.classList.add('error');
       error.textContent = err;
+      hideLoading();
     }
   });
 });
