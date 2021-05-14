@@ -61,6 +61,88 @@
   }
 }
 
+.resume_profile {
+  display: flex;
+  flex-wrap: wrap;
+
+  .job {
+    font-size: 1.25rem;
+    font-weight: 300;
+  }
+
+  ul {
+    padding-inline-start: 0;
+    font-size: 0.75rem;
+  }
+
+  ul > li {
+    display: flex;
+    align-items: center;
+  }
+
+  svg {
+    width: 12px;
+    padding-right: 8px;
+  }
+}
+
+.resume__bio {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+
+  img {
+    box-sizing: border-box;
+    margin: auto;
+    max-width: 128px;
+    max-height: 128px;
+  }
+
+  p {
+    box-sizing: border-box;
+    width: $resume-left-width;
+  }
+}
+
+.resume__content {
+  display: flex;
+  flex-wrap: wrap;
+
+  section {
+    padding-bottom: 8px;
+  }
+
+  .experience-title {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .item {
+    ul {
+      list-style: none;
+      padding-inline-start: 0;
+    }
+
+    padding-bottom: 16px;
+  }
+}
+
+.resume__social {
+  text-align: center;
+
+  a {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+    fill: $text-color;
+  }
+}
+
 @media (max-width: $width-sm) {
   .resume__left {
     width: 100%;
@@ -74,5 +156,12 @@
     width: 100%;
     border: none;
     padding-left: 0;
+  }
+
+  .resume__bio {
+    p {
+      box-sizing: border-box;
+      width: 100%;
+    }
   }
 }
