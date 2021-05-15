@@ -2,7 +2,7 @@
 {{ $page := . }}
 {{ $menus := .Site.Menus.document }}
 
-<div id="collapseMenu" class="document__menu">
+<div id="navMenu" class="document__menu">
   {{ range (where $menus "HasChildren" false) }}
     {{ $active := "" }}
     {{ if $page.IsMenuCurrent "document" . }}
@@ -32,9 +32,7 @@
             {{ end }}
 
             {{ $collapseTarget := printf "%s-collapse" .KeyName }}
-            <a class="title" href="#"
-              data-toggle="collapse" data-target="#{{ $collapseTarget }}" aria-expanded="{{ $isExpaned }}"
-            >
+            <a class="title" href="#" data-toggle="collapse" data-target="#{{ $collapseTarget }}">
               {{ .Name -}}
             </a>
 

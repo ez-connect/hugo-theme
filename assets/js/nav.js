@@ -1,23 +1,19 @@
+const navMenuButtonID = '#navMenuButton';
+const navMenuContentID = '#navMenu';
+
 class _Nav {
   _init() {
-    const button = document.querySelector('.nav .menu-btn');
-    if (button != null) {
-      button.addEventListener('click', this._onClickMenuButton);
+    const content = document.querySelector(navMenuContentID);
+    if (!content) {
+      util.hide(navMenuButtonID);
     }
+
+    const button = document.querySelector(navMenuButtonID);
+    button.addEventListener('click', this._onClickLeftButton);
   }
 
-  _onClickMenuButton = () => {
-    const menu = document.querySelector('#collapseMenu');
-    if (!menu) {
-      console.warn('Not found: #collapseMenu');
-      return;
-    }
-
-    if (util.isShow('#collapseMenu')) {
-      util.hide('#collapseMenu');
-    } else {
-      util.show('#collapseMenu');
-    }
+  _onClickLeftButton = () => {
+    util.toogle(navMenuContentID);
   };
 }
 

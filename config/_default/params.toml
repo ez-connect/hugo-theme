@@ -1,6 +1,6 @@
 [options]
   darkMode = false
-  breadCrumb = false
+  breadCrumb = true
   timeago = true
   mermaid = true
   plantUML = true

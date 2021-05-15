@@ -33,11 +33,11 @@
       height: 20px;
       padding-right: 8px;
     }
+  }
 
-    .menu-btn {
-      display: none;
-      padding-right: 16px;
-    }
+  .menu-btn {
+    display: none;
+    padding-right: 16px;
   }
 
   .link {
@@ -63,6 +63,11 @@
       padding-left: 8px;
     }
   }
+
+  .link-menu {
+    position: absolute;
+    right: 32px;
+  }
 }
 
 @media (max-width: $width-sm) {
@@ -70,14 +75,16 @@
     .logo {
       border: none;
       flex: 1;
+    }
 
-      .menu-btn {
-        display: block;
-      }
+    .menu-btn {
+      display: block;
     }
 
     .link {
-      display: none;
+      position: absolute;
+      bottom: -8px;
+      font-size: $font-size-sx;
     }
 
     .search {

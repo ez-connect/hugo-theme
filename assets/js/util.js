@@ -12,38 +12,34 @@ class Util {
 
   show(selector) {
     const element = document.querySelector(selector);
-    if (!element) return;
     element.classList.remove('hide');
     element.classList.add('show');
   }
 
-  isShow(selector) {
-    const element = document.querySelector(selector);
-    return element.classList.contains('show');
-  }
-
   hide(selector) {
     const element = document.querySelector(selector);
-    if (!element) return;
     element.classList.remove('show');
     element.classList.add('hide');
   }
 
-  isHide(selector) {
+  toogle(selector) {
     const element = document.querySelector(selector);
-    return element.classList.contains('hide');
+    if (element.classList.contains('show')) {
+      util.hide(selector);
+    } else {
+      util.show(selector);
+    }
   }
 
   scrollToElement(selector) {
     const element = document.querySelector(selector);
-    if (element) {
-      const pos = element.getBoundingClientRect();
-      window.scrollTo({
-        top: pos.top + window.pageYOffset - this.getNavHeight(),
-        left: 0,
-        behavior: 'smooth',
-      });
-    }
+    const pos = element.getBoundingClientRect();
+
+    window.scrollTo({
+      top: pos.top + window.pageYOffset - this.getNavHeight(),
+      left: 0,
+      behavior: 'smooth',
+    });
   }
 
   _initTimeago() {

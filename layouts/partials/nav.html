@@ -8,11 +8,11 @@
 {{ end }}
 
 <nav class="nav">
-  <div  class="logo">
-    <a class="menu-btn" href="#">{{ partial "svg/bars.svg" . }}</a>
+  <div class="logo">
+    <a id="navMenuButton" class="menu-btn" href="#">{{ partial "svg/bars.svg" . }}</a>
     <img alt="{{ $nav.logo.name }}" src="{{ $nav.logo.url }}" />
     <a href="/"><strong>{{ $nav.title }}</strong></a>
-  </div >
+  </div>
 
   <ul class="link">
     {{ range $links.items }}
@@ -23,5 +23,5 @@
   <a class="search" href="/search">
     {{ partial "svg/search.svg" . }}
     <span>Search...</span>
-  </a >
+  </a>
 </nav>

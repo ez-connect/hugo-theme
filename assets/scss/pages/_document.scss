@@ -81,6 +81,7 @@
 @media (max-width: $width-sm) {
   .document__menu {
     display: none;
+    width: unset;
   }
 
   .document__content {
