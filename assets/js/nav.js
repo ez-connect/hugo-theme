@@ -1,23 +1,25 @@
-// Nav - menu button
-// Click to show #collapseMenu
-document.addEventListener('DOMContentLoaded', function () {
-  /// Click to open menu
-  const button = document.querySelector('.nav .menu-btn');
-  if (button != null) {
-    button.addEventListener('click', function () {
-      const menu = document.querySelector('#collapseMenu');
-      if (!menu) {
-        console.warn('Not found: #collapseMenu');
-        return;
-      }
-      const classList = menu.classList;
-      if (classList.contains('show')) {
-        classList.remove('show');
-        classList.add('hide');
-      } else {
-        classList.remove('hide');
-        menu.classList.add('show');
-      }
-    });
+class _Nav {
+  _init() {
+    const button = document.querySelector('.nav .menu-btn');
+    if (button != null) {
+      button.addEventListener('click', this._onClickMenuButton);
+    }
   }
-});
+
+  _onClickMenuButton = () => {
+    const menu = document.querySelector('#collapseMenu');
+    if (!menu) {
+      console.warn('Not found: #collapseMenu');
+      return;
+    }
+
+    if (util.isShow('#collapseMenu')) {
+      util.hide('#collapseMenu');
+    } else {
+      util.show('#collapseMenu');
+    }
+  };
+}
+
+const _nav = new _Nav();
+_nav._init();

@@ -1,50 +1,40 @@
-//
-// Modal
-//
+const modalID = `#modal`;
+const modalContentID = `#modalContent`;
 
-function showModal(body) {
-  const modal = document.querySelector('#modal');
-  modal.classList.add('show');
-
-  if (body) {
-    const content = document.querySelector('#modalContent');
-    content.appendChild(body.cloneNode(true));
+class Modal {
+  init() {
+    const element = this._getModal();
+    element.addEventListener('click', this.hide);
   }
-}
 
-function hideModal() {
-  const modal = document.querySelector('#modal');
-  modal.classList.remove('show');
-  modal.classList.add('hide');
+  show(body) {
+    util.show(modalID);
+    if (body) {
+      this._getModalContent().appendChild(body.cloneNode(true));
+    }
+  }
 
-  const content = document.querySelector('#modalContent');
-  content.childNodes.forEach(function (e) {
-    content.removeChild(e);
-  });
-}
+  hide = () => {
+    util.hide(modalID);
 
-function showLoading() {
-  const loading = document.querySelector('.loading');
-  loading.classList.remove('hide');
-  loading.classList.add('show');
-}
-
-function hideLoading() {
-  const loading = document.querySelector('.loading');
-  loading.classList.remove('show');
-  loading.classList.add('hide');
-}
-
-document.addEventListener('DOMContentLoaded', function () {
-  // Hide the modal on click
-  const modal = document.querySelector('#modal');
-  modal.addEventListener('click', hideModal);
-
-  // View images
-  const images = document.querySelectorAll('.main img');
-  images.forEach(function (image) {
-    image.addEventListener('click', function (e) {
-      showModal(e.target);
+    const content = this._getModalContent();
+    content.childNodes.forEach(function (e) {
+      content.removeChild(e);
     });
-  });
-});
+  };
+
+  _getModal() {
+    return document.querySelector(modalID);
+  }
+
+  _getModalContent() {
+    return document.querySelector(modalContentID);
+  }
+
+  _onClickModal = () => {
+    this._hide();
+  };
+}
+
+const modal = new Modal();
+modal.init();

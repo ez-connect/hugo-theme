@@ -1,9 +1,16 @@
-// Submit CV
-document.addEventListener('DOMContentLoaded', function () {
-  const button = document.querySelector('#applyJob');
-  button.addEventListener('click', async function (e) {
+class _Applicant {
+  constructor() {
+    this._button = document.querySelector('#applyJob');
+  }
+
+  _init() {
+    if (!this._button) return;
+    this._button.addEventListener('click', this._onSubmit);
+  }
+
+  _onSubmit = async (e) => {
     e.preventDefault();
-    showLoading();
+    util.show('.loading');
 
     const pathname = window.location.pathname;
     const matches = pathname.match(/.*-(\d+)\/$/);
@@ -22,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // console.log(body);
     const error = form.querySelector('.error');
-    const baseURL = button.getAttribute('data-target');
+    const baseURL = this._button.getAttribute('data-target');
     try {
       const res = await fetch(`${baseURL}/applicants`, {
         method: 'POST',
@@ -31,6 +38,8 @@ document.addEventListener('DOMContentLoaded', function () {
       });
 
       const data = await res.json();
+      util.hide('.loading');
+
       if (res.status == 200) {
         error.classList.remove('error');
         error.classList.add('success');
@@ -54,13 +63,14 @@ document.addEventListener('DOMContentLoaded', function () {
           ${messages.join('')}
         </ul>
       `;
-
-      hideLoading();
     } catch (err) {
       error.classList.remove('success');
       error.classList.add('error');
       error.textContent = err;
-      hideLoading();
+      util.hide('.loading');
     }
-  });
-});
+  };
+}
+
+const _applicant = new _Applicant();
+_applicant._init();

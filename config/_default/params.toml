@@ -1,0 +1,7 @@
+[options]
+  darkMode = false
+  breadCrumb = false
+  timeago = true
+  mermaid = true
+  plantUML = true
+  quilljs = true
