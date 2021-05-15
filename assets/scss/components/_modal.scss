@@ -27,10 +27,8 @@
 
 //  Modal Content (Image)
 .modal-content {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
+  display: flex;
+  justify-content: center;
 }
 
 /* Caption of Modal Image (Image Text) - Same Width as the Image */

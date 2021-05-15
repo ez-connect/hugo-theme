@@ -1,5 +1,10 @@
 {{ define "main" }}
   <div class="blog__content">
+    {{ if .Site.Params.options.breadcrumb }}
+      {{ partial "breadcrumb" . }}
+      <hr />
+    {{ end }}
+
     {{ partial "content" . }}
   </div>
 {{ end }}

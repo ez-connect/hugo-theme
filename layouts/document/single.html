@@ -2,6 +2,11 @@
   {{ partial "document/menu" . }}
 
   <div class="document__content">
+    {{ if .Site.Params.options.breadcrumb }}
+      {{ partial "breadcrumb" . }}
+      <hr />
+    {{ end }}
+
     {{ partial "content" . }}
   </div>
 {{ end }}

@@ -1,6 +1,11 @@
 {{ define "main" }}
   <article class="job">
     <div class="job__content">
+      {{ if .Site.Params.options.breadcrumb }}
+        {{ partial "breadcrumb" . }}
+        <hr />
+      {{ end }}
+
       {{ partial "content" . }}
     </div>
   </article>

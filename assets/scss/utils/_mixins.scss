@@ -1,0 +1,7 @@
+@mixin sentence-case() {
+  text-transform: lowercase;
+
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}
