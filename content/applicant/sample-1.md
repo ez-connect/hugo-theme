@@ -1,6 +1,6 @@
 ---
 title: Sample 1
-phone: "0909999999"
+tel: "0909999999"
 email: name@example.com
 date: 2021-05-11T22:41:56+07:00
 lastmod: 2021-05-11T22:41:56+07:00
@@ -16,6 +16,12 @@ updatedby:
   lastname:
 draft: false
 ---
+
+## Applicant
+
+> - Sample 1
+> - 0909999999
+> - name@example.com
 
 ## Example title
 

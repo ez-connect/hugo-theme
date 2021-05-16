@@ -1,0 +1,10 @@
+{{ define "main" }}
+  <div class="applicant__content">
+    {{ if .Site.Params.options.breadcrumb }}
+      {{ partial "breadcrumb" . }}
+      <hr />
+    {{ end }}
+
+    {{ partial "content" . }}
+  </div>
+{{ end }}
