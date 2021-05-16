@@ -10,3 +10,6 @@ signIn:
 applyJob:
   method: POST
   url: http://localhost:1337/applicants
+forgotPassword:
+  method: GET
+  url: http://localhost:1337/admin/auth/forgot-password

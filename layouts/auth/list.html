@@ -12,5 +12,7 @@
       <input id="signInButton" data-method="{{ $api.method }}" data-url="{{ $api.url }}" type="button" value="Sign-in">
       <small><div class="error"></div></small>
     </form>
+
+    <a href="{{ .Site.Data.site.forgotPassword.url }}">Forgot your password?</a>
   </div>
 {{ end }}
