@@ -1,11 +1,8 @@
 class _Applicant {
-  constructor() {
-    this._button = document.querySelector('#applyJob');
-  }
-
   _init() {
-    if (!this._button) return;
-    this._button.addEventListener('click', this._onSubmit);
+    const button = document.querySelector('#applyJobButton');
+    if (!button) return;
+    button.addEventListener('click', this._onSubmit);
   }
 
   _onSubmit = async (e) => {
@@ -16,7 +13,7 @@ class _Applicant {
     const matches = pathname.match(/.*-(\d+)\/$/);
     const job = matches[1];
 
-    const form = document.querySelector('#applicantForm');
+    const form = document.querySelector('#applyJobForm');
     const title = form.querySelector('input[name=title]').value;
     const phone = form.querySelector('input[name=phone]').value;
     const email = form.querySelector('input[name=email]').value;
@@ -28,11 +25,14 @@ class _Applicant {
     const body = { title, phone, email, content, job };
 
     // console.log(body);
+    const button = e.target;
+    const method = button.getAttribute('data-method');
+    const url = button.getAttribute('data-url');
+
     const error = form.querySelector('.error');
-    const baseURL = this._button.getAttribute('data-target');
     try {
-      const res = await fetch(`${baseURL}/applicants`, {
-        method: 'POST',
+      const res = await fetch(url, {
+        method,
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(body),
       });

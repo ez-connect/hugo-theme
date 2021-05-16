@@ -1,5 +1,11 @@
 title: Ez-Connect
-cms: http://localhost:1337
+api:
+  signIn:
+    method: POST
+    url: http://localhost:1337/admin/login
+  applyJob:
+    method: POST
+    url: http://localhost:1337/applicants
 contact:
   name: Ez-Connect
   address: 198 West 21th Street, Suite 721 New York NY 10016

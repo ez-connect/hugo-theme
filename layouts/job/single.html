@@ -14,7 +14,7 @@
 
   <div class="job__applicant">
     <div class="applicant">
-      <form id="applicantForm">
+      <form id="applyJobForm">
         <h2>Apply this job</h2>
         <input type="text" name="title" placeholder="Your name">
         <input type="tel" name="phone" placeholder="Your phone number">
@@ -22,7 +22,9 @@
         <label for="editor">Cover letter & CV</label>
         <div name="content" id="editor" data-placeholder="Cover letter"></div>
         {{/*  <input type="file" name="cv" accept="application/pdf, application/zip">  */}}
-        <input id="applyJob" data-target="{{ .Site.Data.site.cms }}" type="button" value="Apply">
+
+        {{ $api := .Site.Data.site.api.applyJob }}
+        <input id="applyJobButton" data-method="{{ $api.method }}" data-url="{{ $api.url }}" type="button" value="Apply">
         <small><div class="error"></div></small>
       </form>
     </div>

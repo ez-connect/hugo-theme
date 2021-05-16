@@ -1,0 +1,16 @@
+{{ define "main" }}
+  <div class="sign-in">
+    <h2>{{ .Title }} </h2>
+    {{ .Content }}
+    <br />
+
+    <form id="signInForm">
+      <input type="email" name="email" placeholder="Your email">
+      <input type="password" name="password" placeholder="Your password">
+
+      {{ $api := .Site.Data.site.api.signIn }}
+      <input id="signInButton" data-method="{{ $api.method }}" data-url="{{ $api.url }}" type="button" value="Sign-in">
+      <small><div class="error"></div></small>
+    </form>
+  </div>
+{{ end }}
