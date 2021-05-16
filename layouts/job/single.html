@@ -23,7 +23,7 @@
         <div name="content" id="editor" data-placeholder="Cover letter"></div>
         {{/*  <input type="file" name="cv" accept="application/pdf, application/zip">  */}}
 
-        {{ $api := .Site.Data.site.api.applyJob }}
+        {{ $api := .Site.Data.site.applyJob }}
         <input id="applyJobButton" data-method="{{ $api.method }}" data-url="{{ $api.url }}" type="button" value="Apply">
         <small><div class="error"></div></small>
       </form>

@@ -8,7 +8,7 @@
       <input type="email" name="email" placeholder="Your email">
       <input type="password" name="password" placeholder="Your password">
 
-      {{ $api := .Site.Data.site.api.signIn }}
+      {{ $api := .Site.Data.site.signIn }}
       <input id="signInButton" data-method="{{ $api.method }}" data-url="{{ $api.url }}" type="button" value="Sign-in">
       <small><div class="error"></div></small>
     </form>

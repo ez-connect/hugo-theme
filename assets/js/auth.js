@@ -15,7 +15,6 @@ class _Auth {
     const body = { email, password };
 
     const button = e.target;
-    console.log(button)
     const method = button.getAttribute('data-method');
     const url = button.getAttribute('data-url');
 
@@ -32,14 +31,13 @@ class _Auth {
       util.hide('.loading');
 
       if (res.status == 200) {
-        error.classList.remove('error');
-        error.classList.add('success');
+        error.textContent = '';
+        // localStorage.setItem('auth', JSON.stringify(data.data));
+        util.setCookie('token', data.data.token, 24 * 3600);
         history.back();
         return;
       }
 
-      error.classList.remove('success');
-      error.classList.add('error');
       error.textContent = data.message;
     } catch (err) {
       error.classList.remove('success');
