@@ -4,9 +4,7 @@ description: Mauris elementum felis purus, a gravida leo sodales ac. Phasellus e
 tags: []
 date: {{ .Date }}
 lastmod: {{ .Date }}
-authors:
-  - name: Vinh
-    userID: 1
+authors: [Vinh]
 draft: true
 ---
 

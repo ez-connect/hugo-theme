@@ -3,9 +3,7 @@ title: {{ replace .Name "-" " " | title }}
 description:
 date: {{ .Date }}
 lastmod: {{ .Date }}
-authors:
-  - name: Vinh
-    userID: 1
+authors: [Vinh]
 draft: true
 ---
 

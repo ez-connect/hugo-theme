@@ -3,6 +3,10 @@ languageCode = "en-us"
 title = "Ez-Connect"
 # summaryLength = 70
 
+[taxonomies]
+  tag = "tags"
+  author = "authors"
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.extensions]

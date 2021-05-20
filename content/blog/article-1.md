@@ -4,9 +4,7 @@ description: Mauris elementum felis purus, a gravida leo sodales ac. Phasellus e
 tags: [tag1, tag2]
 date: 2021-04-27T22:54:36+07:00
 lastmod: 2021-04-27T22:54:36+07:00
-authors:
-  - name: Vinh
-    userID: 1
+authors: [Vinh]
 ---
 
 ## Heading 2

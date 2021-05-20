@@ -8,9 +8,7 @@ menu:
 weight: 999
 date: {{ .Date }}
 lastmod: {{ .Date }}
-authors:
-  - name: Vinh
-    userID: 1
+authors: [Vinh]
 draft: true
 ---
 

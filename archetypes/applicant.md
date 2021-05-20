@@ -8,9 +8,7 @@ lastmod: {{ .Date }}
 job:
   title: Frontend Engineer
   url: /job/sample-1
-authors:
-  - name: Vinh
-    userID: 1
+authors: [Vinh]
 draft: true
 ---
 

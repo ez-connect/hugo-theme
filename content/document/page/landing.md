@@ -7,9 +7,7 @@ menu:
 weight: 999
 date: 2021-04-24T13:22:36+07:00
 lastmod: 2021-04-24T13:22:36+07:00
-authors:
-  - name: Vinh
-    userID: 1
+authors: [Vinh]
 ---
 
 ## Heading 2

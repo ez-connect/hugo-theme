@@ -3,22 +3,18 @@
   {{ if isset .Params "authors"  }}
     {{ if gt (len $authors) 0 }}
       {{ $createdBy := index $authors 0 }}
-      {{ $name := $createdBy.name }}
-      {{ $id := $createdBy.userID }}
-      {{ $path := printf "/%s/%s-%s" "contributor" $name $id }}
+      {{ $path := printf "/%s/%s" "authors" $createdBy }}
 
-      Created by <a href="{{ urlize $path }}">{{ $name }}</a>
+      Created by <a href="{{ urlize $path }}">{{ index (split $createdBy "-") 0 }}</a>
       <span class="timeago" datetime="{{ .Date }}">{{ .Date }}</span>
     {{ end }}
 
     {{ if gt (len $authors) 1 }}
       {{ $updatedBy := index $authors 1 }}
-      {{ $name := $updatedBy.name }}
-      {{ $id := $updatedBy.userID }}
-      {{ $path := printf "/%s/%s-%s" "contributor" $name $id }}
+      {{ $path := printf "/%s/%s" "authors" $updatedBy }}
 
       <br />
-      Last updated by <a href="{{ urlize $path }}">{{ $name }}</a>
+      Last updated by <a href="{{ urlize $path }}">{{ index (split $updatedBy "-") 0 }}</a>
       <span class="timeago" datetime="{{ .Lastmod }}">{{ .Lastmod }}</span>
     {{ end }}
   {{ end }}
