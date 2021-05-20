@@ -3,12 +3,9 @@ title: Senior Full-Stack Engineer
 description:
 date: 2021-05-09T18:55:06+07:00
 lastmod: 2021-05-09T18:55:06+07:00
-createdby:
-  firstname: Vinh
-  lastname:
-updatedby:
-  firstname: Vinh
-  lastname:
+authors:
+  - name: Vinh
+    userID: 1
 ---
 
 ## Salary Expectation

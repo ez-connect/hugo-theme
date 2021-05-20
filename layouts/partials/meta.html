@@ -1,35 +1,25 @@
 <div class="meta">
-  {{ $createdby := .Params.createdby }}
-  {{ $updatedby := .Params.updatedby }}
-  {{ $hasChange := .Lastmod.After .Date }}
+  {{ $authors := .Params.authors }}
+  {{ if isset .Params "authors"  }}
+    {{ if gt (len $authors) 0 }}
+      {{ $createdBy := index $authors 0 }}
+      {{ $name := $createdBy.name }}
+      {{ $id := $createdBy.userID }}
+      {{ $path := printf "/%s/%s-%s" "contributor" $name $id }}
 
-  {{ if $createdby }}
-    {{ $firstname := $createdby.firstname }}
-    {{ $lastname := default "" $createdby.lastname }}
-    {{ $path := printf "/%s/%s-%s" "author" $firstname $lastname }}
+      Created by <a href="{{ urlize $path }}">{{ $name }}</a>
+      <span class="timeago" datetime="{{ .Date }}">{{ .Date }}</span>
+    {{ end }}
 
-    Created by <a href="{{ urlize $path }}">{{ $createdby.firstname }}</a>
-    <span class="timeago" datetime="{{ .Date }}">{{ .Date }}</span>
-  {{ end }}
+    {{ if gt (len $authors) 1 }}
+      {{ $updatedBy := index $authors 1 }}
+      {{ $name := $updatedBy.name }}
+      {{ $id := $updatedBy.userID }}
+      {{ $path := printf "/%s/%s-%s" "contributor" $name $id }}
 
-  {{ if .Params.tags }}
-    in
-    {{ range .Params.tags }}
-      <a href="/tags/{{ . }}">#{{ . }}</a>
+      <br />
+      Last updated by <a href="{{ urlize $path }}">{{ $name }}</a>
+      <span class="timeago" datetime="{{ .Lastmod }}">{{ .Lastmod }}</span>
     {{ end }}
   {{ end }}
-
-  {{ if and $hasChange $updatedby }}
-    {{ $firstname := $updatedby.firstname }}
-    {{ $lastname := default "" $updatedby.lastname }}
-    {{ $path := printf "/%s/%s-%s" "author" $firstname $lastname }}
-
-    <br />
-    Last updated by <a href="{{ urlize $path }}">{{ $createdby.firstname }}</a>
-    <span class="timeago" datetime="{{ .Lastmod }}">{{ .Lastmod }}</span>
-  {{ end }}
-
-  <span class="text-color-muted">
-    &nbsp; • {{ .ReadingTime -}}&nbsp;min read
-  </span>
 </div>

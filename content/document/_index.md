@@ -5,13 +5,12 @@ menu:
   document:
     parent:
 date: 2021-04-23T18:48:52+07:00
-lastmod: 2021-04-23T18:48:52+07:00
-createdby:
-  firstname: Vinh
-  lastname:
-updatedby:
-  firstname: Vinh
-  lastname:
+lastmod: 2021-04-29T18:48:52+07:00
+authors:
+  - name: Vinh
+    userID: 1
+  - name: Trong
+    userID: 2
 ---
 
 ```bash
