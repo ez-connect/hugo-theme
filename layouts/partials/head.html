@@ -20,5 +20,5 @@
   <link rel="stylesheet" href="{{ $css.Permalink }}">
 {{ else }}
   {{ $css = $css | minify | fingerprint }}
-  <link rel="stylesheet" href="{{ $css.Permalink }}" integrity="{{ $css.Data.Integrity }}" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{ $css.Permalink }}" crossorigin="anonymous">
 {{ end }}
