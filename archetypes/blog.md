@@ -4,12 +4,7 @@ description: Mauris elementum felis purus, a gravida leo sodales ac. Phasellus e
 tags: []
 date: {{ .Date }}
 lastmod: {{ .Date }}
-createdby:
-  firstname: Vinh
-  lastname:
-updatedby:
-  firstname: Vinh
-  lastname:
+authors: [Vinh]
 draft: true
 ---
 

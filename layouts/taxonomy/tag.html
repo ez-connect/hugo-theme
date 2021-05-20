@@ -1,0 +1,16 @@
+{{ define "main" }}
+  <div class="tag-list">
+    <h3 class="spanborder"><span>#{{ .Title }}</span></h3>
+
+    {{ range .Pages }}
+      <article>
+        <a href="{{ .RelPermalink }}">
+          <h2>{{ .Name }}</h2>
+        </a>
+        <p>{{ .Summary }}...</p>
+
+        {{ partial "meta" . }}
+      </article>
+    {{ end }}
+  </div>
+{{ end}}

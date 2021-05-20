@@ -1,0 +1,28 @@
+{{ define "main" }}
+  <div class="applicant__list">
+    <table>
+      <thead>
+        <tr>
+          <th>Job</th>
+          <th>Status</th>
+          <th>Name</th>
+          <th>Phone</th>
+          <th>Email</th>
+          <th>Updated At</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{ range where .Site.RegularPages "Section" "applicant" }}
+        <tr>
+          <td><a href="{{ .Params.job.url }}">{{ .Params.job.title }}</a></td>
+          <td>{{ .Params.status }}</td>
+          <td><a href="{{ .RelPermalink }}">{{ .Title }}</a></td>
+          <td>{{ .Params.tel }}</td>
+          <td>{{ .Params.email }}</td>
+          <td><span class="timeago" datetime="{{ .Date }}">{{ .Lastmod }}</span></td>
+        </tr>
+        {{ end }}
+      </tbody>
+    </table>
+  </div>
+{{ end }}

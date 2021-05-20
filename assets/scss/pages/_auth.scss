@@ -1,0 +1,11 @@
+.sign-in {
+  max-width: $width-sm;
+  padding: 128px 64px;
+  margin: auto;
+
+  a {
+    display: flex;
+    justify-content: center;
+    font-size: $font-size-sm;
+  }
+}

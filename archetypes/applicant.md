@@ -8,12 +8,7 @@ lastmod: {{ .Date }}
 job:
   title: Frontend Engineer
   url: /job/sample-1
-createdby:
-  firstname: Vinh
-  lastname:
-updatedby:
-  firstname: Vinh
-  lastname:
+authors: [Vinh]
 draft: true
 ---
 

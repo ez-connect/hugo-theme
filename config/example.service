@@ -1,0 +1,11 @@
+[Unit]
+Description=Ez-Connect Page
+After=network.target
+
+[Service]
+User=dev
+WorkingDirectory=/opt/server/home
+ExecStart=/opt/server/bin/http-server -root /opt/server/home -private /document http://localhost:1337/document/auth /applicant http://localhost:1337/applicant/auth -redirect /auth
+
+[Install]
+WantedBy=multi-user.target
