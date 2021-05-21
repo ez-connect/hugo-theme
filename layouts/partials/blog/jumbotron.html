@@ -1,6 +1,6 @@
-{{ with .Site.Data.blog.jumbotron}}
+{{ with .Site.Data.blog.jumbotron }}
   <div class="jumbotron">
     <h2>{{ .title }}</h2>
-    <img src="{{ .background }}" />
+    <img alt="{{ .background.name }}" src="{{ .background.url }}" />
   </div>
 {{ end }}
