@@ -1,0 +1,19 @@
+.search-result {
+  z-index: 1;
+  position: fixed;
+  top: $nav-height - 12px;
+  right: 4px;
+  padding: 16px;
+  background: $background-color;
+  max-width: $width-sm / 2;
+
+  border: solid 1px;
+  border-radius: 4px;
+  // box-shadow: 0 1px rgb(0 0 0 / 20%), 0 2px 3px rgb(0 0 0 / 10%);
+
+  a {
+    display: block;
+    color: $text-color;
+    margin-bottom: 8px;
+  }
+}
