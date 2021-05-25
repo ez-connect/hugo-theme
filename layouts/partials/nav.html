@@ -1,11 +1,5 @@
 {{ $nav := .Site.Data.nav }}
-{{ $links := slice "" }}
-
-{{ if .IsHome }}
-  {{ $links = index $nav "home" }}
-{{ else }}
-  {{ $links = index $nav .Section }}
-{{ end }}
+{{ $links := $nav.links }}
 
 <nav class="nav">
   <div class="logo">
@@ -15,13 +9,13 @@
   </div>
 
   <ul class="link">
-    {{ range $links.items }}
+    {{ range $links }}
       <li><a href="{{ .url }}">{{ .name }}</a></li>
     {{ end }}
   </ul>
 
-  <a class="search" href="/search">
+  <div id="search" class="search" href="#">
     {{ partial "svg/search.svg" . }}
-    <span>Search...</span>
-  </a>
+    <input id="searchInput" data-section="{{ .Section }}" type="text" placeholder="Search..">
+  </div>
 </nav>

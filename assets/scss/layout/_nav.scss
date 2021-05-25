@@ -51,16 +51,22 @@
   }
 
   .search {
-    display: flex;
-    align-items: center;
     padding-left: 16px;
-    padding-right: 16px;
-    border-width: 1px;
+    // border-width: 1px;
 
-    span {
-      display: none;
-      color: $text-color-muted;
+    svg {
+      position: absolute;
+      padding: 8px 16px;
+      fill: $text-color-muted;
       padding-left: 8px;
+    }
+
+    input {
+      min-width: 64px;
+      height: 32px;
+      padding-left: 32px;
+      margin-bottom: 0;
+      color: $text-color-muted;
     }
   }
 

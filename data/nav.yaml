@@ -2,61 +2,16 @@ logo:
   name: hugo_logo_wide.svg
   url: /uploads/hugo_logo_wide_7b43d25cae.svg
 title: Ez-Connect
-home:
-  enable: true
-  items:
-    - name: Document
-      url: /document
-    - name: Blog
-      url: /blog
-    - name: Job
-      url: /job
-    - name: Resume
-      url: /resume
-    - name: GitHub
-      url: https://github.com/ez-connect/hugo-theme
-document:
-  enable: false
-  items:
-    - name: Blog
-      url: /blog
-    - name: Job
-      url: /job
-    - name: Resume
-      url: /resume
-    - name: GitHub
-      url: https://github.com/ez-connect/hugo-theme
-blog:
-  enable: true
-  items:
-    - name: Document
-      url: /document
-    - name: Job
-      url: /job
-    - name: Resume
-      url: /resume
-resume:
-  enable: true
-  items:
-    - name: Document
-      url: /document
-    - name: Blog
-      url: /blog
-job:
-  enable: true
-  items:
-    - name: Document
-      url: /document
-    - name: Blog
-      url: /blog
-applicant:
-  enable: true
-  items:
-    - name: Document
-      url: /document
-    - name: Blog
-      url: /blog
-    - name: Job
-      url: /job
-    - name: Resume
-      url: /resume
+links:
+  - name: Document
+    url: /document
+  - name: Blog
+    url: /blog
+  - name: Resume
+    url: /resume
+  - name: Job
+    url: /job
+  - name: Applicant
+    url: /applicant
+  - name: GitHub
+    url: https://github.com/ez-connect/hugo-theme

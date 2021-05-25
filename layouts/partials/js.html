@@ -17,9 +17,14 @@
   <script src="//unpkg.com/turndown/dist/turndown.js"></script>
 {{ end }}
 
+{{ if .Site.Params.options.flexSearch }}
+  <script src="https://cdn.jsdelivr.net/gh/nextapps-de/flexsearch@master/dist/flexsearch.min.js"></script>
+{{ end }}
+
 <!-- Assets -->
 {{ $util := resources.Get "js/util.js" }}
 {{ $auth := resources.Get "js/auth.js" }}
+{{ $search := resources.Get "js/search.js" }}
 {{ $nav := resources.Get "js/nav.js" }}
 {{ $toc := resources.Get "js/toc.js" }}
 {{ $content := resources.Get "js/content.js" }}
@@ -27,7 +32,7 @@
 {{ $document := resources.Get "js/document.js" }}
 {{ $applicant := resources.Get "js/applicant.js" }}
 
-{{ $js := slice $util $auth $nav $toc $content $modal $document $applicant }}
+{{ $js := slice $util $auth $search $nav $toc $content $modal $document $applicant }}
 {{ $js = $js | resources.Concat "main.js" }}
 
 {{ if eq (hugo.Environment) "development" -}}
