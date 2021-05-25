@@ -14,8 +14,8 @@
     {{ end }}
   </ul>
 
-  <div class="search" href="#">
+  <div id="search" class="search" href="#">
     {{ partial "svg/search.svg" . }}
-    <input type="text" id="searchInput" placeholder="Search..">
+    <input id="searchInput" data-section="{{ .Section }}" type="text" placeholder="Search..">
   </div>
 </nav>

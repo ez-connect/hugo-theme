@@ -1,10 +1,12 @@
 const navMenuButtonID = '#navMenuButton';
 const navMenuContentID = '#navMenu';
+
+const searchInputParentID = '#search';
 const searchInputID = '#searchInput';
 const searchContentID = '#searchResult';
 
 class _Nav {
-  _init() {
+  async _init() {
     // Menu
     const menu = document.querySelector(navMenuContentID);
     if (!menu) {
@@ -14,17 +16,31 @@ class _Nav {
     const menuButton = document.querySelector(navMenuButtonID);
     menuButton.addEventListener('click', this._onClickLeftButton);
 
-    // Search
-    const searchInput = document.querySelector(searchInputID);
-    this._searchContent = document.querySelector(searchContentID);
-    if (searchInput && this._searchContent) {
+    // Data file
+    const section = searchInput.getAttribute('data-section');
+    const dataFile = `/${section}/index.json`;
+    let hasSearchData = section;
+    if (hasSearchData) {
+      const res = await fetch(dataFile, { method: 'HEAD' });
+      hasSearchData = res.status == 200;
+    }
+
+    if (hasSearchData) {
+      // Search
+      const searchInput = document.querySelector(searchInputID);
       searchInput.addEventListener('focus', this._onFocusSearchInput);
       searchInput.addEventListener('blur', this._onBlurSearchInput);
       searchInput.addEventListener('input', this._onInputSearchInput);
-    }
 
-    // Results to HTML
-    this._items = [];
+      // Results to HTML
+      textSearch.setDataFile(dataFile);
+      this._items = [];
+      this._searchContent = document.querySelector(searchContentID);
+
+      util.show(searchInputParentID);
+    } else {
+      util.hide(searchInputParentID);
+    }
   }
 
   _onClickLeftButton = () => {
@@ -38,7 +54,7 @@ class _Nav {
   };
 
   _onBlurSearchInput() {
-    setTimeout(() => util.hide(searchContentID), 1000);
+    setTimeout(() => util.hide(searchContentID), 200);
   }
 
   _onInputSearchInput = async (e) => {

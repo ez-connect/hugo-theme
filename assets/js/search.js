@@ -1,4 +1,12 @@
 class TextSearch {
+  constructor() {
+    this._dataFile = 'index.json';
+  }
+
+  setDataFile(value) {
+    this._dataFile = value;
+  }
+
   async search (value) {
     if (!this._index) {
       await this._load();
@@ -9,7 +17,7 @@ class TextSearch {
   };
 
   async _load() {
-    const res = await fetch('/document/index.json');
+    const res = await fetch(this._dataFile);
     const data = await res.json();
     this._index = new FlexSearch('memory', {
       doc: {
