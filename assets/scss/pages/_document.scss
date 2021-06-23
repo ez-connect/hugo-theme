@@ -74,7 +74,7 @@
 .document__content {
   box-sizing: border-box;
   margin-left: $document-menu-width;
-  width: 100% - $document-menu-width;
+  width: calc(100% - #{$document-menu-width});
 }
 
 // Mobiles: hide menu and toc
@@ -93,6 +93,6 @@
 // Tablets: hide toc
 @media (min-width: $width-sm) and (max-width: $width-md) {
   .document__content {
-    width: 100% - $document-menu-width;
+    width: calc(100% - #{$document-menu-width});
   }
 }
