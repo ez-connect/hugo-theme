@@ -5,7 +5,7 @@
       {{ partial "meta" . }}
 
       {{ if .Description }}
-      <p class="description">{{ .Description }}</p>
+      <p class="description">{{ markdownify .Description }}</p>
       {{ end }}
       <hr />
     </section>
