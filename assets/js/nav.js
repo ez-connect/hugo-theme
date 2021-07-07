@@ -68,16 +68,18 @@ class _Nav {
     util.show(searchContentID);
 
     this._items = [];
-    for (const e of results) {
-      const { title, url, content } = e;
-      const html = `
+    for (const item of results) {
+      for (const e of item.result) {
+        const { title, url, content } = e.doc;
+        const html = `
           <a href="${url}">
             ${title}
             <br />
             <span class="meta meta__text">${content.substr(0, 100)}...</span>
           </a>
       `;
-      this._items.push(html);
+        this._items.push(html);
+      }
     }
 
     this._searchContent.innerHTML = this._items.join('');

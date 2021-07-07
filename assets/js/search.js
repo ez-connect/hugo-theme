@@ -7,31 +7,37 @@ class TextSearch {
     this._dataFile = value;
   }
 
-  async search (value) {
+  async search(value) {
     if (!this._index) {
       await this._load();
     }
 
-    const results = await this._index.search(value);
+    const results = await this._index.search(value, {
+      enrich: true,
+      bool: 'or',
+    });
+    console.log(results);
     return results;
-  };
+  }
 
   async _load() {
+    this._index = new FlexSearch.Document({
+      tokenize: 'forward',
+      optimize: true,
+      resolution: 9,
+      cache: 100,
+      // worker: true,
+      document: {
+        id: 'url',
+        // tag: 'tags',
+        index: ['title', 'url', 'description', 'content'],
+        store: true,
+      },
+    });
+
     const res = await fetch(this._dataFile);
     const data = await res.json();
-    this._index = new FlexSearch('memory', {
-      doc: {
-        id: 'url',
-        field: ['title', 'description', 'url', 'tags', 'content'],
-      },
-      encode: 'balance',
-      tokenize: 'forward',
-      threshold: 0,
-      async: false,
-      worker: false,
-      cache: true,
-    });
-    this._index.add(data);
+    data.map((e) => this._index.add(e));
   }
 }
 
