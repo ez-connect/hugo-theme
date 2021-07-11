@@ -32,7 +32,7 @@
             {{ end }}
 
             {{ $collapseTarget := printf "%s-collapse" .KeyName }}
-            <a class="title" href="#" data-toggle="collapse" data-target="#{{ $collapseTarget }}">
+            <a class="title" href="#" data-toggle="collapse" data-target="#{{ $collapseTarget }}" aria-expanded="{{ $isExpaned }}">
               {{ .Name -}}
             </a>
 

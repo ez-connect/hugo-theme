@@ -8,6 +8,8 @@ class _Document {
 
   _onClickMenuItem(e) {
     e.preventDefault();
+    const isExpanded = e.target.getAttribute('aria-expanded') === 'true';
+    e.target.setAttribute('aria-expanded', !isExpanded);
     util.toogle(e.target.getAttribute('data-target'));
   }
 }

@@ -34,7 +34,7 @@ class _Auth {
         error.textContent = '';
         // localStorage.setItem('auth', JSON.stringify(data.data));
         util.setCookie('token', data.data.token, 24 * 3600);
-        history.back();
+        window.location.href = '/';
         return;
       }
 
