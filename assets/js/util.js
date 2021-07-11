@@ -6,10 +6,10 @@ class Util {
     }, timeout);
   }
 
-  setCookie(name, value, exp = 0) {
-    exp = new Date().getDate() +exp;
-    value = escape(value)
-    document.cookie = `${name}=${escape(value)};expires=${exp};path=/;`
+  setCookie(name, value, exp = 24 * 3600) {
+    exp = new Date().getDate() + exp;
+    value = escape(value);
+    document.cookie = `${name}=${escape(value)};expires=${exp};path=/;`;
   }
 
   getNavHeight() {

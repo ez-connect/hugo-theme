@@ -1,7 +1,10 @@
-<div class="toc">
-  <p>
-    <span>{{ partial "svg/stream.svg" . }}</span>
-    &nbsp; CONTENTS
-  </p>
-  {{ .TableOfContents }}
-</div>
+<nav class="toc">
+  <div class="toc__content">
+    <p>
+      <span>{{ partial "svg/stream.svg" . }}</span>
+      &nbsp; CONTENTS
+    </p>
+
+    {{ .TableOfContents }}
+  </div>
+</nav>

@@ -9,9 +9,8 @@
   font-weight: 500;
   font-size: $font-size-sm;
   line-height: 32px;
-  background: $surface-color;
-  border-right: solid $divider-color;
-  border-width: 1px;
+  // background: $surface-color;
+  border-right: solid 1px $divider-color;
 
   .category {
     font-weight: 700;
