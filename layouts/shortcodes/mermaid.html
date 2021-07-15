@@ -1,4 +1,4 @@
 <p class="mermaid{{ with .Get "class" }} {{ . }}{{ end }}">
-  {{ $data := replaceRE "(^\\s+```)" "" .Inner }}
+  {{ $data := replaceRE "(^\\s+```.*)" "" .Inner }}
   {{- replaceRE "(```\\s+$)" "" $data -}}
 </p>
