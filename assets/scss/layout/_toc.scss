@@ -3,4 +3,8 @@
   width: $toc-width;
   margin-left: 16px;
   padding-left: 8px;
+
+  @media (max-width: $width-md) {
+    display: none;
+  }
 }

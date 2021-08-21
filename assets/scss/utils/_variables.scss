@@ -1,22 +1,27 @@
 // Color system
 
-$background-color: #FFFFFF;
-$surface-color: #F5F7F9;
+$background-color: #ffffff;
+$surface-color: #f5f7f9;
 
-$primary-color: #1D3055;
-$primary-color-dark: #252A31;
-$primary-color-light: #6896EE;
+$primary-color: #1d3055;
+$primary-color-dark: #252a31;
+$primary-color-light: #6896ee;
 
-$divider-color: #E6ECF1;
+$divider-color: #e6ecf1;
 
 $success-color: green;
 $error-color: red;
 
-$text-color: #242A31;
-$text-color-light: #74818D;
-$text-color-muted: #9DAAB6;
+// Typography
+$text-color: #242a31;
+$text-color-light: #74818d;
+$text-color-muted: #9daab6;
 
-$font-size: 1rem;
+$font-size: 16px;
+$font-weight: 400;
+$line-height: 1.5;
+$font-family: 'Roboto', sans-serif;
+
 $font-size-sm: 0.875rem;
 $font-size-sx: 0.75rem;
 $font-size-lg: 1.25rem;
@@ -26,6 +31,7 @@ $width-sm: 576px; // small devices (phones)
 $width-md: 768px; // medium devices, portrail tables & large phones
 $width-lg: 992px; // large, laptops/ desktops
 $width-xl: 1200px; // extra large, laptops / desktops
+$width-xxl: 1400px; // extra large
 
 // Nav + TOC
 $nav-height: 64px;
@@ -33,7 +39,7 @@ $toc-width: 128px;
 $footer-height: 64px;
 
 // Document
-$document-menu-width: 16em;
+$document-menu-width: 196px;
 
 // Blog
 $blog-jumbotron-height: 192px;

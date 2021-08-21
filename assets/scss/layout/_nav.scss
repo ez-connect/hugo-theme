@@ -10,6 +10,10 @@
   padding: 16px;
   background: $primary-color-dark;
 
+  @media print {
+    display: none;
+  }
+
   a {
     color: $background-color;
   }
@@ -29,6 +33,11 @@
     border-right: solid $text-color-muted;
     border-width: 1px;
 
+    @include media-breakpoint-up(md) {
+      border: none;
+      flex: 1;
+    }
+
     img {
       height: 20px;
       padding-right: 8px;
@@ -38,12 +47,22 @@
   .menu-btn {
     display: none;
     padding-right: 16px;
+
+    @include media-breakpoint-up(sm) {
+      display: block;
+    }
   }
 
   .link {
     display: flex;
     flex: 1;
     padding-left: 32px;
+
+    @include media-breakpoint-up(sm) {
+      position: absolute;
+      bottom: -8px;
+      font-size: $font-size-sx;
+    }
 
     li {
       padding-right: 16px;
@@ -62,47 +81,21 @@
     }
 
     input {
-      min-width: 64px;
       height: 32px;
       padding-left: 32px;
       margin-bottom: 0;
       color: $text-color-muted;
+    }
+
+    span {
+      @include media-breakpoint-up(sm) {
+        display: none;
+      }
     }
   }
 
   .link-menu {
     position: absolute;
     right: 32px;
-  }
-}
-
-@media (max-width: $width-sm) {
-  .nav {
-    .logo {
-      border: none;
-      flex: 1;
-    }
-
-    .menu-btn {
-      display: block;
-    }
-
-    .link {
-      position: absolute;
-      bottom: -8px;
-      font-size: $font-size-sx;
-    }
-
-    .search {
-      .span {
-        display: none;
-      }
-    }
-  }
-}
-
-@media print {
-  .nav {
-    display: none;
   }
 }

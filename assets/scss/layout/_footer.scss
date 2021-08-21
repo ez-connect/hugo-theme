@@ -12,14 +12,12 @@
   color: $background-color;
   font-size: $font-size-sx;
 
+  @media print {
+    display: none;
+  }
+
   a {
     font-weight: bold;
     color: $background-color;
-  }
-}
-
-@media print {
-  .footer {
-    display: none;
   }
 }
