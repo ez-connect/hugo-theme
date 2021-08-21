@@ -2,7 +2,13 @@
   box-sizing: border-box;
   display: flex;
   width: calc(100% - #{$toc-width});
-  // padding: 32px;
+  padding: 0 32px;
+
+  // Phones: hide toc
+  @include media-breakpoint-up(md) {
+    width: 100%;
+    padding: 0 16px;
+  }
 
   h1 {
     margin-block-start: 0;
@@ -12,23 +18,5 @@
   article {
     box-sizing: border-box;
     width: 100%;
-  }
-}
-
-// Phones: hide toc
-@media (max-width: $width-sm) {
-  .content {
-    width: 100%;
-  }
-
-  .toc {
-    display: none;
-  }
-}
-
-// Tablets: hide toc
-@media (min-width: $width-sm) and (max-width: $width-md) {
-  .content {
-    width: calc(100% - #{$toc-width});
   }
 }

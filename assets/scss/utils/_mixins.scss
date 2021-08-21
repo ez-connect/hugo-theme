@@ -1,3 +1,45 @@
+@import 'variables';
+
+// Responsive
+// No media query necessary for xs breakpoint as it's effectively `@media (min-width: 0) { ... }`
+@mixin media-breakpoint-up($breakpoint) {
+  @if $breakpoint == sm {
+    @media (min-width: $width-sm) { @content };
+  }
+  @if $breakpoint == md {
+    @media (min-width: $width-md) { @content };
+  }
+  @if $breakpoint == lg {
+    @media (min-width: $width-lg) { @content };
+  }
+  @if $breakpoint == xl {
+    @media (min-width: $width-xl) { @content };
+  }
+  @if $breakpoint == xxl {
+    @media (min-width: $width-xxl) { @content };
+  }
+}
+
+// No media query necessary for xs breakpoint as it's effectively `@media (max-width: 0) { ... }`
+@mixin media-breakpoint-up($breakpoint) {
+  @if $breakpoint == sm {
+    @media (max-width: $width-sm) { @content };
+  }
+  @if $breakpoint == md {
+    @media (max-width: $width-md) { @content };
+  }
+  @if $breakpoint == lg {
+    @media (max-width: $width-lg) { @content };
+  }
+  @if $breakpoint == xl {
+    @media (max-width: $width-xl) { @content };
+  }
+  @if $breakpoint == xxl {
+    @media (max-width: $width-xxl) { @content };
+  }
+}
+
+
 @mixin sentence-case() {
   text-transform: lowercase;
 
