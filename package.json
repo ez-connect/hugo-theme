@@ -8,7 +8,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "lint": "stylelint **/*.scss"
+    "lint": "stylelint **/*.scss",
+    "syntax": "hugo gen chromastyles --style=dracula > assets/scss/components/_syntax.scss"
   },
   "devDependencies": {
     "postcss": "^8.2.10",

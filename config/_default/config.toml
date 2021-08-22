@@ -29,9 +29,9 @@ title = "Ez-Connect"
     guessSyntax = true
     # hl_Lines = ""
     # lineNoStart = 1
-    # lineNos = true
-    lineNumbersInTable = false
-    # # noClasses = false
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = false
     # # Chroma Style Gallery: https://xyproto.github.io/splash/docs/
-    # style = "dracula"
-    # tabWidth = 4
+    style = "dracula"
+    tabWidth = 2

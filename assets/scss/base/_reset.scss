@@ -42,22 +42,6 @@ a {
   // }
 }
 
-// Code block
-p > code {
-  padding: 4px;
-  background: $surface-color;
-  font-family: 'Source Code Pro', Consolas, Menlo, Monaco, Courier, monospace;
-  font-size: 0.85rem;
-}
-
-pre {
-  background: $primary-color !important;
-  padding: 16px;
-  font-family: 'Source Code Pro', Consolas, Menlo, Monaco, Courier, monospace !important;
-  font-size: 16px;
-  overflow: auto;
-}
-
 blockquote {
   margin-inline-start: 0;
   margin-inline-end: 0;
