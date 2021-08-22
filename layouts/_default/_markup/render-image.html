@@ -1,0 +1,10 @@
+<img
+  src="{{ .Destination | safeURL }}"
+  {{ with .Text }}
+    alt="{{ . }}"
+  {{ end }}
+  {{ with .Title}}
+    title="{{ . }}"
+  {{ end }}
+  loading="lazy"
+/>
