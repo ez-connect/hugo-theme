@@ -6,6 +6,11 @@ class Util {
     }, timeout);
   }
 
+  getQueryParam(key) {
+    const url = new URLSearchParams(window.location.search);
+    return url.get(key);
+  }
+
   setCookie(name, value, exp = 24 * 3600) {
     exp = new Date().getDate() + exp;
     value = escape(value);
