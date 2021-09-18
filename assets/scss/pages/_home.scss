@@ -1,0 +1,13 @@
+.home {
+  svg {
+    width: $font-size-sm;
+    height: $font-size-sm;
+    fill: $background-color;
+  }
+
+  .hero {
+    margin-top: -32px;
+    background: $primary-color;
+    color: $background-color;
+  }
+}
