@@ -1,40 +1,41 @@
-const modalID = `#modal`;
-const modalContentID = `#modalContent`;
+function _modal(id) {
+  const content = document.querySelector('#modalContent');
 
-class Modal {
-  init() {
-    const element = this._getModal();
-    element.addEventListener('click', this.hide);
-  }
+  _getModal = () => {
+    return document.querySelector(id);
+  };
 
-  show(body) {
-    util.show(modalID);
+  _onClickModal = () => {
+    _hide();
+  };
+
+  show = (body) => {
+    content.classList.remove('close');
+    content.classList.add('open');
+    util.show(id);
     if (body) {
-      this._getModalContent().appendChild(body.cloneNode(true));
+      content.appendChild(body.cloneNode(true));
     }
-  }
+  };
 
   hide = () => {
-    util.hide(modalID);
+    content.classList.remove('open');
+    content.classList.add('close');
+    content.addEventListener('animationend', _onAnimationEnd);
+  };
 
-    const content = this._getModalContent();
+  _onAnimationEnd = () => {
+    content.removeEventListener('animationend', _onAnimationEnd);
+    util.hide(id);
+    content.remo;
     content.childNodes.forEach(function (e) {
       content.removeChild(e);
     });
   };
 
-  _getModal() {
-    return document.querySelector(modalID);
-  }
+  document.querySelector(id).addEventListener('click', hide);
 
-  _getModalContent() {
-    return document.querySelector(modalContentID);
-  }
-
-  _onClickModal = () => {
-    this._hide();
-  };
+  return { show, hide };
 }
 
-const modal = new Modal();
-modal.init();
+const modal = _modal('#modal');

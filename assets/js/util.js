@@ -1,68 +1,68 @@
-class Util {
-  debounce(func, timer, timeout = 500) {
+function _util() {
+  debounce = (func, timer, timeout = 500) => {
     clearTimeout(timer);
     timer = setTimeout(function () {
       func.apply();
     }, timeout);
-  }
+  };
 
-  getQueryParam(key) {
+  getQueryParam = (key) => {
     const url = new URLSearchParams(window.location.search);
     return url.get(key);
-  }
+  };
 
-  setCookie(name, value, exp = 24 * 3600) {
+  setCookie = (name, value, exp = 24 * 3600) => {
     exp = new Date().getDate() + exp;
     value = escape(value);
     document.cookie = `${name}=${escape(value)};expires=${exp};path=/;`;
-  }
+  };
 
-  getNavHeight() {
+  getNavHeight = () => {
     return document.querySelector('.nav').getBoundingClientRect().height;
-  }
+  };
 
-  show(selector) {
+  show = (selector) => {
     const element = document.querySelector(selector);
     element.classList.remove('hide');
     element.classList.add('show');
-  }
+  };
 
-  hide(selector) {
+  hide = (selector) => {
     const element = document.querySelector(selector);
     element.classList.remove('show');
     element.classList.add('hide');
-  }
+  };
 
-  toogle(selector) {
+  toogle = (selector) => {
     const element = document.querySelector(selector);
     if (element.classList.contains('show')) {
       util.hide(selector);
     } else {
       util.show(selector);
     }
-  }
+  };
 
-  scrollToElement(selector) {
+  scrollToElement = (selector) => {
     const element = document.querySelector(selector);
     const pos = element.getBoundingClientRect();
 
     window.scrollTo({
-      top: pos.top + window.pageYOffset - this.getNavHeight(),
+      top: pos.top + window.pageYOffset - getNavHeight(),
       left: 0,
       behavior: 'smooth',
     });
-  }
+  };
 
-  _initTimeago() {
+  _initTimeago = () => {
     if (!window.timeago) return;
 
     const elements = document.querySelectorAll('.timeago');
     if (elements.length > 0) {
       timeago.render(elements);
     }
-  }
+  };
 
-  _initMermaid() {
+  _initMermaid = () => {
     if (!window.mermaid) return;
 
     mermaid.initialize({
@@ -77,9 +77,9 @@ class Util {
         showSequenceNumbers: true,
       },
     });
-  }
+  };
 
-  _initPlantUML() {
+  _initPlantUML = () => {
     const elements = document.querySelectorAll('.plantuml');
     if (elements.length == 0) return;
 
@@ -90,9 +90,9 @@ class Util {
       const src = '//www.plantuml.com/plantuml/svg/' + encoded;
       v.innerHTML = '<img src="' + src + '" />';
     });
-  }
+  };
 
-  _initQuill() {
+  _initQuill = () => {
     if (!window.Quill) return;
     if (!window.QuillMarkdown) return;
 
@@ -133,11 +133,23 @@ class Util {
       <h2>Your CV</h2>
       <p><a href="#">https://example.com/path/to/your/cv.pdf</a></p>
     `;
-  }
+  };
+
+  _initTimeago();
+  _initMermaid();
+  _initPlantUML();
+  _initQuill();
+
+  return {
+    debounce,
+    getQueryParam,
+    setCookie,
+    getNavHeight,
+    show,
+    hide,
+    toogle,
+    scrollToElement,
+  };
 }
 
-const util = new Util();
-util._initTimeago();
-util._initMermaid();
-util._initPlantUML();
-util._initQuill();
+const util = _util();

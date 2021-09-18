@@ -1,23 +1,16 @@
-class _Toc {
-  constructor() {
-    this._timer = null;
-  }
-
-  _init() {
-    this._handleOnScroll();
-    this._handleOnClick();
-  }
+function toc() {
+  let _timer = null;
 
   // Highlight the current TOC item
-  _handleOnScroll() {
+  _handleOnScroll = () => {
     const that = this;
     document.addEventListener('scroll', function () {
-      util.debounce(that._highlight, this._timer);
+      util.debounce(that._highlight, _timer);
     });
-  }
+  };
 
   // Click on a TOC item
-  _handleOnClick() {
+  _handleOnClick = () => {
     const items = document.querySelectorAll('#TableOfContents a');
     items.forEach(function (item) {
       item.addEventListener('click', function (e) {
@@ -25,10 +18,10 @@ class _Toc {
         util.scrollToElement(e.target.getAttribute('href'));
       });
     });
-  }
+  };
 
   // Highlight current item
-  _highlight() {
+  _highlight = () => {
     const items = document.querySelectorAll('#TableOfContents a');
 
     let activeItem = items.length > 0 ? items[0] : null;
@@ -47,8 +40,10 @@ class _Toc {
     if (activeItem) {
       activeItem.classList.add('active');
     }
-  }
+  };
+
+  _handleOnScroll();
+  _handleOnClick();
 }
 
-const _toc = new _Toc();
-_toc._init();
+toc();

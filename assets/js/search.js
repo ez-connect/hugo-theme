@@ -1,27 +1,9 @@
-class TextSearch {
-  constructor() {
-    this._dataFile = 'index.json';
-  }
+function fsearch() {
+  let _dataFile = 'index.json';
+  let _index = null;
 
-  setDataFile(value) {
-    this._dataFile = value;
-  }
-
-  async search(value) {
-    if (!this._index) {
-      await this._load();
-    }
-
-    const results = await this._index.search(value, {
-      enrich: true,
-      bool: 'or',
-    });
-    console.log(results);
-    return results;
-  }
-
-  async _load() {
-    this._index = new FlexSearch.Document({
+  _load = async () => {
+    _index = new FlexSearch.Document({
       tokenize: 'forward',
       optimize: true,
       resolution: 9,
@@ -35,10 +17,27 @@ class TextSearch {
       },
     });
 
-    const res = await fetch(this._dataFile);
+    const res = await fetch(_dataFile);
     const data = await res.json();
-    data.map((e) => this._index.add(e));
-  }
-}
+    data.map((e) => _index.add(e));
+  };
 
-const textSearch = new TextSearch();
+  setDataFile = (value) => {
+    _dataFile = value;
+  };
+
+  search = async (value) => {
+    if (!_index) {
+      await _load();
+    }
+
+    const results = await _index.search(value, {
+      enrich: true,
+      bool: 'or',
+    });
+    console.log(results);
+    return results;
+  };
+
+  return { setDataFile, search };
+}
