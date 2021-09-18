@@ -1,10 +1,4 @@
-class _Applicant {
-  _init() {
-    const button = document.querySelector('#applyJobButton');
-    if (!button) return;
-    button.addEventListener('click', this._onSubmit);
-  }
-
+function application() {
   _onSubmit = async (e) => {
     e.preventDefault();
     util.show('.loading');
@@ -70,7 +64,10 @@ class _Applicant {
       util.hide('.loading');
     }
   };
+
+  const button = document.querySelector('#applyJobButton');
+  if (!button) return;
+  button.addEventListener('click', _onSubmit);
 }
 
-const _applicant = new _Applicant();
-_applicant._init();
+application();

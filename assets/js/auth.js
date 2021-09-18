@@ -1,10 +1,4 @@
-class _Auth {
-  _init() {
-    const button = document.querySelector('#signInButton');
-    if (!button) return;
-    button.addEventListener('click', this._onSubmit);
-  }
-
+function auth() {
   _onSubmit = async (e) => {
     e.preventDefault();
     util.show('.loading');
@@ -46,7 +40,10 @@ class _Auth {
       util.hide('.loading');
     }
   };
+
+  const button = document.querySelector('#signInButton');
+  if (!button) return;
+  button.addEventListener('click', _onSubmit);
 }
 
-const _auth = new _Auth();
-_auth._init();
+auth();

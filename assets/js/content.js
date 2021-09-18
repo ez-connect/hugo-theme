@@ -1,42 +1,35 @@
-class _Content {
-  constructor() {
-    this._anchor = null;
-  }
+function content() {
+  let _anchor = null;
 
-  _init() {
-    this._hightlightHeadings();
-    this._zoomImages();
-  }
-
-  _hightlightHeadings() {
+  _hightlightHeadings = () => {
     // Apply for content component only
     const content = document.querySelector('.content');
     if (!content) return;
 
-    this._anchor = document.createElement('a');
-    this._anchor.innerText = ' #';
-    this._anchor.addEventListener('click', this._onClickHeading);
+    _anchor = document.createElement('a');
+    _anchor.innerText = ' #';
+    _anchor.addEventListener('click', _onClickHeading);
 
     const headings = content.querySelectorAll('h2, h3, h4');
     headings.forEach((v) => {
-      v.addEventListener('mouseenter', this._onMouseEnterHeading);
+      v.addEventListener('mouseenter', _onMouseEnterHeading);
     });
 
     headings.forEach((v) => {
-      v.addEventListener('mouseleave', this._onMouseLeaveHeading);
+      v.addEventListener('mouseleave', _onMouseLeaveHeading);
     });
-  }
+  };
 
-  _zoomImages() {
+  _zoomImages = () => {
     const images = document.querySelectorAll('.content img');
     images.forEach((image) => {
-      image.addEventListener('click', this._onClickImage);
+      image.addEventListener('click', _onClickImage);
     });
-  }
+  };
 
   _onClickHeading = (e) => {
     e.preventDefault();
-    const hash = `#${this._anchor.parentNode.id}`;
+    const hash = `#${_anchor.parentNode.id}`;
     // window.location.hash = hash; // can't prevent the default scroll behavior
     history.pushState(null, null, hash);
     util.scrollToElement(hash);
@@ -44,18 +37,20 @@ class _Content {
 
   _onMouseEnterHeading = (e) => {
     const target = e.target;
-    this._anchor.setAttribute('href', `#${target.id}`);
-    target.appendChild(this._anchor);
+    _anchor.setAttribute('href', `#${target.id}`);
+    target.appendChild(_anchor);
   };
 
   _onMouseLeaveHeading = (e) => {
-    e.target.removeChild(this._anchor);
+    e.target.removeChild(_anchor);
   };
 
   _onClickImage = (e) => {
     modal.show(e.target);
   };
+
+  _hightlightHeadings();
+  _zoomImages();
 }
 
-const _content = new _Content();
-_content._init();
+content();
