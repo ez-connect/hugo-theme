@@ -8,7 +8,7 @@ syntax:
 	@hugo gen chromastyles --style=dracula > assets/scss/components/_syntax.scss
 
 run:
-	@hugo serve
+	@hugo serve --bind 0.0.0.0
 
 build:
 	@rm -rf public/
