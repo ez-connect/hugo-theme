@@ -1,3 +1,6 @@
+init:
+	@hugo mod get -u
+
 lint:
 	@node_modules/.bin/stylelint assets/**/*.scss && eslint --ext assets/**/*.js
 

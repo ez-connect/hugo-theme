@@ -1,24 +1,24 @@
 <!-- Libs -->
 {{ $lib := slice }}
 {{ if .Site.Params.options.timeago }}
-  {{ $lib = $lib | append (resources.Get "js/lib/timeago.js") }}
+  {{ $lib = $lib | append (resources.Get "js/vendor/timeago.js") }}
 {{ end }}
 
 {{ if .Site.Params.options.mermaid }}
-  {{ $lib = $lib | append (resources.Get "js/lib/mermaid.js") }}
+  {{ $lib = $lib | append (resources.Get "js/vendor/mermaid.js") }}
 {{ end }}
 
 {{ if .Site.Params.options.plantUML }}
-  {{ $lib = $lib | append (resources.Get "js/lib/plantuml.js") }}
+  {{ $lib = $lib | append (resources.Get "js/vendor/plantuml.js") }}
 {{ end }}
 
 {{ if .Site.Params.options.quilljs }}
-  {{ $lib = $lib | append (resources.Get "js/lib/quill.js") (resources.Get "js/lib/quilljs-markdown.js") (resources.Get "js/lib/turndown.js") }}
+  {{ $lib = $lib | append (resources.Get "js/vendor/quill.js") (resources.Get "js/vendor/quilljs-markdown.js") (resources.Get "js/vendor/turndown.js") }}
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/quilljs-markdown@latest/dist/quilljs-markdown-common-style.css" />
 {{ end }}
 
 {{ if .Site.Params.options.flexSearch }}
-  {{ $lib = $lib | append (resources.Get "js/lib/flexsearch.js") }}
+  {{ $lib = $lib | append (resources.Get "js/vendor/flexsearch.js") }}
 {{ end }}
 
 {{ $lib = $lib | resources.Concat "lib.js" }}
