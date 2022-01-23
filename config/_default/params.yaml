@@ -1,0 +1,8 @@
+options:
+  darkMode: false
+  breadCrumb: true
+  timeago: true
+  mermaid: true
+  plantUML: true
+  quilljs: true
+  flexSearch: true
