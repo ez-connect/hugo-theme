@@ -1,9 +1,19 @@
-{{ $nav := .Site.Data.nav }}
+{{ $defaultData := index $.Site.Data $.Site.Params.defaultLanguage }}
+{{ $data := index $.Site.Data $.Site.Language.Lang }}
+
+{{ $nav := $data.nav }}
+{{ if not $nav }}
+  {{ $nav = $defaultData.nav }}
+{{ end }}
+
 {{ $links := $nav.links }}
+
 
 <nav class="nav">
   <div class="logo">
-    <a id="navMenuButton" class="menu-btn" href="#">{{ partial "svg/bars.svg" . }}</a>
+    <a id="navMenuButton" class="menu-btn" href="#"
+      >{{ partial "svg/bars.svg" . }}</a
+    >
     <img alt="{{ $nav.logo.name }}" src="{{ $nav.logo.url }}" />
     <a href="/"><strong>{{ $nav.title }}</strong></a>
   </div>
@@ -16,6 +26,11 @@
 
   <div id="search" class="search" href="#">
     {{ partial "svg/search.svg" . }}
-    <input id="searchInput" data-section="{{ .Section }}" type="text" placeholder="Search..">
+    <input
+      id="searchInput"
+      data-section="{{ .Section }}"
+      type="text"
+      placeholder="Search.."
+    />
   </div>
 </nav>

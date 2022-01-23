@@ -1,0 +1,17 @@
+logo:
+  name: hugo_logo_wide.svg
+  url: /uploads/hugo_logo_wide_7b43d25cae.svg
+title: Ez-Connect
+links:
+  - name: Document
+    url: /vi/document
+  - name: Blog
+    url: /blog
+  - name: Resume
+    url: /resume
+  - name: Job
+    url: /job
+  - name: Applicant
+    url: /applicant
+  - name: GitHub
+    url: https://github.com/ez-connect/hugo-theme

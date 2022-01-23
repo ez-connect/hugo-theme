@@ -1,6 +1,15 @@
 module.exports = {
   bracketSpacing: true,
-  jsxBracketSameLine: false,
   singleQuote: true,
   trailingComma: 'all',
+  // Hugo
+  goTemplateBracketSpacing: true,
+  overrides: [
+    {
+      files: ['*.html'],
+      options: {
+        parser: 'go-template',
+      },
+    },
+  ],
 };

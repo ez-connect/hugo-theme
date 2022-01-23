@@ -1,4 +1,9 @@
+# Fallback to the default language
+# The same value as `defaultContentLanguage`
+defaultLanguage: en
+
 options:
+  # Enable or disable features to reduce the code size
   darkMode: false
   breadCrumb: true
   timeago: true
