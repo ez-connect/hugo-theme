@@ -12,6 +12,8 @@
   background: $background-color;
   border-right: solid 1px $divider-color;
 
+  overflow-y: auto;
+
   ul {
     margin-block-start: 0;
     margin-block-end: 0;

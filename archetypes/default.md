@@ -1,6 +1,6 @@
 ---
-title: {{ replace .Name "-" " " | title }}
-date: {{ .Date }}
+title: { { replace .Name "-" " " | title } }
+createdBy: Vinh
+createdAt: { { .Date } }
 draft: true
 ---
-

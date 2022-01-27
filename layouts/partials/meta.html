@@ -1,28 +1,20 @@
 <div class="meta">
-  {{ $authors := .Params.authors }}
-  {{ if isset .Params "authors" }}
-    {{ if gt (len $authors) 0 }}
-      {{ $createdBy := index $authors 0 }}
-      {{ $path := printf "/%s/%s" "authors" $createdBy }}
+  {{ with .Params.createdBy }}
+    {{ $path := printf "/%s/%s" "contributors" . }}
+    Created by
+    <a href="{{ urlize $path }}">{{ index (split . "-") 0 }}</a>
+    <span class="timeago" datetime="{{ $.Params.createdAt }}"
+      >{{ $.Params.createdAt }}</span
+    >
+  {{ end }}
 
-      Created by
-      <a href="{{ urlize $path }}">{{ index (split $createdBy "-") 0 }}</a>
-      <span class="timeago" datetime="{{ .Params.createdAt }}"
-        >{{ .Params.createdAt }}</span
-      >
-    {{ end }}
-
-    {{ if gt (len $authors) 1 }}
-      {{ $updatedBy := index $authors 1 }}
-      {{ $path := printf "/%s/%s" "authors" $updatedBy }}
-
-
-      <br />
-      Last updated by
-      <a href="{{ urlize $path }}">{{ index (split $updatedBy "-") 0 }}</a>
-      <span class="timeago" datetime="{{ .Params.updatedAt }}"
-        >{{ .Params.updatedAt }}</span
-      >
-    {{ end }}
+  {{ with .Params.updatedBy }}
+    <br />
+    {{ $path := printf "/%s/%s" "contributors" . }}
+    Last updated by
+    <a href="{{ urlize $path }}">{{ index (split . "-") 0 }}</a>
+    <span class="timeago" datetime="{{ $.Params.updatedAt }}"
+      >{{ $.Params.updatedAt }}</span
+    >
   {{ end }}
 </div>

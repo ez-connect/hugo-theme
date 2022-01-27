@@ -18,7 +18,6 @@ languages:
 
 taxonomies:
   tag: tags
-  author: authors
 
 outputs:
   home: [HTML, ROBOTS, Sitemap]
