@@ -73,10 +73,10 @@ educations:
 awards:
   - name: Award Lorem Ipsum
     body: Microsoft lorem ipsum
-    date: 2019
+    createdAt: 2019
   - name: Award Donec Sodales
     body: Oracle Aenean
-    date: 2017
+    createdAt: 2017
 
 # Languages
 languages:

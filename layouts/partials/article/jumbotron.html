@@ -1,0 +1,15 @@
+{{ $defaultData := index $.Site.Data $.Site.Params.defaultLanguage }}
+{{ $data := index $.Site.Data $.Site.Language.Lang }}
+
+{{ $blog := $data.blog }}
+
+{{ if not $blog }}
+  {{ $blog = $defaultData.blog }}
+{{ end }}
+
+{{ with $blog.jumbotron }}
+  <div class="jumbotron">
+    <h2>{{ .title }}</h2>
+    <img alt="{{ .background.name }}" src="{{ .background.url }}" />
+  </div>
+{{ end }}

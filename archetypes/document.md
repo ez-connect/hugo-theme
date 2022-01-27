@@ -1,14 +1,12 @@
 ---
-title: {{ replace .Name "-" " " | title }}
+title: { { replace .Name "-" " " | title } }
 description: Mauris elementum felis purus, a gravida leo sodales ac. Phasellus et tempus purus. Cras nibh tellus, convallis at mollis a, egestas ac sem. Donec erat mauris, tempor id accumsan id, facilisis non sapien.
-menu:
-  document:
-    parent:
-    identifier: {{ (time .Date).Unix }}
-weight: 999
-date: {{ .Date }}
-lastmod: {{ .Date }}
-authors: [Vinh]
+parent:
+weight:
+createdBy: Vinh
+createdAt: { { .Date } }
+updatedBy: Vinh
+updatedAt: { { .Date } }
 draft: true
 ---
 

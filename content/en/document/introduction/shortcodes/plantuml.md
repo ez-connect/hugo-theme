@@ -1,13 +1,9 @@
 ---
 title: Plantuml
 description: Mauris elementum felis purus, a gravida leo sodales ac. Phasellus et tempus purus. Cras nibh tellus, convallis at mollis a, egestas ac sem. Donec erat mauris, tempor id accumsan id, facilisis non sapien.
-menu:
-  document:
-    parent: shortcodes
-weight: 999
-date: 2021-04-23T21:31:39+07:00
-lastmod: 2021-04-23T21:31:39+07:00
-authors: [Vinh]
+parent: introduction/shortcodes
+createdBy: Vinh
+createdAt: 2021-04-23T21:31:39+07:00
 ---
 
 [**PlantUML**](https://plantuml.com/) is used to draw UML diagrams, using a simple and human readable text description.
@@ -19,18 +15,18 @@ authors: [Vinh]
 Alice -> Bob: Authentication Request
 
 alt successful case
-  Bob -> Alice: Authentication Accepted
+Bob -> Alice: Authentication Accepted
 else some kind of failure
-  Bob -> Alice: Authentication Failure
-  group My own label
-  Alice -> Log : Log attack start
-      loop 1000 times
-          Alice -> Bob: DNS Attack
-      end
-  Alice -> Log : Log attack end
-  end
+Bob -> Alice: Authentication Failure
+group My own label
+Alice -> Log : Log attack start
+loop 1000 times
+Alice -> Bob: DNS Attack
+end
+Alice -> Log : Log attack end
+end
 else Another type of failure
-   Bob -> Alice: Please repeat
+Bob -> Alice: Please repeat
 end
 @enduml
 {{</plantuml>}}
@@ -42,14 +38,14 @@ end
 left to right direction
 actor Guest as g
 package Professional {
-  actor Chef as c
-  actor "Food Critic" as fc
+actor Chef as c
+actor "Food Critic" as fc
 }
 package Restaurant {
-  usecase "Eat Food" as UC1
-  usecase "Pay for Food" as UC2
-  usecase "Drink" as UC3
-  usecase "Review" as UC4
+usecase "Eat Food" as UC1
+usecase "Pay for Food" as UC2
+usecase "Drink" as UC3
+usecase "Review" as UC4
 }
 fc --> UC4
 g --> UC1
@@ -76,22 +72,22 @@ AbstractCollection <|- AbstractList
 AbstractList <|-- ArrayList
 
 class ArrayList {
-  Object[] elementData
-  size()
+Object[] elementData
+size()
 }
 
 enum TimeUnit {
-  DAYS
-  HOURS
-  MINUTES
+DAYS
+HOURS
+MINUTES
 }
 
 annotation SuppressWarnings
 
 annotation Annotation {
-  annotation with members
-  String foo()
-  String bar()
+annotation with members
+String foo()
+String bar()
 }
 
 @enduml
@@ -100,6 +96,7 @@ annotation Annotation {
 ## Object Diagram
 
 {{<plantuml>}}
+
 ```
 @startuml
 object London
@@ -116,6 +113,7 @@ map CapitalCity {
 NewYork --> CapitalCity::USA
 @enduml
 ```
+
 {{</plantuml>}}
 
 ## Activity Diagram
@@ -126,14 +124,14 @@ NewYork --> CapitalCity::USA
 start
 
 if (multiprocessor?) then (yes)
-  fork
-    :Treatment 1;
-  fork again
-    :Treatment 2;
-  end fork
+fork
+:Treatment 1;
+fork again
+:Treatment 2;
+end fork
 else (monoproc)
-  :Treatment 1;
-  :Treatment 2;
+:Treatment 1;
+:Treatment 2;
 endif
 
 @enduml
@@ -152,8 +150,8 @@ DA - [First Component]
 note left of HTTP : Web Service only
 
 note right of [First Component]
-  A note can also
-  be on several lines
+A note can also
+be on several lines
 end note
 
 @enduml
@@ -231,28 +229,28 @@ DNS is Idle
 @startjson
 
 {
-  "firstName": "John",
-  "lastName": "Smith",
-  "isAlive": true,
-  "age": 27,
-  "address": {
-    "streetAddress": "21 2nd Street",
-    "city": "New York",
-    "state": "NY",
-    "postalCode": "10021-3100"
-  },
-  "phoneNumbers": [
-    {
-      "type": "home",
-      "number": "212 555-1234"
-    },
-    {
-      "type": "office",
-      "number": "646 555-4567"
-    }
-  ],
-  "children": [],
-  "spouse": null
+"firstName": "John",
+"lastName": "Smith",
+"isAlive": true,
+"age": 27,
+"address": {
+"streetAddress": "21 2nd Street",
+"city": "New York",
+"state": "NY",
+"postalCode": "10021-3100"
+},
+"phoneNumbers": [
+{
+"type": "home",
+"number": "212 555-1234"
+},
+{
+"type": "office",
+"number": "646 555-4567"
+}
+],
+"children": [],
+"spouse": null
 }
 
 @endjson
@@ -272,18 +270,18 @@ pi: 3.14159
 xmas: true
 french-hens: 3
 calling-birds:
-  \- huey
-  \- dewey
-  \- louie
-  \- fred
+\- huey
+\- dewey
+\- louie
+\- fred
 xmas-fifth-day:
-  calling-birds: four
-  french-hens: 3
-  golden-rings: 5
-  partridges:
-    count: 1
-    location: "a pear tree"
-  turtle-doves: two
+calling-birds: four
+french-hens: 3
+golden-rings: 5
+partridges:
+count: 1
+location: "a pear tree"
+turtle-doves: two
 
 @endyaml
 {{</plantuml>}}
@@ -291,6 +289,7 @@ xmas-fifth-day:
 ## Network diagram
 
 {{<plantuml>}}
+
 ```
 @startuml
 nwdiag {
@@ -312,6 +311,7 @@ nwdiag {
 }
 @enduml
 ```
+
 {{</plantuml>}}
 
 ## Salt (Wireframe)
@@ -319,8 +319,8 @@ nwdiag {
 {{<plantuml>}}
 @startsalt
 {+
-{* File | Edit | Source | Refactor
- Refactor | New | Open File | - | Close | Close All }
+{\* File | Edit | Source | Refactor
+Refactor | New | Open File | - | Close | Close All }
 {/ General | Fullscreen | Behavior | Saving }
 {
 { Open image in: | ^Smart Mode^ }
@@ -351,6 +351,7 @@ nwdiag {
 ## MindMap
 
 {{<plantuml>}}
+
 ```
 @startmindmap
 * Debian
@@ -367,11 +368,13 @@ nwdiag {
 *** <s>Raspyfi</s> => Volumio
 @endmindmap
 ```
+
 {{</plantuml>}}
 
 ## Work Breakdown Structure (WBS)
 
 {{<plantuml>}}
+
 ```
 @startwbs
 * Business Process Modelling WBS
@@ -387,11 +390,13 @@ nwdiag {
 ** Complete innovate phase
 @endwbs`
 ```
+
 {{</plantuml>}}
 
 ## Entity Relationship Diagram
 
 {{<plantuml>}}
+
 ```
 @startuml
 
@@ -427,4 +432,5 @@ e01 |o..o{ e03
 
 @enduml
 ```
+
 {{</plantuml>}}

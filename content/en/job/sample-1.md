@@ -1,9 +1,8 @@
 ---
 title: Frontend Engineer
 description:
-date: 2021-05-06T21:09:05+07:00
-lastmod: 2021-05-06T21:09:05+07:00
-authors: [Vinh]
+createdBy: Vinh
+createdAt: 2021-05-06T21:09:05+07:00
 ---
 
 ## Salary Expectation

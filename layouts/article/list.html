@@ -1,0 +1,9 @@
+{{ define "main" }}
+  {{ partial "article/jumbotron" . }}
+
+
+  <div class="blog__list">
+    {{ partial "article/item-list" . }}
+    {{ partial "article/menu" . }}
+  </div>
+{{ end }}
