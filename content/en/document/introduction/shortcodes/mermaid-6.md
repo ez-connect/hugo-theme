@@ -1,9 +1,14 @@
 ---
-title: Mermaid
-description: Mauris elementum felis purus, a gravida leo sodales ac. Phasellus et tempus purus. Cras nibh tellus, convallis at mollis a, egestas ac sem. Donec erat mauris, tempor id accumsan id, facilisis non sapien.
+components: []
+createdAt: "2022-01-27T15:46:00.129Z"
+createdBy: thanh.vinh@hotmail.com
+id: 6
+locale: en
 parent: introduction/shortcodes
-createdBy: Vinh
-createdAt: 2021-04-23T21:31:39+07:00
+publishedAt: "2022-01-27T15:46:01.328Z"
+title: Mermaid
+updatedAt: "2022-01-27T15:47:14.891Z"
+updatedBy: thanh.vinh@hotmail.com
 ---
 
 **[Mermaid](https://mermaid-js.github.io/mermaid/#/) lets you create diagrams using text and code**. This simplifies the maintenance of complex diagrams. It is a Javascript based diagramming and charting tool that renders Markdown-inspired text definitions to create and modify diagrams dynamically.

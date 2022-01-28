@@ -1,70 +1,10 @@
 components:
-- __component: home.banner
-  background:
-    alternativeText: banner.png
-    caption: banner.png
-    createdAt: "2022-01-23T15:13:57.798Z"
-    ext: .png
-    formats:
-      large:
-        ext: .png
-        hash: large_banner_88460af8c2
-        height: 430
-        mime: image/png
-        name: large_banner.png
-        path: null
-        size: 536.25
-        url: /uploads/large_banner_88460af8c2.png
-        width: 1000
-      medium:
-        ext: .png
-        hash: medium_banner_88460af8c2
-        height: 322
-        mime: image/png
-        name: medium_banner.png
-        path: null
-        size: 322.61
-        url: /uploads/medium_banner_88460af8c2.png
-        width: 750
-      small:
-        ext: .png
-        hash: small_banner_88460af8c2
-        height: 215
-        mime: image/png
-        name: small_banner.png
-        path: null
-        size: 157.84
-        url: /uploads/small_banner_88460af8c2.png
-        width: 500
-      thumbnail:
-        ext: .png
-        hash: thumbnail_banner_88460af8c2
-        height: 105
-        mime: image/png
-        name: thumbnail_banner.png
-        path: null
-        size: 45.19
-        url: /uploads/thumbnail_banner_88460af8c2.png
-        width: 245
-    hash: banner_88460af8c2
-    height: 619
-    id: 1
-    mime: image/png
-    name: banner.png
-    previewUrl: null
-    provider: local
-    provider_metadata: null
-    size: 656.65
-    updatedAt: "2022-01-23T15:13:57.798Z"
-    url: /uploads/banner_88460af8c2.png
-    width: 1440
+- __component: site.banner
+  background: null
   html: null
   id: 1
-  subtitle: Freemind is a software development company dedicated to providing businesses
-    worldwide with customized technology solutions. Our team will deliver the extended
-    features you desire. At the same time, you will have 100% ownership so you can
-    edit or develop it later.
-  title: INTEGRATION - WEB - POS - MOBILE
+  subtitle: null
+  title: null
 - __component: home.service-list
   id: 1
   services:
@@ -228,16 +168,15 @@ components:
   subtitle: null
   title: CONTACT
   url: https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.964201857117!2d108.21958701536109!3d16.067347343755017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31421833985fc91f%3A0x5e39dd82204d67a!2zMTkgUGjhuqFtIEjhu5NuZyBUaMOhaSwgSOG6o2kgQ2jDonUgMSwgSOG6o2kgQ2jDonUsIMSQw6AgTuG6tW5nIDU1MDAwMCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1642039122924!5m2!1svi!2s
-- __component: home.banner
-  background: null
-  html: "11"
-  id: 17
+- __component: site.contact-form
+  id: 2
   subtitle: null
   title: null
+  webhook: null
 createdAt: "2022-01-23T15:14:18.796Z"
 createdBy: thanh.vinh@hotmail.com
+draft: true
 id: 1
 locale: en
-publishedAt: null
-updatedAt: "2022-01-25T05:15:14.757Z"
+updatedAt: "2022-01-28T01:19:47.382Z"
 updatedBy: thanh.vinh@hotmail.com

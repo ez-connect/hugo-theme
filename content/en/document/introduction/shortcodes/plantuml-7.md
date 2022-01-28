@@ -1,9 +1,14 @@
 ---
-title: Plantuml
-description: Mauris elementum felis purus, a gravida leo sodales ac. Phasellus et tempus purus. Cras nibh tellus, convallis at mollis a, egestas ac sem. Donec erat mauris, tempor id accumsan id, facilisis non sapien.
+components: []
+createdAt: "2022-01-27T16:04:43.247Z"
+createdBy: thanh.vinh@hotmail.com
+id: 7
+locale: en
 parent: introduction/shortcodes
-createdBy: Vinh
-createdAt: 2021-04-23T21:31:39+07:00
+publishedAt: "2022-01-27T16:05:08.999Z"
+title: PlantUML
+updatedAt: "2022-01-27T16:05:09.002Z"
+updatedBy: thanh.vinh@hotmail.com
 ---
 
 [**PlantUML**](https://plantuml.com/) is used to draw UML diagrams, using a simple and human readable text description.

@@ -1,15 +1,15 @@
 ---
+components: []
+createdAt: '2022-01-27T15:31:12.352Z'
+createdBy: thanh.vinh@hotmail.com
+description: Markdown is intended to be as easy-to-read and easy-to-write as is feasible.
+id: 3
+locale: en
+parent: /introduction
+publishedAt: '2022-01-27T15:35:52.331Z'
 title: Markdown syntax
-description: Mauris elementum felis purus, a gravida leo sodales ac. Phasellus et tempus purus. Cras nibh tellus, convallis at mollis a, egestas ac sem. Donec erat mauris, tempor id accumsan id, facilisis non sapien.
-parent: introduction
-createdBy: Vinh
-createdAt: 2021-04-20T22:37:54+07:00
-updatedBy: Trong
-updatedAt: 2021-05-10T18:37:54+07:00
----
-
-111
-
+updatedAt: '2022-01-27T15:47:35.338Z'
+updatedBy: trong@hotmail.com
 ---
 
 ## Basic Syntax
