@@ -2,12 +2,13 @@
 {{ $currentPage := .currentPage }}
 {{ $pages := union .context.Sections .context.Pages }}
 
-{{ range $pages.ByTitle }}
+{{ range $pages.ByWeight }}
   {{ $hasChildren := or (.Sections) (.Pages) }}
 
 
   <!-- The data bs target doesn't like forward slashes, replace all with hyphens instead -->
   {{ if $hasChildren }}
+    <!-- Collapse -->
     {{ $collapseTarget := printf "%s-collapse" (urlize .Name) }}
 
     {{ $isExpaned := false }}
@@ -15,6 +16,8 @@
       {{ $isExpaned = true }}
     {{ end }}
 
+
+    <!-- Show or hide the collapse -->
     {{ $collapseTargetClass := "hide" }}
     {{ if $isExpaned }}
       {{ $collapseTargetClass = "show" }}
@@ -37,8 +40,15 @@
       </ul>
     </li>
   {{ else }}
+    <!-- Highlight the current page -->
+    {{ $itemClass := "" }}
+    {{ if eq $currentPage.Permalink .Permalink }}
+      {{ $itemClass = "active" }}
+    {{ end }}
+
+
     <li>
-      <a href="{{ .Permalink }}">{{- .Name -}}</a>
+      <a class="{{ $itemClass }}" href="{{ .Permalink }}">{{- .Name -}}</a>
     </li>
   {{ end }}
 {{ end }}

@@ -1,0 +1,37 @@
+{{ define "main" }}
+  <!-- All pages was created by the user -->
+  {{ $createdByPages := where $.Site.RegularPages "Params.createdBy" .Params.user.username }}
+  {{ $updatedByPages := where $.Site.RegularPages "Params.updatedBy" .Params.user.username }}
+  {{ $pages := union $createdByPages $updatedByPages }}
+  <!-- Sort by `updatedAt` -->
+  <!-- {{ $pages = ($pages.ByParam "updatedAt") }} -->
+  <!-- {{ $pages = (sort $pages "Params.updatedAt").Reverse }} -->
+
+  <div class="contributor">
+    <h1>{{ .Title }}</h1>
+
+    <!-- Avatar -->
+    {{ with .Params.avatar }}
+      <img class="avatar" src="{{ .url }}" alt="{{ $.Params.user.username }}" />
+    {{ end }}
+
+    {{ .Content }}
+
+
+    <!-- Ingore empty page -->
+    <h2>Latest</h2>
+    <section class="contributor__list">
+      {{ range (where $pages "Content" "!=" "") }}
+        <article class="item">
+          <a href="{{ .RelPermalink }}">
+            <h3>{{ .Name }}</h3>
+            <img src="{{ .Params.thumbnail.url }}" alt="" />
+          </a>
+          <p>{{ .Summary }}...</p>
+
+          <!-- {{ partial "shared/meta" . }} -->
+        </article>
+      {{ end }}
+    </section>
+  </div>
+{{ end }}

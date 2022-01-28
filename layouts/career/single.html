@@ -2,11 +2,11 @@
   <article class="job">
     <div class="job__content">
       {{ if .Site.Params.options.breadcrumb }}
-        {{ partial "breadcrumb" . }}
+        {{ partial "shared/breadcrumb" . }}
         <hr />
       {{ end }}
 
-      {{ partial "content" . }}
+      {{ partial "shared/content" . }}
     </div>
   </article>
 
@@ -16,15 +16,21 @@
     <div class="applicant">
       <form id="applyJobForm">
         <h2>Apply this job</h2>
-        <input type="text" name="title" placeholder="Your name">
-        <input type="tel" name="phone" placeholder="Your phone number">
-        <input type="email" name="email" placeholder="Your email">
+        <input type="text" name="title" placeholder="Your name" />
+        <input type="tel" name="phone" placeholder="Your phone number" />
+        <input type="email" name="email" placeholder="Your email" />
         <label for="editor">Cover letter & CV</label>
         <div name="content" id="editor" data-placeholder="Cover letter"></div>
-        {{/*  <input type="file" name="cv" accept="application/pdf, application/zip">  */}}
+        {{/* <input type="file" name="cv" accept="application/pdf, application/zip"> */}}
 
         {{ $api := .Site.Data.site.applyJob }}
-        <input id="applyJobButton" data-method="{{ $api.method }}" data-url="{{ $api.url }}" type="button" value="Apply">
+        <input
+          id="applyJobButton"
+          data-method="{{ $api.method }}"
+          data-url="{{ $api.url }}"
+          type="button"
+          value="Apply"
+        />
         <small><div class="error"></div></small>
       </form>
     </div>
@@ -35,7 +41,11 @@
       {{ $contact := .Site.Data.site.contact }}
       <div class="item">
         {{ partial "svg/map-marker-alt.svg" }}
-        <a target="_blank" href="https://www.google.com/maps/search/{{ $contact.address }}">{{ $contact.address }}</a>
+        <a
+          target="_blank"
+          href="https://www.google.com/maps/search/{{ $contact.address }}"
+          >{{ $contact.address }}</a
+        >
       </div>
       <div class="item">
         {{ partial "svg/phone-square.svg" }}
@@ -46,6 +56,5 @@
         <a href="mailto:{{ $contact.email }}">{{ $contact.email }}</a>
       </div>
     </div>
-
   </div>
 {{ end }}

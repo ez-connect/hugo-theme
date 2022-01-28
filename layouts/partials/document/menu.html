@@ -11,9 +11,7 @@
 
         <!-- Using partialCached here offers significant build time speedup, as this recursive menu would otherwise be rebuilt for
         every page! -->
-        <ul>
-          {{ partial "document/menu_recursive" (dict "context" . "currentPage" $currentPage) }}
-        </ul>
+        {{ partial "document/menu_recursive" (dict "context" . "currentPage" $currentPage) }}
       </div>
     {{ end }}
   {{ end }}

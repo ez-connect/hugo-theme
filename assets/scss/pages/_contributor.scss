@@ -1,0 +1,14 @@
+.contributor {
+  padding: 32px;
+
+  .avatar {
+    width: 256px;
+    float: right;
+  }
+
+  &__list {
+    .item {
+      border-bottom: 1px solid $text-color-muted;
+    }
+  }
+}
