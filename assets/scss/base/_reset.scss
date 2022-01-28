@@ -30,16 +30,29 @@ body {
 
 hr {
   border: 0.5px solid $divider-color;
-  margin-block: 16px;
+  margin-block: $space;
 }
 
 a {
-  color: $primary-color-light;
+  color: $primary-color;
   text-decoration: none;
 
-  // &:hover {
-  //   text-decoration: none;
-  // }
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+svg {
+  max-width: 100%;
+}
+
+label {
+  font-size: $font-size-sx;
+  color: $text-color-light;
 }
 
 blockquote {
@@ -68,7 +81,7 @@ table {
   caption-side: bottom;
   border-collapse: collapse;
   width: 100%;
-  margin-bottom: 16px;
+  margin-bottom: $space;
   font-size: $font-size-sm;
 }
 
