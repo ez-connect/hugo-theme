@@ -1,0 +1,10 @@
+.author {
+  display: flex;
+  align-items: center;
+  margin-top: $space;
+
+  img {
+    width: 48px;
+    margin-right: $space / 2;
+  }
+}

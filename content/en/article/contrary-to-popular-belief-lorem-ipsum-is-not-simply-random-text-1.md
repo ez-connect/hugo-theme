@@ -75,7 +75,7 @@ thumbnail:
   width: 1920
 title: Contrary to popular belief, Lorem Ipsum is not simply random text
 updatedAt: "2022-01-28T09:44:19.967Z"
-updatedBy: thanh.vinh@hotmail.com
+updatedBy: editor@freemind.vn
 ---
 
 # Est cum herba tum spatio iactantem summos

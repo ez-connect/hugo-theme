@@ -1,0 +1,13 @@
+// A list of pages
+.page-list {
+  article {
+    padding-bottom: $space / 2;
+    border-bottom: 1px solid $divider-color;
+
+    .metadata {
+      display: flex;
+      align-items: center;
+      align-content: center;
+    }
+  }
+}

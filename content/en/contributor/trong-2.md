@@ -1,47 +1,49 @@
 ---
 avatar:
-  alternativeText: avataars.png
-  caption: avataars.png
-  createdAt: "2022-01-28T03:09:33.667Z"
+  alternativeText: avataaars.png
+  caption: avataaars.png
+  createdAt: "2022-02-02T05:52:22.926Z"
   ext: .png
   formats:
     small:
       ext: .png
-      hash: small_avataars_922958566f
+      hash: small_avataaars_a7ad6e4fb1
       height: 500
       mime: image/png
-      name: small_avataars.png
+      name: small_avataaars.png
       path: null
-      size: 77.58
-      url: /uploads/small_avataars_922958566f.png
+      size: 68.19
+      url: /uploads/small_avataaars_a7ad6e4fb1.png
       width: 471
     thumbnail:
       ext: .png
-      hash: thumbnail_avataars_922958566f
+      hash: thumbnail_avataaars_a7ad6e4fb1
       height: 156
       mime: image/png
-      name: thumbnail_avataars.png
+      name: thumbnail_avataaars.png
       path: null
-      size: 19.66
-      url: /uploads/thumbnail_avataars_922958566f.png
+      size: 17.52
+      url: /uploads/thumbnail_avataaars_a7ad6e4fb1.png
       width: 147
-  hash: avataars_922958566f
+  hash: avataaars_a7ad6e4fb1
   height: 560
-  id: 38
+  id: 40
   mime: image/png
-  name: avataars.png
+  name: avataaars.png
   previewUrl: null
   provider: local
   provider_metadata: null
-  size: 33.58
-  updatedAt: "2022-01-28T03:09:33.667Z"
-  url: /uploads/avataars_922958566f.png
+  size: 28.75
+  updatedAt: "2022-02-02T05:52:22.926Z"
+  url: /uploads/avataaars_a7ad6e4fb1.png
   width: 528
 createdAt: "2022-01-28T02:54:51.215Z"
+createdBy: thanh.vinh@hotmail.com
 id: 2
 publishedAt: "2022-01-28T03:38:10.811Z"
 title: Trong
-updatedAt: "2022-01-28T03:38:10.813Z"
+updatedAt: "2022-02-02T05:53:03.923Z"
+updatedBy: thanh.vinh@hotmail.com
 user:
   createdAt: "2022-01-25T03:40:57.383Z"
   firstname: Editor

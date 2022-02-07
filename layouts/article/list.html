@@ -2,8 +2,14 @@
   {{ partial "article/jumbotron" . }}
 
 
-  <div class="blog__list">
-    {{ partial "article/item-list" . }}
+  <div class="article-list-page">
+    <section class="article-list">
+      <h3 class="spanborder"><span>Latest</span></h3>
+
+      {{ partial "shared/page-list" . }}
+
+    </section>
+
     {{ partial "article/menu" . }}
   </div>
 {{ end }}

@@ -1,0 +1,19 @@
+<!-- Display a list of pages -->
+<div class="page-list">
+  {{ range .Pages }}
+    <article>
+      {{ partial "shared/author" . }}
+
+
+      <a href="{{ .RelPermalink }}">
+        <h3>{{ .Name }}</h3>
+      </a>
+      <p>{{ .Summary }}...</p>
+
+      <div class="metadata">
+        {{ partial "shared/tag-list" .Params.tags }}
+        {{ partial "shared/reading-time" . }}
+      </div>
+    </article>
+  {{ end }}
+</div>
