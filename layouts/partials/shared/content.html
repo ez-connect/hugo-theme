@@ -1,9 +1,9 @@
 <div class="content">
   <article>
     <section>
-      <h1>{{ .Title }}</h1>
-      {{ partial "shared/meta" . }}
+      {{ partial "shared/author" . }}
 
+      <h1>{{ .Title }}</h1>
       {{ if .Description }}
         <p class="description">{{ markdownify .Description }}</p>
       {{ end }}
