@@ -16,66 +16,66 @@ tags:
 - tag-1
 - tag-2
 thumbnail:
-  alternativeText: bg_bggenerator_com.jpg
-  caption: bg_bggenerator_com.jpg
-  createdAt: "2022-01-28T09:42:28.091Z"
+  alternativeText: bg_bggenerator_com_6a6e7262cd.jpg
+  caption: bg_bggenerator_com_6a6e7262cd.jpg
+  createdAt: "2022-02-15T02:51:57.602Z"
   ext: .jpg
   formats:
     large:
       ext: .jpg
-      hash: large_bg_bggenerator_com_6a6e7262cd
+      hash: large_bg_bggenerator_com_6a6e7262cd_9c31351228
       height: 563
       mime: image/jpeg
-      name: large_bg_bggenerator_com.jpg
+      name: large_bg_bggenerator_com_6a6e7262cd.jpg
       path: null
-      size: 15.98
-      url: /uploads/large_bg_bggenerator_com_6a6e7262cd.jpg
+      size: 15.99
+      url: /uploads/large_bg_bggenerator_com_6a6e7262cd_9c31351228.jpg
       width: 1000
     medium:
       ext: .jpg
-      hash: medium_bg_bggenerator_com_6a6e7262cd
+      hash: medium_bg_bggenerator_com_6a6e7262cd_9c31351228
       height: 422
       mime: image/jpeg
-      name: medium_bg_bggenerator_com.jpg
+      name: medium_bg_bggenerator_com_6a6e7262cd.jpg
       path: null
-      size: 11.25
-      url: /uploads/medium_bg_bggenerator_com_6a6e7262cd.jpg
+      size: 11.24
+      url: /uploads/medium_bg_bggenerator_com_6a6e7262cd_9c31351228.jpg
       width: 750
     small:
       ext: .jpg
-      hash: small_bg_bggenerator_com_6a6e7262cd
+      hash: small_bg_bggenerator_com_6a6e7262cd_9c31351228
       height: 281
       mime: image/jpeg
-      name: small_bg_bggenerator_com.jpg
+      name: small_bg_bggenerator_com_6a6e7262cd.jpg
       path: null
       size: 7.01
-      url: /uploads/small_bg_bggenerator_com_6a6e7262cd.jpg
+      url: /uploads/small_bg_bggenerator_com_6a6e7262cd_9c31351228.jpg
       width: 500
     thumbnail:
       ext: .jpg
-      hash: thumbnail_bg_bggenerator_com_6a6e7262cd
+      hash: thumbnail_bg_bggenerator_com_6a6e7262cd_9c31351228
       height: 138
       mime: image/jpeg
-      name: thumbnail_bg_bggenerator_com.jpg
+      name: thumbnail_bg_bggenerator_com_6a6e7262cd.jpg
       path: null
-      size: 3.11
-      url: /uploads/thumbnail_bg_bggenerator_com_6a6e7262cd.jpg
+      size: 3.1
+      url: /uploads/thumbnail_bg_bggenerator_com_6a6e7262cd_9c31351228.jpg
       width: 245
-  hash: bg_bggenerator_com_6a6e7262cd
+  hash: bg_bggenerator_com_6a6e7262cd_9c31351228
   height: 1080
-  id: 39
+  id: 76
   mime: image/jpeg
-  name: bg_bggenerator_com.jpg
+  name: bg_bggenerator_com_6a6e7262cd.jpg
   previewUrl: null
   provider: local
   provider_metadata: null
-  size: 36.13
-  updatedAt: "2022-01-28T09:42:28.091Z"
-  url: /uploads/bg_bggenerator_com_6a6e7262cd.jpg
+  size: 36.11
+  updatedAt: "2022-02-15T02:51:57.602Z"
+  url: /uploads/bg_bggenerator_com_6a6e7262cd_9c31351228.jpg
   width: 1920
 title: Contrary to popular belief, Lorem Ipsum is not simply random text
-updatedAt: "2022-01-28T09:44:19.967Z"
-updatedBy: editor@freemind.vn
+updatedAt: "2022-02-15T02:52:01.102Z"
+updatedBy: thanh.vinh@hotmail.com
 ---
 
 # Est cum herba tum spatio iactantem summos

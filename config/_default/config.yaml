@@ -48,6 +48,9 @@ markup:
     style: dracula
     tabWidth: 2
 
+#
+# Go module
+#
 module:
   imports:
     path: github.com/kaushalmodi/hugo-debugprint
