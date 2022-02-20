@@ -1,18 +1,29 @@
 {{ define "main" }}
-  <div class="sign-in">
-    <h2>{{ .Title }} </h2>
-    {{ .Content }}
-    <br />
 
-    <form id="signInForm">
-      <input type="email" name="email" placeholder="Your email">
-      <input type="password" name="password" placeholder="Your password">
+{{ $defaultData := index $.Site.Data $.Site.Params.defaultLanguage }}
+{{ $data := index $.Site.Data $.Site.Language.Lang }}
 
-      {{ $api := .Site.Data.site.signIn }}
-      <input id="signInButton" data-method="{{ $api.method }}" data-url="{{ $api.url }}" type="button" value="Sign-in">
-      <small><div class="error"></div></small>
-    </form>
+{{ $webhook := $data.site.webhook }}
 
-    <a href="{{ .Site.Data.site.forgotPassword.url }}">Forgot your password?</a>
-  </div>
+{{ if not $webhook }}
+{{ $webhook = $defaultData.site.webhook }}
+{{ end }}
+
+<div class="sign-in">
+  <h2>{{ .Title }} </h2>
+  {{ .Content }}
+  <br />
+
+  <form id="signInForm">
+    <input type="email" name="email" placeholder="Your email">
+    <input type="password" name="password" placeholder="Your password">
+
+    <input id="signInButton" data-url="{{ $webhook.signin }}" type="button" value="Sign-in">
+    <small>
+      <div class="error"></div>
+    </small>
+  </form>
+
+  <a href="{{ $webhook.forgotPassword }}">Forgot your password?</a>
+</div>
 {{ end }}

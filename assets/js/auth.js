@@ -9,14 +9,12 @@ function auth() {
     const body = { email, password };
 
     const button = e.target;
-    const method = button.getAttribute('data-method');
     const url = button.getAttribute('data-url');
-
     const error = form.querySelector('.error');
 
     try {
       const res = await fetch(url, {
-        method,
+        method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(body),
       });
