@@ -3,9 +3,11 @@
 <!-- All contributor pages -->
 {{ $contributors := where $.Site.RegularPages "Section" "contributor" }}
 
+
 <!-- Author pages / createdBy -->
 {{ $createdBy := index (where $contributors "Params.user.username" .Params.createdBy) 0 }}
 {{ $updatedBy := index (where $contributors "Params.user.username" .Params.updatedBy) 0 }}
+
 
 <div class="author">
   <!-- Avatar -->
@@ -24,9 +26,13 @@
   <!-- Meta -->
   <div>
     <div>
-      <a href="{{ $createdBy.Permalink }}"> {{ $createdBy.Params.user.firstname }}</a>
+      <a href="{{ $createdBy.Permalink }}">
+        {{ $createdBy.Params.user.firstname }}
+      </a>
       {{ if ne $createdBy $updatedBy }}
-        ⠂<a href="{{ $updatedBy.Permalink }}"> {{ $updatedBy.Params.user.firstname }}</a>
+        ⠂<a href="{{ $updatedBy.Permalink }}">
+          {{ $updatedBy.Params.user.firstname }}
+        </a>
       {{ end }}
     </div>
 

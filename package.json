@@ -1,6 +1,6 @@
 {
   "name": "hugo-theme",
-  "version": "0.0.1",
+  "version": "0.2.0",
   "description": "Built with Hugo",
   "main": "index.js",
   "repository": "git@github.com:ez-connect/hugo-theme.git",
@@ -8,7 +8,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "lint": "stylelint **/*.scss && eslint --ext **/*.js",
+    "lint": "prettier -c -w assets/js/*.js assets/scss/ layouts/",
     "syntax": "hugo gen chromastyles --style=dracula > assets/scss/components/_syntax.scss"
   },
   "devDependencies": {
@@ -16,8 +16,6 @@
     "postcss": "^8.2.10",
     "postcss-cli": "^8.3.1",
     "prettier": "^2.5.1",
-    "prettier-plugin-go-template": "^0.0.11",
-    "stylelint": "^13.13.1",
-    "stylelint-scss": "^3.20.1"
+    "prettier-plugin-go-template": "^0.0.11"
   }
 }

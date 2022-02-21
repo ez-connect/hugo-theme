@@ -1,9 +1,10 @@
 <!-- Title -->
 {{ if eq .Kind "page" }}
-<title>{{ .Title }}</title>
+  <title>{{ .Title }}</title>
 {{ else }}
-<title>{{ .Site.Title }}</title>
+  <title>{{ .Site.Title }}</title>
 {{ end }}
+
 
 <!-- Meta -->
 <meta charset="utf-8" />
@@ -21,8 +22,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <!-- \Sharing meta -->
 
-<!-- Schema -->
-<script type="application/ld+json">
+<!-- Schema --><script type="application/ld+json">
 {
   "@context" : "http://schema.org",
   "name": {{ .Title }},
@@ -37,8 +37,8 @@
 {{ $options := (dict "targetPath" "main.css" "outputStyle" "compressed" "enableSourceMap" true) }}
 {{ $css := resources.Get "scss/main.scss" | resources.ToCSS $options }}
 {{ if eq (hugo.Environment) "development" -}}
-<link rel="stylesheet" href="{{ $css.Permalink }}">
+  <link rel="stylesheet" href="{{ $css.Permalink }}" />
 {{ else }}
-{{ $css = $css | minify | fingerprint }}
-<link rel="stylesheet" href="{{ $css.Permalink }}" crossorigin="anonymous">
+  {{ $css = $css | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $css.Permalink }}" crossorigin="anonymous" />
 {{ end }}

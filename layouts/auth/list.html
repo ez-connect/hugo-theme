@@ -1,29 +1,35 @@
 {{ define "main" }}
 
-{{ $defaultData := index $.Site.Data $.Site.Params.defaultLanguage }}
-{{ $data := index $.Site.Data $.Site.Language.Lang }}
+  {{ $defaultData := index $.Site.Data $.Site.Params.defaultLanguage }}
+  {{ $data := index $.Site.Data $.Site.Language.Lang }}
 
-{{ $webhook := $data.site.webhook }}
+  {{ $webhook := $data.site.webhook }}
 
-{{ if not $webhook }}
-{{ $webhook = $defaultData.site.webhook }}
-{{ end }}
+  {{ if not $webhook }}
+    {{ $webhook = $defaultData.site.webhook }}
+  {{ end }}
 
-<div class="sign-in">
-  <h2>{{ .Title }} </h2>
-  {{ .Content }}
-  <br />
 
-  <form id="signInForm">
-    <input type="email" name="email" placeholder="Your email">
-    <input type="password" name="password" placeholder="Your password">
+  <div class="sign-in">
+    <h2>{{ .Title }}</h2>
+    {{ .Content }}
+    <br />
 
-    <input id="signInButton" data-url="{{ $webhook.signin }}" type="button" value="Sign-in">
-    <small>
-      <div class="error"></div>
-    </small>
-  </form>
+    <form id="signInForm">
+      <input type="email" name="email" placeholder="Your email" />
+      <input type="password" name="password" placeholder="Your password" />
 
-  <a href="{{ $webhook.forgotPassword }}">Forgot your password?</a>
-</div>
+      <input
+        id="signInButton"
+        data-url="{{ $webhook.signin }}"
+        type="button"
+        value="Sign-in"
+      />
+      <small>
+        <div class="error"></div>
+      </small>
+    </form>
+
+    <a href="{{ $webhook.forgotPassword }}">Forgot your password?</a>
+  </div>
 {{ end }}

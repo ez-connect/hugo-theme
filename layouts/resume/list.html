@@ -1,6 +1,7 @@
 {{ define "main" }}
   {{ $pages := where .Site.RegularPages "Section" "resume" }}
 
+
   <div class="resume__list">
     {{ range $pages }}
       <a class="item" href="{{ .RelPermalink }}">
@@ -12,5 +13,4 @@
       </a>
     {{ end }}
   </div>
-
 {{ end }}

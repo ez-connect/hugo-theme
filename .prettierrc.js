@@ -6,7 +6,7 @@ module.exports = {
   goTemplateBracketSpacing: true,
   overrides: [
     {
-      files: ['*.html'],
+      files: ['*.html', '*.json'],
       options: {
         parser: 'go-template',
       },
