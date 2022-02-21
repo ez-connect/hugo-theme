@@ -1,3 +1,5 @@
+.DEFAULT_GOAL := run
+
 init:
 	@hugo mod get -u
 

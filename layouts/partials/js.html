@@ -1,33 +1,33 @@
 <!-- Libs -->
 {{ $lib := slice }}
 {{ if .Site.Params.options.timeago }}
-  {{ $lib = $lib | append (resources.Get "js/vendor/timeago.js") }}
+{{ $lib = $lib | append (resources.Get "js/vendor/timeago.js") }}
 {{ end }}
 
 {{ if .Site.Params.options.mermaid }}
-  {{ $lib = $lib | append (resources.Get "js/vendor/mermaid.js") }}
+{{ $lib = $lib | append (resources.Get "js/vendor/mermaid.js") }}
 {{ end }}
 
 {{ if .Site.Params.options.plantUML }}
-  {{ $lib = $lib | append (resources.Get "js/vendor/plantuml.js") }}
+{{ $lib = $lib | append (resources.Get "js/vendor/plantuml.js") }}
 {{ end }}
 
 {{ if .Site.Params.options.quilljs }}
-  {{ $lib = $lib | append (resources.Get "js/vendor/quill.js") (resources.Get "js/vendor/quilljs-markdown.js") (resources.Get "js/vendor/turndown.js") }}
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/quilljs-markdown@latest/dist/quilljs-markdown-common-style.css" />
+{{ $lib = $lib | append (resources.Get "js/vendor/quill.js") (resources.Get "js/vendor/quilljs-markdown.js") (resources.Get "js/vendor/turndown.js") }}
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/quilljs-markdown@latest/dist/quilljs-markdown-common-style.css" />
 {{ end }}
 
 {{ if .Site.Params.options.flexSearch }}
-  {{ $lib = $lib | append (resources.Get "js/vendor/flexsearch.js") }}
+{{ $lib = $lib | append (resources.Get "js/vendor/flexsearch.js") }}
 {{ end }}
 
 {{ $lib = $lib | resources.Concat "lib.js" }}
 
 {{ if eq (hugo.Environment) "development" -}}
-  <script defer src="{{ $lib.Permalink }}"></script>
+<script defer src="{{ $lib.Permalink }}"></script>
 {{ else }}
-  {{ $lib = $lib | minify | fingerprint }}
-  <script defer src="{{ $lib.Permalink }}" integrity="{{ $lib.Data.Integrity }}" crossorigin="anonymous"></script>
+{{ $lib = $lib | minify | fingerprint }}
+<script defer src="{{ $lib.Permalink }}" {{ if .Site.Params.options.useSRI }} integrity="{{ $lib.Data.Integrity }}" {{ end }} crossorigin="anonymous"></script>
 {{ end }}
 
 <!-- Assets -->
@@ -46,8 +46,9 @@
 {{ $js = $js | resources.Concat "main.js" }}
 
 {{ if eq (hugo.Environment) "development" -}}
-  <script defer src="{{ $js.Permalink }}"></script>
+<script defer src="{{ $js.Permalink }}"></script>
 {{ else }}
-  {{ $js = $js | minify | fingerprint }}
-  <script defer src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}" crossorigin="anonymous"></script>
+{{ $js = $js | minify | fingerprint }}
+<script defer src="{{ $js.Permalink }}" {{ if .Site.Params.options.useSRI }} integrity="{{ $js.Data.Integrity }}" {{ end }} crossorigin="anonymous">
+</script>
 {{ end }}

@@ -2,8 +2,10 @@
 # The same value as `defaultContentLanguage`
 defaultLanguage: en
 
+# Enable or disable features to reduce the code size
 options:
-  # Enable or disable features to reduce the code size
+  # https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity
+  useSRI: true
   darkMode: false
   breadCrumb: true
   timeago: true
