@@ -2,3 +2,11 @@ node_modules
 
 resources
 public
+
+*.lock
+
+# Registry username & password
+.makerc
+
+# Helm package
+*.tgz
