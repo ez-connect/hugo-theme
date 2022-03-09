@@ -1,0 +1,14 @@
+name: hugo-theme
+version: 0.2.0
+description: Built with Hugo
+
+port:
+  http: 80
+
+k8s:
+  repository: docker.io/ezconnect/hugo-theme:0.2.0
+  service:
+    http:
+      host: hugo-theme.ez-connect.net
+  hostPath: /mnt/data/hugo-theme
+  mountPath: /app/
