@@ -81,16 +81,16 @@ ingress:
 ingressGRPC:
   enabled: false
 
-# storage:
-#   # https://kubernetes.io/docs/concepts/storage/persistent-volumes/
-#   persistent:
-#     enable: true
-#     storageClassName: manual
-#     size: 256Mi
-#     accessModes:
-#       - ReadWriteOnce
-#     mountPath: /app/
-#     hostPath: /mnt/data/hugo-theme
+storage:
+  # https://kubernetes.io/docs/concepts/storage/persistent-volumes/
+  persistent:
+    enable: false
+    # storageClassName: manual
+    # size: 256Mi
+    # accessModes:
+    #   - ReadWriteOnce
+    # mountPath: /app/
+    # hostPath: /mnt/data/hugo-theme
 #
 # \@gkgen
 #

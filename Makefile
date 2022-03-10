@@ -18,7 +18,7 @@ init:
 	@hugo mod get -u
 
 lint:
-	@node_modules/.bin/stylelint assets/**/*.scss && eslint --ext assets/**/*.js
+	@npm run lint
 
 syntax:
 	@hugo gen chromastyles --style=dracula > assets/scss/components/_syntax.scss
@@ -47,7 +47,7 @@ ifneq ($(and $(REGISTRY_USERNAME),$(REGISTRY_PWD)),)
 endif
 
 # Helm chart
-package:
+package: helm
 	@helm cm-push chart/ hub-dev
 
 deploy: package
