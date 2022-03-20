@@ -1,14 +1,18 @@
 name: hugo-theme
-version: 0.2.0
-description: Built with Hugo
+version: 0.2.2
+description: Freemind home
 
 port:
-  http: 80
+  http: 9000
+  webhook: 8081
 
 k8s:
-  repository: docker.io/ezconnect/hugo-theme:0.2.0
+  repository: docker.io/ezconnect/hugo-theme
+  hostname: ez-connect.net
   service:
     http:
-      host: hugo-theme.ez-connect.net
-  hostPath: /mnt/data/hugo-theme
-  mountPath: /app/
+      host: home
+    webhook:
+      host: home-webhook
+  tls: production-tls
+  volume: {}

@@ -3,64 +3,68 @@
 #
 
 .DEFAULT_GOAL := run
+# GOPATH := $(shell go env GOPATH)
 
 # Service
-name := hugo-theme
-version := 0.2.0
+name := home
 
 # Git
-gitBranch := $(shell git rev-parse --abbrev-ref HEAD)
-gitCommit := $(shell git rev-parse --short HEAD)
+# gitBranch := $(shell git rev-parse --abbrev-ref HEAD)
+# gitCommit := $(shell git rev-parse --short HEAD)
 
--include .makerc
+include .makerc
+include .make.env
 
 init:
-	@hugo mod get -u
+	hugo mod get -u
 
 lint:
-	@npm run lint
+	npm run lint
 
 syntax:
 	@hugo gen chromastyles --style=dracula > assets/scss/components/_syntax.scss
 
 run:
-	@hugo serve --bind 0.0.0.0
+	hugo serve --bind 0.0.0.0
 
 build:
-	@rm -rf public/
-	@hugo --gc --minify
+	rm -rf public
+	hugo --gc --minify
 
 clean:
-	@git clean -fdx
+	git clean -fdx
 
 helm:
-	@gkgen -k $(args) .
-	@helm lint chart
+	gkgen -k $(args) .
+	helm lint chart
 
 # K8s
-oci:
-	@buildah bud -t $(name):$(version) --build-arg name=$(name) --build-arg version=$(version)
+# @buildah bud -t sample:0.0.1 args='--build-arg name=$(name) --build-arg version=$(VERSION)'
 
-ifneq ($(and $(REGISTRY_USERNAME),$(REGISTRY_PWD)),)
-	@buildah login -u $(REGISTRY_USERNAME) -p $(REGISTRY_PWD) $(REGISTRY)
-	buildah push $(name):$(version) $(REGISTRY)/$(REGISTRY_REPO)/$(name):$(version)
+oci:
+	buildah bud -t $(name):$(VERSION) $(args)
+
+oci-push:
+ifeq ($(and $(REGISTRY_USERNAME),$(REGISTRY_PWD)),)
+	@echo 'User and password are incorrect'
+	@exit 1
 endif
 
+	buildah login -u $(REGISTRY_USERNAME) -p $(REGISTRY_PWD) $(REGISTRY)
+	buildah push $(name):$(VERSION) $(REGISTRY)/$(REGISTRY_REPO)/$(name):$(VERSION)
+
 # Helm chart
-package: helm
-	@helm cm-push chart/ hub-dev
+package:
+ifndef HELM_REPO
+	@echo 'Missing "HELM_REPO" in .makerc'
+	@exit 1
+endif
 
-deploy: package
-	@ssh $(SSH_DESTINATION) '$(HELM_CMD) install $(name) hub-dev/$(name) -n dev'
+	helm lint chart/
+	helm cm-push chart/ $(HELM_REPO)
 
-deploy-delete: package
-	@ssh $(SSH_DESTINATION) '$(HELM_CMD) uninstall $(name) hub-dev/$(name) -n dev'
+deploy:
+	ssh $(SSH_DESTINATION) '$(HELM_CMD) install $(name) $(HELM_REPO)/$(name) -n $(NAMESPACE)'
 
-deploy-restart:
-	@ssh $(SSH_DESTINATION) '$(KUBECTL_CMD) rollout -n dev restart deploy/$(name)'
-
-package-prod:
-	@helm cm-push chart/ hub
-
-deploy-prod: package-prod
-	$(HELM_CMD) install $(name) hub-dev/$(name) -n prod
+deploy-delete:
+	ssh $(SSH_DESTINATION) '$(HELM_CMD) uninstall $(name) $(HELM_REPO)/$(name) -n $(NAMESPACE)'

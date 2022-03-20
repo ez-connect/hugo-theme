@@ -4,6 +4,7 @@ resources
 public
 
 *.lock
+*.log
 
 # Registry username & password
 .makerc

@@ -11,6 +11,33 @@ replicaCount: 1
 image:
   repository: docker.io/ezconnect/hugo-theme
   pullPolicy: IfNotPresent
+  env:
+    - name: GIT_USERNAME
+      value: Bot
+    - name: GIT_EMAIL
+      value: bot@ez-connect.net
+    - name: GIT_REPO
+      value: git@github.com:ez-connect/hugo-theme.git
+    - name: GIT_BRANCH
+      value: dev
+    - name: GIT_MSG
+      value: Sync CMS
+    - name: GIT_TIMEOUT
+      value: "300"
+    - name: CMS_URL
+      value: https://cms.ez-connect.net
+    # - name: SSH_PRIVATE
+    #   valueFrom:
+    #     secretKeyRef:
+    #       name: ssh-github
+    #       key: private
+    # - name: SSH_PUBLIC
+    #   valueFrom:
+    #     secretKeyRef:
+    #       name: ssh-github
+    #       key: public  # command: []
+  # args: []
+
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
 
@@ -49,11 +76,9 @@ securityContext: {}
 # @gkgen
 #
 service:
-  ports:
-    - name: http
-      type: ClusterIP
-      port: 80
-      protocol: TCP
+  http: 9000
+  webhook: 8081
+
 #
 # \@gkgen
 #
@@ -62,17 +87,21 @@ ingress:
   enabled: true
   className: ""
   annotations: {}
+  hostname: ez-connect.net
   hosts:
-    - host: hugo-theme.ez-connect.net
+    - host: home
       paths:
         - path: /
           pathType: Prefix
           name: http
-          port: 80
-  tls:
-    - secretName: ez-connect.net-tls
-      hosts:
-        - hugo-theme.ez-connect.net
+          port: 9000
+    - host: home-webhook
+      paths:
+        - path: /
+          pathType: Prefix
+          name: webhook
+          port: 8081
+  tls: production-tls
 
 #
 # @gkgen
@@ -81,16 +110,9 @@ ingress:
 ingressGRPC:
   enabled: false
 
-storage:
-  # https://kubernetes.io/docs/concepts/storage/persistent-volumes/
-  persistent:
-    enable: false
-    # storageClassName: manual
-    # size: 256Mi
-    # accessModes:
-    #   - ReadWriteOnce
-    # mountPath: /app/
-    # hostPath: /mnt/data/hugo-theme
+# https://kubernetes.io/docs/concepts/storage/persistent-volumes/
+persistent:
+    enabled: false
 #
 # \@gkgen
 #
