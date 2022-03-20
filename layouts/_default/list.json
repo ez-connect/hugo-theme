@@ -1,6 +1,6 @@
 {{- $.Scratch.Add "index" slice -}}
-  {{- range where .Site.RegularPages "Section" .Section -}}
-    {{ $item := (dict "title" .Title "date" .Params.date "content" .Plain "url" .RelPermalink) }}
-    {{- $.Scratch.Add "index" $item -}}
-  {{- end -}}
+{{- range where .Site.RegularPages "Section" .Section -}}
+  {{ $item := (dict "title" .Title "date" .Params.date "content" .Plain "url" .RelPermalink) }}
+  {{- $.Scratch.Add "index" $item -}}
+{{- end -}}
 {{- $.Scratch.Get "index" | jsonify -}}

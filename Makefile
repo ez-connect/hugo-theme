@@ -18,11 +18,11 @@ include .make.env
 init:
 	hugo mod get -u
 
-lint:
-	npm run lint
-
 syntax:
 	@hugo gen chromastyles --style=dracula > assets/scss/components/_syntax.scss
+
+lint:
+	npm run lint
 
 run:
 	hugo serve --bind 0.0.0.0

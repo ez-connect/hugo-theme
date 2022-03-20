@@ -1,0 +1,54 @@
+{{/* {{ partial "debugprint" . }} */}}
+{{ $currentPage := .currentPage }}
+{{ $pages := union .context.Sections .context.Pages }}
+
+{{ range $pages.ByWeight }}
+  {{ $hasChildren := or (.Sections) (.Pages) }}
+
+
+  <!-- The data bs target doesn't like forward slashes, replace all with hyphens instead -->
+  {{ if $hasChildren }}
+    <!-- Collapse -->
+    {{ $collapseTarget := printf "%s-collapse" (urlize .Name) }}
+
+    {{ $isExpaned := false }}
+    {{ if in $currentPage.Permalink .Permalink }}
+      {{ $isExpaned = true }}
+    {{ end }}
+
+
+    <!-- Show or hide the collapse -->
+    {{ $collapseTargetClass := "hide" }}
+    {{ if $isExpaned }}
+      {{ $collapseTargetClass = "show" }}
+    {{ end }}
+
+
+    <li class="sub-category">
+      <a
+        href="#"
+        class="collapse"
+        data-toggle="collapse"
+        data-target="#{{ $collapseTarget }}"
+        aria-expanded="{{ $isExpaned }}"
+      >
+        {{- .Name -}}
+      </a>
+
+      <ul id="{{ $collapseTarget }}" class="{{ $collapseTargetClass }}">
+        {{ partial "document/menu_recursive.html"  (dict "context" . "currentPage" $currentPage) }}
+      </ul>
+    </li>
+  {{ else }}
+    <!-- Highlight the current page -->
+    {{ $itemClass := "" }}
+    {{ if eq $currentPage.Permalink .Permalink }}
+      {{ $itemClass = "active" }}
+    {{ end }}
+
+
+    <li>
+      <a class="{{ $itemClass }}" href="{{ .Permalink }}">{{- .Name -}}</a>
+    </li>
+  {{ end }}
+{{ end }}

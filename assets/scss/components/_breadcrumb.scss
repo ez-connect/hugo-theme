@@ -4,7 +4,7 @@
   padding: 0 32px;
 
   @include media-breakpoint-up(sm) {
-    padding: 0 16px;
+    padding: 0 $space;
   }
 
   ol {

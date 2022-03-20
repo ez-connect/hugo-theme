@@ -1,0 +1,48 @@
+contact:
+  address: 5th floor, 19 Pham Hong Thai, Hai Chau 1, Hai Chau, Da Nang
+  email: contact@freemind.vn
+  facebook: https://www.facebook.com/freemind.vn/
+  id: 7
+  linkedIn: https://www.linkedin.com/company/freemind-vn/
+  phone: +84 908 007 074
+  telegram: http://159.223.72.235:51010/
+  youtube: http://youtube.com
+createdAt: "2022-02-12T15:16:46.649Z"
+createdBy: thanh.vinh@hotmail.com
+footer:
+  content: Freemind is proud to be the place to provide e-ecommerce solutions using
+    the Magento 2 platform. We believe that innovation and creativity is the key to
+    open a bright future for members of the company.
+  copyright: Freemind © 2021
+  id: 1
+  logo:
+    alternativeText: logo-footer.png
+    caption: logo-footer.png
+    createdAt: "2022-02-12T15:20:05.743Z"
+    ext: .png
+    formats: null
+    hash: logo_footer_3c4f74666e
+    height: 29
+    id: 75
+    mime: image/png
+    name: logo-footer.png
+    previewUrl: null
+    provider: local
+    provider_metadata: null
+    size: 4.61
+    updatedAt: "2022-02-12T15:20:05.743Z"
+    url: /uploads/logo_footer_3c4f74666e.png
+    width: 140
+id: 1
+locale: en
+navs: []
+publishedAt: "2022-02-12T15:28:05.158Z"
+title: Ez-Connect
+updatedAt: "2022-02-13T02:52:13.641Z"
+updatedBy: thanh.vinh@hotmail.com
+webhook:
+  applyJob: http://localhost:1337/applicants
+  contact: http://localhost:1337/contacts
+  forgotPassword: http://localhost:1337/admin/auth/forgot-password
+  id: 1
+  signin: http://localhost:1337/admin/login

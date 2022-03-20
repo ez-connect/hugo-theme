@@ -1,9 +1,10 @@
 ---
-title: {{ replace .Name "-" " " | title }}
+title: { { replace .Name "-" " " | title } }
 description:
-date: {{ .Date }}
-lastmod: {{ .Date }}
-authors: [Vinh]
+createdBy: Vinh
+createdAt: { { .Date } }
+updatedBy: Vinh
+updatedAt: { { .Date } }
 draft: true
 ---
 

@@ -1,6 +1,6 @@
 <a
   href="{{ .Destination | safeURL }}"
-  {{ with .Title}}
+  {{ with .Title }}
     title="{{ . }}"
   {{ end }}
   {{ if strings.HasPrefix .Destination "http" }}

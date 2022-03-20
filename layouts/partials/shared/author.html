@@ -1,0 +1,46 @@
+<!-- Displays authors of a post -->
+
+<!-- All contributor pages -->
+{{ $contributors := where $.Site.RegularPages "Section" "contributor" }}
+
+
+<!-- Author pages / createdBy -->
+{{ $createdBy := index (where $contributors "Params.user.username" .Params.createdBy) 0 }}
+{{ $updatedBy := index (where $contributors "Params.user.username" .Params.updatedBy) 0 }}
+
+
+<div class="author">
+  <!-- Avatar -->
+  <div>
+    {{ if $updatedBy }}
+      <a href="{{ $updatedBy.Permalink }}">
+        <img src="{{ $updatedBy.Params.avatar.url }}" />
+      </a>
+    {{ else }}
+      <a href="{{ $createdBy.Permalink }}">
+        <img src="{{ $createdBy.Params.avatar.url }}" />
+      </a>
+    {{ end }}
+  </div>
+
+  <!-- Meta -->
+  <div>
+    <div>
+      <a href="{{ $createdBy.Permalink }}">
+        {{ $createdBy.Params.user.firstname }}
+      </a>
+      {{ if ne $createdBy $updatedBy }}
+        ⠂<a href="{{ $updatedBy.Permalink }}">
+          {{ $updatedBy.Params.user.firstname }}
+        </a>
+      {{ end }}
+    </div>
+
+    <div class="meta">
+      <span class="timeago" datetime="{{ $.Params.updatedAt }}">
+        {{ $.Params.updatedAt }}
+      </span>
+      ⠂{{ partial "shared/reading-time" . }}
+    </div>
+  </div>
+</div>

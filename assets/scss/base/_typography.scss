@@ -2,8 +2,8 @@
 // Typography rules
 //
 
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap');
 
 p {
   text-align: justify;
@@ -20,8 +20,8 @@ h2 {
 }
 
 .meta {
-  font-size: $font-size-sx;
-  padding-bottom: 16px;
+  font-size: $font-size-sm;
+  color: $text-color-muted;
 }
 
 .text-color-muted {

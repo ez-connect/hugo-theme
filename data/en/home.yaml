@@ -1,0 +1,182 @@
+components:
+- __component: site.banner
+  background: null
+  html: null
+  id: 1
+  subtitle: null
+  title: null
+- __component: home.service-list
+  id: 1
+  services:
+  - description: We work with Magento, WooCommerce, and provide services on demand.
+    id: 1
+    logo:
+      alternativeText: service-outsourcing.png
+      caption: service-outsourcing.png
+      createdAt: "2022-01-23T15:18:34.218Z"
+      ext: .png
+      formats: null
+      hash: service_outsourcing_eee3860547
+      height: 52
+      id: 2
+      mime: image/png
+      name: service-outsourcing.png
+      previewUrl: null
+      provider: local
+      provider_metadata: null
+      size: 1.22
+      updatedAt: "2022-01-23T15:18:34.218Z"
+      url: /uploads/service_outsourcing_eee3860547.png
+      width: 53
+    name: E-COMMERCE
+  - description: ver 10 years working experience in Mobile industry, we can provide
+      all solutions to fit with your goal and business vision.
+    id: 2
+    logo:
+      alternativeText: service-outsourcing.png
+      caption: service-outsourcing.png
+      createdAt: "2022-01-23T15:18:34.218Z"
+      ext: .png
+      formats: null
+      hash: service_outsourcing_eee3860547
+      height: 52
+      id: 2
+      mime: image/png
+      name: service-outsourcing.png
+      previewUrl: null
+      provider: local
+      provider_metadata: null
+      size: 1.22
+      updatedAt: "2022-01-23T15:18:34.218Z"
+      url: /uploads/service_outsourcing_eee3860547.png
+      width: 53
+    name: MOBILE DEVELOPMENT
+  - description: With more than 50% of our team has experience working in Mobile Game
+      Industry before, we know how to create an Mobile game.
+    id: 3
+    logo:
+      alternativeText: service-outsourcing.png
+      caption: service-outsourcing.png
+      createdAt: "2022-01-23T15:18:34.218Z"
+      ext: .png
+      formats: null
+      hash: service_outsourcing_eee3860547
+      height: 52
+      id: 2
+      mime: image/png
+      name: service-outsourcing.png
+      previewUrl: null
+      provider: local
+      provider_metadata: null
+      size: 1.22
+      updatedAt: "2022-01-23T15:18:34.218Z"
+      url: /uploads/service_outsourcing_eee3860547.png
+      width: 53
+    name: MOBILE GAME
+  - description: We always listen to the requirement and analyze the user point of
+      view in order to provide the best user experience.
+    id: 4
+    logo:
+      alternativeText: service-outsourcing.png
+      caption: service-outsourcing.png
+      createdAt: "2022-01-23T15:18:34.218Z"
+      ext: .png
+      formats: null
+      hash: service_outsourcing_eee3860547
+      height: 52
+      id: 2
+      mime: image/png
+      name: service-outsourcing.png
+      previewUrl: null
+      provider: local
+      provider_metadata: null
+      size: 1.22
+      updatedAt: "2022-01-23T15:18:34.218Z"
+      url: /uploads/service_outsourcing_eee3860547.png
+      width: 53
+    name: UI/UX
+  - description: We make sure your frontline in internet look attractive and express
+      the value of your business.
+    id: 5
+    logo:
+      alternativeText: service-outsourcing.png
+      caption: service-outsourcing.png
+      createdAt: "2022-01-23T15:18:34.218Z"
+      ext: .png
+      formats: null
+      hash: service_outsourcing_eee3860547
+      height: 52
+      id: 2
+      mime: image/png
+      name: service-outsourcing.png
+      previewUrl: null
+      provider: local
+      provider_metadata: null
+      size: 1.22
+      updatedAt: "2022-01-23T15:18:34.218Z"
+      url: /uploads/service_outsourcing_eee3860547.png
+      width: 53
+    name: WEB DEVELOPMENT
+  - description: We have experience in creating an ecosystem that work for all platforms
+      and make sure the performance and synchronization smoothly.
+    id: 6
+    logo: null
+    name: X-PLATFORM DEVELOPMENT
+  subtitle: With an in-house development team of over 10 years of experience working
+    in many different fields and industries. We are confident that we will meet all
+    the needs of our customers.
+  title: OUTSOURCING SERVICES
+- __component: home.partner-list
+  id: 1
+  items:
+  - id: 1
+    name: Soja
+    url: null
+  - id: 2
+    name: Topebox
+    url: null
+  - id: 3
+    name: BAP
+    url: null
+  - id: 4
+    name: Heineken
+    url: null
+  - id: 5
+    name: Invoice Robotic
+    url: null
+  - id: 6
+    name: Vinfast
+    url: null
+  subtitle: CUSTOMERS HAVE TRUSTED US
+  title: Our Partner
+- __component: home.review-list
+  id: 1
+  reviews:
+  - comment: “Professional services at all levels, from management to development.
+      Highly recommended for your Magento projects.”
+    company: Senior Full Stack Engineer at Reviewshake
+    id: 1
+    reviewer: Long Tran
+  - comment: null
+    company: Founder at Mirei
+    id: 2
+    reviewer: Le Vo Manh Hung
+  subtitle: WHAT CLIENTS SAYS ABOUT US
+  title: TESTIMONIALS
+- __component: home.map
+  id: 1
+  subtitle: null
+  title: CONTACT
+  url: https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.964201857117!2d108.21958701536109!3d16.067347343755017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31421833985fc91f%3A0x5e39dd82204d67a!2zMTkgUGjhuqFtIEjhu5NuZyBUaMOhaSwgSOG6o2kgQ2jDonUgMSwgSOG6o2kgQ2jDonUsIMSQw6AgTuG6tW5nIDU1MDAwMCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1642039122924!5m2!1svi!2s
+- __component: site.contact-form
+  id: 2
+  subtitle: null
+  title: null
+  webhook: null
+createdAt: "2022-01-23T15:14:18.796Z"
+createdBy: thanh.vinh@hotmail.com
+draft: true
+id: 1
+locale: en
+updatedAt: "2022-01-28T01:19:47.382Z"
+updatedBy: thanh.vinh@hotmail.com

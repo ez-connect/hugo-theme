@@ -1,0 +1,12 @@
+{
+    "recommendations": [
+        "editorconfig.editorconfig",
+        "esbenp.prettier-vscode",
+        "budparr.language-hugo-vscode",
+        "hitkodev.vscode-remark-hugo",
+        "yzhang.markdown-all-in-one",
+        "bierner.markdown-mermaid",
+        "jebbs.plantuml",
+        "be5invis.toml"
+    ]
+}

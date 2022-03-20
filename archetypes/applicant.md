@@ -1,14 +1,15 @@
 ---
-title: {{ replace .Name "-" " " | title }}
-phone: "0909999999"
+title: { { replace .Name "-" " " | title } }
+phone: '0909999999'
 email: name@example.com
 status: New
-date: {{ .Date }}
-lastmod: {{ .Date }}
 job:
   title: Frontend Engineer
   url: /job/sample-1
-authors: [Vinh]
+createdBy: Vinh
+createdAt: { { .Date } }
+updatedBy: Vinh
+updatedAt: { { .Date } }
 draft: true
 ---
 

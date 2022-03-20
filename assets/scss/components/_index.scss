@@ -1,13 +1,16 @@
 // github.com/kaushalmodi/hugo-debugprint
 @import 'debugprint';
 
-@import 'loading';
-@import 'toc';
-@import 'content';
-@import 'modal';
-@import 'input';
-@import 'editor';
-@import 'breadcrumb';
-@import 'search';
-
 @import 'syntax.scss';
+
+@import 'author';
+@import 'breadcrumb';
+@import 'content';
+@import 'editor';
+@import 'input';
+@import 'loading';
+@import 'modal';
+@import 'page-list';
+@import 'search';
+@import 'tag';
+@import 'toc';

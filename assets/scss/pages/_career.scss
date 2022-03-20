@@ -1,0 +1,33 @@
+.career-list {
+  padding: $space * 2;
+}
+
+.job__applicant {
+  box-sizing: border-box;
+  display: flex;
+  margin: auto;
+  padding: 32px;
+
+  .applicant {
+    box-sizing: border-box;
+    width: 50%;
+  }
+
+  .contact {
+    box-sizing: border-box;
+    width: 50%;
+    margin-left: 32px;
+
+    .item {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  svg {
+    width: 16px;
+    height: 16px;
+    padding-right: 16px;
+    fill: $primary-color;
+  }
+}

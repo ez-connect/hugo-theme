@@ -1,0 +1,28 @@
+<div class="content">
+  <article>
+    <section>
+      {{ partial "shared/author" . }}
+
+
+      <h1>{{ .Title }}</h1>
+      {{ if .Description }}
+        <p class="description">{{ markdownify .Description }}</p>
+      {{ end }}
+      <hr />
+    </section>
+
+    <section>
+      {{ .Content }}
+
+      {{/* Dynamic zone */}}
+      {{ range .Params.components }}
+        {{ if eq .__component "site.block" }}
+          {{ safeHTML .html }}
+        {{ end }}
+      {{ end }}
+    </section>
+  </article>
+
+  {{ partial "shared/toc" . }}
+
+</div>

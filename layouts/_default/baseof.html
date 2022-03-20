@@ -1,25 +1,24 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
+  <head>
+    {{ partial "head.html" . }}
+  </head>
 
-<head>
-  {{ partial "head.html" . }}
-</head>
+  <body>
+    {{ partial "nav" . }}
 
-<body>
-  {{ partial "nav" . }}
 
-  <div class="main">
-    {{ block "main" . }}
-    {{ end }}
-  </div>
+    <div class="main">
+      {{ block "main" . }}
+      {{ end }}
+    </div>
 
-  {{ partial "footer" . }}
+    {{ partial "footer" . }}
 
-  {{ partial "search" . }}
-  {{ partial "modal" . }}
-  {{ partial "loading" . }}
+    {{ partial "search" . }}
+    {{ partial "modal" . }}
+    {{ partial "loading" . }}
 
-  {{ partial "js" . }}
-</body>
-
+    {{ partial "js" . }}
+  </body>
 </html>

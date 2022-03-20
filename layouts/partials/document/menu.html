@@ -1,54 +1,18 @@
-<!-- https://gohugo.io/content-management/menus/ -->
-{{ $page := . }}
-{{ $menus := .Site.Menus.document }}
+{{/* https://github.com/gbmhunter/blog/blob/master/layouts/partials/menu.html */}}
+
+{{ $currentPage := . }}
+
 
 <div id="navMenu" class="document__menu">
-  {{ range (where $menus "HasChildren" false) }}
-    {{ $active := "" }}
-    {{ if $page.IsMenuCurrent "document" . }}
-      {{ $active = "active"}}
+  {{ with .Site.GetPage "/document" }}
+    {{ range .Sections.ByWeight }}
+      <div class="category">
+        <p>{{ .Title }}</p>
+
+        <!-- Using partialCached here offers significant build time speedup, as this recursive menu would otherwise be rebuilt for
+        every page! -->
+        {{ partial "document/menu_recursive" (dict "context" . "currentPage" $currentPage) }}
+      </div>
     {{ end }}
-
-    <a href="{{ .URL }}" class="{{ $active }}">{{- .Name -}} </a>
-  {{ end }}
-
-  {{ range (where $menus "HasChildren" true) }}
-    <div class="category">
-      <p>{{- .Name -}}</p>
-
-      {{ range .Children }}
-        {{ if not .HasChildren }}
-          {{ $active := "" }}
-          {{ if $page.IsMenuCurrent "document" . }}
-            {{ $active = "active"}}
-          {{ end }}
-
-          <a class="item {{ $active }}" href="{{ .URL }}">{{- .Name -}}</a>
-        {{ else }}
-          <div class="sub-category">
-            {{ $isExpaned := false }}
-            {{ if $page.HasMenuCurrent "document" . }}
-              {{ $isExpaned = true }}
-            {{ end }}
-
-            {{ $collapseTarget := printf "%s-collapse" .KeyName }}
-            <a class="title" href="#" data-toggle="collapse" data-target="#{{ $collapseTarget }}" aria-expanded="{{ $isExpaned }}">
-              {{ .Name -}}
-            </a>
-
-            <div id="{{ $collapseTarget }}" class="{{ if $isExpaned }} show {{ else }} hide {{ end }}">
-              {{ range .Children }}
-                {{ $active := "" }}
-                {{ if $page.IsMenuCurrent "document" . }}
-                  {{ $active = "active"}}
-                {{ end }}
-
-                <a class="item {{ $active }}" href="{{ .URL }}" class="{{ $active }}">{{- .Name -}}</a>
-              {{ end }}
-          </div>
-          </div>
-        {{ end }}
-      {{ end }}
-    </div>
   {{ end }}
 </div>

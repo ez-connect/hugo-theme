@@ -14,7 +14,10 @@
 
 {{ if .Site.Params.options.quilljs }}
   {{ $lib = $lib | append (resources.Get "js/vendor/quill.js") (resources.Get "js/vendor/quilljs-markdown.js") (resources.Get "js/vendor/turndown.js") }}
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/quilljs-markdown@latest/dist/quilljs-markdown-common-style.css" />
+  <link
+    rel="stylesheet"
+    href="//cdn.jsdelivr.net/npm/quilljs-markdown@latest/dist/quilljs-markdown-common-style.css"
+  />
 {{ end }}
 
 {{ if .Site.Params.options.flexSearch }}
@@ -24,10 +27,10 @@
 {{ $lib = $lib | resources.Concat "lib.js" }}
 
 {{ if eq (hugo.Environment) "development" -}}
-  <script defer src="{{ $lib.Permalink }}"></script>
+<script defer src="{{ $lib.Permalink }}"></script>
 {{ else }}
-  {{ $lib = $lib | minify | fingerprint }}
-  <script defer src="{{ $lib.Permalink }}" integrity="{{ $lib.Data.Integrity }}" crossorigin="anonymous"></script>
+{{ $lib = $lib | minify | fingerprint }}
+<script defer src="{{ $lib.Permalink }}" {{ if .Site.Params.options.useSRI }} integrity="{{ $lib.Data.Integrity }}" {{ end }} crossorigin="anonymous"></script>
 {{ end }}
 
 <!-- Assets -->
@@ -46,8 +49,9 @@
 {{ $js = $js | resources.Concat "main.js" }}
 
 {{ if eq (hugo.Environment) "development" -}}
-  <script defer src="{{ $js.Permalink }}"></script>
+<script defer src="{{ $js.Permalink }}"></script>
 {{ else }}
-  {{ $js = $js | minify | fingerprint }}
-  <script defer src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}" crossorigin="anonymous"></script>
+{{ $js = $js | minify | fingerprint }}
+<script defer src="{{ $js.Permalink }}" {{ if .Site.Params.options.useSRI }} integrity="{{ $js.Data.Integrity }}" {{ end }} crossorigin="anonymous">
+</script>
 {{ end }}
