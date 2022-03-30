@@ -8,6 +8,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
+    "ngrok": "ngrok",
+    "http-server": "http-server",
     "lint": "prettier -c -w assets/js/*.js assets/scss/ layouts/",
     "syntax": "hugo gen chromastyles --style=dracula > assets/scss/components/_syntax.scss"
   },
@@ -15,5 +17,8 @@
     "eslint": "^7.32.0",
     "prettier": "^2.5.1",
     "prettier-plugin-go-template": "^0.0.11"
+  },
+  "dependencies": {
+    "http-server": "^14.1.0"
   }
 }
