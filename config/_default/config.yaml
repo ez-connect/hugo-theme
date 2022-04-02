@@ -51,6 +51,6 @@ markup:
 #
 # Go module
 #
-module:
-  imports:
-    path: github.com/kaushalmodi/hugo-debugprint
+# module:
+#   imports:
+#     path: github.com/kaushalmodi/hugo-debugprint

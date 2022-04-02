@@ -6,6 +6,17 @@ public
 *.lock
 *.log
 
+###########################################################
+# gkgen
+###########################################################
+
+base/
+chart/
+dist/
+
+# Make env from yaml
+.make.env
+
 # Registry username & password
 .makerc
 

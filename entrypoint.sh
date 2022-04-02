@@ -32,8 +32,10 @@ echo "CMS_URL=$CMS_URL"
 git clone --branch $GIT_BRANCH $GIT_REPO site
 cd site && hugo --gc --minify && cd ..
 
-# Start strapi webhook
-strapi-webhook -m "$GIT_MSG" -t $GIT_TIMEOUT -s $CMS_URL site &
+# Reload nginx
+cp /etc/nginx/http.d/default.conf /etc/nginx/http.d/default.conf.save
+cp site/config/nginx.default.conf /etc/nginx/http.d/default.conf
+nginx && nginx -s reload
 
-# Start http server
-http-server -a ':9000' site/public
+# Start strapi webhook
+strapi-webhook -m "$GIT_MSG" -t $GIT_TIMEOUT -s $CMS_URL /app/site
