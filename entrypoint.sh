@@ -29,7 +29,15 @@ echo "GIT_MSG=$GIT_MSG"
 echo "GIT_TIMEOUT=$GIT_TIMEOUT"
 echo "CMS_URL=$CMS_URL"
 
-git clone --branch $GIT_BRANCH $GIT_REPO site
+# Clone the site
+if [ -d site/.git ]; then
+  echo 'Git exists'
+  cd site && git pull && cd ..
+else
+  git clone --branch $GIT_BRANCH $GIT_REPO site
+fi
+
+# Build
 cd site && hugo --gc --minify && cd ..
 
 # Reload nginx
