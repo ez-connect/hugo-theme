@@ -1,6 +1,8 @@
 #!/bin/sh
 
 if [ -z "$SSH_PUBLIC" ] | [ -z "$SSH_PRIVATE" ]; then
+  echo "Missing SSH"
+else
   mkdir -p ~/.ssh
   chmod 766 ~/.ssh
   echo -e "$SSH_PUBLIC\n" > ~/.ssh/id_rsa.pub
@@ -10,7 +12,6 @@ fi
 
 if [ -z "$GIT_USERNAME" ] | [ -z "$GIT_EMAIL" ]; then
   echo "Missing git user info"
-  exit 1
 else
   git config --global user.name "$GIT_USERNAME"
   git config --global user.email "$GIT_EMAIL"
