@@ -12,7 +12,8 @@
 -include .make.env
 
 init:
-	hugo mod get -u
+	@# hugo mod get -u
+	npm ci
 
 syntax:
 	@hugo gen chromastyles --style=dracula > assets/scss/components/_syntax.scss

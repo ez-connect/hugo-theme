@@ -29,13 +29,12 @@
 {{ if eq (hugo.Environment) "development" -}}
 <script defer src="{{ $lib.Permalink }}"></script>
 {{ else }}
-{{ $lib = $lib | minify | fingerprint }}
-<script defer src="{{ $lib.Permalink }}" {{ if .Site.Params.options.useSRI }} integrity="{{ $lib.Data.Integrity }}" {{ end }} crossorigin="anonymous"></script>
+  {{ $lib = $lib | minify | fingerprint }}  <script defer src="{{ $lib.Permalink }}" {{ if .Site.Params.options.useSRI }} integrity="{{ $lib.Data.Integrity }}" {{ end }} crossorigin="anonymous"></script>
 {{ end }}
+
 
 <!-- Assets -->
 {{ $util := resources.Get "js/util.js" }}
-{{ $auth := resources.Get "js/auth.js" }}
 {{ $search := resources.Get "js/search.js" }}
 {{ $nav := resources.Get "js/nav.js" }}
 {{ $toc := resources.Get "js/toc.js" }}
@@ -44,14 +43,15 @@
 {{ $document := resources.Get "js/document.js" }}
 {{ $applicant := resources.Get "js/applicant.js" }}
 
-{{ $js := slice $util $auth $search $nav $toc $content $modal $document $applicant }}
+{{ $js := slice $util $search $nav $toc $content $modal $document $applicant }}
 
 {{ $js = $js | resources.Concat "main.js" }}
 
 {{ if eq (hugo.Environment) "development" -}}
-<script defer src="{{ $js.Permalink }}"></script>
+  <script defer src="{{ $js.Permalink }}"></script>
 {{ else }}
-{{ $js = $js | minify | fingerprint }}
-<script defer src="{{ $js.Permalink }}" {{ if .Site.Params.options.useSRI }} integrity="{{ $js.Data.Integrity }}" {{ end }} crossorigin="anonymous">
+  {{ $js = $js | minify | fingerprint }}
+
+  <script defer src="{{ $js.Permalink }}" {{ if .Site.Params.options.useSRI }} integrity="{{ $js.Data.Integrity }}" {{ end }} crossorigin="anonymous">
 </script>
 {{ end }}

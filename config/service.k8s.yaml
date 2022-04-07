@@ -9,19 +9,30 @@ deployment:
   kind: Deployment # one of [Deployment|StatefulSet]
   replicas: 1 # specified number of pod replicas are running at any given time
   # annotations: {}
-  image: registry.gitlab.com/free-mind/hub/hugo-theme
+  image: docker.io/ezconnect/hugo-theme
   # tag: latest # optional, default is the current version
   # imagePullSecrets: # optional, leave it blank for public registries
   #   - gitlab-auth
-  pullPolicy: Always # IfNotPresent | Always
+  pullPolicy: IfNotPresent # IfNotPresent | Always
   # Environment variables for the containers that run in the Pod
-  env: {}
-    # ENV_NAME: value
-    # ENV_SECRET:
+  env:
+    GIT_USERNAME: Bot
+    GIT_EMAIL: bot@ez-connect.net
+    GIT_REPO: https://github.com/ez-connect/hugo-theme.git
+    GIT_BRANCH: home
+    GIT_MSG: Sync CMS
+    GIT_TIMEOUT: "300"
+    CMS_URL: cms.prod.svc.cluster.local:1337
+    # SSH_PRIVATE:
     #   valueFrom:
     #     secretKeyRef:
     #       name: ssh-gitlab
     #       key: private
+    # SSH_PUBLIC:
+    #   valueFrom:
+    #     secretKeyRef:
+    #       name: ssh-gitlab
+    #       key: public
   # The command and arguments that you define in the configuration file
   # override the default command and arguments provided by the container image.
   # If you define args, but do not define a command, the default command
@@ -41,24 +52,14 @@ deployment:
   liveness: {}
   readiness: {}
 
-  podSecurityContext: {}
-  securityContext: {}
-
 # Exposes the application running on a set of Pods as a network service
 service:
   type: ClusterIP
   port:
-    # grpc:
-    #   port: 8080
-    # proxy:
-    #   port: 8081
-    # http:
-    #   port: 8082
-    # additional services
-    nginx:
+    http:
       port: 80
     webhook:
-      port: 8081
+      port: 8082
 
 ingress:
   enabled: true
@@ -72,25 +73,25 @@ ingress:
   domain: ez-connect.net
   tls: staging-tls
   host:
-    nginx:
+    http:
       subdomain: hugo-theme
       path: /
       type: Prefix
 
 # An addidition ingress if it have different annotations
 ingressEx:
-  enabled: true
-  annotations: {}
-  host:
-    webhook:
-      subdomain: webhook
-      path: /
-      type: Prefix
+  enabled: false
+  # annotations: {}
+  # host:
+  #   webhook:
+  #     subdomain: webhook
+  #     path: /
+  #     type: Prefix
 
 #  Persistent volumes
 # https://kubernetes.io/docs/concepts/storage/persistent-volumes/
 persistent:
-  enabled: true
+  enabled: false
   volume:
     hugo-theme:
       class: nfs-csi # manual, leave empty to use the default
@@ -98,6 +99,34 @@ persistent:
         - ReadWriteOnce
       size: 256Mi
       path: /app/site
+
+# podSecurityContext:
+#   runAsUser: 1000
+#   runAsGroup: 3000
+#   fsGroup: 2000
+
+# securityContext:
+#   runAsUser: 65534
+#   allowPrivilegeEscalation: false
+
+# nodeSelector:
+#   kubernetes.io/hostname: microk8s
+
+# https://kubernetes.io/docs/tasks/configure-pod-container/assign-pods-nodes-using-node-affinity/#schedule-a-pod-using-required-node-affinity
+# affinity: {}
+
+# https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/
+# tolerations: []
+
+# Resource requests and limits of Pod and container
+# https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#resource-requests-and-limits-of-pod-and-container
+# resource:
+#   requests:
+#     cpu: 0.2
+#     memory: 500Mi
+#   limits:
+#     cpu: 0.5
+#     memory: 1Gi
 
 # Automatically updates a workload resource (such as a Deployment or StatefulSet),
 #  with the aim of automatically scaling the workload to match demand.

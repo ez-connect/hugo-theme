@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [ -z "$SSH_PUBLIC" ] |  [ -z "$SSH_PRIVATE" ]; then
+if [ -z "$SSH_PUBLIC" ] | [ -z "$SSH_PRIVATE" ]; then
   mkdir -p ~/.ssh
   chmod 766 ~/.ssh
   echo -e "$SSH_PUBLIC\n" > ~/.ssh/id_rsa.pub

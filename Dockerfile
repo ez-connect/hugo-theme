@@ -1,6 +1,4 @@
-FROM docker.io/ezconnect/strapi-webhook:0.2.0
-
-ARG httpServerVersion=0.4.0
+FROM docker.io/ezconnect/strapi-webhook:0.2.1
 
 ENV GIT_USERNAME=Vinh
 ENV GIT_EMAIL=thanh.vinh@hotmail.com
