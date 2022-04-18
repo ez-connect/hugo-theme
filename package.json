@@ -1,6 +1,6 @@
 {
   "name": "hugo-theme",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "Built with Hugo",
   "main": "index.js",
   "repository": "git@github.com:ez-connect/hugo-theme.git",

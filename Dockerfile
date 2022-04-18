@@ -1,4 +1,4 @@
-FROM docker.io/ezconnect/strapi-webhook:0.2.1
+FROM docker.io/ezconnect/strapi-webhook:0.2.2
 
 ENV GIT_USERNAME=Vinh
 ENV GIT_EMAIL=thanh.vinh@hotmail.com

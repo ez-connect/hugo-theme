@@ -10,8 +10,8 @@ public
 # gkgen
 ###########################################################
 
+.chart/
 base/
-chart/
 dist/
 
 # Make env from yaml

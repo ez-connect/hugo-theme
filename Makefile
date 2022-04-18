@@ -58,12 +58,16 @@ endif
 ###########################################################
 helm:
 	gkgen -k $(args) .
-	cp config/service.k8s.yaml chart/values.yaml
-	helm lint chart/
+	cp .config/service.k8s.yaml .chart/values.yaml
+ifneq ($(wildcard .chart/Chart.lock),)
+	rm .chart/Chart.lock
+endif
+	helm dependency build .chart/
+	helm lint .chart/
 
 # Generate template for testing
 pod: helm
-	helm template $(NAME) chart/ > chart/k8s.yaml
+	helm template $(NAME) .chart/ > .chart/k8s.yaml
 
 # Helm chart
 package: helm
@@ -72,7 +76,7 @@ ifndef HELM_REPO
 	@exit 1
 endif
 
-	helm cm-push chart/ $(HELM_REPO)
+	helm cm-push .chart/ $(HELM_REPO)
 
 # Helm install
 install:
