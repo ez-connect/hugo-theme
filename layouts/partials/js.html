@@ -27,9 +27,17 @@
 {{ $lib = $lib | resources.Concat "lib.js" }}
 
 {{ if eq (hugo.Environment) "development" -}}
-<script defer src="{{ $lib.Permalink }}"></script>
+  <script defer src="{{ $lib.Permalink }}"></script>
 {{ else }}
-  {{ $lib = $lib | minify | fingerprint }}  <script defer src="{{ $lib.Permalink }}" {{ if .Site.Params.options.useSRI }} integrity="{{ $lib.Data.Integrity }}" {{ end }} crossorigin="anonymous"></script>
+  {{ $lib = $lib | minify | fingerprint }}
+  <script
+    defer
+    src="{{ $lib.Permalink }}"
+    {{ if .Site.Params.options.useSRI }}
+      integrity="{{ $lib.Data.Integrity }}"
+    {{ end }}
+    crossorigin="anonymous"
+  ></script>
 {{ end }}
 
 
@@ -52,6 +60,13 @@
 {{ else }}
   {{ $js = $js | minify | fingerprint }}
 
-  <script defer src="{{ $js.Permalink }}" {{ if .Site.Params.options.useSRI }} integrity="{{ $js.Data.Integrity }}" {{ end }} crossorigin="anonymous">
-</script>
+
+  <script
+    defer
+    src="{{ $js.Permalink }}"
+    {{ if .Site.Params.options.useSRI }}
+      integrity="{{ $js.Data.Integrity }}"
+    {{ end }}
+    crossorigin="anonymous"
+  ></script>
 {{ end }}

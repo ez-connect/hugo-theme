@@ -24,6 +24,7 @@
     {{ end }}
   </ul>
 
+  <!--
   <div id="search" class="search" href="#">
     {{ partial "svg/search.svg" . }}
     <input
@@ -32,5 +33,14 @@
       type="text"
       placeholder="Search.."
     />
+  </div>
+-->
+
+  <div id="navMenu" class="link--vertical">
+    <ul>
+      {{ range $links }}
+        <li><a href="{{ .url }}">{{ .name }}</a></li>
+      {{ end }}
+    </ul>
   </div>
 </nav>
