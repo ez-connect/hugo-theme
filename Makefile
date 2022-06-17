@@ -30,9 +30,9 @@ build:
 
 # Share site via ngrok
 share: build
-	npm run http-server public/ &
-	npm run ngrok authtoken 2760UjyRswx9WoJxA1WKbnw2t7Y_2MC5WfbCXHv787ggw93S7
-	npm run ngrok http 8080
+	npx --yes http-server public/ &
+	npx --yes ngrok authtoken 2760UjyRswx9WoJxA1WKbnw2t7Y_2MC5WfbCXHv787ggw93S7
+	npx ngrok http 8080
 
 clean:
 	git clean -fdx

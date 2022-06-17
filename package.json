@@ -1,24 +1,18 @@
 {
   "name": "hugo-theme",
-  "version": "0.2.5",
+  "version": "0.3.0",
   "description": "Built with Hugo",
-  "main": "index.js",
-  "repository": "git@github.com:ez-connect/hugo-theme.git",
+  "repository": "https://github.com/ez-connect/hugo-theme",
   "author": "Ez-Connect",
   "license": "MIT",
   "private": true,
   "scripts": {
-    "ngrok": "ngrok",
-    "http-server": "http-server",
     "lint": "prettier -c -w assets/js/*.js assets/scss/ layouts/",
     "syntax": "hugo gen chromastyles --style=dracula > assets/scss/components/_syntax.scss"
   },
   "devDependencies": {
-    "eslint": "^8.12.0",
-    "prettier": "^2.6.2",
-    "prettier-plugin-go-template": "^0.0.12"
-  },
-  "dependencies": {
-    "http-server": "^14.1.0"
+    "eslint": "^8.17.0",
+    "prettier": "^2.7.1",
+    "prettier-plugin-go-template": "^0.0.13"
   }
 }
