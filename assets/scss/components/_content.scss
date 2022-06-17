@@ -6,7 +6,7 @@
   overflow-x: hidden; // avoid overlap toc on length line, URL for example
 
   // Phones: hide toc
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-down(md) {
     width: 100%;
     padding: 0 $space;
   }

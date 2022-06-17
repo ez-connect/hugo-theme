@@ -34,19 +34,23 @@
     width: 100% - $blog-menu-width;
     padding: 0 32px 16px 32px;
   }
+}
 
-  @media (max-width: $width-sm) {
-    .article-list {
-      flex-direction: column;
-    }
+@include media-breakpoint-down(md) {
+  .article-list-page {
+    flex-direction: column;
+  }
 
-    .article-list {
-      width: 100%;
-    }
+  .article-list {
+    width: 100% !important;
+  }
 
-    .blog__menu {
-      width: 100%;
-      padding: 32px;
-    }
+  .article-list {
+    width: 100%;
+  }
+
+  .blog__menu {
+    width: 100%;
+    padding: 32px;
   }
 }

@@ -7,7 +7,7 @@
   top: 0;
   width: 100%;
   height: $nav-height;
-  padding: 16px;
+  padding: $space;
   background: $primary-color-dark;
 
   @media print {
@@ -33,7 +33,7 @@
     border-right: solid $text-color-muted;
     border-width: 1px;
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-down(md) {
       border: none;
       flex: 1;
     }
@@ -48,8 +48,8 @@
     display: none;
     padding-right: 16px;
 
-    @include media-breakpoint-up(sm) {
-      display: block;
+    @include media-breakpoint-down(md) {
+      display: block !important;
     }
   }
 
@@ -58,10 +58,8 @@
     flex: 1;
     padding-left: 32px;
 
-    @include media-breakpoint-up(sm) {
-      position: absolute;
-      bottom: -8px;
-      font-size: $font-size-sx;
+    @include media-breakpoint-down(md) {
+      display: none;
     }
 
     li {
@@ -69,30 +67,43 @@
     }
   }
 
-  .search {
-    padding-left: 16px;
-    // border-width: 1px;
+  .link--vertical {
+    display: none;
+    position: absolute !important;
+    left: 0px;
+    top: $nav-height;
+    width: 100%;
+    background: $primary-color-dark;
 
-    svg {
-      position: absolute;
-      padding: 8px 16px;
-      fill: $text-color-muted;
-      padding-left: 8px;
-    }
-
-    input {
-      height: 32px;
-      padding-left: 32px;
-      margin-bottom: 0;
-      color: $text-color-muted;
-    }
-
-    span {
-      @include media-breakpoint-up(sm) {
-        display: none;
-      }
+    li {
+      padding: $space / 2 0;
     }
   }
+
+  // .search {
+  //   padding-left: 16px;
+  //   // border-width: 1px;
+
+  //   svg {
+  //     position: absolute;
+  //     padding: 8px 16px;
+  //     fill: $text-color-muted;
+  //     padding-left: 8px;
+  //   }
+
+  //   input {
+  //     height: 32px;
+  //     padding-left: 32px;
+  //     margin-bottom: 0;
+  //     color: $text-color-muted;
+  //   }
+
+  //   span {
+  //     @include media-breakpoint-down(md) {
+  //       display: none;
+  //     }
+  //   }
+  // }
 
   .link-menu {
     position: absolute;
