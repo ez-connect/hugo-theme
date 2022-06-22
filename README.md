@@ -2,42 +2,15 @@
 
 ## Getting started
 
-### GNU Make
+### Hugo, GNU Make
 
-**Windows**
+- Windows: `scoop install hugo-extended make`
+- Linux: `sudo apt install hugo make`
+- MacOS: `brew install hugo make`
 
-```console
-scoop install make
-```
-
-**Linux**
-
-```console
-sudo apt install make
-```
-
-**MacOS**
-
-```console
-brew install make
-```
-
-### Hugo
-
-Install [hugo-extended](https://gohugo.io/getting-started/installing/)
+Or [install Hugo from Tarbal](https://gohugo.io/getting-started/installing/#install-hugo-from-tarball)
 
 ## Development
 
-```console
-make run
-make build
-```
-
-## HTML/CSS Style Guide
-
-https://home.freemind.vn/document/development/htmlcss-style-guide-24/
-
-## Preview
-
-- Development: http://local.freemind.com.vn
-- Production: https://freemind.vn
+- Launch Hugo server: `make run`
+- Build: `make build`
