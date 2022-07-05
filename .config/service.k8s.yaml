@@ -17,6 +17,11 @@ deployment:
   # Environment variables for the containers that run in the Pod
   env:
     STRAPI_HOST: strapi-hugo.prod.svc.cluster.local:1337
+    # STRAPI_API_TOKEN: api-token
+    # HUGO_SITE_DIR: web
+    # DEFAULT_LOCALE: en
+    # SINGLE_TYPES: site,home,nav,about
+    # COLLECTION_TYPES: contributor,article,document,career,project,page,resume
     GIT_USERNAME: Bot
     GIT_EMAIL: bot@ez-connect.net
     GIT_REPO: https://github.com/ez-connect/hugo-theme.git
