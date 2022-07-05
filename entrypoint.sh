@@ -31,20 +31,35 @@ echo "GIT_TIMEOUT=$GIT_TIMEOUT"
 echo "CMS_URL=$CMS_URL"
 
 # Clone the site
-if [ -d site/.git ]; then
+if [ -d web/.git ]; then
   echo 'Git exists'
-  cd site && git pull && cd ..
+  cd web && git pull && cd ..
 else
-  git clone --branch $GIT_BRANCH $GIT_REPO site
+  git clone --branch=$GIT_BRANCH $GIT_REPO web
 fi
 
 # Build
-cd site && hugo --gc --minify && cd ..
+cd web && hugo --gc --minify && cd ..
 
-# Reload nginx
-cp /etc/nginx/http.d/default.conf /etc/nginx/http.d/default.conf.save
-cp site/config/nginx.default.conf /etc/nginx/http.d/default.conf
-nginx && nginx -s reload
-
+# Start nginx
+nginx
 # Start strapi webhook
-strapi-webhook -m "$GIT_MSG" -t $GIT_TIMEOUT -s $CMS_URL /app/site
+echo "STRAPI_HOST=$STRAPI_HOST"
+echo "STRAPI_API_TOKEN=$STRAPI_API_TOKEN"
+echo "HUGO_SITE_DIR=$HUGO_SITE_DIR"
+echo "DEFAULT_LOCALE=$DEFAULT_LOCALE"
+echo "SINGLE_TYPES=$SINGLE_TYPES"
+echo "SINGLE_TYPES=$SINGLE_TYPES"
+echo "COLLECTION_TYPES=$COLLECTION_TYPES"
+echo "GIT_MSG=$GIT_MSG"
+echo "GIT_TIMEOUT=$GIT_TIMEOUT"
+
+strapiwebhook serve \
+	--strapi=$STRAPI_HOST \
+	--token=$STRAPI_API_TOKEN \
+	--dir=$HUGO_SITE_DIR \
+	--locale=$DEFAULT_LOCALE \
+	--single=$SINGLE_TYPES \
+	--collection=${COLLECTION_TYPES} \
+	--commit="$GIT_MSG" \
+	--timeout=$GIT_TIMEOUT
