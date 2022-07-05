@@ -25,6 +25,6 @@ RUN set -ex && \
   chmod +x entrypoint.sh && \
   mv entrypoint.sh /usr/bin/
 
-USER webhook
+# USER webhook
 
 ENTRYPOINT 'entrypoint.sh'
