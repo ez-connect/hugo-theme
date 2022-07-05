@@ -1,3 +1,6 @@
 name: hugo-theme
-version: 0.2.5
+namespace:
+version: 0.3.0
 description: Built with Hugo
+readme: https://raw.githubusercontent.com/ez-connect/hugo-theme/main/README.md
+

@@ -16,23 +16,23 @@ deployment:
   pullPolicy: IfNotPresent # IfNotPresent | Always
   # Environment variables for the containers that run in the Pod
   env:
+    STRAPI_HOST: strapi-hugo.prod.svc.cluster.local:1337
     GIT_USERNAME: Bot
     GIT_EMAIL: bot@ez-connect.net
     GIT_REPO: https://github.com/ez-connect/hugo-theme.git
-    GIT_BRANCH: home
+    GIT_BRANCH: main
     GIT_MSG: Sync CMS
     GIT_TIMEOUT: "300"
-    CMS_URL: cms.prod.svc.cluster.local:1337
-    # SSH_PRIVATE:
-    #   valueFrom:
-    #     secretKeyRef:
-    #       name: ssh-gitlab
-    #       key: private
-    # SSH_PUBLIC:
-    #   valueFrom:
-    #     secretKeyRef:
-    #       name: ssh-gitlab
-    #       key: public
+    SSH_PRIVATE:
+      valueFrom:
+        secretKeyRef:
+          name: ssh-auth
+          key: private
+    SSH_PUBLIC:
+      valueFrom:
+        secretKeyRef:
+          name: ssh-auth
+          key: public
   # The command and arguments that you define in the configuration file
   # override the default command and arguments provided by the container image.
   # If you define args, but do not define a command, the default command
@@ -57,7 +57,7 @@ service:
   type: ClusterIP
   port:
     http:
-      port: 80
+      port: 8000
     webhook:
       port: 8082
 
@@ -71,7 +71,7 @@ ingress:
         return 200;
       }
   domain: ez-connect.net
-  tls: staging-tls
+  tls: ez-connect.net
   host:
     http:
       subdomain: hugo-theme
@@ -91,10 +91,10 @@ ingressEx:
 #  Persistent volumes
 # https://kubernetes.io/docs/concepts/storage/persistent-volumes/
 persistent:
-  enabled: false
+  enabled: true
   volume:
     hugo-theme:
-      class: nfs-csi # manual, leave empty to use the default
+      # class: default # manual, nfs-csi, longhorn... leave empty to use the default
       accessModes:
         - ReadWriteOnce
       size: 256Mi
