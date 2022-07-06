@@ -104,7 +104,7 @@ persistent:
       accessModes:
         - ReadWriteOnce
       size: 256Mi
-      path: /app/site
+      path: /home/webhook
 
 # podSecurityContext:
 #   runAsUser: 1000
