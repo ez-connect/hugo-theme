@@ -1,11 +1,6 @@
 {{ $defaultData := index $.Site.Data $.Site.Params.defaultLanguage }}
 {{ $data := index $.Site.Data $.Site.Language.Lang }}
-
-{{ $footer := $data.footer }}
-
-{{ if not $footer }}
-  {{ $footer = $defaultData.footer }}
-{{ end }}
+{{ $footer := default $defaultData.footer $data.footer }}
 
 
 <footer class="footer">

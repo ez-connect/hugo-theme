@@ -1,11 +1,7 @@
 {{ $defaultData := index $.Site.Data $.Site.Params.defaultLanguage }}
 {{ $data := index $.Site.Data $.Site.Language.Lang }}
 
-{{ $nav := $data.nav }}
-{{ if not $nav }}
-  {{ $nav = $defaultData.nav }}
-{{ end }}
-
+{{ $nav := default $defaultData.nav $data.nav }}
 {{ $links := $nav.links }}
 
 
