@@ -1,0 +1,9 @@
+// https://gohugo.io/commands/hugo_gen_chromastyles/
+// Generate via `make syntax` in /vendor/_systax.scss
+.highlight {
+  overflow: auto;
+}
+
+.chroma {
+  padding: $space;
+}

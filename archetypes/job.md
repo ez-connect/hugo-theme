@@ -1,10 +1,10 @@
 ---
-title: { { replace .Name "-" " " | title } }
+title: {{ replace .Name "-" " " | title }}
 description:
-createdBy: Vinh
-createdAt: { { .Date } }
-updatedBy: Vinh
-updatedAt: { { .Date } }
+createdBy: thanh.vinh@hotmail.com
+createdAt: {{ .Date }}
+updatedBy: thanh.vinh@hotmail.com
+updatedAt: {{ .Date }}
 draft: true
 ---
 

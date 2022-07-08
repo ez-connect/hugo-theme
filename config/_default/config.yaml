@@ -23,6 +23,7 @@ outputs:
   home: [HTML, ROBOTS, Sitemap]
   section: [HTML, JSON]
 
+# https://gohugo.io/getting-started/configuration-markup#configure-markup
 markup:
   goldmark:
     extensions:
@@ -36,16 +37,14 @@ markup:
     #     title: true
     # renderer:
     #   unsafe: true
+
+  # https://gohugo.io/getting-started/configuration-markup#highlight
+  # https://gohugo.io/functions/highlight/#options
   highlight:
-    codeFences: true
     guessSyntax: true
-    # hl_Lines: ""
-    # lineNoStart: 1
-    lineNos: true
-    lineNumbersInTable: true
     noClasses: false
-    # Chroma Style Gallery: https://xyproto.github.io/splash/docs/
-    style: dracula
+    # # Chroma Style Gallery: https://xyproto.github.io/splash/docs/
+    # style: emacs # native
     tabWidth: 2
 
 #

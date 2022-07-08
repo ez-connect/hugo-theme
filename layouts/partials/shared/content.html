@@ -2,12 +2,7 @@
   <article>
     <section>
       {{ partial "shared/author" . }}
-
-
       <h1>{{ .Title }}</h1>
-      {{ if .Description }}
-        <p class="description">{{ markdownify .Description }}</p>
-      {{ end }}
       <hr />
     </section>
 
@@ -24,5 +19,4 @@
   </article>
 
   {{ partial "shared/toc" . }}
-
 </div>

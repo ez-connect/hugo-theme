@@ -1,15 +1,15 @@
 ---
-title: { { replace .Name "-" " " | title } }
+title: {{ replace .Name "-" " " | title }}
 phone: '0909999999'
 email: name@example.com
 status: New
 job:
   title: Frontend Engineer
   url: /job/sample-1
-createdBy: Vinh
-createdAt: { { .Date } }
-updatedBy: Vinh
-updatedAt: { { .Date } }
+createdBy: thanh.vinh@hotmail.com
+createdAt: {{ .Date }}
+createdBy: thanh.vinh@hotmail.com
+updatedAt: {{ .Date }}
 draft: true
 ---
 

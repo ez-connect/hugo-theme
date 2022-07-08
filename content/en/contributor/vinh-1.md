@@ -40,11 +40,11 @@ avatar:
 createdAt: "2022-01-28T02:54:09.517Z"
 id: 1
 publishedAt: "2022-01-28T03:38:08.218Z"
-title: Vinh
+title: thanh.vinh@hotmail.com
 updatedAt: "2022-01-28T03:38:08.219Z"
 user:
   createdAt: "2022-01-23T13:59:43.490Z"
-  firstname: Vinh
+  firstname: thanh.vinh@hotmail.com
   id: 1
   lastname: Nguyen
   preferedLanguage: null

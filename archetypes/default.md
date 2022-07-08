@@ -1,6 +1,6 @@
 ---
-title: { { replace .Name "-" " " | title } }
-createdBy: Vinh
-createdAt: { { .Date } }
+title: {{ replace .Name "-" " " | title }}
+createdBy: thanh.vinh@hotmail.com
+createdAt: {{ .Date }}
 draft: true
 ---

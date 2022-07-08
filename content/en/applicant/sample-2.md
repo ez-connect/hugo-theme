@@ -1,23 +1,17 @@
 ---
-title: Sample 1
-tel: '0909999999'
+title: Sample 2
+phone: '0909999999'
 email: name@example.com
 status: New
 job:
   title: Frontend Engineer
   url: /job/sample-1
 createdBy: thanh.vinh@hotmail.com
-createdAt: 2021-05-11T22:41:56+07:00
-updatedBy: thanh.vinh@hotmail.com
-updatedAt: 2021-05-11T22:41:56+07:00
-draft: false
+createdAt: 2022-07-08T22:17:58+07:00
+createdBy: thanh.vinh@hotmail.com
+updatedAt: 2022-07-08T22:17:58+07:00
+draft: true
 ---
-
-## Applicant
-
-> - Sample 1
-> - 0909999999
-> - name@example.com
 
 ## Example title
 
