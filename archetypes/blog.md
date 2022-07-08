@@ -1,11 +1,11 @@
 ---
-title: { { replace .Name "-" " " | title } }
+title: {{ replace .Name "-" " " | title }}
 description: Mauris elementum felis purus, a gravida leo sodales ac. Phasellus et tempus purus. Cras nibh tellus, convallis at mollis a, egestas ac sem. Donec erat mauris, tempor id accumsan id, facilisis non sapien.
 tags: []
-createdBy: Vinh
-createdAt: { { .Date } }
-updatedBy: Vinh
-updatedAt: { { .Date } }
+createdBy: thanh.vinh@hotmail.com
+createdAt: {{ .Date }}
+updatedBy: thanh.vinh@hotmail.com
+updatedAt: {{ .Date }}
 draft: true
 ---
 
