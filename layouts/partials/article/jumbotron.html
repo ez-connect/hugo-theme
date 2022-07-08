@@ -1,11 +1,6 @@
 {{ $defaultData := index $.Site.Data $.Site.Params.defaultLanguage }}
 {{ $data := index $.Site.Data $.Site.Language.Lang }}
-
-{{ $blog := $data.blog }}
-
-{{ if not $blog }}
-  {{ $blog = $defaultData.blog }}
-{{ end }}
+{{ $blog := default $defaultData.blog $data.blog }}
 
 {{ with $blog.jumbotron }}
   <div class="jumbotron">
