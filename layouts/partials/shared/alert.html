@@ -1,0 +1,14 @@
+{{ $icon := "checkmark-circle-outline" }}
+{{ if (eq .type "info") }}
+  {{ $icon = "information-circle-outline" }}
+{{ else if (eq .type "warning") }}
+  {{ $icon = "warning-outline" }}
+{{ else if (eq .type "error") }}
+  {{ $icon = "alert-circle-outline" }}
+{{ end }}
+
+
+<div class="alert {{ .type }}">
+  {{ partial "shared/ionicons" $icon }}
+  {{ .message }}
+</div>
