@@ -40,7 +40,7 @@
 
       {{ $contact := .Site.Data.site.contact }}
       <div class="item">
-        {{ partial "svg/map-marker-alt.svg" }}
+        {{ partial "shared/ionicons" "location-outline" }}
         <a
           target="_blank"
           href="https://www.google.com/maps/search/{{ $contact.address }}"
@@ -48,11 +48,12 @@
         >
       </div>
       <div class="item">
-        {{ partial "svg/phone-square.svg" }}
+        {{ partial "shared/ionicons" "call-outline" }}
+
         <a href="tel:{{ $contact.tel }}">{{ $contact.tel }}</a>
       </div>
       <div class="item">
-        {{ partial "svg/envelope.svg" }}
+        {{ partial "shared/ionicons" "mail-outline" }}
         <a href="mailto:{{ $contact.email }}">{{ $contact.email }}</a>
       </div>
     </div>

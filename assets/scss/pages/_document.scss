@@ -78,7 +78,6 @@
 .document__content {
   box-sizing: border-box;
   margin-left: $document-menu-width;
-  width: calc(100% - #{$document-menu-width});
 }
 
 // Mobiles: hide menu and toc
@@ -95,8 +94,8 @@
 }
 
 // Tablets: hide toc
-@media (min-width: $width-sm) and (max-width: $width-md) {
-  .document__content {
-    width: calc(100% - #{$document-menu-width});
+@include media-breakpoint-down(md) {
+  .toc {
+    display: none !important;
   }
 }

@@ -7,19 +7,19 @@
   <div class="resume__right">
     <ul>
       <li>
-        {{ partial "svg/phone-square.svg" }}
+        {{ partial "shared/ionicons" "call-outline" }}
         <a href="tel:{{ .Params.tel }}">{{ .Params.tel }}</a>
       </li>
       <li>
-        {{ partial "svg/envelope.svg" }}
+        {{ partial "shared/ionicons" "mail-outline" }}
         <a href="mailto:{{ .Params.email }}">{{ .Params.email }}</a>
       </li>
       <li>
-        {{ partial "svg/globe.svg" }}
+        {{ partial "shared/ionicons" "earth-outline" }}
         <a href="{{ .Params.webpage }}">{{ .Params.webpage }}</a>
       </li>
       <li>
-        {{ partial "svg/map-marker-alt.svg" }}
+        {{ partial "shared/ionicons" "location-outline" }}
         {{ .Params.address }}
       </li>
     </ul>

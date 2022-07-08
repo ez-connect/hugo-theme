@@ -57,6 +57,15 @@ syntax:
 lint:
 	npm run lint
 
+#: Download svg icons
+svg:
+	@icons="$(shell cat assets/ionicons/_icons | tr '\n' ' ')"; \
+	echo $${icons}; \
+	for icon in $${icons}; do \
+		echo "Download icon: $${icon}"; \
+		curl -s -o assets/ionicons/$${icon}.svg https://unpkg.com/ionicons@5.5.2/dist/ionicons/svg/$${icon}.svg; \
+	done
+
 #: Hugo provides its own webserver which builds and serves the site
 run:
 	hugo serve --bind 0.0.0.0

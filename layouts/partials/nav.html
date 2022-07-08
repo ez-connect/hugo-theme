@@ -11,9 +11,9 @@
 
 <nav class="nav">
   <div class="logo">
-    <a id="navMenuButton" class="menu-btn" href="#"
-      >{{ partial "svg/bars.svg" . }}</a
-    >
+    <a id="navMenuButton" class="menu-btn" href="#">
+      {{ partial "shared/ionicons" "menu-outline" }}
+    </a>
     <img alt="{{ $nav.logo.name }}" src="{{ $nav.logo.url }}" />
     <a href="/"><strong>{{ $nav.title }}</strong></a>
   </div>
@@ -26,7 +26,7 @@
 
   <!--
   <div id="search" class="search" href="#">
-    {{ partial "svg/search.svg" . }}
+    {{ partial "shared/ionicons" "search-outline" }}
     <input
       id="searchInput"
       data-section="{{ .Section }}"
