@@ -1,6 +1,7 @@
 ---
 title: Simon Doe
-avatar: avatar.png
+avatar:
+  url: /uploads/avatar_d6f96d73d0.png
 position: Senior Software Engineer
 tel: 0123 4567 890
 email: name@example.com
