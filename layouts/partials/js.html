@@ -1,5 +1,10 @@
 <!-- Libs -->
 {{ $lib := slice }}
+
+{{ if .Site.Params.options.clipboard }}
+  {{ $lib = $lib | append (resources.Get "js/clipboard.js") }}
+{{ end }}
+
 {{ if .Site.Params.options.timeago }}
   {{ $lib = $lib | append (resources.Get "js/vendor/timeago.js") }}
 {{ end }}
