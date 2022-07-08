@@ -1,3 +1,6 @@
-{{ $svg := resources.Get (print "ionicons/" . ".svg")}}
-{{ safeHTML $svg.Content }}
-
+{{ $svg := resources.Get (print "ionicons/" . ".svg") }}
+{{ if $svg }}
+  {{ safeHTML $svg.Content }}
+{{ else }}
+  {{ . }}
+{{ end }}

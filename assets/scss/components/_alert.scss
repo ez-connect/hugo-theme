@@ -1,0 +1,48 @@
+.alert {
+  display: flex;
+  align-items: center;
+
+  svg {
+    padding: $space;
+  }
+}
+
+.alert.success {
+  background: rgba($success-color, 0.1);
+
+  svg {
+    path {
+      stroke: $success-color;
+    }
+  }
+}
+
+.alert.info {
+  background: rgba($info-color, 0.1);
+
+  svg {
+    path {
+      stroke: $info-color;
+    }
+  }
+}
+
+.alert.warning {
+  background: rgba($warning-color, 0.1);
+
+  svg {
+    path {
+      stroke: $warning-color;
+    }
+  }
+}
+
+.alert.error {
+  background: rgba($error-color, 0.1);
+
+  svg {
+    path {
+      stroke: $error-color;
+    }
+  }
+}
