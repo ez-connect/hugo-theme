@@ -1,0 +1,3 @@
+{{ $svg := resources.Get (print "ionicons/" . ".svg")}}
+{{ safeHTML $svg.Content }}
+
