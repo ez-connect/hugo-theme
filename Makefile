@@ -51,7 +51,7 @@ init:
 
 #: Generate chromastyles
 syntax:
-	@hugo gen chromastyles --style=emacs > assets/scss/vendor/_syntax.scss
+	@hugo gen chromastyles --style=emacs > assets/scss/vendor/chroma.scss
 
 #: Lint the code
 lint:

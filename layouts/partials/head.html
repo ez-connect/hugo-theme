@@ -33,12 +33,22 @@
 
 <link rel="shortcut icon" href="favicon.ico" />
 
-<!-- CSS -->
-{{ $options := (dict "targetPath" "main.css" "outputStyle" "compressed" "enableSourceMap" true) }}
-{{ $css := resources.Get "scss/main.scss" | resources.ToCSS $options }}
+<!-- Vendor -->
+{{ $css := resources.Match "scss/vendor/*.css" | resources.Concat "vendor.css" }}
 {{ if eq (hugo.Environment) "development" -}}
   <link rel="stylesheet" href="{{ $css.Permalink }}" />
 {{ else }}
   {{ $css = $css | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $css.Permalink }}" crossorigin="anonymous" />
+{{ end }}
+
+
+<!-- SCSS -->
+{{ $options := (dict "targetPath" "main.css" "outputStyle" "compressed" "enableSourceMap" true) }}
+{{ $scss := resources.Get "scss/main.scss" | resources.ToCSS $options }}
+{{ if eq (hugo.Environment) "development" -}}
+  <link rel="stylesheet" href="{{ $scss.Permalink }}" />
+{{ else }}
+  {{ $scss = $scss | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $scss.Permalink }}" crossorigin="anonymous" />
 {{ end }}
