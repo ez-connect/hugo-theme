@@ -3,7 +3,9 @@
 {{ $currentPage := . }}
 
 
-<div id="navMenu" class="document__menu">
+<div id="navMenu" class="document-menu">
+  {{ partial "shared/search-input" }}
+
   {{ with .Site.GetPage "/document" }}
     {{ range .Sections.ByWeight }}
       <div class="category">

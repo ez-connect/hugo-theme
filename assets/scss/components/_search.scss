@@ -1,3 +1,19 @@
+.search-input {
+  svg {
+    position: absolute;
+    font-size: 8px;
+    width: $space;
+    margin: $space / 2;
+  }
+  input {
+    width: 100%;
+    padding: $space / 2 $space / 2 $space / 2 $space * 2;
+    border-radius: $space / 2;
+    border: solid 1px $surface-color;
+    background: $surface-color;
+  }
+}
+
 .search-result {
   z-index: 1;
   position: fixed;
