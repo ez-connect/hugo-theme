@@ -1,4 +1,4 @@
-.document__menu {
+.document-menu {
   z-index: 0;
   box-sizing: border-box;
   position: fixed;
@@ -53,7 +53,7 @@
 
     .collapse {
       &::after {
-        content: $colappsed-icon;
+        content: '❯';
         position: absolute;
         right: 0;
       }
@@ -82,7 +82,7 @@
 
 // Mobiles: hide menu and toc
 @media (max-width: $width-sm) {
-  .document__menu {
+  .document-menu {
     display: none;
     width: unset;
   }

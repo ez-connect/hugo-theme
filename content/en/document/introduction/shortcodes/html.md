@@ -12,31 +12,27 @@ draft: false
 
 ## HTML
 
+HTML content
+
 ```
 {{ < html > }}
 Content
 {{ < html > }}
 ```
 
+## Collapse
+
 {{< html >}}
+<details>
+  <summary>Simple collapsible</summary>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+</details>
+{{< /html >}}
 
-<div align="left">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-  labore et dolore magna aliqua.
-</div>
-<div align="right">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-  labore et dolore magna aliqua.
-</div>
-<div align="center">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-  labore et dolore magna aliqua.
-</div>
-<div align="justify">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-  labore et dolore magna aliqua.
-</div>
 
+## Form
+
+{{< html >}}
 <form >
   First name: <input type = "text" name = "first_name" />
   <br>
@@ -44,6 +40,5 @@ Content
   <br>
   <button>Submit</button>
 </form>
-
 {{< /html >}}
 
