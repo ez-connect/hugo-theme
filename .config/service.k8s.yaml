@@ -16,7 +16,7 @@ deployment:
   pullPolicy: IfNotPresent # IfNotPresent | Always
   # Environment variables for the containers that run in the Pod
   env:
-    STRAPI_HOST: strapi-hugo.prod.svc.cluster.local:1337
+    STRAPI_HOST: http://strapi-hugo.prod.svc.cluster.local:1337
     # STRAPI_API_TOKEN: api-token
     # HUGO_SITE_DIR: web
     # DEFAULT_LOCALE: en
