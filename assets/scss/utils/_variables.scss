@@ -30,6 +30,7 @@ $font-size-lg: 1.25rem;
 
 // Space
 $space: 16px;
+$space2: $space * 2;
 
 // Breakpoints
 $width-sm: 576px; // small devices (phones)
@@ -39,7 +40,6 @@ $width-xl: 1200px; // extra large, laptops / desktops
 $width-xxl: 1400px; // extra large
 
 // Nav + TOC
-$nav-height: 64px;
 $toc-width: 15%;
 $footer-height: 64px;
 

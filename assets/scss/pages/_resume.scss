@@ -3,7 +3,7 @@
   max-width: $width-lg;
   margin-left: auto;
   margin-right: auto;
-  padding: 32px;
+  padding: $space2;
   border: 1px solid rgba(0, 0, 0, 0.025);
   // box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
 
@@ -53,7 +53,7 @@
 
 .resume__list {
   .item {
-    padding: 32px;
+    padding: $space2;
 
     display: flex;
     flex-direction: column;
@@ -67,7 +67,7 @@
       max-width: 192px;
       max-height: 192px;
 
-      padding: 16px;
+      padding: $space;
     }
   }
 }
@@ -140,7 +140,7 @@
       padding-inline-start: 0;
     }
 
-    padding-bottom: 16px;
+    padding-bottom: $space;
   }
 }
 

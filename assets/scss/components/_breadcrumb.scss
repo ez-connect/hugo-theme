@@ -1,13 +1,6 @@
 @import '../utils/mixins';
 
 .breadcrumb {
-  padding: 0 32px;
-  // white-space: nowrap;
-
-  @include media-breakpoint-up(sm) {
-    padding: 0 $space;
-  }
-
   ol {
     list-style: none;
     padding-inline-start: 0;

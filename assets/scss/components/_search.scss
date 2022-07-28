@@ -7,7 +7,7 @@
   }
   input {
     width: 100%;
-    padding: $space / 2 $space / 2 $space / 2 $space * 2;
+    padding: $space / 2 $space / 2 $space / 2 $space2;
     border-radius: $space / 2;
     border: solid 1px $surface-color;
     background: $surface-color;
@@ -17,7 +17,6 @@
 .search-result {
   z-index: 1;
   position: fixed;
-  top: $nav-height - 12px;
   right: 4px;
   padding: $space;
   background: $background-color;

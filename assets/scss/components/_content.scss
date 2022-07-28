@@ -1,15 +1,10 @@
 .content {
   box-sizing: border-box;
-  display: flex;
-  width: calc(100% - #{$toc-width});
-  padding: ($space * 2);
+  width: 100%;
   padding-top: 0;
-  overflow-x: hidden; // avoid overlap toc on length line, URL for example
-
-  // Phones: hide toc
-  @include media-breakpoint-down(md) {
-    width: 100%;
-  }
+  padding-left: $space2;
+  padding-right: $space2;
+  padding-bottom: $space2;
 
   h1 {
     margin-block-start: 0;

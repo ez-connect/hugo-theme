@@ -1,6 +1,6 @@
 .ionicon {
   display: inline-block;
-  width: 32px;
+  width: $space2;
 }
 
 .ionicon-fill-none {
@@ -9,5 +9,5 @@
 
 .ionicon-stroke-width {
   stroke: $text-color;
-  stroke-width: 32px;
+  stroke-width: $space2;
 }
