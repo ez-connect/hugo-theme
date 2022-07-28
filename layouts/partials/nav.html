@@ -14,17 +14,21 @@
     <a href="/"><strong>{{ $nav.title }}</strong></a>
   </div>
 
-  <ul class="link">
+  <!-- Menu for desktop -->
+  <ul>
     {{ range $links }}
       <li><a href="{{ .url }}">{{ .name }}</a></li>
     {{ end }}
   </ul>
+</nav>
 
-  <div id="navMenu" class="link--vertical">
+<!-- Menu for mobile -->
+<div class="nav">
+  <div class=" nav-menu">
     <ul>
       {{ range $links }}
         <li><a href="{{ .url }}">{{ .name }}</a></li>
       {{ end }}
     </ul>
   </div>
-</nav>
+</div>

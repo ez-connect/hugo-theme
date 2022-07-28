@@ -8,7 +8,7 @@
 
 .spanborder {
   border-bottom: 1px solid $divider-color;
-  margin-bottom: 32px;
+  margin-bottom: $space2;
 
   span {
     display: inline-block;
@@ -32,8 +32,4 @@
 
 .error {
   color: $error-color;
-}
-
-.page {
-  margin: $space * 2;
 }

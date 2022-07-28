@@ -1,10 +1,11 @@
 {{ define "main" }}
   {{ $pages := (.Pages.ByParam "updatedAt").Reverse }}
 
-  {{ partial "article/jumbotron" . }}
+
+  <div class="article-list-page">
+    {{ partial "article/jumbotron" . }}
 
 
-  <div class="page article-list-page">
     <section class="article-list">
       <h3 class="spanborder"><span>Latest</span></h3>
 

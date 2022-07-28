@@ -1,18 +1,58 @@
+.document-list-page {
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  margin: 0 $space2;
+
+  @include media-breakpoint-down(md) {
+    margin: 0;
+  }
+}
+
+.document-page {
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  margin: 0 $space2;
+
+  @include media-breakpoint-down(md) {
+    margin: 0;
+  }
+
+  // Override content
+  .content {
+    width: 70%;
+
+    // Full with on mobile
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+  }
+}
+
+// Left side menu
 .document-menu {
   z-index: 0;
   box-sizing: border-box;
-  position: fixed;
-  width: $document-menu-width;
-  height: 100%;
+  position: sticky;
+  top: 0;
+  width: 25%;
+  height: 100vh;
 
-  padding: 32px 16px $nav-height + $footer-height 32px;
+  padding: $space2 $space;
   font-weight: 500;
   font-size: $font-size-sm;
-  line-height: 32px;
+  line-height: $space2;
   background: $background-color;
   border-right: solid 1px $divider-color;
 
-  overflow-y: auto;
+  overflow: auto;
+
+  // Hide menu on mobile
+  @include media-breakpoint-down(sm) {
+    display: none;
+    width: unset;
+  }
 
   ul {
     margin-block-start: 0;
@@ -42,7 +82,7 @@
     position: relative;
 
     // &::before {
-    //   top: 32px;
+    //   top: $space2;
     //   left: 8px;
     //   width: 1.2px;
     //   bottom: 0;
@@ -72,30 +112,5 @@
 
   .active {
     color: $primary-color-light !important;
-  }
-}
-
-.document__content {
-  box-sizing: border-box;
-  margin-left: $document-menu-width;
-}
-
-// Mobiles: hide menu and toc
-@media (max-width: $width-sm) {
-  .document-menu {
-    display: none;
-    width: unset;
-  }
-
-  .document__content {
-    width: 100%;
-    margin: 0;
-  }
-}
-
-// Tablets: hide toc
-@include media-breakpoint-down(md) {
-  .toc {
-    display: none !important;
   }
 }

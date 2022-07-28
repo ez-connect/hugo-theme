@@ -1,6 +1,6 @@
 function nav() {
   const navMenuButtonID = '#navMenuButton';
-  const navMenuContentID = '#navMenu';
+  const navMenu = '.nav-menu';
 
   // const searchInputParentID = '#search';
   // const searchInputID = '#searchInput';
@@ -48,14 +48,13 @@ function nav() {
 
   _init = async () => {
     // Menu
-    const menu = document.querySelector(navMenuContentID);
+    const menu = document.querySelector(navMenu);
     if (!menu) {
       util.hide(navMenuButtonID);
     }
 
     const menuButton = document.querySelector(navMenuButtonID);
-    menuButton.addEventListener('click', () => util.toogle(navMenuContentID));
-    menuButton.addEventListener('blur', () => util.hide(navMenuContentID));
+    menuButton.addEventListener('click', () => util.toogle(navMenu));
 
     // // Data file
     // const section = searchInput.getAttribute('data-section');

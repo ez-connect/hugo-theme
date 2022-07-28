@@ -1,13 +1,12 @@
 .nav {
   z-index: 1;
+  position: sticky;
+  top: 0;
   display: flex;
   align-items: center;
-  position: fixed;
   box-sizing: border-box;
-  top: 0;
   width: 100%;
-  height: $nav-height;
-  padding: $space;
+  padding: 0 $space;
   background: $primary-color-dark;
 
   @media print {
@@ -18,11 +17,38 @@
     color: $background-color;
   }
 
-  svg {
-    width: 16px;
-    height: 16px;
-    // fill: $background-color;
-    stroke: black;
+  // Links
+  ul {
+    display: flex;
+    flex: 1;
+    padding-left: $space2;
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+
+    li {
+      padding-right: $space;
+    }
+  }
+
+  .nav-menu {
+    display: none;
+
+    @include media-breakpoint-down(md) {
+      width: 100%;
+      background: $primary-color-dark;
+    }
+
+    ul {
+      @include media-breakpoint-down(md) {
+        display: block;
+      }
+    }
+
+    li {
+      padding: $space / 2;
+    }
   }
 
   .logo {
@@ -45,56 +71,35 @@
     }
   }
 
+  // Display a menu on mobile
   .menu-btn {
     display: none;
-    padding-right: 16px;
+    padding-right: $space;
 
     @include media-breakpoint-down(md) {
       display: block !important;
     }
-  }
 
-  .link {
-    display: flex;
-    flex: 1;
-    padding-left: 32px;
-
-    @include media-breakpoint-down(md) {
-      display: none;
-    }
-
-    li {
-      padding-right: 16px;
-    }
-  }
-
-  .link--vertical {
-    display: none;
-    position: absolute !important;
-    left: 0px;
-    top: $nav-height;
-    width: 100%;
-    background: $primary-color-dark;
-
-    li {
-      padding: $space / 2 0;
+    // Override ionicons style
+    .ionicon-stroke-width {
+      stroke: $background-color;
     }
   }
 
   // .search {
-  //   padding-left: 16px;
+  //   padding-left: $space;
   //   // border-width: 1px;
 
   //   svg {
   //     position: absolute;
-  //     padding: 8px 16px;
+  //     padding: 8px $space;
   //     fill: $text-color-muted;
   //     padding-left: 8px;
   //   }
 
   //   input {
-  //     height: 32px;
-  //     padding-left: 32px;
+  //     height: $space2;
+  //     padding-left: $space2;
   //     margin-bottom: 0;
   //     color: $text-color-muted;
   //   }
@@ -105,9 +110,4 @@
   //     }
   //   }
   // }
-
-  .link-menu {
-    position: absolute;
-    right: 32px;
-  }
 }

@@ -1,13 +1,9 @@
 {{ define "main" }}
-  {{ partial "document/menu" . }}
-
-
-  <div class="document__content">
-    {{ if .Site.Params.options.breadcrumb }}
-      {{ partial "shared/breadcrumb" . }}
-      <hr />
-    {{ end }}
+  <div class="document-page">
+    {{ partial "document/menu" . }}
 
     {{ partial "shared/content" . }}
+
+    {{ partial "shared/toc" . }}
   </div>
 {{ end }}
