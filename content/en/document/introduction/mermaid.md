@@ -4,7 +4,7 @@ createdAt: "2022-01-27T15:46:00.129Z"
 createdBy: thanh.vinh@hotmail.com
 id: 6
 locale: en
-parent: introduction/shortcodes
+parent: introduction
 publishedAt: "2022-01-27T15:46:01.328Z"
 title: Mermaid
 updatedAt: "2022-01-27T15:47:14.891Z"
@@ -25,7 +25,7 @@ graph LR
 
 ## Sequence diagram
 
-{{<mermaid>}}
+```mermaid
 sequenceDiagram
 autonumber
 Alice ->> John: Hello John, how are you?
@@ -36,11 +36,11 @@ Note right of John: Rational thoughts!
 John -->> Alice: Great!
 John ->> Bob: How about you?
 Bob -->> John: Jolly good!
-{{</mermaid>}}
+```
 
 ## Class diagram
 
-{{<mermaid>}}
+```mermaid
 classDiagram
 Animal <|-- Duck
 Animal <|-- Fish
@@ -62,11 +62,11 @@ class Zebra{
 +bool is_wild
 +run()
 }
-{{</mermaid>}}
+```
 
 ## State diagram
 
-{{<mermaid>}}
+```mermaid
 stateDiagram-v2
 [*] --> Active
 
@@ -83,11 +83,11 @@ CapsLockOn --> CapsLockOff : EvCapsLockPressed
 ScrollLockOff --> ScrollLockOn : EvScrollLockPressed
 ScrollLockOn --> ScrollLockOff : EvScrollLockPressed
 }
-{{</mermaid>}}
+```
 
 ## User Journey Diagram
 
-{{<mermaid>}}
+```mermaid
 journey
 title My working day
 section Go to work
@@ -97,11 +97,11 @@ Do work: 1: Me, Cat
 section Go home
 Go downstairs: 5: Me
 Sit down: 5: Me
-{{</mermaid>}}
+```
 
 ## Gantt diagram
 
-{{<mermaid>}}
+```mermaid
 gantt
 title A Gantt Diagram
 dateFormat YYYY-MM-DD
@@ -111,15 +111,15 @@ Another task :after a1 , 20d
 section Another
 Task in sec :2014-01-12 , 12d
 another task : 24d
-{{</mermaid>}}
+```
 
 ## Pie chart diagram
 
-{{<mermaid>}}
+```mermaid
 pie title Pets adopted by volunteers
 title Key elements in Product X
 "Calcium" : 42.96
 "Potassium" : 50.05
 "Magnesium" : 10.01
 "Iron" : 5
-{{</mermaid>}}
+```

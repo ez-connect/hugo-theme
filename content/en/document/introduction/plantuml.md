@@ -4,7 +4,7 @@ createdAt: "2022-01-27T16:04:43.247Z"
 createdBy: thanh.vinh@hotmail.com
 id: 7
 locale: en
-parent: introduction/shortcodes
+parent: introduction
 publishedAt: "2022-01-27T16:05:08.999Z"
 title: PlantUML
 updatedAt: "2022-01-27T16:05:09.002Z"
@@ -15,7 +15,7 @@ updatedBy: thanh.vinh@hotmail.com
 
 ## Sequence Diagram
 
-{{<plantuml>}}
+```plantuml
 @startuml
 Alice -> Bob: Authentication Request
 
@@ -34,11 +34,11 @@ else Another type of failure
 Bob -> Alice: Please repeat
 end
 @enduml
-{{</plantuml>}}
+```
 
 ## Use Case Diagram
 
-{{<plantuml>}}
+```plantuml
 @startuml
 left to right direction
 actor Guest as g
@@ -57,11 +57,11 @@ g --> UC1
 g --> UC2
 g --> UC3
 @enduml
-{{</plantuml>}}
+```
 
 ## Class Diagram
 
-{{<plantuml>}}
+```plantuml
 @startuml
 
 abstract class AbstractList
@@ -96,11 +96,11 @@ String bar()
 }
 
 @enduml
-{{</plantuml>}}
+```
 
 ## Object Diagram
 
-{{<plantuml>}}
+```plantuml
 
 ```
 @startuml
@@ -119,11 +119,11 @@ NewYork --> CapitalCity::USA
 @enduml
 ```
 
-{{</plantuml>}}
+```
 
 ## Activity Diagram
 
-{{<plantuml>}}
+```plantuml
 @startuml
 
 start
@@ -140,11 +140,11 @@ else (monoproc)
 endif
 
 @enduml
-{{</plantuml>}}
+```
 
 ## Component Diagram
 
-{{<plantuml>}}
+```plantuml
 @startuml
 
 interface "Data Access" as DA
@@ -160,11 +160,11 @@ be on several lines
 end note
 
 @enduml
-{{</plantuml>}}
+```
 
 ## Deployment Diagram
 
-{{<plantuml>}}
+```plantuml
 @startuml
 
 node node1
@@ -178,11 +178,11 @@ node1 ~~ node4 : label3
 node1 == node5
 
 @enduml
-{{</plantuml>}}
+```
 
 ## State Diagram
 
-{{<plantuml>}}
+```plantuml
 @startuml
 
 [*] --> State1
@@ -194,11 +194,11 @@ State1 -> State2
 State2 --> [*]
 
 @enduml
-{{</plantuml>}}
+```
 
 ## Timing Diagram
 
-{{<plantuml>}}
+```plantuml
 @startuml
 
 robust "DNS Resolver" as DNS
@@ -226,11 +226,11 @@ DNS is Processing
 DNS is Idle
 
 @enduml
-{{</plantuml>}}
+```
 
 ## Display JSON Data
 
-{{<plantuml>}}
+```plantuml
 @startjson
 
 {
@@ -259,11 +259,11 @@ DNS is Idle
 }
 
 @endjson
-{{</plantuml>}}
+```
 
 ## Display YAML Data
 
-{{<plantuml>}}
+```plantuml
 @startyaml
 
 \#highlight "french-hens"
@@ -289,11 +289,11 @@ location: "a pear tree"
 turtle-doves: two
 
 @endyaml
-{{</plantuml>}}
+```
 
 ## Network diagram
 
-{{<plantuml>}}
+```plantuml
 
 ```
 @startuml
@@ -317,11 +317,11 @@ nwdiag {
 @enduml
 ```
 
-{{</plantuml>}}
+```
 
 ## Salt (Wireframe)
 
-{{<plantuml>}}
+```plantuml
 @startsalt
 {+
 {\* File | Edit | Source | Refactor
@@ -336,11 +336,11 @@ Refactor | New | Open File | - | Close | Close All }
 [Close]
 }
 @endsalt
-{{</plantuml>}}
+```
 
 ## Gantt Diagram
 
-{{<plantuml>}}
+```plantuml
 @startgantt
 [Prototype design] lasts 15 days
 [Test prototype] lasts 10 days
@@ -351,11 +351,11 @@ Refactor | New | Open File | - | Close | Close All }
 [T4 (1 week and 4 days)] lasts 1 week and 4 days
 [T5 (2 weeks)] lasts 2 weeks
 @endgantt
-{{</plantuml>}}
+```
 
 ## MindMap
 
-{{<plantuml>}}
+```plantuml
 
 ```
 @startmindmap
@@ -374,11 +374,11 @@ Refactor | New | Open File | - | Close | Close All }
 @endmindmap
 ```
 
-{{</plantuml>}}
+```
 
 ## Work Breakdown Structure (WBS)
 
-{{<plantuml>}}
+```plantuml
 
 ```
 @startwbs
@@ -396,11 +396,11 @@ Refactor | New | Open File | - | Close | Close All }
 @endwbs`
 ```
 
-{{</plantuml>}}
+```
 
 ## Entity Relationship Diagram
 
-{{<plantuml>}}
+```plantuml
 
 ```
 @startuml
@@ -438,4 +438,4 @@ e01 |o..o{ e03
 @enduml
 ```
 
-{{</plantuml>}}
+```

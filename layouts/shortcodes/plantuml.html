@@ -1,8 +1,0 @@
-{{ if .Site.Params.options.plantUML }}
-  <p class="plantuml{{ with .Get "class" }}{{ . }}{{ end }}">
-    {{ $data := replaceRE "(^\\s+```.*)" "" .Inner }}
-    {{- replaceRE "(```\\s+$)" "" $data -}}
-  </p>
-{{ else }}
-  {{ errorf "Failed to process plantuml shortcode: %s. Set plantuml to true in page front matter." .Position }}
-{{ end }}
