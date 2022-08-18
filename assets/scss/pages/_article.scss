@@ -18,15 +18,18 @@
 
 .article-list-page {
   box-sizing: border-box;
-  display: flex;
 
-  .blog__menu {
+  .article-tag-list {
     width: $blog-menu-width;
 
     a {
       font-weight: 600;
       font-size: $font-size-sm;
     }
+  }
+
+  .article-list-page-container {
+    display: flex;
   }
 
   .article-list {
@@ -37,10 +40,6 @@
 }
 
 @include media-breakpoint-down(md) {
-  .article-list-page {
-    flex-direction: column;
-  }
-
   .article-list {
     width: 100% !important;
   }
@@ -49,7 +48,7 @@
     width: 100%;
   }
 
-  .blog__menu {
+  .article-tag-list {
     width: 100%;
     padding: $space2;
   }

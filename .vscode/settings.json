@@ -1,4 +1,9 @@
 {
+    "git.branchProtection": [
+        "main",
+        "dev"
+    ],
+    "editor.experimental.stickyScroll.enabled": true
     // "editor.formatOnSave": true,
     // "editor.defaultFormatter": "esbenp.prettier-vscode",
     // "[Html]": {

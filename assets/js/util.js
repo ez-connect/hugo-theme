@@ -54,7 +54,10 @@ function _util() {
   };
 
   _initTimeago = () => {
-    if (!window.timeago) return;
+    if (!window.timeago) {
+      console.warn('timeago not found');
+      return;
+    }
 
     const elements = document.querySelectorAll('.timeago');
     if (elements.length > 0) {
@@ -80,10 +83,10 @@ function _util() {
   };
 
   _initPlantUML = () => {
+    if (!window.plantumlEncoder) return;
+
     const elements = document.querySelectorAll('.plantuml');
     if (elements.length == 0) return;
-
-    if (!window.plantumlEncoder) return;
 
     elements.forEach((v) => {
       const encoded = plantumlEncoder.encode(v.textContent);

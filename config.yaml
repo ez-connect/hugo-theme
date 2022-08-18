@@ -65,9 +65,3 @@ params:
     useSRI: true
     darkMode: false
     breadCrumb: true
-    clipboard: true
-    timeago: true
-    mermaid: true
-    plantUML: true
-    quilljs: true
-    flexSearch: true

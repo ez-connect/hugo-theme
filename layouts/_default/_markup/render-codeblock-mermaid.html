@@ -1,4 +1,6 @@
-{{/*  https://gohugo.io/content-management/diagrams/#mermaid-diagrams  */}}
+{{/* https://gohugo.io/content-management/diagrams/#mermaid-diagrams */}}
 <div class="mermaid">
   {{- .Inner | safeHTML }}
 </div>
+
+{{ .Page.Store.Set "hasMermaid" true }}

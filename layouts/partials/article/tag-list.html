@@ -5,7 +5,7 @@
 {{ $count := .Site.Params.recentCount | default 10 }}
 
 
-<div class="blog__menu">
+<div class="article-tag-list">
   <h3 class="spanborder"><span>Tags</span></h3>
 
   {{ range $key, $taxonomy := .Site.Taxonomies.tags }}

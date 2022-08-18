@@ -1,3 +1,5 @@
 <div class="plantuml">
   {{- .Inner | safeHTML }}
 </div>
+
+{{ .Page.Store.Set "hasPlantUML" true }}
