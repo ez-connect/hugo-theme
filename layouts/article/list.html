@@ -6,13 +6,13 @@
     {{ partial "article/jumbotron" . }}
 
 
-    <section class="article-list">
-      <h3 class="spanborder"><span>Latest</span></h3>
+    <div class="article-list-page-container">
+      <section class="article-list">
+        <h3 class="spanborder"><span>Latest</span></h3>
+        {{ partial "shared/page-list" $pages }}
+      </section>
 
-      {{ partial "shared/page-list" $pages }}
-
-    </section>
-
-    {{ partial "article/menu" . }}
+      {{ partial "article/tag-list" . }}
+    </div>
   </div>
 {{ end }}
