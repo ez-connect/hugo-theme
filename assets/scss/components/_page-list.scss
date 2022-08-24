@@ -1,5 +1,7 @@
 // A list of pages
 .page-list {
+  padding: $space2;
+
   article {
     padding-bottom: $space / 2;
     border-bottom: 1px solid $divider-color;

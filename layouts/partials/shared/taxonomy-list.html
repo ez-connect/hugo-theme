@@ -1,0 +1,14 @@
+<!--
+Display all taxonomies of a page.
+Params:
+  - `[]string{} items`: all taxonomies
+  - `string name`: is the name of the taxonomy
+-->
+
+<div class="tag-list">
+  {{ range .items }}
+    <a class="tag-item" href="/{{ $.name }}/{{ . }}">
+      {{ . }}
+    </a>
+  {{ end }}
+</div>

@@ -37,9 +37,7 @@
     </div>
 
     <div class="meta">
-      <span class="timeago" datetime="{{ $.Params.updatedAt }}">
-        {{ $.Params.updatedAt }}
-      </span>
+      {{ partial "shared/timeago" . }}
       ⠂{{ partial "shared/reading-time" . }}
     </div>
   </div>

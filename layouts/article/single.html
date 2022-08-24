@@ -1,8 +1,10 @@
 {{ define "main" }}
-  {{ if .Site.Params.options.breadcrumb }}
-    {{ partial "shared/breadcrumb" . }}
-    <hr />
-  {{ end }}
+  <div class="article-page">
+    {{ if .Site.Params.options.breadcrumb }}
+      {{ partial "shared/breadcrumb" . }}
+      <hr />
+    {{ end }}
 
-  {{ partial "shared/content" . }}
+    {{ partial "shared/content" . }}
+  </div>
 {{ end }}

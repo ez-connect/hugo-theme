@@ -5,7 +5,7 @@ description: Pellentesque convallis scelerisque semper. Vivamus vestibulum ultri
   nisl ullamcorper congue.
 id: 2
 publishedAt: "2022-01-28T10:03:17.336Z"
-tags:
+categories:
 - FE
 - Fresher
 title: Lorem ipsum dolor sit amet, consectetur adipiscing elit.

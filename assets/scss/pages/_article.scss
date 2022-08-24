@@ -22,6 +22,11 @@
   .article-tag-list {
     width: $blog-menu-width;
 
+    @include media-breakpoint-down(md) {
+      width: 100%;
+      padding: $space2;
+    }
+
     a {
       font-weight: 600;
       font-size: $font-size-sm;
@@ -36,20 +41,16 @@
     box-sizing: border-box;
     width: 100% - $blog-menu-width;
     padding: 0 $space2 $space $space2;
+
+    @include media-breakpoint-down(md) {
+      width: 100% !important;
+    }
   }
 }
 
-@include media-breakpoint-down(md) {
-  .article-list {
-    width: 100% !important;
-  }
-
-  .article-list {
-    width: 100%;
-  }
-
-  .article-tag-list {
-    width: 100%;
-    padding: $space2;
-  }
+// Single page
+.article-page {
+  padding-left: $space2;
+  padding-right: $space2;
+  padding-bottom: $space2;
 }

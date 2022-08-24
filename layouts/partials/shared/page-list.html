@@ -3,7 +3,9 @@
 <div class="page-list">
   {{ range . }}
     <article>
-      {{ partial "shared/author" . }}
+      {{ if not (eq .Section "career") }}
+        {{ partial "shared/author" . }}
+      {{ end }}
 
 
       <a href="{{ .RelPermalink }}">
@@ -12,7 +14,13 @@
       <p>{{ .Summary }}...</p>
 
       <div class="metadata">
-        {{ partial "shared/tag-list" .Params.tags }}
+        {{/* Taxonomy name */}}
+        {{ $name := "tags" }}
+        {{ if eq .Section "career" }}
+          {{ $name = "categories" }}
+        {{ end }}
+
+        {{ partial "shared/taxonomy-list" (dict "items" (index .Params $name) "name" $name) }}
         {{ partial "shared/reading-time" . }}
       </div>
     </article>
