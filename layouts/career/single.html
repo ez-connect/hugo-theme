@@ -1,70 +1,69 @@
 {{ define "main" }}
-  <article class="job">
-    <div class="job__content">
+  <div class="career-page">
+    <article class="job">
       {{ if .Site.Params.options.breadcrumb }}
         {{ partial "shared/breadcrumb" . }}
         <hr />
       {{ end }}
 
       {{ partial "shared/content" . }}
-    </div>
-  </article>
+    </article>
 
-  <hr />
+    <hr />
 
-  <div class="job__applicant">
-    <div class="applicant">
-      <form id="applyJobForm">
-        <h2>Apply this job</h2>
-        <input type="text" name="title" placeholder="Your name" />
-        <input type="tel" name="phone" placeholder="Your phone number" />
-        <input type="email" name="email" placeholder="Your email" />
-        <label for="editor">Cover letter & CV</label>
-        <div name="content" id="editor" data-placeholder="Cover letter"></div>
-        {{/* <input type="file" name="cv" accept="application/pdf, application/zip"> */}}
+    <div class="job__applicant">
+      <div class="applicant">
+        <form id="applyJobForm">
+          <h2>Apply this job</h2>
+          <input type="text" name="title" placeholder="Your name" />
+          <input type="tel" name="phone" placeholder="Your phone number" />
+          <input type="email" name="email" placeholder="Your email" />
+          <label for="editor">Cover letter & CV</label>
+          <div name="content" id="editor" data-placeholder="Cover letter"></div>
+          {{/* <input type="file" name="cv" accept="application/pdf, application/zip"> */}}
 
-        {{ $api := .Site.Data.site.applyJob }}
-        <input
-          id="applyJobButton"
-          data-method="{{ $api.method }}"
-          data-url="{{ $api.url }}"
-          type="button"
-          value="Apply"
-        />
-        <small><div class="error"></div></small>
-      </form>
-    </div>
-
-    <div class="contact">
-      <h2>Contact us</h2>
-
-      {{ $defaultData := index $.Site.Data $.Site.Params.defaultLanguage }}
-      {{ $data := index $.Site.Data $.Site.Language.Lang }}
-      {{ $contact := default $defaultData.site.contact $data.site.contact }}
-
-
-      <div class="item">
-        {{ partial "shared/ionicons" "location-outline" }}
-        <a
-          target="_blank"
-          href="https://www.google.com/maps/search/{{ $contact.address }}"
-          >{{ $contact.address }}</a
-        >
+          {{ $api := .Site.Data.site.applyJob }}
+          <input
+            id="applyJobButton"
+            data-method="{{ $api.method }}"
+            data-url="{{ $api.url }}"
+            type="button"
+            value="Apply"
+          />
+          <small><div class="error"></div></small>
+        </form>
       </div>
-      <div class="item">
-        {{ partial "shared/ionicons" "call-outline" }}
+
+      <div class="contact">
+        <h2>Contact us</h2>
+
+        {{ $defaultData := index $.Site.Data $.Site.Params.defaultLanguage }}
+        {{ $data := index $.Site.Data $.Site.Language.Lang }}
+        {{ $contact := default $defaultData.site.contact $data.site.contact }}
 
 
-        <a href="tel:{{ $contact.tel }}">{{ $contact.phone }}</a>
-      </div>
-      <div class="item">
-        {{ partial "shared/ionicons" "mail-outline" }}
-        <a href="mailto:{{ $contact.email }}">{{ $contact.email }}</a>
+        <div class="item">
+          {{ partial "shared/ionicons" "location-outline" }}
+          <a
+            target="_blank"
+            href="https://www.google.com/maps/search/{{ $contact.address }}"
+            >{{ $contact.address }}</a
+          >
+        </div>
+        <div class="item">
+          {{ partial "shared/ionicons" "call-outline" }}
+
+
+          <a href="tel:{{ $contact.tel }}">{{ $contact.phone }}</a>
+        </div>
+        <div class="item">
+          {{ partial "shared/ionicons" "mail-outline" }}
+          <a href="mailto:{{ $contact.email }}">{{ $contact.email }}</a>
+        </div>
       </div>
     </div>
+
+    <!-- Use Quill for the editor: https://quilljs.com/ -->
+    {{ .Page.Store.Set "hasQuill" true }}
   </div>
-
-  <!-- Use Quill for the editor: https://quilljs.com/ -->
-  {{ .Page.Store.Set "hasQuill" true }}
-
 {{ end }}

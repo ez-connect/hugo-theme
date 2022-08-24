@@ -7,7 +7,7 @@ description: Nulla facilisi. Aliquam pellentesque justo lorem, at porttitor nunc
   quis enim id volutpat.
 id: 1
 publishedAt: "2022-01-28T09:26:30.994Z"
-tags:
+categories:
 - Android
 - Senior
 title: Quisque finibus turpis sed convallis rhoncus

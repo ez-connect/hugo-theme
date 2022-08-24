@@ -23,7 +23,7 @@ function _addCopyButtons() {
           button.innerHTML = _svgCheck;
           setTimeout(() => (button.innerHTML = _svgCopy), 2000);
         },
-        (error) => (button.innerHTML = 'Error'),
+        (_) => (button.innerHTML = 'Error'),
       );
     });
     // 3. Append the button directly before the pre tag

@@ -1,0 +1,14 @@
+{{ define "main" }}
+  {{ $pages := (.Pages.ByParam "updatedAt").Reverse }}
+
+
+  <div class="career-list-page">
+    <div class="article-list-page-container">
+      <section class="article-list">
+        {{ partial "shared/page-list" $pages }}
+      </section>
+
+      {{ partial "article/tag-list" . }}
+    </div>
+  </div>
+{{ end }}

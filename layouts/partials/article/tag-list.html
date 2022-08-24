@@ -9,7 +9,7 @@
   <h3 class="spanborder"><span>Tags</span></h3>
 
   {{ range $key, $taxonomy := .Site.Taxonomies.tags }}
-    <p><a href="/tags/{{ $key }}">{{ $key }} ({{ len $taxonomy }})</a></p>
+    <p><a href="{{ $taxonomy }}">{{ $key }} ({{ len $taxonomy }})</a></p>
   {{ end }}
 
 </div>

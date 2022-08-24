@@ -17,7 +17,8 @@ languages:
     contentDir: content/vi
 
 taxonomies:
-  tag: tags
+  tag: tags # article tags
+  category: categories # carrer categories
 
 outputs:
   home: [HTML, ROBOTS, Sitemap]
@@ -58,6 +59,9 @@ params:
   # Fallback to the default language
   # The same value as `defaultContentLanguage`
   defaultLanguage: en
+
+  # Define layouts
+  # layout: {}
 
   # Enable or disable features to reduce the code size
   options:
