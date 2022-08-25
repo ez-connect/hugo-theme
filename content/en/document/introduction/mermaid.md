@@ -1,14 +1,12 @@
 ---
-components: []
-createdAt: "2022-01-27T15:46:00.129Z"
-createdBy: thanh.vinh@hotmail.com
-id: 6
-locale: en
-parent: introduction
-publishedAt: "2022-01-27T15:46:01.328Z"
 title: Mermaid
-updatedAt: "2022-01-27T15:47:14.891Z"
+description: Mermaid lets you create diagrams using text and code.
+weight: 2
+createdBy: thanh.vinh@hotmail.com
+createdAt: "2022-01-27T15:46:00.129Z"
 updatedBy: thanh.vinh@hotmail.com
+updatedAt: "2022-01-27T15:47:14.891Z"
+publishedAt: "2022-01-27T15:46:01.328Z"
 ---
 
 **[Mermaid](https://mermaid-js.github.io/mermaid/#/) lets you create diagrams using text and code**. This simplifies the maintenance of complex diagrams. It is a Javascript based diagramming and charting tool that renders Markdown-inspired text definitions to create and modify diagrams dynamically.
@@ -42,6 +40,7 @@ Bob -->> John: Jolly good!
 
 ```mermaid
 classDiagram
+
 Animal <|-- Duck
 Animal <|-- Fish
 Animal <|-- Zebra
@@ -49,18 +48,21 @@ Animal : +int age
 Animal : +String gender
 Animal: +isMammal()
 Animal: +mate()
+
 class Duck{
-+String beakColor
-+swim()
-+quack()
+  +String beakColor
+  +swim()
+  +quack()
 }
+
 class Fish{
--int sizeInFeet
--canEat()
+  -int sizeInFeet
+  -canEat()
 }
+
 class Zebra{
-+bool is_wild
-+run()
+  +bool is_wild
+  +run()
 }
 ```
 

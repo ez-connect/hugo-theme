@@ -1,15 +1,12 @@
 ---
-components: []
-createdAt: '2022-01-27T15:31:12.352Z'
-createdBy: thanh.vinh@hotmail.com
-description: Markdown is intended to be as easy-to-read and easy-to-write as is feasible.
-id: 3
-locale: en
-parent: /introduction
-publishedAt: '2022-01-27T15:35:52.331Z'
 title: Markdown syntax
-updatedAt: '2022-01-27T15:47:35.338Z'
+description: Markdown is intended to be as easy-to-read and easy-to-write as is feasible.
+weight: 1
+createdBy: thanh.vinh@hotmail.com
+createdAt: '2022-01-27T15:31:12.352Z'
 updatedBy: trong@hotmail.com
+updatedAt: '2022-01-27T15:47:35.338Z'
+publishedAt: '2022-01-27T15:35:52.331Z'
 ---
 
 ## Basic Syntax
