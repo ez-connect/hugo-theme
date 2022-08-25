@@ -2,7 +2,15 @@
   <div class="document-page">
     {{ partial "document/menu" . }}
 
-    {{ partial "shared/content" . }}
+
+    <div class="document-content">
+      {{ if .Site.Params.options.breadcrumb }}
+        {{ partial "shared/breadcrumb" . }}
+        <hr />
+      {{ end }}
+
+      {{ partial "shared/content" . }}
+    </div>
 
     {{ partial "shared/toc" . }}
   </div>

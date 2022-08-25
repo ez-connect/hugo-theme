@@ -1,441 +1,163 @@
 ---
-components: []
+title: PlantUML
+description: PlantUML is used to draw UML diagrams, using a simple and human readable text description.
+weight: 3
 createdAt: "2022-01-27T16:04:43.247Z"
 createdBy: thanh.vinh@hotmail.com
-id: 7
-locale: en
-parent: introduction
-publishedAt: "2022-01-27T16:05:08.999Z"
-title: PlantUML
 updatedAt: "2022-01-27T16:05:09.002Z"
 updatedBy: thanh.vinh@hotmail.com
+publishedAt: "2022-01-27T16:05:08.999Z"
 ---
 
 [**PlantUML**](https://plantuml.com/) is used to draw UML diagrams, using a simple and human readable text description.
 
-## Sequence Diagram
+## Activity
 
-```plantuml
-@startuml
-Alice -> Bob: Authentication Request
-
-alt successful case
-Bob -> Alice: Authentication Accepted
-else some kind of failure
-Bob -> Alice: Authentication Failure
-group My own label
-Alice -> Log : Log attack start
-loop 1000 times
-Alice -> Bob: DNS Attack
-end
-Alice -> Log : Log attack end
-end
-else Another type of failure
-Bob -> Alice: Please repeat
-end
-@enduml
-```
-
-## Use Case Diagram
-
-```plantuml
-@startuml
-left to right direction
-actor Guest as g
-package Professional {
-actor Chef as c
-actor "Food Critic" as fc
-}
-package Restaurant {
-usecase "Eat Food" as UC1
-usecase "Pay for Food" as UC2
-usecase "Drink" as UC3
-usecase "Review" as UC4
-}
-fc --> UC4
-g --> UC1
-g --> UC2
-g --> UC3
-@enduml
-```
-
-## Class Diagram
-
-```plantuml
-@startuml
-
-abstract class AbstractList
-abstract AbstractCollection
-interface List
-interface Collection
-
-List <|-- AbstractList
-Collection <|-- AbstractCollection
-
-Collection <|- List
-AbstractCollection <|- AbstractList
-AbstractList <|-- ArrayList
-
-class ArrayList {
-Object[] elementData
-size()
-}
-
-enum TimeUnit {
-DAYS
-HOURS
-MINUTES
-}
-
-annotation SuppressWarnings
-
-annotation Annotation {
-annotation with members
-String foo()
-String bar()
-}
-
-@enduml
-```
-
-## Object Diagram
-
-```plantuml
-
-```
-@startuml
-object London
-object Washington
-object Berlin
-object NewYork
-
-map CapitalCity {
-  UK *-> London
-  USA *--> Washington
-  Germany *---> Berlin
-}
-
-NewYork --> CapitalCity::USA
-@enduml
-```
-
-```
-
-## Activity Diagram
+https://plantuml.com/activity-diagram-beta
 
 ```plantuml
 @startuml
 
 start
+:ClickServlet.handleRequest();
+:new page;
+if (Page.onSecurityCheck) then (true)
+  :Page.onInit();
+  if (isForward?) then (no)
+    :Process controls;
+    if (continue processing?) then (no)
+      stop
+    endif
 
-if (multiprocessor?) then (yes)
-fork
-:Treatment 1;
-fork again
-:Treatment 2;
-end fork
-else (monoproc)
-:Treatment 1;
-:Treatment 2;
+    if (isPost?) then (yes)
+      :Page.onPost();
+    else (no)
+      :Page.onGet();
+    endif
+    :Page.onRender();
+  endif
+else (false)
 endif
 
+if (do redirect?) then (yes)
+  :redirect process;
+else
+  if (do forward?) then (yes)
+    :Forward request;
+  else (no)
+    :Render page template;
+  endif
+endif
+
+stop
+
 @enduml
 ```
 
-## Component Diagram
+## Maths
+
+https://plantuml.com/ascii-math
 
 ```plantuml
 @startuml
-
-interface "Data Access" as DA
-
-DA - [First Component]
-[First Component] ..> HTTP : use
-
-note left of HTTP : Web Service only
-
-note right of [First Component]
-A note can also
-be on several lines
+:<math>int_0^1f(x)dx</math>;
+:<math>x^2+y_1+z_12^34</math>;
+note right
+Try also
+<math>d/dxf(x)=lim_(h->0)(f(x+h)-f(x))/h</math>
+<math>P(y|bb"x") or f(bb"x")+epsilon</math>
 end note
+@enduml
+```
+
+## Classes
+
+https://plantuml.com/class-diagram
+
+```plantuml
+@startuml
+Object <|-- ArrayList
+
+Object : equals()
+ArrayList : Object[] elementData
+ArrayList : size()
 
 @enduml
 ```
 
-## Deployment Diagram
+## Deployment
+
+https://plantuml.com/deployment-diagram
 
 ```plantuml
 @startuml
 
-node node1
-node node2
-node node3
-node node4
-node node5
-node1 -- node2 : label1
-node1 .. node3 : label2
-node1 ~~ node4 : label3
-node1 == node5
+cloud cloud1
+cloud cloud2
+cloud cloud3
+cloud cloud4
+cloud cloud5
+cloud1 -0- cloud2
+cloud1 -0)- cloud3
+cloud1 -(0- cloud4
+cloud1 -(0)- cloud5
 
 @enduml
 ```
 
-## State Diagram
+## Gantt
 
-```plantuml
-@startuml
-
-[*] --> State1
-State1 --> [*]
-State1 : this is a string
-State1 : this is another string
-
-State1 -> State2
-State2 --> [*]
-
-@enduml
-```
-
-## Timing Diagram
-
-```plantuml
-@startuml
-
-robust "DNS Resolver" as DNS
-robust "Web Browser" as WB
-concise "Web User" as WU
-
-@0
-WU is Idle
-WB is Idle
-DNS is Idle
-
-@+100
-WU -> WB : URL
-WU is Waiting
-WB is Processing
-
-@+200
-WB is Waiting
-WB -> DNS@+50 : Resolve URL
-
-@+100
-DNS is Processing
-
-@+300
-DNS is Idle
-
-@enduml
-```
-
-## Display JSON Data
-
-```plantuml
-@startjson
-
-{
-"firstName": "John",
-"lastName": "Smith",
-"isAlive": true,
-"age": 27,
-"address": {
-"streetAddress": "21 2nd Street",
-"city": "New York",
-"state": "NY",
-"postalCode": "10021-3100"
-},
-"phoneNumbers": [
-{
-"type": "home",
-"number": "212 555-1234"
-},
-{
-"type": "office",
-"number": "646 555-4567"
-}
-],
-"children": [],
-"spouse": null
-}
-
-@endjson
-```
-
-## Display YAML Data
-
-```plantuml
-@startyaml
-
-\#highlight "french-hens"
-\#highlight "xmas-fifth-day" / "partridges"
-
-doe: "a deer, a female deer"
-ray: "a drop of golden sun"
-pi: 3.14159
-xmas: true
-french-hens: 3
-calling-birds:
-\- huey
-\- dewey
-\- louie
-\- fred
-xmas-fifth-day:
-calling-birds: four
-french-hens: 3
-golden-rings: 5
-partridges:
-count: 1
-location: "a pear tree"
-turtle-doves: two
-
-@endyaml
-```
-
-## Network diagram
-
-```plantuml
-
-```
-@startuml
-nwdiag {
-  network dmz {
-    address = "210.x.x.x/24"
-
-    web01 [address = "210.x.x.1"];
-    web02 [address = "210.x.x.2"];
-  }
-
-  network internal {
-    address = "172.x.x.x/24";
-
-    web01 [address = "172.x.x.1"];
-    web02 [address = "172.x.x.2"];
-    db01;
-    db02;
-  }
-}
-@enduml
-```
-
-```
-
-## Salt (Wireframe)
-
-```plantuml
-@startsalt
-{+
-{\* File | Edit | Source | Refactor
-Refactor | New | Open File | - | Close | Close All }
-{/ General | Fullscreen | Behavior | Saving }
-{
-{ Open image in: | ^Smart Mode^ }
-[X] Smooth images when zoomed
-[X] Confirm image deletion
-[ ] Show hidden images
-}
-[Close]
-}
-@endsalt
-```
-
-## Gantt Diagram
+https://plantuml.com/gantt-diagram
 
 ```plantuml
 @startgantt
-[Prototype design] lasts 15 days
-[Test prototype] lasts 10 days
--- All example --
-[Task 1 (1 day)] lasts 1 day
-[T2 (5 days)] lasts 5 days
-[T3 (1 week)] lasts 1 week
-[T4 (1 week and 4 days)] lasts 1 week and 4 days
-[T5 (2 weeks)] lasts 2 weeks
+Project starts the 20th of september 2018
+sunday are close
+2018/09/21 to 2018/09/23 are colored in salmon
+2018/09/21 to 2018/09/30 are named [Vacation in the Bahamas]
+
+today is 30 days after start and is colored in #AAF
+[Foo] happens 40 days after start
+[Dummy] lasts 10 days and starts 10 days after start
+
 @endgantt
 ```
 
-## MindMap
+## JSON
+
+https://plantuml.com/json
 
 ```plantuml
-
-```
-@startmindmap
-* Debian
-** Ubuntu
-*** Linux Mint
-*** Kubuntu
-*** Lubuntu
-*** KDE Neon
-** LMDE
-** SolydXK
-** SteamOS
-** Raspbian with a very long name
-*** <s>Raspmbc</s> => OSMC
-*** <s>Raspyfi</s> => Volumio
-@endmindmap
-```
-
-```
-
-## Work Breakdown Structure (WBS)
-
-```plantuml
-
-```
-@startwbs
-* Business Process Modelling WBS
-** Launch the project
-*** Complete Stakeholder Research
-*** Initial Implementation Plan
-** Design phase
-*** Model of AsIs Processes Completed
-**** Model of AsIs Processes Completed1
-**** Model of AsIs Processes Completed2
-*** Measure AsIs performance metrics
-*** Identify Quick Wins
-** Complete innovate phase
-@endwbs`
-```
-
-```
-
-## Entity Relationship Diagram
-
-```plantuml
-
-```
-@startuml
-
-' hide the spot
-hide circle
-
-' avoid problems with angled crows feet
-skinparam linetype ortho
-
-entity "Entity01" as e01 {
-  *e1_id : number <<generated>>
-  --
-  *name : text
-  description : text
+@startjson
+#highlight "lastName"
+#highlight "address" / "city"
+#highlight "phoneNumbers" / "0" / "number"
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "isAlive": true,
+  "age": 28,
+  "address": {
+    "streetAddress": "21 2nd Street",
+    "city": "New York",
+    "state": "NY",
+    "postalCode": "10021-3100"
+  },
+  "phoneNumbers": [
+    {
+      "type": "home",
+      "number": "212 555-1234"
+    },
+    {
+      "type": "office",
+      "number": "646 555-4567"
+    }
+  ],
+  "children": [],
+  "spouse": null
 }
-
-entity "Entity02" as e02 {
-  *e2_id : number <<generated>>
-  --
-  *e1_id : number <<FK>>
-  other_details : text
-}
-
-entity "Entity03" as e03 {
-  *e3_id : number <<generated>>
-  --
-  e1_id : number <<FK>>
-  other_details : text
-}
-
-e01 ||..o{ e02
-e01 |o..o{ e03
-
-@enduml
+@endjson
 ```
 
-```
+More examples - https://plantuml.com/sitemap-language-specification
+
