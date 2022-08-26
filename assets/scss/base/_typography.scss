@@ -20,7 +20,7 @@ h2 {
 }
 
 .meta {
-  font-size: $font-size-sm;
+  font-size: var(--body-m);
   color: $text-color-muted;
 }
 

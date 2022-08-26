@@ -1,6 +1,6 @@
 .resume {
   box-sizing: border-box;
-  max-width: $width-lg;
+  max-width: map-get($breakpoint, 'lg');
   margin-left: auto;
   margin-right: auto;
   padding: $space2;
@@ -9,7 +9,7 @@
 
   h2,
   h3 {
-    color: $primary-color-dark;
+    color: var(--primary);
   }
 
   h2 {
@@ -32,7 +32,7 @@
   width: 70%;
   padding-right: 24px;
 
-  @media (max-width: $width-sm) {
+  @include media-breakpoint-down(sm) {
     width: 100%;
     padding-right: 0;
   }
@@ -44,7 +44,7 @@
   padding-left: 24px;
   border-left: 1px solid rgba(0, 0, 0, 0.08);
 
-  @media (max-width: $width-sm) {
+  @include media-breakpoint-down(sm) {
     width: 100%;
     border: none;
     padding-left: 0;
@@ -52,16 +52,15 @@
 }
 
 .resume__list {
-  .item {
-    padding: $space2;
+  padding: $space2;
 
+  .item {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    border-bottom: 0.5px solid $divider-color;
-
-    color: $text-color;
+    padding: $space 0;
+    border-bottom: 0.5px solid var(--surface);
+    color: var(--on-background);
 
     img {
       max-width: 192px;
@@ -113,7 +112,7 @@
     box-sizing: border-box;
     width: $resume-left-width;
 
-    @media (max-width: $width-sm) {
+    @include media-breakpoint-down(sm) {
       box-sizing: border-box;
       width: 100%;
     }
@@ -155,6 +154,5 @@
   svg {
     width: 24px;
     height: 24px;
-    // fill: $text-color;
   }
 }

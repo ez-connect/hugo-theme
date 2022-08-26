@@ -13,7 +13,6 @@
 
   li + li ::before {
     display: inline-block;
-    color: $text-color-muted;
     padding-right: 6px;
     content: '/';
   }

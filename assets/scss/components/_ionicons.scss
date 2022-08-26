@@ -8,6 +8,6 @@
 }
 
 .ionicon-stroke-width {
-  stroke: $text-color;
+  stroke: var(--on-background);
   stroke-width: $space2;
 }

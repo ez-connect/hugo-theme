@@ -2,10 +2,10 @@ input {
   box-sizing: border-box;
   margin-bottom: $space;
   padding: $space;
-  border: solid 1px $divider-color;
+  border: solid 1px var(--outline);
 
   &:focus {
-    outline: solid 1px $primary-color;
+    outline: solid 1px var(--primary);
     border-radius: 0;
   }
 }
@@ -18,8 +18,8 @@ textarea {
 
 input[type='button'],
 input[type='submit'] {
-  background: $primary-color;
-  color: $background-color;
+  background: var(--primary);
+  color: var(--background);
   font-weight: bold;
   border: none;
   padding: $space;

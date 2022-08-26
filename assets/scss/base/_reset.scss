@@ -11,30 +11,26 @@ body {
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: $font-family;
-  font-size: $font-size;
-  font-weight: $font-weight;
-  line-height: $line-height;
-  color: $text-color;
-  background-color: $background-color;
+  font-family: var(--font-family);
+  font-size: var(--body-m);
+  color: var(--on-background);
+  background-color: var(--background);
   margin: 0;
 }
 
-// ul,
-// li {
-//   list-style: none;
-//   padding-inline-start: 0;
-//   margin-block-start: 0;
-//   margin-block-end: 0;
-// }
+ul,
+li {
+  list-style: none;
+}
 
 hr {
-  border: 0.5px solid $divider-color;
+  border-top: 1px;
+  border-color: var(--surface);
   margin-block: $space;
 }
 
 a {
-  color: $primary-color;
+  color: var(--primary);
   text-decoration: none;
 
   &:hover {
@@ -50,28 +46,23 @@ svg {
   max-width: 100%;
 }
 
-label {
-  font-size: $font-size-sx;
-  color: $text-color-light;
-}
-
 blockquote {
   margin-inline-start: 0;
   margin-inline-end: 0;
 
-  border-color: $primary-color-light !important;
+  border-color: var(--primary) !important;
   border-left: 4px solid;
   border-radius: 3px;
   padding-top: 4px;
   padding-left: 32px;
   padding-right: 32px;
   padding-bottom: 4px;
-  background: $surface-color;
+  background: var(--surface);
 }
 
 table {
   --bs-table-bg: transparent;
-  --bs-table-striped-color: $primary-color;
+  --bs-table-striped-color: var(--primary);
   --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
   --bs-table-active-color: #212529;
   --bs-table-active-bg: rgba(0, 0, 0, 0.1);
@@ -82,7 +73,7 @@ table {
   border-collapse: collapse;
   width: 100%;
   margin-bottom: $space;
-  font-size: $font-size-sm;
+  font-size: var(--body-s);
 }
 
 table > thead {
@@ -109,4 +100,8 @@ tr {
   border-style: solid;
   border-width: 0;
   text-align: left;
+}
+
+code {
+  font-size: var(--body-s);
 }

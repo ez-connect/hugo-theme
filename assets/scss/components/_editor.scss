@@ -1,6 +1,6 @@
 .ql-editor {
   padding: 8px !important;
   min-height: 256px;
-  border: solid 1px $divider-color;
-  font-size: $font-size-sm;
+  border: solid 1px var(--outline);
+  font-size: var(--body-m);
 }

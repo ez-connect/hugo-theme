@@ -2,7 +2,7 @@
   box-sizing: border-box;
   display: flex;
   width: 100%;
-  max-width: $width-xxl;
+  max-width: map-get($breakpoint, 'xxl');
   min-height: 100%;
   margin: auto;
 }

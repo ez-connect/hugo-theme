@@ -2,58 +2,58 @@
 
 // Responsive
 // No media query necessary for xs breakpoint as it's effectively `@media (min-width: 0) { ... }`
-@mixin media-breakpoint-up($breakpoint) {
-  @if $breakpoint == sm {
-    @media (min-width: $width-sm) {
+@mixin media-breakpoint-up($value) {
+  @if $value == sm {
+    @media (min-width: map-get($breakpoint, 'sm')) {
       @content;
     }
   }
-  @if $breakpoint == md {
-    @media (min-width: $width-md) {
+  @if $value == md {
+    @media (min-width: map-get($breakpoint, 'md')) {
       @content;
     }
   }
-  @if $breakpoint == lg {
-    @media (min-width: $width-lg) {
+  @if $value == lg {
+    @media (min-width: map-get($breakpoint, 'lg')) {
       @content;
     }
   }
-  @if $breakpoint == xl {
-    @media (min-width: $width-xl) {
+  @if $value == xl {
+    @media (min-width: map-get($breakpoint, 'xl')) {
       @content;
     }
   }
-  @if $breakpoint == xxl {
-    @media (min-width: $width-xxl) {
+  @if $value == xxl {
+    @media (min-width: map-get($breakpoint, 'xxl')) {
       @content;
     }
   }
 }
 
 // No media query necessary for xs breakpoint as it's effectively `@media (max-width: 0) { ... }`
-@mixin media-breakpoint-down($breakpoint) {
-  @if $breakpoint == sm {
-    @media (max-width: $width-sm) {
+@mixin media-breakpoint-down($value) {
+  @if $value == sm {
+    @media (max-width: map-get($breakpoint, 'sm')) {
       @content;
     }
   }
-  @if $breakpoint == md {
-    @media (max-width: $width-md) {
+  @if $value == md {
+    @media (max-width: map-get($breakpoint, 'md')) {
       @content;
     }
   }
-  @if $breakpoint == lg {
-    @media (max-width: $width-lg) {
+  @if $value == lg {
+    @media (max-width: map-get($breakpoint, 'lg')) {
       @content;
     }
   }
-  @if $breakpoint == xl {
-    @media (max-width: $width-xl) {
+  @if $value == xl {
+    @media (max-width: map-get($breakpoint, 'xl')) {
       @content;
     }
   }
   @if $breakpoint == xxl {
-    @media (max-width: $width-xxl) {
+    @media (max-width: map-get($breakpoint, 'xxl')) {
       @content;
     }
   }
