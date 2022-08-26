@@ -1,3 +1,14 @@
+// Theme
+:root {
+  @each $k, $v in $theme-color {
+    --#{$k}: #{$v};
+  }
+
+  @each $k, $v in $theme-typo {
+    --#{$k}: #{$v};
+  }
+}
+
 .hide {
   display: none !important;
 }
@@ -7,29 +18,13 @@
 }
 
 .spanborder {
-  border-bottom: 1px solid $divider-color;
+  border-bottom: 1px solid var(--surface);
   margin-bottom: $space2;
 
   span {
     display: inline-block;
-    border-bottom: 1px solid $text-color;
+    border-bottom: 1px solid var(--primary);
     margin-bottom: -1px;
     padding-bottom: $space;
   }
-}
-
-.success {
-  color: $success-color;
-}
-
-.info {
-  color: $info-color;
-}
-
-.warning {
-  color: $warning-color;
-}
-
-.error {
-  color: $error-color;
 }

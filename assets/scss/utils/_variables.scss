@@ -1,43 +1,93 @@
-// Color system
+// Theme
+// https://m3.material.io/styles/color/the-color-system/key-colors-tones
+$theme-color: (
+  // Accent colors
+  primary: #386a20,
+  on-primary: white,
+  primary-container: #386a20,
+  onPrimary-container: #042100,
 
-$background-color: #ffffff;
-$surface-color: #f5f7f9;
+  secondary: #55624c,
+  on-secondary: white,
+  secondary-container: #d9e7cb,
+  on-secondary-container: #131f0d,
 
-$primary-color: #1d3055;
-$primary-color-dark: #252a31;
-$primary-color-light: #6896ee;
+  tertiary: #19686a,
+  on-tertiary: white,
+  tertiary-container: #a8eff0,
+  on-tertiary-container: #002021,
 
-$divider-color: #e6ecf1;
+  // Neutral colors
+  background: white,
+  on-background: black,
+  surface: #e0e5d7,
+  on-surface: #43483e,
+  outline: #72776c,
 
-$info-color: dodgerblue;
-$success-color: green;
-$warning-color: orange;
-$error-color: tomato;
+  // Additional colors
+  error: tomato,
+  on-error: white,
+  error-container: #f9dedc,
+  on-error-container: black,
+
+  // Product-specific custom colors
+  info: dodgerblue,
+  on-info: white,
+  info-container: #e3f2fd,
+  on-info-container: black,
+
+  success: green,
+  on-sucess: white,
+  success-container: #e8f5e9,
+  on-success-container: black,
+
+  warning: orange,
+  on-warning: white,
+  warning-container: #fff8e1,
+  on-warning-container: black
+);
+
+$theme-typo: (
+  font-family: 'Roboto, sans-serif',
+
+  display-l: 64px,
+  display-m: 52px,
+  display-s: 44px,
+  headline-l: 32px,
+  headline-m: 28px,
+  headline-s: 24px,
+  title-l: 22px,
+  title-m: 16px,
+  title-s: 14px,
+  label-l: 14px,
+  label-m: 12px,
+  label-s: 11px,
+  body-l: 16px,
+  body-m: 14px,
+  body-s: 12px,
+);
 
 // Typography
-$text-color: #242a31;
 $text-color-light: #74818d;
 $text-color-muted: #9daab6;
-
-$font-size: 16px;
-$font-weight: 400;
-$line-height: 1.5;
-$font-family: 'Roboto', sans-serif;
-
-$font-size-sm: 0.875rem;
-$font-size-sx: 0.75rem;
-$font-size-lg: 1.25rem;
 
 // Space
 $space: 16px;
 $space2: $space * 2;
 
 // Breakpoints
-$width-sm: 576px; // small devices (phones)
-$width-md: 768px; // medium devices, portrail tables & large phones
-$width-lg: 992px; // large, laptops/ desktops
-$width-xl: 1200px; // extra large, laptops / desktops
-$width-xxl: 1400px; // extra large
+$breakpoint: (
+  sm: 576px,
+  // small devices (phones)
+  md: 768px,
+  // medium devices, portrail tables & large phones
+  lg: 992px,
+  // large, laptops/ desktops
+  xl: 1200px,
+  // extra large, laptops / desktops
+  xxl: 1400px,
+  // extra large
+);
 
 // Nav + TOC
 $toc-width: 15%;

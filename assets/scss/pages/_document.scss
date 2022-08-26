@@ -1,19 +1,21 @@
+// Document list page
 .document-list-page {
   box-sizing: border-box;
   display: flex;
   width: 100%;
-  margin: 0 $space2;
+  padding: $space $space2;
 
   @include media-breakpoint-down(md) {
     margin: 0;
   }
 }
 
+// Single document page
 .document-page {
   box-sizing: border-box;
   display: flex;
   width: 100%;
-  margin: 0 $space2;
+  padding: $space $space2;
 
   @include media-breakpoint-down(md) {
     margin: 0;
@@ -42,10 +44,10 @@
   padding: $space2 $space;
   margin-right: $space2;
   font-weight: 500;
-  font-size: $font-size-sm;
+  font-size: var(--body-m);
   line-height: $space2;
-  background: $background-color;
-  border-right: solid 1px $divider-color;
+  // background: var(--surface);
+  border-right: 1px solid var(--surface);
 
   overflow: auto;
 
@@ -53,6 +55,10 @@
   @include media-breakpoint-down(sm) {
     display: none;
     width: unset;
+  }
+
+  a {
+    color: var(--on-background);
   }
 
   ul {
@@ -107,11 +113,7 @@
     }
   }
 
-  a {
-    color: $text-color;
-  }
-
   .active {
-    color: $primary-color-light !important;
+    color: var(--primary) !important;
   }
 }

@@ -22,6 +22,10 @@
     width: 50%;
     margin-left: $space2;
 
+    a {
+      color: var(--on-background);
+    }
+
     .item {
       display: flex;
       align-items: center;

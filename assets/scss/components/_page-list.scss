@@ -3,8 +3,9 @@
   padding: $space2;
 
   article {
-    padding-bottom: $space / 2;
-    border-bottom: 1px solid $divider-color;
+    padding-bottom: $space;
+    margin-bottom: $space2;
+    border-bottom: 1px solid var(--surface);
 
     .metadata {
       display: flex;

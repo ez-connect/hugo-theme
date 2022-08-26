@@ -8,9 +8,9 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 $space2;
-  background: $primary-color-dark;
-  color: $background-color;
-  font-size: $font-size-sx;
+  background: var(--primary);
+  color: var(--background);
+  font-size: var(--body-s);
 
   @media print {
     display: none;
@@ -18,6 +18,6 @@
 
   a {
     font-weight: bold;
-    color: $background-color;
+    color: var(--background);
   }
 }

@@ -2,10 +2,10 @@
   .tag-item {
     margin-right: $space / 2;
     padding: 2px 8px;
-    font-size: $font-size-sx;
+    font-size: var(--body-s);
     color: $text-color-muted;
     border: 1px solid $text-color-muted;
     border-radius: $space;
-    background: $surface-color;
+    background: var(--surface);
   }
 }
