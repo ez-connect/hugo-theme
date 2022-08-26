@@ -8,45 +8,45 @@
 }
 
 .alert.success {
-  background: var(--success-container);
-  color: var(--on-success-container);
+  background: var(--md-custom-color-success-container);
+  color: var(--md-custom-color-on-success-container);
 
   svg {
     path {
-      stroke: var(--success);
+      stroke: var(--md-custom-color-success);
     }
   }
 }
 
 .alert.info {
-  background: var(--info-container);
+  background: var(--md-custom-color-info-container);
   color: var(--on-info-container);
 
   svg {
     path {
-      stroke: var(--info);
+      stroke: var(--md-custom-color-info);
     }
   }
 }
 
 .alert.warning {
-  background: var(--warning-container);
-  color: var(--on-warning-container);
+  background: var(--md-custom-color-warning-container);
+  color: var(--md-custom-color-on-warning-container);
 
   svg {
     path {
-      stroke: var(--warning);
+      stroke: var(--md-custom-color-warning);
     }
   }
 }
 
 .alert.error {
-  background: var(--error-container);
+  background: var(--md-sys-color-error-container);
   color: var(--on-error-container);
 
   svg {
     path {
-      stroke: var(--error);
+      stroke: var(--md-sys-color-error);
     }
   }
 }

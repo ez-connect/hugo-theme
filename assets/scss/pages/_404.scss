@@ -13,7 +13,7 @@
   h1 {
     font-size: 8rem;
     margin: -48px;
-    color: var(--primary);
+    color: var(--md-sys-color-primary);
     z-index: 0;
   }
 
@@ -23,8 +23,8 @@
 
   a {
     display: inline-block;
-    background-color: var(--primary);
-    color: var(--background);
+    background-color: var(--md-sys-color-primary);
+    color: var(--md-sys-color-background);
     border-radius: $space2;
     padding: $space $space2;
     transition: 0.2s all;

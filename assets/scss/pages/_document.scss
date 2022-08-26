@@ -44,10 +44,9 @@
   padding: $space2 $space;
   margin-right: $space2;
   font-weight: 500;
-  font-size: var(--body-m);
   line-height: $space2;
-  // background: var(--surface);
-  border-right: 1px solid var(--surface);
+  // background: var(--md-sys-color-surface-variant);
+  border-right: 1px solid var(--md-sys-color-surface-variant);
 
   overflow: auto;
 
@@ -58,7 +57,7 @@
   }
 
   a {
-    color: var(--on-background);
+    color: var(--md-sys-color-on-background);
   }
 
   ul {
@@ -75,7 +74,7 @@
     p {
       margin-block-end: 0;
       font-weight: 700;
-      color: $text-color-muted;
+      color: var(--md-ref-palette-tertiary50);
       text-transform: uppercase;
     }
 
@@ -95,7 +94,7 @@
     //   bottom: 0;
     //   content: '';
     //   position: absolute;
-    //   background: $text-color-muted;
+    //   background: var(--md-ref-palette-tertiary50);
     // }
 
     .collapse {
@@ -114,6 +113,6 @@
   }
 
   .active {
-    color: var(--primary) !important;
+    color: var(--md-sys-color-primary) !important;
   }
 }

@@ -3,7 +3,9 @@
 // https://gist.github.com/rveitch/84cea9650092119527bc
 //
 
-@import 'utils/index.scss';
+@import 'vendor/index';
+
+@import 'utils/index';
 
 @import 'base/index';
 @import 'layout/index';

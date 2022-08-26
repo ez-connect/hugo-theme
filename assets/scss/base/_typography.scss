@@ -21,9 +21,5 @@ h2 {
 
 .meta {
   font-size: var(--body-m);
-  color: $text-color-muted;
-}
-
-.text-color-muted {
-  color: $text-color-muted;
+  color: var(--md-ref-palette-tertiary50);
 }

@@ -3,11 +3,11 @@
   align-items: center;
   justify-content: center;
   height: $blog-jumbotron-height;
-  background: var(--primary);
+  background: var(--md-sys-color-primary);
 
   h2 {
     position: absolute;
-    color: var(--background);
+    color: var(--md-sys-color-background);
   }
 
   img {

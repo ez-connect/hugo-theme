@@ -20,6 +20,10 @@ make run
 make build
 ```
 
+### Theme
+
+Use [Material Theme Builder](https://m3.material.io/theme-builder#/custom) to generate CSS in `assets/scss/vendor/material-theme`
+
 ### How it works?
 
 ```mermaid

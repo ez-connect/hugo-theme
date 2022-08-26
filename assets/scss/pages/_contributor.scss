@@ -8,7 +8,7 @@
 
   &__list {
     .item {
-      border-bottom: 1px solid $text-color-muted;
+      border-bottom: 1px solid var(--md-ref-palette-tertiary50);
     }
   }
 }

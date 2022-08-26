@@ -9,8 +9,8 @@
     width: 100%;
     padding: $space / 2 $space / 2 $space / 2 $space2;
     border-radius: $space / 2;
-    border: solid 1px var(--surface);
-    background: var(--surface);
+    border: solid 1px var(--md-sys-color-surface-variant-variant-variant);
+    background: var(--md-sys-color-surface-variant-variant);
   }
 }
 
@@ -19,7 +19,7 @@
   position: fixed;
   right: 4px;
   padding: $space;
-  background: var(--background);
+  background: var(--md-sys-color-background);
   max-width: map-get($breakpoint, 'sm') / 2;
 
   border: solid 1px;
@@ -28,7 +28,7 @@
 
   a {
     display: block;
-    color: var(--on-background);
+    color: var(--md-sys-color-on-background);
     margin-bottom: 8px;
   }
 }
