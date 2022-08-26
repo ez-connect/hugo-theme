@@ -9,7 +9,7 @@
 
   h2,
   h3 {
-    color: var(--primary);
+    color: var(--md-sys-color-primary);
   }
 
   h2 {
@@ -59,8 +59,8 @@
     flex-direction: column;
     align-items: center;
     padding: $space 0;
-    border-bottom: 0.5px solid var(--surface);
-    color: var(--on-background);
+    border-bottom: 0.5px solid var(--md-sys-color-surface-variant-variant);
+    color: var(--md-sys-color-on-background);
 
     img {
       max-width: 192px;

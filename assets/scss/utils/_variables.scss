@@ -1,75 +1,22 @@
 // Theme
-// https://m3.material.io/styles/color/the-color-system/key-colors-tones
-$theme-color: (
-  // Accent colors
-  primary: #386a20,
-  on-primary: white,
-  primary-container: #386a20,
-  onPrimary-container: #042100,
+// Add extended color based on https://m3.material.io/theme-builder#/custom
+// https://mui.com/material-ui/customization/palette/
+$theme-extended-color: (
+  md-custom-color-info: dodgerblue,
+  md-custom-color-on-info: white,
+  md-custom-color-info-container: #e3f2fd,
+  md-custom-color-on-info-container: black,
 
-  secondary: #55624c,
-  on-secondary: white,
-  secondary-container: #d9e7cb,
-  on-secondary-container: #131f0d,
+  md-custom-color-success: green,
+  md-custom-color-on-sucess: white,
+  md-custom-color-success-container: #e8f5e9,
+  md-custom-color-on-success-container: black,
 
-  tertiary: #19686a,
-  on-tertiary: white,
-  tertiary-container: #a8eff0,
-  on-tertiary-container: #002021,
-
-  // Neutral colors
-  background: white,
-  on-background: black,
-  surface: #e0e5d7,
-  on-surface: #43483e,
-  outline: #72776c,
-
-  // Additional colors
-  error: tomato,
-  on-error: white,
-  error-container: #f9dedc,
-  on-error-container: black,
-
-  // Product-specific custom colors
-  info: dodgerblue,
-  on-info: white,
-  info-container: #e3f2fd,
-  on-info-container: black,
-
-  success: green,
-  on-sucess: white,
-  success-container: #e8f5e9,
-  on-success-container: black,
-
-  warning: orange,
-  on-warning: white,
-  warning-container: #fff8e1,
-  on-warning-container: black
+  md-custom-color-warning: orange,
+  md-custom-color-on-warning: white,
+  md-custom-color-warning-container: #fff8e1,
+  md-custom-color-on-warning-container: black,
 );
-
-$theme-typo: (
-  font-family: 'Roboto, sans-serif',
-
-  display-l: 64px,
-  display-m: 52px,
-  display-s: 44px,
-  headline-l: 32px,
-  headline-m: 28px,
-  headline-s: 24px,
-  title-l: 22px,
-  title-m: 16px,
-  title-s: 14px,
-  label-l: 14px,
-  label-m: 12px,
-  label-s: 11px,
-  body-l: 16px,
-  body-m: 14px,
-  body-s: 12px,
-);
-
-// Typography
-$text-color-light: #74818d;
-$text-color-muted: #9daab6;
 
 // Space
 $space: 16px;

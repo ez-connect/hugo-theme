@@ -7,14 +7,14 @@
   box-sizing: border-box;
   width: 100%;
   padding: 0 $space;
-  background: var(--primary);
+  background: var(--md-sys-color-primary);
 
   @media print {
     display: none;
   }
 
   a {
-    color: var(--background);
+    color: var(--md-sys-color-background);
   }
 
   // Links
@@ -37,7 +37,7 @@
 
     @include media-breakpoint-down(md) {
       width: 100%;
-      background: var(--primary);
+      background: var(--md-sys-color-primary);
     }
 
     ul {
@@ -57,7 +57,7 @@
     // width: $document-menu-width;
     align-items: center;
     padding-right: 8px;
-    border-right: solid $text-color-muted;
+    border-right: solid var(--md-ref-palette-tertiary50);
     border-width: 1px;
 
     @include media-breakpoint-down(md) {
@@ -82,7 +82,7 @@
 
     // Override ionicons style
     .ionicon-stroke-width {
-      stroke: var(--background);
+      stroke: var(--md-sys-color-background);
     }
   }
 
@@ -93,7 +93,7 @@
   //   svg {
   //     position: absolute;
   //     padding: 8px $space;
-  //     fill: $text-color-muted;
+  //     fill: var(--md-ref-palette-tertiary50);
   //     padding-left: 8px;
   //   }
 
@@ -101,7 +101,7 @@
   //     height: $space2;
   //     padding-left: $space2;
   //     margin-bottom: 0;
-  //     color: $text-color-muted;
+  //     color: var(--md-ref-palette-tertiary50);
   //   }
 
   //   span {

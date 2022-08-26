@@ -1,12 +1,12 @@
 // Theme
 :root {
-  @each $k, $v in $theme-color {
+  @each $k, $v in $theme-extended-color {
     --#{$k}: #{$v};
   }
 
-  @each $k, $v in $theme-typo {
-    --#{$k}: #{$v};
-  }
+  // @each $k, $v in $theme-typo {
+  //   --#{$k}: #{$v};
+  // }
 }
 
 .hide {
@@ -18,7 +18,7 @@
 }
 
 .spanborder {
-  border-bottom: 1px solid var(--surface);
+  border-bottom: 1px solid var(--md-sys-color-surface);
   margin-bottom: $space2;
 
   span {
@@ -26,5 +26,16 @@
     border-bottom: 1px solid var(--primary);
     margin-bottom: -1px;
     padding-bottom: $space;
+  }
+}
+
+// For /document/theme
+.theme-showcase {
+  display: flex;
+
+  div {
+    padding: $space;
+    margin-bottom: $space / 2;
+    width: 128px;
   }
 }

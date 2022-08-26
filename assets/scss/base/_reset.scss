@@ -11,11 +11,10 @@ body {
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: var(--font-family);
-  font-size: var(--body-m);
-  color: var(--on-background);
-  background-color: var(--background);
+  background-color: var(--md-sys-color-background);
   margin: 0;
+
+  @extend .body-medium;
 }
 
 ul,
@@ -30,7 +29,7 @@ hr {
 }
 
 a {
-  color: var(--primary);
+  color: var(--md-sys-color-primary);
   text-decoration: none;
 
   &:hover {
@@ -50,7 +49,7 @@ blockquote {
   margin-inline-start: 0;
   margin-inline-end: 0;
 
-  border-color: var(--primary) !important;
+  border-color: var(--md-sys-color-primary) !important;
   border-left: 4px solid;
   border-radius: 3px;
   padding-top: 4px;
@@ -62,7 +61,7 @@ blockquote {
 
 table {
   --bs-table-bg: transparent;
-  --bs-table-striped-color: var(--primary);
+  --bs-table-striped-color: var(--md-sys-color-primary);
   --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
   --bs-table-active-color: #212529;
   --bs-table-active-bg: rgba(0, 0, 0, 0.1);
@@ -73,7 +72,7 @@ table {
   border-collapse: collapse;
   width: 100%;
   margin-bottom: $space;
-  font-size: var(--body-s);
+  font-size: var(--md-sys-typescale-body-small-font-size);
 }
 
 table > thead {
@@ -103,5 +102,5 @@ tr {
 }
 
 code {
-  font-size: var(--body-s);
+  font-size: var(--md-sys-typescale-body-small-font-size);
 }

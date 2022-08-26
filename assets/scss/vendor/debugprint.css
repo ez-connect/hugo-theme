@@ -1,6 +1,8 @@
-// CSS for Pretty Print for Debug (debugprint.html)
-// https://github.com/kaushalmodi/hugo-debugprint/blob/master/layouts/partials/debugprint.html
-// https://github.com/kaushalmodi/hugo-debugprint/blob/master/layouts/partials/debugprint.css
+/**
+CSS for Pretty Print for Debug (debugprint.html)
+https://github.com/kaushalmodi/hugo-debugprint/blob/master/layouts/partials/debugprint.html
+https://github.com/kaushalmodi/hugo-debugprint/blob/master/layouts/partials/debugprint.css
+**/
 .debugprint_wrap {
   padding: 20px;
   display: inline-block;
@@ -30,8 +32,7 @@
 }
 
 .debugprint .type {
-  // Hide Type columns in debugprint
-  // display: none;
+  /* Hide Type columns in debugprint */
   font-size: 0.9em;
   font-family: monospace;
   font-style: italic;
@@ -48,7 +49,7 @@
   color: red;
 }
 
-//  Don't touch the table headers
+/*  Don't touch the table headers */
 .debugprint th.key,
 .debugprint th.type,
 .debugprint th.value {

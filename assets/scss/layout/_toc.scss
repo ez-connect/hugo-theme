@@ -5,7 +5,7 @@
   width: 15%;
   height: 100vh;
   padding-left: $space2;
-  font-size: var(--body-s);
+  font-size: var(--md-sys-typescale-body-small-font-size);
   overflow: auto;
 
   @include media-breakpoint-down(md) {
@@ -28,11 +28,11 @@
   }
 
   a {
-    color: var(--on-background);
+    color: var(--md-sys-color-on-background);
   }
 
   a.active {
-    color: var(--primary) !important;
+    color: var(--md-sys-color-primary) !important;
     font-weight: bold;
   }
 }
