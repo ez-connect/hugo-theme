@@ -1,3 +1,4 @@
 {{ define "main" }}
-  {{ partial "shared/page-list" .Pages }}
+  {{ $paginator := .Paginate .Pages }}
+  {{ partial "shared/page-list" $paginator }}
 {{ end }}

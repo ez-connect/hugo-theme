@@ -30,6 +30,11 @@
       width: 100%;
     }
   }
+
+  // Override .toc
+  .toc {
+    width: 15%;
+  }
 }
 
 // Left side menu
@@ -45,10 +50,11 @@
   margin-right: $space2;
   font-weight: 500;
   line-height: $space2;
-  // background: var(--md-sys-color-surface-variant);
   border-right: 1px solid var(--md-sys-color-surface-variant);
 
   overflow: auto;
+
+  @extend .body-medium;
 
   // Hide menu on mobile
   @include media-breakpoint-down(sm) {

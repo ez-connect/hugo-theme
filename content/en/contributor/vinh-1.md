@@ -44,7 +44,7 @@ title: thanh.vinh@hotmail.com
 updatedAt: "2022-01-28T03:38:08.219Z"
 user:
   createdAt: "2022-01-23T13:59:43.490Z"
-  firstname: thanh.vinh@hotmail.com
+  firstname: Vinh
   id: 1
   lastname: Nguyen
   preferedLanguage: null

@@ -51,7 +51,7 @@ init:
 
 #: Generate chromastyles
 syntax:
-	@hugo gen chromastyles --style=emacs > assets/scss/vendor/chroma.scss
+	@hugo gen chromastyles --style=emacs > assets/scss/vendors/chroma.scss
 
 #: Lint the code
 lint:
@@ -132,3 +132,7 @@ restart:
 #: Uninstalls the service
 uninstall:
 	helm uninstall $(IMAGE) -n $(HELM_NAMESPACE) $(args)
+
+#: Upload to surge.sh
+surge:
+	surge public/ https://hugo-theme.ez-connect.net

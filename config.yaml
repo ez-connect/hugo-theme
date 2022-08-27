@@ -1,6 +1,7 @@
 baseURL: /
 title: Ez-Connect
 summaryLength: 30
+paginate: 1 # default 10
 
 # https://gohugo.io/content-management/multilingual/#configure-languages
 languageCode: en-us

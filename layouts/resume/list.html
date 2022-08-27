@@ -2,7 +2,7 @@
   {{ $pages := where .Site.RegularPages "Section" "resume" }}
 
 
-  <div class="resume__list">
+  <div class="resume-list-page">
     {{ range $pages }}
       <a class="item" href="{{ .RelPermalink }}">
         <img src="{{ .Params.avatar.url }}" />

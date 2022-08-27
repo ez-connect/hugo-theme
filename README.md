@@ -22,7 +22,7 @@ make build
 
 ### Theme
 
-Use [Material Theme Builder](https://m3.material.io/theme-builder#/custom) to generate CSS in `assets/scss/vendor/material-theme`
+Use [Material Theme Builder](https://m3.material.io/theme-builder#/custom) to generate CSS in `assets/scss/vendors/material-theme`
 
 ### How it works?
 

@@ -78,8 +78,6 @@ updatedAt: "2022-02-15T02:52:01.102Z"
 updatedBy: thanh.vinh@hotmail.com
 ---
 
-# Est cum herba tum spatio iactantem summos
-
 ## Imo vulnera eadem fiducia Scythicis obicit e
 
 Lorem markdownum natam et alvum cui, [nulla Aeacon] et silentum fuerit. Pugnae

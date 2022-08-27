@@ -1,7 +1,7 @@
 ---
 title: Theme
 description: https://m3.material.io/theme-builder#/custom
-weight: 99
+weight: 5
 createdBy: thanh.vinh@hotmail.com
 createdAt: 2022-08-26T15:59:43+07:00
 updatedBy: thanh.vinh@hotmail.com
@@ -119,4 +119,53 @@ https://m3.material.io/theme-builder#/custom
     On Surface variant
   </div>
 </div>
+```
+
+## Typography
+
+```safehtml
+<div class="typography-showcase">
+  <div class="display-large">Display large</div>
+  <div class="display-medium">Display medium</div>
+  <div class="display-small">Display small</div>
+
+  <div class="headline-large">Headline large</div>
+  <div class="headline-medium">Headline medium</div>
+  <div class="headline-small">Headline small</div>
+
+  <div class="title-large">Title large</div>
+  <div class="title-medium">Title medium</div>
+  <div class="title-small">Title small</div>
+
+  <div class="label-large">Label large</div>
+  <div class="label-medium">Label medium</div>
+  <div class="label-small">Label small</div>
+
+  <div class="body-large">Body large</div>
+  <div class="body-medium">Body medium</div>
+  <div class="body-small">Body small</div>
+</div>
+```
+
+## Components
+
+### Nav
+
+```safehtml
+<nav class="nav">
+  <div class="logo">
+    <a id="navMenuButton" class="menu-btn" href="#">
+      {{ partial "shared/ionicons" "logo-github" }}
+    </a>
+    <img alt="{{ $nav.logo.name }}" src="https://github.com/orgs/ez-connect/dashboard" />
+    <a href="/"><strong>{{ $nav.title }}</strong></a>
+  </div>
+
+  <!-- Menu for desktop -->
+  <ul>
+    {{ range $links }}
+      <li><a href="{{ .url }}">{{ .name }}</a></li>
+    {{ end }}
+  </ul>
+</nav>
 ```

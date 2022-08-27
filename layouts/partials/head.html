@@ -33,8 +33,9 @@
 
 <link rel="shortcut icon" href="favicon.ico" />
 
-<!-- Vendor -->
-{{ $css := resources.Match "scss/vendor/*.css" | resources.Concat "vendor.css" }}
+<!-- SCSS -->
+{{ $options := (dict "targetPath" "main.css" "outputStyle" "compressed" "enableSourceMap" true) }}
+{{ $css := resources.Get "scss/main.scss" | resources.ToCSS $options }}
 {{ if eq (hugo.Environment) "development" -}}
   <link rel="stylesheet" href="{{ $css.Permalink }}" />
 {{ else }}
@@ -43,14 +44,30 @@
 {{ end }}
 
 
-<!-- SCSS -->
-{{ $options := (dict "targetPath" "main.css" "outputStyle" "compressed" "enableSourceMap" true) }}
-{{ $scss := resources.Get "scss/main.scss" | resources.ToCSS $options }}
+<!-- Theme Light -->
+{{ $options = (dict "targetPath" "theme.light.css" "outputStyle" "compressed" "enableSourceMap" true) }}
+{{ $css = resources.Get "scss/vendors/material-theme/theme.light.css" | resources.ToCSS $options }}
 {{ if eq (hugo.Environment) "development" -}}
-  <link rel="stylesheet" href="{{ $scss.Permalink }}" />
+  <link rel="stylesheet" href="{{ $css.Permalink }}" />
 {{ else }}
-  {{ $scss = $scss | minify | fingerprint }}
-  <link rel="stylesheet" href="{{ $scss.Permalink }}" crossorigin="anonymous" />
+  {{ $css = $css | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $css.Permalink }}" crossorigin="anonymous" />
+{{ end }}
+
+
+<!-- Theme Dark -->
+{{ $options = (dict "targetPath" "theme.dark.css" "outputStyle" "compressed" "enableSourceMap" true) }}
+{{ $css = resources.Get "scss/vendors/material-theme/theme.dark.css" | resources.ToCSS $options }}
+{{ if eq (hugo.Environment) "development" -}}
+  <link disabled rel="stylesheet" href="{{ $css.Permalink }}" />
+{{ else }}
+  {{ $css = $css | minify | fingerprint }}
+  <link
+    disabled
+    rel="stylesheet"
+    href="{{ $css.Permalink }}"
+    crossorigin="anonymous"
+  />
 {{ end }}
 
 

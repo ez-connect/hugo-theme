@@ -5,8 +5,7 @@
   article {
     padding-bottom: $space;
     margin-bottom: $space2;
-    border-bottom: 1px solid
-      var(--md-sys-color-surface-variant-variant-variant-variant);
+    border-bottom: 1px solid var(--md-sys-color-surface-variant);
 
     .metadata {
       display: flex;
