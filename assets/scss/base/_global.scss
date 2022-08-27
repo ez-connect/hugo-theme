@@ -1,4 +1,4 @@
-// Theme
+// Theme - Extended colors
 :root {
   @each $k, $v in $theme-extended-color {
     --#{$k}: #{$v};
@@ -18,18 +18,18 @@
 }
 
 .spanborder {
-  border-bottom: 1px solid var(--md-sys-color-surface);
+  border-bottom: 1px solid var(--md-sys-color-surface-variant);
   margin-bottom: $space2;
 
   span {
     display: inline-block;
-    border-bottom: 1px solid var(--primary);
+    border-bottom: 1px solid var(--md-sys-color-primary);
     margin-bottom: -1px;
     padding-bottom: $space;
   }
 }
 
-// For /document/theme
+// For /document/introduction/theme#your-theme
 .theme-showcase {
   display: flex;
 
@@ -37,5 +37,16 @@
     padding: $space;
     margin-bottom: $space / 2;
     width: 128px;
+  }
+}
+
+// For /document/introduction/theme#typography
+.typography-showcase {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  div {
+    padding-right: $space;
   }
 }

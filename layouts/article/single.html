@@ -5,6 +5,10 @@
       <hr />
     {{ end }}
 
-    {{ partial "shared/content" . }}
+
+    <div class="article-content">
+      {{ partial "shared/content" . }}
+      {{ partial "shared/toc" . }}
+    </div>
   </div>
 {{ end }}

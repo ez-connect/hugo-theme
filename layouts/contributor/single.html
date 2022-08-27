@@ -8,6 +8,8 @@
   <!-- Sort by `updatedAt` -->
   <!-- {{ $pages = ($pages.ByParam "updatedAt") }} -->
   <!-- {{ $pages = (sort $pages "Params.updatedAt").Reverse }} -->
+  {{ $paginator := .Paginate $pages }}
+
 
   <div class="contributor">
     <h1>{{ .Title }}</h1>
@@ -23,7 +25,7 @@
     <!-- Ingore empty page -->
     <h2>Latest</h2>
     <section class="contributor__list">
-      {{ partial "shared/page-list" $pages }}
+      {{/* {{ partial "shared/page-list" $paginator }} */}}
     </section>
   </div>
 {{ end }}

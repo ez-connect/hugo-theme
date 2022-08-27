@@ -1,5 +1,6 @@
 {{ define "main" }}
   {{ $pages := (.Pages.ByParam "updatedAt").Reverse }}
+  {{ $paginator := .Paginate $pages }}
 
 
   <div class="article-list-page">
@@ -9,7 +10,7 @@
     <div class="article-list-page-container">
       <section class="article-list">
         <h3 class="spanborder"><span>Latest</span></h3>
-        {{ partial "shared/page-list" $pages }}
+        {{ partial "shared/page-list" $paginator }}
       </section>
 
       {{ partial "article/tag-list" . }}

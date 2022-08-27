@@ -48,4 +48,13 @@
   padding-left: $space2;
   padding-right: $space2;
   padding-bottom: $space2;
+
+  .article-content {
+    display: flex;
+  }
+
+  // Override .toc
+  .toc {
+    width: 30%;
+  }
 }

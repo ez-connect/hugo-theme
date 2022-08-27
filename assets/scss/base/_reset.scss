@@ -14,7 +14,7 @@ body {
   background-color: var(--md-sys-color-background);
   margin: 0;
 
-  @extend .body-medium;
+  @extend .body-large;
 }
 
 ul,
@@ -24,7 +24,7 @@ li {
 
 hr {
   border-top: 1px;
-  border-color: var(--surface);
+  border-color: var(--md-sys-color-surface-variant);
   margin-block: $space;
 }
 
@@ -56,7 +56,7 @@ blockquote {
   padding-left: 32px;
   padding-right: 32px;
   padding-bottom: 4px;
-  background: var(--surface);
+  background: var(--md-sys-color-surface-variant);
 }
 
 table {
@@ -72,7 +72,8 @@ table {
   border-collapse: collapse;
   width: 100%;
   margin-bottom: $space;
-  font-size: var(--md-sys-typescale-body-small-font-size);
+
+  @extend .body-medium;
 }
 
 table > thead {
@@ -102,5 +103,5 @@ tr {
 }
 
 code {
-  font-size: var(--md-sys-typescale-body-small-font-size);
+  font-size: var(--md-sys-typescale-body-medium-font-size);
 }

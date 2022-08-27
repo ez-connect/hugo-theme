@@ -1,7 +1,10 @@
 {{ define "main" }}
+  {{ $paginator := .Paginate .Pages }}
+
+
   <div class="tag-list">
     <h3 class="spanborder"><span>#{{ .Title }}</span></h3>
 
-    {{ partial "shared/page-list" .Pages }}
+    {{ partial "shared/page-list" $paginator }}
   </div>
 {{ end }}

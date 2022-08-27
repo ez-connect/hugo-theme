@@ -54,11 +54,10 @@
   .logo {
     box-sizing: border-box;
     display: flex;
-    // width: $document-menu-width;
     align-items: center;
     padding-right: 8px;
-    border-right: solid var(--md-ref-palette-tertiary50);
-    border-width: 1px;
+    // border-right: solid var(--md-sys-color-on-primary);
+    // border-width: 1px;
 
     @include media-breakpoint-down(md) {
       border: none;

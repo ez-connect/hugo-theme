@@ -1,7 +1,13 @@
-<!-- Display a list of pages -->
+<!--
+  Display a list of pages, called form PageList template
+  https://gohugo.io/templates/lists/
+
+  Params:
+    - `Paginator`: https://gohugo.io/templates/pagination/
+-->
 
 <div class="page-list">
-  {{ range . }}
+  {{ range .Pages }}
     <article>
       {{ if not (eq .Section "career") }}
         {{ partial "shared/author" . }}

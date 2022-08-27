@@ -14,8 +14,6 @@ updatedAt: "2022-01-28T03:51:02.395Z"
 updatedBy: thanh.vinh@hotmail.com
 ---
 
-# Per ferox pinguia tremens
-
 ## Alte ter faciem fronde reminiscitur atque palearia
 
 Lorem markdownum legebantur solet fortibus, et soli vincat verba. Ixione omni
