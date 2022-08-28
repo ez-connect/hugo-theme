@@ -1,4 +1,22 @@
 {{ define "main" }}
-  {{ $paginator := .Paginate .Pages }}
-  {{ partial "shared/page-list" $paginator }}
+  {{ $pages := (.Pages.ByParam "updatedAt").Reverse }}
+  {{ $paginator := .Paginate $pages }}
+
+
+  <div class="list-page">
+    {{/* TODO: Define img in site.banner.section-name */}}
+    {{ partial "shared/banner" . }}
+
+
+    <div class="flex">
+      <section class="content-container">
+        {{ partial "shared/content-list" $paginator }}
+        {{ template "_internal/pagination.html" . }}
+      </section>
+
+      <section class="menu-container">
+        {{ partial "shared/list-menu" . }}
+      </section>
+    </div>
+  </div>
 {{ end }}

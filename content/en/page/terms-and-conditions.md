@@ -1,9 +1,6 @@
 ---
-components: []
 createdAt: '2022-01-27T11:46:26.030Z'
 draft: true
-id: 2
-locale: en
 title: Terms and Conditions
 updatedAt: '2022-01-27T11:46:26.030Z'
 ---

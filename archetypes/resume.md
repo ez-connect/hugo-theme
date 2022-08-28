@@ -1,5 +1,5 @@
 ---
-name: Simon Doe
+title: Simon Doe
 avatar:
   url: /uploads/avatar_d6f96d73d0.png
 position: Senior Software Engineer
@@ -13,7 +13,7 @@ social:
   github: https://github.com
   gitlab: https://gitlab.com
   linkedin: https://linkedin.com
-  twitter: https://twitter.com
+  twitter: https://twitterP.com
   facebook: https://facebook.com
   instagram: https://instagram.com
 
@@ -22,19 +22,17 @@ experiences:
   - title: Senior Software Engineer
     dates: 2019 - Present
     company: Google
-    detail:
-      summary: Role description goes here ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Donec pede justo, fringilla vel. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis.
-      items:
+    detail: >-
+      Role description goes here ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Donec pede justo, fringilla vel. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis.
         - Lorem ipsum dolor sit amet, consectetuer.
         - Aenean commodo ligula eget dolor.
         - Etiam ultricies nisi vel augue.
   - title: Lead Software Developer
     dates: 2016 - 2019
     company: Apple
-    detail:
-      summary: Lorem ipsum dolor sit amet, consectetuer.
-      items:
-        - Aenean commodo ligula eget dolor.
+    detail: >-
+      Lorem ipsum dolor sit amet, consectetuer.
+      - Aenean commodo ligula eget dolor.
 
 # Projects
 projects:
@@ -48,7 +46,7 @@ projects:
 # Skills
 skills:
   - title: Technical
-    details:
+    items: |-
       - JavaScript/Angular/React/Vue
       - Python/Ruby/PHP
       - Node.js/ASP.NET
@@ -57,7 +55,7 @@ skills:
       - Design and implement database structures
       - Lead and deliver complex software systems
   - title: Professional
-    details:
+    items: |-
       - Effective communication
       - Team player
       - Strong problem solver
@@ -76,10 +74,10 @@ educations:
 awards:
   - name: Award Lorem Ipsum
     body: Microsoft lorem ipsum
-    date: 2019
+    createdAt: 2019
   - name: Award Donec Sodales
     body: Oracle Aenean
-    date: 2017
+    createdAt: 2017
 
 # Languages
 languages:
@@ -89,11 +87,12 @@ languages:
     level: Professional
 
 # Interests
-interests:
+interests: |-
   - Climbing
   - Snowboarding
   - Photography
   - Travelling
+draft: false
 ---
 
 Summarise your career here. You can make a PDF version of your resume using our free Sketch template here. Donec quam felis, ultricies nec, pellentesque eu. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.

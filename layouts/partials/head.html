@@ -37,10 +37,14 @@
 {{ $options := (dict "targetPath" "main.css" "outputStyle" "compressed" "enableSourceMap" true) }}
 {{ $css := resources.Get "scss/main.scss" | resources.ToCSS $options }}
 {{ if eq (hugo.Environment) "development" -}}
-  <link rel="stylesheet" href="{{ $css.Permalink }}" />
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" />
 {{ else }}
   {{ $css = $css | minify | fingerprint }}
-  <link rel="stylesheet" href="{{ $css.Permalink }}" crossorigin="anonymous" />
+  <link
+    rel="stylesheet"
+    href="{{ $css.RelPermalink }}"
+    crossorigin="anonymous"
+  />
 {{ end }}
 
 
@@ -48,10 +52,14 @@
 {{ $options = (dict "targetPath" "theme.light.css" "outputStyle" "compressed" "enableSourceMap" true) }}
 {{ $css = resources.Get "scss/vendors/material-theme/theme.light.css" | resources.ToCSS $options }}
 {{ if eq (hugo.Environment) "development" -}}
-  <link rel="stylesheet" href="{{ $css.Permalink }}" />
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" />
 {{ else }}
   {{ $css = $css | minify | fingerprint }}
-  <link rel="stylesheet" href="{{ $css.Permalink }}" crossorigin="anonymous" />
+  <link
+    rel="stylesheet"
+    href="{{ $css.RelPermalink }}"
+    crossorigin="anonymous"
+  />
 {{ end }}
 
 
@@ -59,13 +67,13 @@
 {{ $options = (dict "targetPath" "theme.dark.css" "outputStyle" "compressed" "enableSourceMap" true) }}
 {{ $css = resources.Get "scss/vendors/material-theme/theme.dark.css" | resources.ToCSS $options }}
 {{ if eq (hugo.Environment) "development" -}}
-  <link disabled rel="stylesheet" href="{{ $css.Permalink }}" />
+  <link disabled rel="stylesheet" href="{{ $css.RelPermalink }}" />
 {{ else }}
   {{ $css = $css | minify | fingerprint }}
   <link
     disabled
     rel="stylesheet"
-    href="{{ $css.Permalink }}"
+    href="{{ $css.RelPermalink }}"
     crossorigin="anonymous"
   />
 {{ end }}

@@ -1,7 +1,6 @@
 input {
   box-sizing: border-box;
-  margin-bottom: $space;
-  padding: $space;
+  padding: var(--space-small) var(--space-medium);
   border: solid 1px var(--md-sys-color-outline);
 
   &:focus {
@@ -16,12 +15,14 @@ textarea {
   padding: 8px;
 }
 
+input::placeholder {
+  @extend .body-medium;
+}
+
 input[type='button'],
 input[type='submit'] {
   background: var(--md-sys-color-primary);
   color: var(--md-sys-color-background);
   font-weight: bold;
   border: none;
-  padding: $space;
-  width: 100%;
 }

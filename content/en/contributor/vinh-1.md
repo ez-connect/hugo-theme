@@ -1,4 +1,12 @@
 ---
+title: thanh.vinh@hotmail.com
+user:
+  createdAt: "2022-01-23T13:59:43.490Z"
+  firstname: Vinh
+  lastname: Nguyen
+  preferedLanguage: null
+  updatedAt: "2022-01-28T03:29:57.720Z"
+  username: thanh.vinh@hotmail.com
 avatar:
   alternativeText: avataars.png
   caption: avataars.png
@@ -27,7 +35,6 @@ avatar:
       width: 147
   hash: avataars_922958566f
   height: 560
-  id: 38
   mime: image/png
   name: avataars.png
   previewUrl: null
@@ -38,18 +45,7 @@ avatar:
   url: /uploads/avataars_922958566f.png
   width: 528
 createdAt: "2022-01-28T02:54:09.517Z"
-id: 1
-publishedAt: "2022-01-28T03:38:08.218Z"
-title: thanh.vinh@hotmail.com
 updatedAt: "2022-01-28T03:38:08.219Z"
-user:
-  createdAt: "2022-01-23T13:59:43.490Z"
-  firstname: Vinh
-  id: 1
-  lastname: Nguyen
-  preferedLanguage: null
-  updatedAt: "2022-01-28T03:29:57.720Z"
-  username: thanh.vinh@hotmail.com
 ---
 
 I am a copy and paste developer, how do I become a real software developer?

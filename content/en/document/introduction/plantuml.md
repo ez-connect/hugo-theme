@@ -6,7 +6,6 @@ createdAt: "2022-01-27T16:04:43.247Z"
 createdBy: thanh.vinh@hotmail.com
 updatedAt: "2022-01-27T16:05:09.002Z"
 updatedBy: thanh.vinh@hotmail.com
-publishedAt: "2022-01-27T16:05:08.999Z"
 ---
 
 [**PlantUML**](https://plantuml.com/) is used to draw UML diagrams, using a simple and human readable text description.

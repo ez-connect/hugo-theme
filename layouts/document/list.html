@@ -1,7 +1,17 @@
 {{ define "main" }}
-  <div class="document-list-page">
+  <div class="document-page">
     {{ partial "document/menu" . }}
 
-    {{ partial "shared/content" . }}
+
+    <div class="content-container">
+      {{ if .Site.Params.options.breadcrumb }}
+        {{ partial "shared/breadcrumb" . }}
+        <hr />
+      {{ end }}
+
+      {{ partial "shared/content" . }}
+    </div>
+
+    {{ partial "shared/toc" . }}
   </div>
 {{ end }}

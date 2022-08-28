@@ -1,4 +1,7 @@
-<!-- Displays authors of a post -->
+<!--
+Displays authors of a single page
+Params: Single page
+-->
 
 <!-- All contributor pages -->
 {{ $contributors := where $.Site.RegularPages "Section" "contributor" }}
@@ -8,37 +11,16 @@
 {{ $createdBy := index (where $contributors "Params.user.username" .Params.createdBy) 0 }}
 {{ $updatedBy := index (where $contributors "Params.user.username" .Params.updatedBy) 0 }}
 
+{{ if not $updatedBy }}
+  {{ $updatedBy = $createdBy }}
+{{ end }}
+
 
 <div class="author">
-  <!-- Avatar -->
-  <div>
-    {{ if $updatedBy }}
-      <a href="{{ $updatedBy.Permalink }}">
-        <img src="{{ $updatedBy.Params.avatar.url }}" />
-      </a>
-    {{ else }}
-      <a href="{{ $createdBy.Permalink }}">
-        <img src="{{ $createdBy.Params.avatar.url }}" />
-      </a>
-    {{ end }}
-  </div>
-
-  <!-- Meta -->
-  <div>
-    <div>
-      <a href="{{ $createdBy.Permalink }}">
-        {{ $createdBy.Params.user.firstname }}
-      </a>
-      {{ if ne $createdBy $updatedBy }}
-        ⠂<a href="{{ $updatedBy.Permalink }}">
-          {{ $updatedBy.Params.user.firstname }}
-        </a>
-      {{ end }}
-    </div>
-
-    <div class="meta">
-      {{ partial "shared/timeago" . }}
-      ⠂{{ partial "shared/reading-time" . }}
-    </div>
-  </div>
+  <a href="{{ $updatedBy.RelPermalink }}">
+    <img src="{{ $updatedBy.Params.avatar.url }}" />
+    {{ $updatedBy.Params.user.firstname }}
+  </a>
+  <span class="dot">∙</span>
+  {{ partial "shared/timeago" (default .Params.updatedAt .Params.createdAt) }}
 </div>

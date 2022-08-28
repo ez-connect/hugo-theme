@@ -5,7 +5,7 @@ createdBy: thanh.vinh@hotmail.com
 createdAt: {{ .Date }}
 updatedBy: thanh.vinh@hotmail.com
 updatedAt: {{ .Date }}
-draft: true
+draft: false
 ---
 
 ## Salary Expectation

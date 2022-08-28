@@ -1,0 +1,18 @@
+<!--
+Display a banner image
+Params:
+  - List page
+-->
+
+{{ $defaultData := index $.Site.Data $.Site.Params.defaultLanguage }}
+{{ $data := default $defaultData (index $.Site.Data $.Site.Language.Lang) }}
+{{ $section := default $defaultData.section $data.section }}
+
+{{ with $section }}
+  {{ with index $section $.Section }}
+    <div class="banner">
+      <h2>{{ .title }}</h2>
+      <img src="{{ .banner.url }}" loading="lazy" />
+    </div>
+  {{ end }}
+{{ end }}

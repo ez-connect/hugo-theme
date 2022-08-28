@@ -25,7 +25,7 @@ li {
 hr {
   border-top: 1px;
   border-color: var(--md-sys-color-surface-variant);
-  margin-block: $space;
+  margin-block: var(--space-medium);
 }
 
 a {
@@ -71,7 +71,7 @@ table {
   caption-side: bottom;
   border-collapse: collapse;
   width: 100%;
-  margin-bottom: $space;
+  margin-bottom: var(--space-medium);
 
   @extend .body-medium;
 }
@@ -105,3 +105,25 @@ tr {
 code {
   font-size: var(--md-sys-typescale-body-medium-font-size);
 }
+
+// Collapse - `details` tag
+details {
+  summary {
+    // list-style: none;
+    cursor: pointer;
+    color: var(--md-sys-color-primary);
+    padding-bottom: var(--space-small);
+  }
+
+  // summary::before {
+  //   display: inline-block;
+  //   content: '❯';
+  //   margin-right: var(--space-small);
+  // }
+}
+
+// details[open] {
+//   summary::before {
+//     transform: rotate(90deg);
+//   }
+// }

@@ -1,6 +1,6 @@
 // List of resumes
 .resume-list-page {
-  padding: $space2;
+  padding: var(--space-large);
 
   a {
     text-decoration: none;
@@ -10,7 +10,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: $space 0;
+    padding: var(--space-medium) 0;
     border-bottom: 0.5px solid var(--md-sys-color-surface-variant-variant);
     color: var(--md-sys-color-on-background);
 
@@ -18,18 +18,17 @@
       max-width: 192px;
       max-height: 192px;
 
-      padding: $space;
+      padding: var(--space-medium);
     }
   }
 }
-
 
 .resume {
   box-sizing: border-box;
   max-width: map-get($breakpoint, 'lg');
   margin-left: auto;
   margin-right: auto;
-  padding: $space2;
+  padding: var(--space-large);
   border: 1px solid rgba(0, 0, 0, 0.025);
   // box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
 
@@ -51,114 +50,114 @@
 
     font-size: 1.125rem;
   }
-}
 
-.resume-left {
-  box-sizing: border-box;
-  width: 70%;
-  padding-right: 24px;
-
-  @include media-breakpoint-down(sm) {
-    width: 100%;
-    padding-right: 0;
-  }
-}
-
-.resume-right {
-  box-sizing: border-box;
-  width: 30%;
-  padding-left: 24px;
-  border-left: 1px solid rgba(0, 0, 0, 0.08);
-
-  @include media-breakpoint-down(sm) {
-    width: 100%;
-    border: none;
-    padding-left: 0;
-  }
-}
-
-.resume_profile {
-  display: flex;
-  flex-wrap: wrap;
-
-  .job {
-    font-size: 1.25rem;
-    font-weight: 300;
-  }
-
-  ul {
-    padding-inline-start: 0;
-    font-size: 0.75rem;
-  }
-
-  ul > li {
-    display: flex;
-    align-items: center;
-  }
-
-  svg {
-    width: 12px;
-    padding-right: 8px;
-  }
-}
-
-.resume__bio {
-  box-sizing: border-box;
-  display: flex;
-  flex-wrap: wrap;
-
-  img {
+  .resume-left {
     box-sizing: border-box;
-    margin: auto;
-    max-width: 128px;
-    max-height: 128px;
-  }
-
-  p {
-    box-sizing: border-box;
-    width: $resume-left-width;
+    width: 70%;
+    padding-right: 24px;
 
     @include media-breakpoint-down(sm) {
-      box-sizing: border-box;
       width: 100%;
+      padding-right: 0;
     }
   }
-}
 
-.resume__content {
-  display: flex;
-  flex-wrap: wrap;
+  .resume-right {
+    box-sizing: border-box;
+    width: 30%;
+    padding-left: 24px;
+    border-left: 1px solid rgba(0, 0, 0, 0.08);
 
-  section {
-    padding-bottom: 8px;
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+      border: none;
+      padding-left: 0;
+    }
   }
 
-  .experience-title {
+  .profile {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-  }
 
-  .item {
-    ul {
-      list-style: none;
-      padding-inline-start: 0;
+    .job {
+      font-size: 1.25rem;
+      font-weight: 300;
     }
 
-    padding-bottom: $space;
+    ul {
+      padding-inline-start: 0;
+      font-size: 0.75rem;
+    }
+
+    ul > li {
+      display: flex;
+      align-items: center;
+    }
+
+    svg {
+      width: 12px;
+      padding-right: 8px;
+    }
   }
-}
 
-.resume__social {
-  text-align: center;
+  .bio {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
 
-  a {
-    padding-left: 4px;
-    padding-right: 4px;
+    img {
+      box-sizing: border-box;
+      margin: auto;
+      max-width: 128px;
+      max-height: 128px;
+    }
+
+    p {
+      box-sizing: border-box;
+      width: 70%;
+
+      @include media-breakpoint-down(sm) {
+        box-sizing: border-box;
+        width: 100%;
+      }
+    }
   }
 
-  svg {
-    width: 24px;
-    height: 24px;
+  .resume-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    section {
+      padding-bottom: 8px;
+    }
+
+    .experience-title {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .item {
+      ul {
+        list-style: none;
+        padding-inline-start: 0;
+      }
+
+      padding-bottom: var(--space-medium);
+    }
+  }
+
+  .social {
+    text-align: center;
+
+    a {
+      padding-left: 4px;
+      padding-right: 4px;
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
   }
 }

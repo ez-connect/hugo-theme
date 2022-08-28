@@ -3,23 +3,32 @@
 //
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap');
 
 p {
   text-align: justify;
 }
 
-h1 {
-  font-size: 32px;
-  // margin-bottom: 32px;
+h1,
+.h1 {
+  @extend .headline-large;
 }
 
-h2 {
-  font-size: 1.5rem;
-  // margin-bottom: 32px;
+h2,
+.h2 {
+  @extend .headline-medium;
 }
 
-.meta {
-  font-size: var(--body-m);
-  color: var(--md-ref-palette-tertiary50);
+h3,
+.h3 {
+  @extend .headline-small;
+}
+
+h4,
+.h4 {
+  @extend .title-large;
+}
+
+h5,
+.h5 {
+  @extend .title-medium;
 }

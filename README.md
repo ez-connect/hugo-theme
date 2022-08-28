@@ -78,7 +78,6 @@ Partials are smaller, context-aware components in your list and page templates t
 - `layouts/partials/shared/*.html` — components are used in many sections
 - `layouts/partials/*.html` — components are used in the global templates
 
-
 ### Config file
 
 The site use the `config.yaml` as the Hugo config file. [^5]
@@ -91,7 +90,21 @@ Hugo uses the `content` directory for building pages, each directory is a sectio
 
  Hugo uses Go’s `html/template` and `text/template` libraries as the basis for the templating. [^6]
 
+ ```html
+ {{ printf "%#v" . }}
+ {{ printf "%#v" $.Site }}
+ {{ printf "%#v" .Permalink }}
 
+ {{ range .Pages }}
+  {{/* The context, ".", is now each one of the pages as it goes through the loop */}}
+  {{ printf "%#v" . }}
+{{ end }}
+
+ ```
+
+### Template Debugging
+
+You can use Go templates’ printf function to debug your Hugo templates. These snippets provide a quick and easy visualization of the variables available to you in different contexts. [^7]
 
 ## Refrences
 
@@ -101,3 +114,4 @@ Hugo uses the `content` directory for building pages, each directory is a sectio
 [^4]: [Partial Templates](https://gohugo.io/templates/partials/)
 [^5]: [Configure Hugo](https://gohugo.io/getting-started/configuration/#all-configuration-settings)
 [^6]: [Templates](https://gohugo.io/templates/)
+[^7]: [Template Debugging](https://gohugo.io/templates/template-debugging/)

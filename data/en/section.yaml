@@ -1,0 +1,12 @@
+# Section configurations
+article:
+  title:
+  banner:
+    url: https://unsplash.com/photos/6sAl6aQ4OWI/download?force=true&w=640
+career:
+  title:
+  banner:
+    url: https://unsplash.com/photos/oqStl2L5oxI/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjYxNjg1MDU3&force=true&w=640
+  # # List configuration
+  # list:
+  #   showAuthor: false

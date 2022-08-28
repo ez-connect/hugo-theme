@@ -1,9 +1,12 @@
+<!-- Footer -->
+
 {{ $defaultData := index $.Site.Data $.Site.Params.defaultLanguage }}
-{{ $data := index $.Site.Data $.Site.Language.Lang }}
+{{ $data := default $defaultData (index $.Site.Data $.Site.Language.Lang) }}
 {{ $footer := default $defaultData.footer $data.footer }}
 
-
-<footer class="footer">
-  <span>{{ markdownify $footer.copyright }}</span>
-  <span>{{ markdownify $footer.credit }}</span>
-</footer>
+{{ with $footer }}
+  <footer>
+    <span>{{ markdownify .copyright }}</span>
+    <span>{{ markdownify .content }}</span>
+  </footer>
+{{ end }}

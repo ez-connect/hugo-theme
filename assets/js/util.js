@@ -131,10 +131,13 @@ function _util() {
     });
 
     document.querySelector('.ql-editor').innerHTML = `
-      <h2>Example title</h2>
-      <p>Write the cover letter...<p>
-      <h2>Your CV</h2>
-      <p><a href="#">https://example.com/path/to/your/cv.pdf</a></p>
+      <h3>Cover letter</h3>
+      <p>Write your cover letter here...</p>
+      <blockquote>TIP: The editor support <b>Markdown syntax</b>, and hotkeys</blockquote>
+      <h3>Curriculum Vitae</h3>
+      <p>Paste your CV's url here</p>
+      <p>Example:</p>
+      <ul><li><a href="https://example.com/path/to/your/cv/">https://example.com/path/to/your/cv/</a></li><li><a href="https://example.com/path/to/your/cv/">https://github.com/yourname/</a></li></ul>
     `;
   };
 

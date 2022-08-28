@@ -1,9 +1,21 @@
 .author {
   display: flex;
   align-items: center;
+  font-size: var(--md-sys-typescale-body-medium-font-size);
+
+  a {
+    display: flex;
+    align-items: center;
+    color: var(--md-sys-color-on-surface-variant);
+  }
 
   img {
-    width: 48px;
-    margin-right: $space / 2;
+    width: 32px;
+    margin-right: var(--space-small);
+  }
+
+  .dot {
+    color: var(--md-sys-color-on-surface-variant);
+    padding: 0 var(--space-tiny);
   }
 }

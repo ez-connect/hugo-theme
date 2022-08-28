@@ -1,7 +1,7 @@
 ---
 title: Alert
 description:
-weight: 1
+weight:
 createdBy: thanh.vinh@hotmail.com
 createdAt: 2022-07-08T15:20:45.000Z
 updatedBy: thanh.vinh@hotmail.com

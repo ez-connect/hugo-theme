@@ -1,13 +1,14 @@
 ---
 title: {{ replace .Name "-" " " | title }}
-description: {{ replace .Name "-" " " | title }} description
-categories: []
+description:
 status: One of {Open | Close }
+recommended: false
+categories: []
 createdBy: thanh.vinh@hotmail.com
 createdAt: {{ .Date }}
 updatedBy: thanh.vinh@hotmail.com
 updatedAt: {{ .Date }}
-draft: true
+draft: false
 ---
 
 The career content

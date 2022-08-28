@@ -1,7 +1,9 @@
 <!--
 Use `$.Params.updatedAt` param + timeago js
+Params:
+  - string: time value
 -->
 
-<span class="timeago" datetime="{{ $.Params.updatedAt }}">
-  {{ $.Params.updatedAt }}
+<span class="timeago" datetime="{{ . }}">
+  {{ . }}
 </span>

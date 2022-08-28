@@ -11,7 +11,7 @@
     {{ $collapseTarget := printf "%s-collapse" (urlize .Name) }}
 
     {{ $isExpaned := false }}
-    {{ if in $currentPage.Permalink .Permalink }}
+    {{ if in $currentPage.RelPermalink .RelPermalink }}
       {{ $isExpaned = true }}
     {{ end }}
 
@@ -41,13 +41,13 @@
   {{ else }}
     <!-- Highlight the current page -->
     {{ $itemClass := "" }}
-    {{ if eq $currentPage.Permalink .Permalink }}
+    {{ if eq $currentPage.RelPermalink .RelPermalink }}
       {{ $itemClass = "active" }}
     {{ end }}
 
 
     <li>
-      <a class="{{ $itemClass }}" href="{{ .Permalink }}">{{- .Name -}}</a>
+      <a class="{{ $itemClass }}" href="{{ .RelPermalink }}">{{- .Name -}}</a>
     </li>
   {{ end }}
 {{ end }}

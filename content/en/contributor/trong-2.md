@@ -1,4 +1,12 @@
 ---
+title: Trong
+user:
+  createdAt: "2022-01-25T03:40:57.383Z"
+  firstname: Editor
+  lastname: ""
+  preferedLanguage: null
+  updatedAt: "2022-01-28T03:28:15.915Z"
+  username: editor@freemind.vn
 avatar:
   alternativeText: avataaars.png
   caption: avataaars.png
@@ -27,7 +35,6 @@ avatar:
       width: 147
   hash: avataaars_a7ad6e4fb1
   height: 560
-  id: 40
   mime: image/png
   name: avataaars.png
   previewUrl: null
@@ -39,19 +46,8 @@ avatar:
   width: 528
 createdAt: "2022-01-28T02:54:51.215Z"
 createdBy: thanh.vinh@hotmail.com
-id: 2
-publishedAt: "2022-01-28T03:38:10.811Z"
-title: Trong
 updatedAt: "2022-02-02T05:53:03.923Z"
 updatedBy: thanh.vinh@hotmail.com
-user:
-  createdAt: "2022-01-25T03:40:57.383Z"
-  firstname: Editor
-  id: 2
-  lastname: ""
-  preferedLanguage: null
-  updatedAt: "2022-01-28T03:28:15.915Z"
-  username: editor@freemind.vn
 ---
 
 Chuyên viên bán Lòng trộn

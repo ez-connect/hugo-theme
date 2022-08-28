@@ -1,13 +1,12 @@
-.footer {
+footer {
   z-index: 1;
   box-sizing: border-box;
   position: relative; // to active z-index, front of document menu
   display: flex;
   flex-wrap: wrap;
-  height: $footer-height;
   justify-content: space-between;
   align-items: center;
-  padding: 0 $space2;
+  padding: var(--space-large);
   background: var(--md-sys-color-primary);
   color: var(--md-sys-color-background);
   font-size: var(--md-sys-typescale-body-small-font-size);

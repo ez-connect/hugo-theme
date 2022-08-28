@@ -1,20 +1,25 @@
+///////////////////////////////////////////////////////////////////////////////
+// Code highlight
 // https://gohugo.io/commands/hugo_gen_chromastyles/
 // Generate via `make syntax` in /vendors/_systax.scss
+///////////////////////////////////////////////////////////////////////////////
 .highlight {
   overflow: auto;
 }
 
 .chroma {
-  padding: $space;
+  padding: var(--space-medium);
 }
 
+///////////////////////////////////////////////////////////////////////////////
 // Clipboard
 // https://simplernerd.com/hugo-add-copy-to-clipboard-button/
+///////////////////////////////////////////////////////////////////////////////
 .clipboard-button {
   position: absolute;
-  top: $space;
+  top: var(--space-medium);
   right: 0;
-  padding: $space / 4;
+  padding: var(--space-medium) / 4;
   color: #767676;
   border-color: #767676;
   background-color: #ededed;

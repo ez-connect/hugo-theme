@@ -1,29 +1,21 @@
-// Document list page
-.document-list-page {
-  box-sizing: border-box;
-  display: flex;
-  width: 100%;
-  padding: $space $space2;
-
-  @include media-breakpoint-down(md) {
-    margin: 0;
-  }
-}
+// Document list page will use the single template
+// TODO: Add the list template in the future
 
 // Single document page
 .document-page {
   box-sizing: border-box;
   display: flex;
   width: 100%;
-  padding: $space $space2;
+  padding: var(--space-medium) var(--space-large);
 
   @include media-breakpoint-down(md) {
     margin: 0;
   }
 
   // Override content
-  .document-content {
+  .content-container {
     width: 70%;
+    padding: 0 var(--space-large);
 
     // Full with on mobile
     @include media-breakpoint-down(md) {
@@ -46,10 +38,9 @@
   width: 25%;
   height: 100vh;
 
-  padding: $space2 $space;
-  margin-right: $space2;
+  padding: var(--space-large) var(--space-medium);
   font-weight: 500;
-  line-height: $space2;
+  line-height: var(--space-large);
   border-right: 1px solid var(--md-sys-color-surface-variant);
 
   overflow: auto;
@@ -94,7 +85,7 @@
     position: relative;
 
     // &::before {
-    //   top: $space2;
+    //   top: var(--space-large);
     //   left: 8px;
     //   width: 1.2px;
     //   bottom: 0;

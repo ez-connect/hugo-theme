@@ -1,10 +1,6 @@
 ---
-components: []
 createdAt: '2022-01-27T11:31:47.125Z'
 description: ''
-id: 1
-locale: en
-publishedAt: '2022-01-27T11:44:23.844Z'
 title: Privacy Policy
 updatedAt: '2022-01-27T11:45:58.992Z'
 ---

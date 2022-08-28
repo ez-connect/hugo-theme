@@ -1,21 +1,17 @@
 ---
+title: Quisque finibus turpis sed convallis rhoncus
+description: Nulla facilisi. Aliquam pellentesque justo lorem, at porttitor nunc euismod quis. Donec molestie, diam id viverra imperdiet, lacus erat pulvinar eros, quis pellentesque diam purus vitae est. Curabitur a ullamcorper nibh. Curabitur tempus quis enim id volutpat.
+categories:
+  - Mobile
+  - Android
+  - Kotlin
+  - Senior
+status: Open
 createdAt: "2022-01-28T09:26:28.753Z"
 createdBy: thanh.vinh@hotmail.com
-description: Nulla facilisi. Aliquam pellentesque justo lorem, at porttitor nunc euismod
-  quis. Donec molestie, diam id viverra imperdiet, lacus erat pulvinar eros, quis
-  pellentesque diam purus vitae est. Curabitur a ullamcorper nibh. Curabitur tempus
-  quis enim id volutpat.
-id: 1
-publishedAt: "2022-01-28T09:26:30.994Z"
-categories:
-- Android
-- Senior
-title: Quisque finibus turpis sed convallis rhoncus
 updatedAt: "2022-01-28T10:07:44.837Z"
 updatedBy: thanh.vinh@hotmail.com
 ---
-
-# Cupiens pestis diem non
 
 ## Formae mirantem hastilia
 
