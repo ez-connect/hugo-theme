@@ -3,12 +3,8 @@ components:
 - __component: site.block
   css: null
   html: <h2>Block</h2>
-  id: 1
   js: null
 createdAt: "2022-01-27T11:47:52.604Z"
-id: 3
-locale: en
-publishedAt: "2022-01-27T12:00:59.123Z"
 title: Sample page
 updatedAt: "2022-01-27T12:18:09.750Z"
 ---

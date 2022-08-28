@@ -1,8 +1,10 @@
 {{ $defaultData := index $.Site.Data $.Site.Params.defaultLanguage }}
-{{ $data := index $.Site.Data $.Site.Language.Lang }}
+{{ $data := default $defaultData (index $.Site.Data $.Site.Language.Lang) }}
+
+{{ $site := default $defaultData.site $data.site }}
 
 {{ $nav := default $defaultData.nav $data.nav }}
-{{ $links := $nav.links }}
+{{ $items := default $nav.default (index $nav .Section) }}
 
 
 <nav class="nav">
@@ -10,13 +12,13 @@
     <a id="navMenuButton" class="menu-btn" href="#">
       {{ partial "shared/ionicons" "menu-outline" }}
     </a>
-    <img alt="{{ $nav.logo.name }}" src="{{ $nav.logo.url }}" />
-    <a href="/"><strong>{{ $nav.title }}</strong></a>
+    <img alt="{{ $nav.logo.name }}" src="{{ $site.logo.url }}" />
+    <a href="/"><strong>{{ $site.title }}</strong></a>
   </div>
 
   <!-- Menu for desktop -->
   <ul>
-    {{ range $links }}
+    {{ range $items }}
       <li><a href="{{ .url }}">{{ .name }}</a></li>
     {{ end }}
   </ul>
@@ -26,7 +28,7 @@
 <div class="nav">
   <div class=" nav-menu">
     <ul>
-      {{ range $links }}
+      {{ range $items }}
         <li><a href="{{ .url }}">{{ .name }}</a></li>
       {{ end }}
     </ul>

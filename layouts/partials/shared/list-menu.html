@@ -1,0 +1,57 @@
+<!--
+List page's menu
+Params:
+  - List Page
+-->
+
+{{/* Recommeded length in data/site.yaml */}}
+{{ $defaultData := index $.Site.Data $.Site.Params.defaultLanguage }}
+{{ $data := default $defaultData (index $.Site.Data $.Site.Language.Lang) }}
+{{ $site := default $defaultData.site $data.site }}
+
+{{/* Recommend pages */}}
+{{ $pages := where .Pages "Params.recommended" true }}
+{{ $pages = ($pages.ByParam "updatedAt").Reverse }}
+
+{{/* Taxonomy name */}}
+{{ $name := "tags" }}
+{{ if eq .Section "career" }}
+  {{ $name = "categories" }}
+{{ end }}
+
+{{/* Taxonomy name list */}}
+{{ $taxonomies := slice }}
+{{ range $k, $v := (index .Site.Taxonomies $name) }}
+  {{ $taxonomies = $taxonomies | append (title $k) }}
+{{ end }}
+
+
+<!-- Search -->
+{{ partial "shared/search-input" . }}
+
+
+<!-- Recommended -->
+<div class="recommended">
+  <span class="title-large">
+    <span class="dot">⦁</span>
+    {{ $site.recommended.page.title }}
+  </span>
+
+  {{ range first $site.recommended.page.length $pages }}
+    <ul>
+      <li>
+        {{ partial "shared/author" . }}
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </li>
+    </ul>
+  {{ end }}
+</div>
+
+<hr />
+
+<!-- All taxonomies -->
+<span class="title-large">
+  {{ $site.recommended.taxonomy.title }}
+</span>
+
+{{ partial "shared/taxonomy-list" (dict "items" $taxonomies "name" $name) }}

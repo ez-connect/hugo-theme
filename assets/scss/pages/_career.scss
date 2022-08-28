@@ -1,38 +1,51 @@
-.career-list {
-  padding: $space2;
-}
-
 .career-page {
-  padding: $space2;
-}
+  padding: var(--space-large);
 
-.job__applicant {
-  box-sizing: border-box;
-  display: flex;
-  margin: auto;
-  padding: $space2;
+  .content {
+    padding-right: var(--space-large);
+  }
 
   .applicant {
     box-sizing: border-box;
-    width: 50%;
-  }
+    display: flex;
+    margin: auto;
+    padding: var(--space-large);
 
-  .contact {
-    box-sizing: border-box;
-    width: 50%;
-    margin-left: $space2;
+    form {
+      width: 50%;
 
-    a {
-      color: var(--md-sys-color-on-background);
+      input {
+        display: block;
+        width: 100%;
+        margin-bottom: var(--space-medium);
+      }
     }
 
-    .item {
-      display: flex;
-      align-items: center;
+    svg {
+      padding-right: var(--space-medium);
+    }
+
+    .contact {
+      box-sizing: border-box;
+      width: 50%;
+      margin-left: var(--space-large);
+
+      a {
+        color: var(--md-sys-color-on-background);
+      }
+
+      .item {
+        display: flex;
+        align-items: center;
+      }
     }
   }
+}
 
-  svg {
-    padding-right: $space;
-  }
+// Override ql-editor
+.ql-editor {
+  padding: 8px !important;
+  min-height: 256px;
+  border: solid 1px var(--md-sys-color-outline);
+  font-size: var(--md-sys-typescale-body-medium-font-size);
 }

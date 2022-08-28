@@ -1,0 +1,81 @@
+// Default list template
+// https://gohugo.io/templates/lists/
+.list-page {
+  box-sizing: border-box;
+
+  // Reduce padding top
+  h3 {
+    margin-top: var(--space-small);
+    margin-bottom: var(--space-small);
+  }
+
+  hr {
+    margin-bottom: var(--space-large);
+  }
+
+  // Left: List items
+  .content-container {
+    width: 70%;
+    border-right: 1px solid var(--md-sys-color-surface-variant);
+  }
+
+  // Righ: Search + Recommended items + Taxonomies
+  .menu-container {
+    width: 30%;
+    padding: var(--space-large);
+
+    // Override search input
+    .search-input {
+      padding-bottom: var(--space-large);
+    }
+
+    .recommended {
+      padding-bottom: var(--space-medium);
+
+      ul {
+        padding: 0;
+      }
+
+      a {
+        font-weight: bold;
+        color: var(--md-sys-color-on-background);
+      }
+
+      .dot {
+        color: var(--md-custom-color-success);
+      }
+    }
+  }
+
+  .metadata {
+    font-size: var(--md-sys-typescale-body-medium-font-size);
+    color: var(--md-ref-palette-tertiary50);
+  }
+
+  .reading-time {
+    margin-left: var(--space-tiny);
+  }
+
+  // Override
+  .content-list {
+    padding: var(--space-large);
+  }
+
+  // Override
+  .taxonomy-list {
+    margin-top: var(--space-medium);
+  }
+}
+
+// Default single content template
+.content-page {
+  padding-left: var(--space-large);
+  padding-right: var(--space-large);
+  padding-bottom: var(--space-large);
+
+  // Override .toc
+  .toc {
+    width: 30%;
+    padding-left: var(--space-large);
+  }
+}

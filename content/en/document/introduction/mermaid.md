@@ -6,7 +6,6 @@ createdBy: thanh.vinh@hotmail.com
 createdAt: "2022-01-27T15:46:00.129Z"
 updatedBy: thanh.vinh@hotmail.com
 updatedAt: "2022-01-27T15:47:14.891Z"
-publishedAt: "2022-01-27T15:46:01.328Z"
 ---
 
 **[Mermaid](https://mermaid-js.github.io/mermaid/#/) lets you create diagrams using text and code**. This simplifies the maintenance of complex diagrams. It is a Javascript based diagramming and charting tool that renders Markdown-inspired text definitions to create and modify diagrams dynamically.

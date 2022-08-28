@@ -1,19 +1,14 @@
 .toc {
+  box-sizing: border-box;
   position: sticky;
   top: 0;
-  box-sizing: border-box;
   height: 100vh;
-  padding-left: $space2;
   overflow: hidden;
 
   @extend .body-small;
 
   @include media-breakpoint-down(md) {
     display: none;
-  }
-
-  p {
-    padding-left: 8px;
   }
 
   ul {

@@ -1,0 +1,15 @@
+// Override template "_internal/pagination.html"
+.pagination {
+  display: flex;
+
+  li {
+    margin-right: var(--space-small);
+    padding: var(--space-small);
+    border: 1px solid var(--md-sys-color-surface-variant);
+  }
+
+  a[aria-current='page'],
+  a[aria-disabled='true'] {
+    color: var(--md-sys-color-on-background);
+  }
+}

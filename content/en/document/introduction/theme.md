@@ -154,18 +154,14 @@ https://m3.material.io/theme-builder#/custom
 ```safehtml
 <nav class="nav">
   <div class="logo">
-    <a id="navMenuButton" class="menu-btn" href="#">
-      {{ partial "shared/ionicons" "logo-github" }}
-    </a>
-    <img alt="{{ $nav.logo.name }}" src="https://github.com/orgs/ez-connect/dashboard" />
-    <a href="/"><strong>{{ $nav.title }}</strong></a>
+    <a href="/"><strong>Ez-Connect</strong></a>
   </div>
 
   <!-- Menu for desktop -->
   <ul>
-    {{ range $links }}
-      <li><a href="{{ .url }}">{{ .name }}</a></li>
-    {{ end }}
+      <li style="list-style: none;"><a href="">Link</a></li>
   </ul>
 </nav>
 ```
+
+TBD

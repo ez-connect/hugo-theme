@@ -18,14 +18,14 @@
 {{ $js = $js | resources.Concat "main.js" }}
 
 {{ if eq (hugo.Environment) "development" -}}
-  <script defer src="{{ $js.Permalink }}"></script>
+  <script defer src="{{ $js.RelPermalink }}"></script>
 {{ else }}
   {{ $js = $js | minify | fingerprint }}
 
 
   <script
     defer
-    src="{{ $js.Permalink }}"
+    src="{{ $js.RelPermalink }}"
     {{ if .Site.Params.options.useSRI }}
       integrity="{{ $js.Data.Integrity }}"
     {{ end }}

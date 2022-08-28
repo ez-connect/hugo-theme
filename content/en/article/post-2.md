@@ -1,15 +1,13 @@
 ---
+title: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+description: . Curabitur ut sem faucibus, interdum elit et, mattis metus. Nam volutpat dignissim ullamcorper. Vivamus mattis enim vehicula mauris consectetur convallis.
+recommended: true
+tags:
+- Git
+- GitLab
+- GitHub
 createdAt: "2022-01-28T02:32:27.781Z"
 createdBy: thanh.vinh@hotmail.com
-description: . Curabitur ut sem faucibus, interdum elit et, mattis metus. Nam volutpat
-  dignissim ullamcorper. Vivamus mattis enim vehicula mauris consectetur convallis.
-id: 2
-locale: en
-publishedAt: "2022-01-28T03:51:02.392Z"
-tags:
-- tag-1
-- tag-2
-title: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 updatedAt: "2022-01-28T03:51:02.395Z"
 updatedBy: thanh.vinh@hotmail.com
 ---

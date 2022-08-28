@@ -10,7 +10,7 @@ createdBy: thanh.vinh@hotmail.com
 createdAt: {{ .Date }}
 createdBy: thanh.vinh@hotmail.com
 updatedAt: {{ .Date }}
-draft: true
+draft: false
 ---
 
 ## Example title

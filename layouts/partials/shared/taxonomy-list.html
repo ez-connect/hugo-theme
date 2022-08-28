@@ -5,9 +5,9 @@ Params:
   - `string name`: is the name of the taxonomy
 -->
 
-<div class="tag-list">
+<div class="taxonomy-list">
   {{ range .items }}
-    <a class="tag-item" href="/{{ $.name }}/{{ . }}">
+    <a href="/{{ $.name }}/{{ lower . }}">
       {{ . }}
     </a>
   {{ end }}

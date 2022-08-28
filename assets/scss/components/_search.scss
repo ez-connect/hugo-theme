@@ -1,16 +1,19 @@
 .search-input {
+  display: flex;
+  align-items: center;
+
   svg {
     position: absolute;
-    font-size: 8px;
-    width: $space;
-    margin: $space / 2;
+    width: var(--space-medium);
+    margin: 0 var(--space-small);
   }
+
   input {
     width: 100%;
-    padding: $space / 2 $space / 2 $space / 2 $space2;
-    border-radius: $space / 2;
-    border: solid 1px var(--md-sys-color-outline);
-    background: var(--md-sys-color-surface-variant);
+    padding-left: var(--space-large);
+    border-radius: var(--space-medium);
+    border: solid 1px var(--md-sys-color-surface-variant);
+    background: var(--md-sys-color-surface);
   }
 }
 
@@ -18,7 +21,7 @@
   z-index: 1;
   position: fixed;
   right: 4px;
-  padding: $space;
+  padding: var(--space-medium);
   background: var(--md-sys-color-background);
   max-width: map-get($breakpoint, 'sm') / 2;
 

@@ -18,9 +18,13 @@ $theme-extended-color: (
   md-custom-color-on-warning-container: black,
 );
 
-// Space
-$space: 16px;
-$space2: $space * 2;
+// Spacing
+$space: (
+  space-large: 32px,
+  space-medium: 16px,
+  space-small: 8px,
+  space-tiny: 4px,
+);
 
 // Breakpoints
 $breakpoint: (
@@ -35,17 +39,3 @@ $breakpoint: (
   xxl: 1400px,
   // extra large
 );
-
-// Nav + TOC
-$toc-width: 15%;
-$footer-height: 64px;
-
-// Document
-$document-menu-width: 20%;
-
-// Blog
-$blog-jumbotron-height: 192px;
-$blog-menu-width: 25%;
-
-// Resume
-$resume-left-width: 70%;

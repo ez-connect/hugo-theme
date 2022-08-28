@@ -1,45 +1,48 @@
 {{ define "main" }}
-  <div class="career-page">
-    <article class="job">
-      {{ if .Site.Params.options.breadcrumb }}
-        {{ partial "shared/breadcrumb" . }}
-        <hr />
-      {{ end }}
+  {{ $defaultData := index $.Site.Data $.Site.Params.defaultLanguage }}
+  {{ $data := default $defaultData (index $.Site.Data $.Site.Language.Lang) }}
+  {{ $webhook := default $defaultData.webhook $data.webhook }}
 
+
+  <div class="career-page">
+    {{ if .Site.Params.options.breadcrumb }}
+      {{ partial "shared/breadcrumb" . }}
+      <hr />
+    {{ end }}
+
+
+    <div class="flex">
       {{ partial "shared/content" . }}
-    </article>
+      {{ partial "shared/toc" . }}
+    </div>
 
     <hr />
 
-    <div class="job__applicant">
-      <div class="applicant">
-        <form id="applyJobForm">
-          <h2>Apply this job</h2>
-          <input type="text" name="title" placeholder="Your name" />
-          <input type="tel" name="phone" placeholder="Your phone number" />
-          <input type="email" name="email" placeholder="Your email" />
-          <label for="editor">Cover letter & CV</label>
-          <div name="content" id="editor" data-placeholder="Cover letter"></div>
-          {{/* <input type="file" name="cv" accept="application/pdf, application/zip"> */}}
+    <div class="applicant">
+      <form id="applyJobForm">
+        <h2>Apply this job</h2>
+        <input type="text" name="title" placeholder="Your name" />
+        <input type="tel" name="phone" placeholder="Your phone number" />
+        <input type="email" name="email" placeholder="Your email" />
+        <div id="editor" name="content"></div>
+        {{/* <input type="file" name="cv" accept="application/pdf, application/zip"> */}}
 
-          {{ $api := .Site.Data.site.applyJob }}
-          <input
-            id="applyJobButton"
-            data-method="{{ $api.method }}"
-            data-url="{{ $api.url }}"
-            type="button"
-            value="Apply"
-          />
-          <small><div class="error"></div></small>
-        </form>
-      </div>
+
+        <input
+          id="applyJobButton"
+          data-method="POST"
+          data-url="{{ $webhook.applyJob }}"
+          type="button"
+          value="Apply"
+        />
+
+        <small><div class="error"></div></small>
+      </form>
 
       <div class="contact">
         <h2>Contact us</h2>
 
-        {{ $defaultData := index $.Site.Data $.Site.Params.defaultLanguage }}
-        {{ $data := index $.Site.Data $.Site.Language.Lang }}
-        {{ $contact := default $defaultData.site.contact $data.site.contact }}
+        {{ $contact := default $defaultData.contact $data.contact }}
 
 
         <div class="item">

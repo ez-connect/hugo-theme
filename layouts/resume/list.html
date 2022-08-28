@@ -7,10 +7,12 @@
       <a class="item" href="{{ .RelPermalink }}">
         <img src="{{ .Params.avatar.url }}" />
 
-        <strong>{{ .Params.name }}</strong>
+        <span class="title-large">{{ .Params.title }}</span>
         <div>{{ .Params.position }}</div>
         {{ .Content }}
       </a>
+
+      <hr />
     {{ end }}
   </div>
 {{ end }}

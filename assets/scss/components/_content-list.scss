@@ -1,10 +1,8 @@
 // A list of pages
-.page-list {
-  padding: $space2;
-
+.content-list {
   article {
-    padding-bottom: $space;
-    margin-bottom: $space2;
+    padding-bottom: var(--space-large);
+    margin-bottom: var(--space-medium);
     border-bottom: 1px solid var(--md-sys-color-surface-variant);
 
     .metadata {

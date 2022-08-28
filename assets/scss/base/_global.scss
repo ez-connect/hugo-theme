@@ -4,9 +4,13 @@
     --#{$k}: #{$v};
   }
 
-  // @each $k, $v in $theme-typo {
-  //   --#{$k}: #{$v};
-  // }
+  @each $k, $v in $space {
+    --#{$k}: #{$v};
+  }
+}
+
+.flex {
+  display: flex;
 }
 
 .hide {
@@ -17,16 +21,10 @@
   display: block !important;
 }
 
-.spanborder {
-  border-bottom: 1px solid var(--md-sys-color-surface-variant);
-  margin-bottom: $space2;
-
-  span {
-    display: inline-block;
-    border-bottom: 1px solid var(--md-sys-color-primary);
-    margin-bottom: -1px;
-    padding-bottom: $space;
-  }
+// Add to timeago
+.timeago {
+  @extend .body-medium;
+  @extend .on-surface-variant-text;
 }
 
 // For /document/introduction/theme#your-theme
@@ -34,8 +32,8 @@
   display: flex;
 
   div {
-    padding: $space;
-    margin-bottom: $space / 2;
+    padding: var(--space-medium);
+    margin-bottom: var(--space-small);
     width: 128px;
   }
 }
@@ -47,6 +45,6 @@
   align-items: center;
 
   div {
-    padding-right: $space;
+    padding-right: var(--space-medium);
   }
 }

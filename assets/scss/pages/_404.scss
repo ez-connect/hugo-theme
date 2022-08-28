@@ -25,8 +25,8 @@
     display: inline-block;
     background-color: var(--md-sys-color-primary);
     color: var(--md-sys-color-background);
-    border-radius: $space2;
-    padding: $space $space2;
+    border-radius: var(--space-large);
+    padding: var(--space-medium) var(--space-large);
     transition: 0.2s all;
   }
 }

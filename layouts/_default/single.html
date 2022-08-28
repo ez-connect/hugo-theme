@@ -1,3 +1,14 @@
 {{ define "main" }}
-  {{ partial "shared/content" . }}
+  <div class="content-page">
+    {{ if .Site.Params.options.breadcrumb }}
+      {{ partial "shared/breadcrumb" . }}
+      <hr />
+    {{ end }}
+
+
+    <div class="flex">
+      {{ partial "shared/content" . }}
+      {{ partial "shared/toc" . }}
+    </div>
+  </div>
 {{ end }}

@@ -1,8 +1,6 @@
-logo:
-  name: hugo_logo_wide.svg
-  url: /uploads/hugo_logo_wide_7b43d25cae.svg
-title: Ez-Connect
-links:
+# Nav links for each sections
+# Home and other sections are not defined
+default:
   - name: Document
     url: /document
   - name: Article
@@ -11,6 +9,39 @@ links:
     url: /resume
   - name: Career
     url: /career
+  - name: Applicant
+    url: /applicant
+  - name: GitHub
+    url: https://github.com/ez-connect/hugo-theme
+document:
+  - name: Article
+    url: /article
+  - name: Resume
+    url: /resume
+  - name: Career
+    url: /career
+  - name: Applicant
+    url: /applicant
+  - name: GitHub
+    url: https://github.com/ez-connect/hugo-theme
+article:
+  - name: Document
+    url: /document
+  - name: Resume
+    url: /resume
+  - name: Career
+    url: /career
+  - name: Applicant
+    url: /applicant
+  - name: GitHub
+    url: https://github.com/ez-connect/hugo-theme
+career:
+  - name: Document
+    url: /document
+  - name: Article
+    url: /article
+  - name: Resume
+    url: /resume
   - name: Applicant
     url: /applicant
   - name: GitHub
