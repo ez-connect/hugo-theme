@@ -1,4 +1,6 @@
-function toc() {
+import { util } from '../helpers/util';
+
+export function initToc() {
   let _timer = null;
 
   // Highlight the current TOC item
@@ -45,5 +47,3 @@ function toc() {
   _handleOnScroll();
   _handleOnClick();
 }
-
-toc();

@@ -1,4 +1,7 @@
-function application() {
+import { util } from '../helpers/util';
+import { initQuillJS } from '../helpers/quill';
+
+function initApplicant() {
   _onSubmit = async (e) => {
     e.preventDefault();
     util.show('.loading');
@@ -38,10 +41,10 @@ function application() {
         error.classList.remove('error');
         error.classList.add('success');
         error.innerHTML = `
-          Thanks for taking the time to apply for our position.
-          We appreciate your interest in our company.
-          We're currently in the process of taking applications for this position.
-        `;
+        Thanks for taking the time to apply for our position.
+        We appreciate your interest in our company.
+        We're currently in the process of taking applications for this position.
+      `;
         return;
       }
 
@@ -52,11 +55,11 @@ function application() {
       });
 
       error.innerHTML = `
-        <strong>${data.error}</strong>
-        <ul>
-          ${messages.join('')}
-        </ul>
-      `;
+      <strong>${data.error}</strong>
+      <ul>
+        ${messages.join('')}
+      </ul>
+    `;
     } catch (err) {
       error.classList.remove('success');
       error.classList.add('error');
@@ -66,8 +69,9 @@ function application() {
   };
 
   const button = document.querySelector('#applyJobButton');
-  if (!button) return;
+  console.assert(button != null);
   button.addEventListener('click', _onSubmit);
 }
 
-application();
+initQuillJS();
+initApplicant();

@@ -1,4 +1,4 @@
-function _modal(id) {
+function Modal(id) {
   const content = document.querySelector('#modalContent');
 
   _getModal = () => {
@@ -38,4 +38,5 @@ function _modal(id) {
   return { show, hide };
 }
 
-const modal = _modal('#modal');
+const modal = Modal('#modal');
+export { modal };

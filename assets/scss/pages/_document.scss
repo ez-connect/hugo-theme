@@ -19,6 +19,7 @@
 
     // Full with on mobile
     @include media-breakpoint-down(md) {
+      padding: 0;
       width: 100%;
     }
   }
