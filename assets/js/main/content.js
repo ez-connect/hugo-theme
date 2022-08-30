@@ -1,4 +1,12 @@
-function content() {
+import { addCopyCodeButton } from '../helpers/clipboard';
+import { initTimeago } from '../helpers/timeago';
+import { initMermaid } from '../helpers/mermaid';
+import { initPlantUML } from '../helpers/plantuml';
+
+import { modal } from './modal';
+import { util } from '../helpers/util';
+
+export function initContent() {
   let _anchor = null;
 
   _hightlightHeadings = () => {
@@ -51,6 +59,9 @@ function content() {
 
   _hightlightHeadings();
   _zoomImages();
-}
 
-content();
+  initTimeago();
+  addCopyCodeButton();
+  initMermaid();
+  initPlantUML();
+}

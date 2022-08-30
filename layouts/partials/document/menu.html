@@ -1,10 +1,8 @@
 {{/* https://github.com/gbmhunter/blog/blob/master/layouts/partials/menu.html */}}
 
-{{ $currentPage := . }}
-
 
 <div id="navMenu" class="document-menu">
-  {{ partial "shared/search-input" }}
+  {{ partial "shared/search-input" . }}
 
   {{ with .Site.GetPage "/document" }}
     {{ range .Sections.ByWeight }}
@@ -13,7 +11,7 @@
 
         <!-- Using partialCached here offers significant build time speedup, as this recursive menu would otherwise be rebuilt for
         every page! -->
-        {{ partial "document/menu_recursive" (dict "context" . "currentPage" $currentPage) }}
+        {{ partial "document/menu_recursive" (dict "context" . "currentPage" $) }}
       </div>
     {{ end }}
   {{ end }}

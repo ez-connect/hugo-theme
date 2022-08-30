@@ -17,6 +17,10 @@
   .content-container {
     width: 70%;
     border-right: 1px solid var(--md-sys-color-surface-variant);
+
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
   }
 
   // Righ: Search + Recommended items + Taxonomies
@@ -24,12 +28,12 @@
     width: 30%;
     padding: var(--space-large);
 
-    // Override search input
-    .search-input {
-      padding-bottom: var(--space-large);
+    @include media-breakpoint-down(md) {
+      display: none;
     }
 
     .recommended {
+      margin-top: var(--space-large);
       padding-bottom: var(--space-medium);
 
       ul {

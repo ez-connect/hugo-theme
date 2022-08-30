@@ -1,0 +1,26 @@
+<!--
+Load a single js for each section
+-->
+
+{{ $section := default "home" .Section }}
+
+{{ $js := resources.Get (print "js/sections/" $section ".js") }}
+{{ if $js }}
+  {{ $js = $js | js.Build (print $section ".js") }}
+
+  {{ if eq (hugo.Environment) "development" -}}
+    <script defer src="{{ $js.RelPermalink }}"></script>
+  {{ else }}
+    {{ $js = $js | minify | fingerprint }}
+
+
+    <script
+      defer
+      src="{{ $js.RelPermalink }}"
+      {{ if .Site.Params.options.useSRI }}
+        integrity="{{ $js.Data.Integrity }}"
+      {{ end }}
+      crossorigin="anonymous"
+    ></script>
+  {{ end }}
+{{ end }}

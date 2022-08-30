@@ -1,39 +1,3 @@
-<!-- Mini JS vendors, globally used -->
-{{ $timeago := resources.Get "js/vendors/timeago.js" }}
-
-
-<!-- App JS -->
-{{ $util := resources.Get "js/util.js" }}
-{{ $search := resources.Get "js/search.js" }}
-{{ $nav := resources.Get "js/nav.js" }}
-{{ $toc := resources.Get "js/toc.js" }}
-{{ $content := resources.Get "js/content.js" }}
-{{ $modal := resources.Get "js/modal.js" }}
-{{ $document := resources.Get "js/document.js" }}
-{{ $applicant := resources.Get "js/applicant.js" }}
-{{ $clipboard := resources.Get "js/clipboard.js" }}
-
-{{ $js := slice $timeago $util $search $nav $toc $content $modal $document $applicant $clipboard }}
-
-{{ $js = $js | resources.Concat "main.js" }}
-
-{{ if eq (hugo.Environment) "development" -}}
-  <script defer src="{{ $js.RelPermalink }}"></script>
-{{ else }}
-  {{ $js = $js | minify | fingerprint }}
-
-
-  <script
-    defer
-    src="{{ $js.RelPermalink }}"
-    {{ if .Site.Params.options.useSRI }}
-      integrity="{{ $js.Data.Integrity }}"
-    {{ end }}
-    crossorigin="anonymous"
-  ></script>
-{{ end }}
-
-
 <!-- Mermaid -->
 {{ if .Page.Store.Get "hasMermaid" }}
   <script src="https://unpkg.com/mermaid@9.1.5/dist/mermaid.min.js"></script>
@@ -62,3 +26,24 @@
   <script src="https://cdn.jsdelivr.net/npm/quilljs-markdown@latest/dist/quilljs-markdown.js"></script>
   <script src="https://unpkg.com/turndown/dist/turndown.js"></script>
 {{ end }}
+
+{{/* main.js, for all pages */}}
+{{ $js := resources.Get "js/main.js" | js.Build "main.js" }}
+{{ if eq (hugo.Environment) "development" -}}
+  <script defer src="{{ $js.RelPermalink }}"></script>
+{{ else }}
+  {{ $js = $js | minify | fingerprint }}
+
+
+  <script
+    defer
+    src="{{ $js.RelPermalink }}"
+    {{ if .Site.Params.options.useSRI }}
+      integrity="{{ $js.Data.Integrity }}"
+    {{ end }}
+    crossorigin="anonymous"
+  ></script>
+{{ end }}
+
+{{/* Seperate section js */}}
+{{ partial "shared/js-section" . }}
