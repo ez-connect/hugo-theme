@@ -4,7 +4,7 @@ summaryLength: 30
 # paginate: 2 # default 10
 
 # https://gohugo.io/content-management/multilingual/#configure-languages
-languageCode: en-us
+languageCode: en-US
 defaultContentLanguage: en
 defaultContentLanguageInSubdir: false
 languages:

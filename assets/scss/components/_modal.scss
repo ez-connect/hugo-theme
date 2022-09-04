@@ -1,12 +1,5 @@
 // Style the Image Used to Trigger the Modal
 #modal {
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-//  The Modal (background)
-.modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
@@ -17,15 +10,27 @@
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   background-color: rgba(0, 0, 0, 0.6); /* Black w/ opacity */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
 
   /* 100% Image Width on Smaller Screens */
   @include media-breakpoint-up(md) {
     width: 100%;
   }
+
+  .open {
+    animation: zoomIn 0.3s;
+  }
+
+  // Add Animation - Zoom in the Modal
+  .close {
+    animation: zoomOut 0.3s;
+  }
 }
 
 //  Modal Content (Image)
-.modal-content {
+#modalContent {
   background: var(--md-sys-color-background);
   margin: auto;
   max-width: 80%;
@@ -41,17 +46,6 @@
   color: #ccc;
   padding: 10px 0;
   height: 150px;
-}
-
-/* Add Animation - Zoom in the Modal */
-.modal {
-  .open {
-    animation: zoomIn 0.3s;
-  }
-
-  .close {
-    animation: zoomOut 0.3s;
-  }
 }
 
 @keyframes zoomIn {

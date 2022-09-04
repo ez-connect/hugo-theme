@@ -2,47 +2,65 @@
 // Call `setDataFile` to assign a json data file to flexsearch
 // Call `search` to query data
 function FlexsearchHelper() {
-  let _filename = 'index.json';
-  let _index = null;
+  // An index for each section
+  const _index = {
+    document: null,
+    article: null,
+    career: null,
+  };
 
   // Set a json data file
   function setData(value) {
     _filename = value;
-  };
+  }
 
-  // Query `value` from the assigned data
-  async function search (value) {
-    if (!_index) {
-      await _load();
+  // Search `query` from `section`
+  async function search(section, query) {
+    if (!_index[section]) {
+      await _load(section);
     }
 
-    const results = await _index.search(value, {
+    return _index[section].search(query, {
+      // Enrich IDs from the results with the corresponding documents
       enrich: true,
+      // Sets the used logical operator when searching through multiple fields or tags.
       bool: 'or',
     });
-    console.log(results);
-    return results;
-  };
+  }
 
-  // Load the json file to Flexsearch index
-  async function _load() {
-    _index = new FlexSearch.Document({
-      tokenize: 'forward',
+  // Load the json data of a section.
+  // The path is: <section>/index.json
+  async function _load(section) {
+    // console.log('load flexsearch data:', section);
+    const idx = new FlexSearch.Document({
+      tokenize: 'full', // forward
       optimize: true,
       resolution: 9,
       cache: 100,
-      // worker: true,
+      worker: true,
       document: {
         id: 'url',
-        // tag: 'tags',
-        index: ['title', 'url', 'description', 'content'],
+        index: [
+          'title',
+          'tags',
+          'categories',
+          'summary',
+          'content',
+          'updatedBy:firstname',
+        ],
         store: true,
       },
     });
 
-    const res = await fetch(_filename);
+    const filename = `/${section}/index.json`;
+    const res = await fetch(filename);
     const data = await res.json();
-    data.map((e) => _index.add(e));
+    data.map((e) => idx.add(e));
+    // console.log('  records:', data.length);
+
+    window.idx = idx;
+    _index[section] = idx;
+    // console.log('  done');
   }
 
   return { setData, search };

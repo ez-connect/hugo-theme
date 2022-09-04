@@ -1,3 +1,5 @@
+import { util } from './util';
+
 function Modal(id) {
   const content = document.querySelector('#modalContent');
 
@@ -33,7 +35,7 @@ function Modal(id) {
     });
   };
 
-  document.querySelector(id).addEventListener('click', hide);
+  document.querySelector('#modal').addEventListener('click', hide);
 
   return { show, hide };
 }

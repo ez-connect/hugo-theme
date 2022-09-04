@@ -32,6 +32,10 @@
       display: none;
     }
 
+    h3 {
+      margin-bottom: var(--space-large);
+    }
+
     .recommended {
       margin-top: var(--space-large);
       padding-bottom: var(--space-medium);
@@ -63,11 +67,6 @@
   // Override
   .content-list {
     padding: var(--space-large);
-  }
-
-  // Override
-  .taxonomy-list {
-    margin-top: var(--space-medium);
   }
 }
 

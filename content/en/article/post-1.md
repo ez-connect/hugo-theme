@@ -1,10 +1,9 @@
 ---
 title: Contrary to popular belief, Lorem Ipsum is not simply random text
-description: Lorem markdownum invide, aliquem lauro flammamque viam tactus arte quia Hippomenen dedit. Duo amara et in si invitaque certum moti, ira non genero.
-recommended: false
 tags:
 - Technology
 - Linux
+recommended: false
 thumbnail:
   alternativeText: bg_bggenerator_com_6a6e7262cd.jpg
   caption: bg_bggenerator_com_6a6e7262cd.jpg

@@ -1,0 +1,22 @@
+<!--
+Load a single css for each section
+-->
+
+{{ $section := default "home" .Section }}
+
+{{ $options := (dict "targetPath" (print "scss/" $section ".css") "outputStyle" "compressed" "enableSourceMap" true) }}
+{{ $css := resources.Get (print "scss/" $section ".scss") }}
+
+{{ if $css }}
+  {{ $css = $css | resources.ToCSS $options }}
+  {{ if eq (hugo.Environment) "development" -}}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}" />
+  {{ else }}
+    {{ $css = $css | minify | fingerprint }}
+    <link
+      rel="stylesheet"
+      href="{{ $css.RelPermalink }}"
+      crossorigin="anonymous"
+    />
+  {{ end }}
+{{ end }}

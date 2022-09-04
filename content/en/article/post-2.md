@@ -1,11 +1,10 @@
 ---
 title: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-description: . Curabitur ut sem faucibus, interdum elit et, mattis metus. Nam volutpat dignissim ullamcorper. Vivamus mattis enim vehicula mauris consectetur convallis.
-recommended: true
 tags:
 - Git
 - GitLab
 - GitHub
+recommended: true
 createdAt: "2022-01-28T02:32:27.781Z"
 createdBy: thanh.vinh@hotmail.com
 updatedAt: "2022-01-28T03:51:02.395Z"

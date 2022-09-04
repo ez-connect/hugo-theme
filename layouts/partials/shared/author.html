@@ -10,16 +10,22 @@ Params: Single page
 <!-- Author pages / createdBy -->
 {{ $createdBy := index (where $contributors "Params.user.username" .Params.createdBy) 0 }}
 {{ $updatedBy := index (where $contributors "Params.user.username" .Params.updatedBy) 0 }}
+{{ $updatedBy = default $createdBy $updatedBy }}
 
-{{ if not $updatedBy }}
-  {{ $updatedBy = $createdBy }}
-{{ end }}
+{{ $avatar := $updatedBy.Params.avatar.url }}
+{{ $firstname := $updatedBy.Params.user.firstname }}
 
 
 <div class="author">
   <a href="{{ $updatedBy.RelPermalink }}">
-    <img src="{{ $updatedBy.Params.avatar.url }}" />
-    {{ $updatedBy.Params.user.firstname }}
+    {{ if $avatar }}
+      <img src="{{ $avatar }}" />
+    {{ else }}
+      <div class="avatar">
+        <h5>{{ title (substr $firstname 0 1) }}</h5>
+      </div>
+    {{ end }}
+    {{ $firstname }}
   </a>
   <span class="dot">∙</span>
   {{ partial "shared/timeago" (default .Params.updatedAt .Params.createdAt) }}

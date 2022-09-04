@@ -17,7 +17,7 @@
       <a href="{{ .RelPermalink }}">
         <h3>{{ .Name }}</h3>
       </a>
-      <p>{{ .Summary }}...</p>
+      <p>{{ default .Summary }}...</p>
 
       <div class="metadata">
         {{/* Taxonomy name */}}

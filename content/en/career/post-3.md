@@ -1,6 +1,5 @@
 ---
 title: Regna ab cacumine nihil cognoverat corna
-description: Lorem markdownum lacrimas sonant patefecit ferar ungues curvavit rari frangunt specularer terribiles supera consistere primae, et tamen, curat. Reges creditur libravit venturis, et fueritque veri natae; aut densis tetigisse e super, se an.
 categories:
   - Remote
   - Backend

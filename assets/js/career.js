@@ -1,5 +1,5 @@
-import { util } from '../helpers/util';
-import { initQuillJS } from '../helpers/quill';
+import { util } from './helpers/util';
+import { initQuillJS } from './helpers/quill';
 
 function initApplicant() {
   _onSubmit = async (e) => {

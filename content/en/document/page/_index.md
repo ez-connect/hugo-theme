@@ -1,6 +1,5 @@
 ---
 title: Page
-description: Page section index
 weight: 999
 createdAt: "2022-01-27T16:22:20.616Z"
 createdBy: thanh.vinh@hotmail.com

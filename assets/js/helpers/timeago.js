@@ -10,4 +10,4 @@ export function initTimeago() {
   if (elements.length > 0) {
     timeago.render(elements);
   }
-};
+}

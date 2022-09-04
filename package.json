@@ -7,11 +7,11 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "lint": "prettier -c -w assets/js/*.js assets/scss/ layouts/",
+    "lint": "prettier -c -w assets/js/ assets/scss/ layouts/",
     "syntax": "hugo gen chromastyles --style=dracula > assets/scss/components/_syntax.scss"
   },
   "devDependencies": {
-    "eslint": "^8.22.0",
+    "eslint": "^8.23.0",
     "prettier": "^2.7.1",
     "prettier-plugin-go-template": "^0.0.13"
   }

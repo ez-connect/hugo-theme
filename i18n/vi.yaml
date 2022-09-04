@@ -1,0 +1,6 @@
+# https://gohugo.io/content-management/multilingual/#translation-of-strings
+search:
+  other: Tìm kiếm
+readingTime:
+  one: 1 phút đọc
+  other: '{{ .Count }} phút đọc'

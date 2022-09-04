@@ -4,7 +4,7 @@ Load a single js for each section
 
 {{ $section := default "home" .Section }}
 
-{{ $js := resources.Get (print "js/sections/" $section ".js") }}
+{{ $js := resources.Get (print "js/" $section ".js") }}
 {{ if $js }}
   {{ $js = $js | js.Build (print $section ".js") }}
 
