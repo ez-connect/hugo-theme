@@ -1,28 +1,78 @@
-input {
+input,
+textarea,
+button {
   box-sizing: border-box;
   padding: var(--space-small) var(--space-medium);
-  border: solid 1px var(--md-sys-color-outline);
-
+  border: solid 1px var(--md-sys-color-surface-variant);
   &:focus {
     outline: solid 1px var(--md-sys-color-primary);
     border-radius: 0;
   }
-}
 
-textarea {
-  box-sizing: border-box;
-  width: 100%;
-  padding: 8px;
+  @extend .body-large;
 }
 
 input::placeholder {
   @extend .body-medium;
 }
 
+///////////////////////////////////////////////////////////////////////////////
+// Button
+///////////////////////////////////////////////////////////////////////////////
 input[type='button'],
-input[type='submit'] {
-  background: var(--md-sys-color-primary);
-  color: var(--md-sys-color-background);
+button {
   font-weight: bold;
-  border: none;
 }
+
+.btn-outline {
+  border: solid 1px var(--md-sys-color-primary);
+  background: var(--md-sys-color-background);
+}
+
+.btn-primary {
+  background: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// partials/shared/search.html
+// Display an input to launch /search in a new tab
+///////////////////////////////////////////////////////////////////////////////
+.search-input {
+  display: flex;
+  align-items: center;
+
+  svg {
+    position: absolute;
+    width: 20px; //var(--space-medium);
+    margin-left: var(--space-medium);
+  }
+
+  input {
+    width: 100%;
+    padding-left: 40px;
+    border-radius: var(--space-large);
+  }
+}
+
+// .search-button {
+//   display: flex;
+//   align-items: center;
+//   padding-top: var(--space-small);
+//   padding-right: var(--space-small);
+//   padding-bottom: var(--space-small);
+//   padding-left: var(--space-medium);
+//   border-radius: var(--space-large);
+//   border: solid 1px var(--md-sys-color-surface-variant);
+//   color: var(--md-sys-color-outline) !important;
+//   text-decoration: none !important;
+
+//   svg {
+//     position: absolute;
+//     width: 20px; //var(--space-medium);
+//   }
+
+//   span {
+//     margin-left: var(--space-large);
+//   }
+// }

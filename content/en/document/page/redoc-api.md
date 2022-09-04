@@ -1,6 +1,5 @@
 ---
 title: Redoc API
-description: Redoc page
 weight: 2
 createdAt: "2022-01-28T02:27:26.190Z"
 createdBy: thanh.vinh@hotmail.com

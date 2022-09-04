@@ -28,13 +28,15 @@
         {{/* <input type="file" name="cv" accept="application/pdf, application/zip"> */}}
 
 
-        <input
+        <button
           id="applyJobButton"
+          {{/* class="btn-outline" */}}
+          type="submit"
           data-method="POST"
           data-url="{{ $webhook.applyJob }}"
-          type="button"
-          value="Apply"
-        />
+        >
+          Apply
+        </button>
 
         <small><div class="error"></div></small>
       </form>

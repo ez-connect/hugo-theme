@@ -32,15 +32,19 @@ Params:
 
 <!-- Recommended -->
 <div class="recommended">
-  <span class="title-large">
+  <h3>
     <span class="dot">⦁</span>
     {{ $site.recommended.page.title }}
-  </span>
+  </h3>
 
   {{ range first $site.recommended.page.length $pages }}
     <ul>
       <li>
-        {{ partial "shared/author" . }}
+        {{ if not (eq .Section "career") }}
+          {{ partial "shared/author" . }}
+        {{ end }}
+
+
         <a href="{{ .RelPermalink }}">{{ .Title }}</a>
       </li>
     </ul>
@@ -50,8 +54,5 @@ Params:
 <hr />
 
 <!-- All taxonomies -->
-<span class="title-large">
-  {{ $site.recommended.taxonomy.title }}
-</span>
-
+<h3>{{ $site.recommended.taxonomy.title }}</h3>
 {{ partial "shared/taxonomy-list" (dict "items" $taxonomies "name" $name) }}

@@ -1,9 +1,8 @@
 ---
 title: {{ replace .Name "-" " " | title }}
-description:
 status: One of {Open | Close }
-recommended: false
 categories: []
+recommended: false
 createdBy: thanh.vinh@hotmail.com
 createdAt: {{ .Date }}
 updatedBy: thanh.vinh@hotmail.com

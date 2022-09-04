@@ -1,6 +1,5 @@
 ---
 title: Quisque finibus turpis sed convallis rhoncus
-description: Nulla facilisi. Aliquam pellentesque justo lorem, at porttitor nunc euismod quis. Donec molestie, diam id viverra imperdiet, lacus erat pulvinar eros, quis pellentesque diam purus vitae est. Curabitur a ullamcorper nibh. Curabitur tempus quis enim id volutpat.
 categories:
   - Mobile
   - Android

@@ -1,7 +1,6 @@
 ---
-createdAt: '2022-01-27T11:31:47.125Z'
-description: ''
 title: Privacy Policy
+createdAt: '2022-01-27T11:31:47.125Z'
 updatedAt: '2022-01-27T11:45:58.992Z'
 ---
 

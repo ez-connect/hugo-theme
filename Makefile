@@ -68,7 +68,7 @@ svg:
 
 #: Hugo provides its own webserver which builds and serves the site
 run:
-	hugo serve --bind 0.0.0.0
+	hugo serve --bind 0.0.0.0 --panicOnWarning
 
 #: Build the site
 build:
@@ -134,5 +134,5 @@ uninstall:
 	helm uninstall $(IMAGE) -n $(HELM_NAMESPACE) $(args)
 
 #: Upload to surge.sh
-surge:
+surge: build
 	surge public/ https://hugo-theme.ez-connect.net

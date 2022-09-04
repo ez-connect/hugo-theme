@@ -1,7 +1,6 @@
 ---
 title: Theme
-description: https://m3.material.io/theme-builder#/custom
-weight: 5
+weight: 1
 createdBy: thanh.vinh@hotmail.com
 createdAt: 2022-08-26T15:59:43+07:00
 updatedBy: thanh.vinh@hotmail.com
@@ -13,7 +12,7 @@ updatedAt: 2022-08-26T15:59:43+07:00
 https://m3.material.io/theme-builder#/custom
 
 
-## Your Theme
+## Color scheme
 
 ```safehtml
  <div class="theme-showcase">
@@ -146,22 +145,3 @@ https://m3.material.io/theme-builder#/custom
   <div class="body-small">Body small</div>
 </div>
 ```
-
-## Components
-
-### Nav
-
-```safehtml
-<nav class="nav">
-  <div class="logo">
-    <a href="/"><strong>Ez-Connect</strong></a>
-  </div>
-
-  <!-- Menu for desktop -->
-  <ul>
-      <li style="list-style: none;"><a href="">Link</a></li>
-  </ul>
-</nav>
-```
-
-TBD

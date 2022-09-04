@@ -12,7 +12,7 @@
 
 <!-- Flexsearch -->
 {{ if .Page.Store.Get "hasFlexsearch" }}
-  <script src="https://rawcdn.githack.com/nextapps-de/flexsearch/0.7.2/dist/flexsearch.bundle.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/nextapps-de/flexsearch@0.7.2/dist/flexsearch.bundle.js"></script>
 {{ end }}
 
 
@@ -27,7 +27,8 @@
   <script src="https://unpkg.com/turndown/dist/turndown.js"></script>
 {{ end }}
 
-{{/* main.js, for all pages */}}
+
+<!-- main.js, for all pages -->
 {{ $js := resources.Get "js/main.js" | js.Build "main.js" }}
 {{ if eq (hugo.Environment) "development" -}}
   <script defer src="{{ $js.RelPermalink }}"></script>
@@ -45,5 +46,6 @@
   ></script>
 {{ end }}
 
-{{/* Seperate section js */}}
+
+<!-- Seperate section js -->
 {{ partial "shared/js-section" . }}

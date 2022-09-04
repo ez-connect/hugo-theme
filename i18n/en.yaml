@@ -1,0 +1,11 @@
+# https://gohugo.io/content-management/multilingual/#translation-of-strings
+search:
+  other: Search
+resultsFor:
+  other: Results for <span>{{ . }}</span>
+
+
+readingTime:
+  one: 1 min read
+  other: '{{ .Count }} mins read'
+# timeago: {}

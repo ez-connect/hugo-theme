@@ -1,3 +1,5 @@
+import { util } from './helpers/util';
+
 _onClickMenuItem = (e) => {
   e.preventDefault();
   const isExpanded = e.target.getAttribute('aria-expanded') === 'true';

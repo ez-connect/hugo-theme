@@ -1,6 +1,5 @@
 ---
 title: Mermaid
-description: Mermaid lets you create diagrams using text and code.
 weight: 2
 createdBy: thanh.vinh@hotmail.com
 createdAt: "2022-01-27T15:46:00.129Z"

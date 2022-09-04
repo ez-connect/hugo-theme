@@ -1,13 +1,12 @@
 ---
 title: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-description: Pellentesque convallis scelerisque semper. Vivamus vestibulum ultricies nisl ullamcorper congue.
-status: Open
-recommended: true
 categories:
 - Frontend
 - JavaScript
 - Angular
 - Fresher
+status: Open
+recommended: true
 createdAt: "2022-01-28T10:03:16.118Z"
 createdBy: thanh.vinh@hotmail.com
 updatedAt: "2022-01-28T10:08:06.712Z"

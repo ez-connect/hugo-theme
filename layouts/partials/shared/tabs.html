@@ -1,0 +1,24 @@
+<!--
+Display tabs.
+Params:
+  - index: number
+  - items: array[{id: string, title: string}]
+-->
+
+<div class="tab" data-index="{{ .index }}">
+  {{ range $i, $v := .items }}
+    {{ $class := "" }}
+    {{ if (eq $.index $i) }}
+      {{ $class = "active" }}
+    {{ end }}
+
+
+    <button
+      class="{{ $class }}"
+      data-id="{{ $v.id }}"
+      data-target="tab{{ title $v.id }}"
+    >
+      {{ $v.title }}
+    </button>
+  {{ end }}
+</div>

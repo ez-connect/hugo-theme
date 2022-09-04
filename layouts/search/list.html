@@ -1,0 +1,55 @@
+{{ define "main" }}
+  {{ $defaultData := index $.Site.Data $.Site.Params.defaultLanguage }}
+  {{ $data := default $defaultData (index $.Site.Data $.Site.Language.Lang) }}
+  {{ $search := default $defaultData.search $data.search }}
+
+  {{ $tabs := slice }}
+  {{ range $search.sections }}
+    {{ $tab := dict "id" .  "title" (title .) }}
+    {{ $tabs = $tabs | append $tab }}
+  {{ end }}
+  {{/* {{ $tabs = $tabs | append (dict "id" "topic" "title" (title (i18n "topic"))) }}
+
+  */}}
+
+  <!-- https://www.algolia.com/search/ -->
+  <div class="search-page">
+    <div class="content-container">
+      <!--  <h1>{{ i18n "recentSearches" }}</h1>  -->
+      <h1>{{ safeHTML (i18n "resultsFor" "xyz") }}</h1>
+      {{ partial "shared/tabs" (dict "index" 0 "items" $tabs) }}
+
+      {{/* Tabs content */}}
+      {{ range $i, $v := $tabs }}
+        {{ $class := "hide" }}
+        {{ if (eq $i 0) }}
+          {{ $class = "" }}
+        {{ end }}
+        <div id="tab{{ title $v.id }}" class="tab-content {{ $class }}">
+          {{ partial "search/content-list" }}
+        </div>
+      {{ end }}
+
+      {{/* Not found */}}
+      <div class="not-found hide">
+        <p>Make sure all words are spelled correctly.</p>
+        <p>Try different keywords.</p>
+        <p>Try more general keywords.</p>
+      </div>
+    </div>
+
+    <div class="menu-container">
+      {{ partial "shared/search-input" . }}
+
+      {{/* Append taxonomy of results */}}
+      <h4>Topics matching</h4>
+      <div class="taxonomy-list">
+        <a href="/tags/git"> Git </a>
+        <a href="/tags/github"> Github </a>
+        <a href="/tags/gitlab"> Gitlab </a>
+        <a href="/tags/linux"> Linux </a>
+        <a href="/tags/technology"> Technology </a>
+      </div>
+    </div>
+  </div>
+{{ end }}

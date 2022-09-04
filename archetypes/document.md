@@ -1,6 +1,5 @@
 ---
 title: {{ replace .Name "-" " " | title }}
-description: Mauris elementum felis purus, a gravida leo sodales ac. Phasellus et tempus purus. Cras nibh tellus, convallis at mollis a, egestas ac sem. Donec erat mauris, tempor id accumsan id, facilisis non sapien.
 weight: 1
 createdBy: thanh.vinh@hotmail.com
 createdAt: {{ .Date }}

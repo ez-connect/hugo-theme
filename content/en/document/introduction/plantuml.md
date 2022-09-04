@@ -1,6 +1,5 @@
 ---
 title: PlantUML
-description: PlantUML is used to draw UML diagrams, using a simple and human readable text description.
 weight: 3
 createdAt: "2022-01-27T16:04:43.247Z"
 createdBy: thanh.vinh@hotmail.com

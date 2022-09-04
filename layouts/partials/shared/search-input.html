@@ -3,51 +3,16 @@
 {{ $search := default $defaultData.search $data.search }}
 
 
-<div class="search">
-  <form>
-    {{ partial "shared/ionicons" "search-outline" }}
-    <input
-      readonly
-      data-section="{{ .Section }}"
-      type="text"
-      placeholder="Search"
-    />
-  </form>
+<form id="searchForm" class="search-input" data-section="{{ .Section }}">
+  {{ partial "shared/ionicons" "search-outline" }}
+  <input type="text" placeholder="{{ i18n "search" }}" autocomplete="off" />
+</form>
 
-  <!-- https://www.algolia.com/search/ -->
-  <div class="result hide">
-    <ul class="tab">
-      <li><a href="">all</a></li>
-      {{ range $search.sections }}
-        <li>
-          <a href="" class="{{ if eq $.Section . }}active{{ end }}">{{ . }}</a>
-        </li>
-      {{ end }}
-    </ul>
+<!--
+<a class="search-button" href="/search?section={{ .Section }}" target="_blank">
+  {{ partial "shared/ionicons" "search-outline" }}
+  <span>{{ i18n "search" }}</span>
+</a>
+-->
 
-    <form>
-      {{ partial "shared/ionicons" "search-outline" }}
-      <input
-        class="large"
-        data-section="{{ .Section }}"
-        type="text"
-        placeholder="Search"
-      />
-    </form>
-
-    <!-- Append taxonomy of results -->
-    <div class="taxonomy-list">
-      <a href="/tags/git"> Git </a>
-      <a href="/tags/github"> Github </a>
-      <a href="/tags/gitlab"> Gitlab </a>
-      <a href="/tags/linux"> Linux </a>
-      <a href="/tags/technology"> Technology </a>
-    </div>
-
-    <h3>{{ title .Section }}</h3>
-    There are no results for this query. List result items here...
-  </div>
-</div>
-
-<!-- Use Flexsearch -->
 {{ .Page.Store.Set "hasFlexsearch" true }}

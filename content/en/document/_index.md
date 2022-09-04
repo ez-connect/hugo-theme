@@ -1,6 +1,5 @@
 ---
 title: Document
-description: ""
 weight: 1
 createdAt: "2022-01-26T07:42:26.891Z"
 createdBy: thanh.vinh@hotmail.com

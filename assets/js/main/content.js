@@ -3,7 +3,7 @@ import { initTimeago } from '../helpers/timeago';
 import { initMermaid } from '../helpers/mermaid';
 import { initPlantUML } from '../helpers/plantuml';
 
-import { modal } from './modal';
+import { modal } from '../helpers/modal';
 import { util } from '../helpers/util';
 
 export function initContent() {

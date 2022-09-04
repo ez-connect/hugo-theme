@@ -1,9 +1,9 @@
 ---
 title: Trong
 user:
-  firstname: Editor
+  firstname: Trong
   lastname: ""
-  username: editor@freemind.vn
+  username: trong
 # avatar:
 #   caption: avatar-trong
 #   url: /uploads/avatar-trong.png

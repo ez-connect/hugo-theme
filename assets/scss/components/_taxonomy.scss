@@ -1,10 +1,9 @@
 .taxonomy-list {
   display: flex;
   flex-wrap: wrap;
+  gap: var(--space-tiny);
 
   a {
-    margin-right: var(--space-tiny);
-    margin-bottom: var(--space-tiny);
     padding: var(--space-tiny) var(--space-small);
     border-radius: var(--space-medium);
     background: var(--md-sys-color-surface-variant);

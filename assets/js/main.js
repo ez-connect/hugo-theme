@@ -1,9 +1,13 @@
 import { initNav } from './main/nav';
 import { initContent } from './main/content';
 import { initToc } from './main/toc';
-import { initSearch } from './main/search';
+
+import { initSearchInput } from './main/search-input';
+import { initTab } from './main/tab';
 
 initNav();
 initContent();
 initToc();
-initSearch();
+
+initSearchInput();
+initTab();

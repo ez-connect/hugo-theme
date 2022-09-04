@@ -1,4 +1,4 @@
-export function  initPlantUML() {
+export function initPlantUML() {
   if (!window.plantumlEncoder) return;
 
   const elements = document.querySelectorAll('.plantuml');

@@ -9,8 +9,10 @@ default:
     url: /resume
   - name: Career
     url: /career
-  - name: Applicant
-    url: /applicant
+  # - name: Applicant
+  #   url: /applicant
+  - name: Search
+    url: /search
   - name: GitHub
     url: https://github.com/ez-connect/hugo-theme
 document:
@@ -20,8 +22,6 @@ document:
     url: /resume
   - name: Career
     url: /career
-  - name: Applicant
-    url: /applicant
   - name: GitHub
     url: https://github.com/ez-connect/hugo-theme
 article:
@@ -31,8 +31,6 @@ article:
     url: /resume
   - name: Career
     url: /career
-  - name: Applicant
-    url: /applicant
   - name: GitHub
     url: https://github.com/ez-connect/hugo-theme
 career:
@@ -42,7 +40,5 @@ career:
     url: /article
   - name: Resume
     url: /resume
-  - name: Applicant
-    url: /applicant
   - name: GitHub
     url: https://github.com/ez-connect/hugo-theme

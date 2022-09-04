@@ -1,6 +1,5 @@
 ---
 title: Article
-description: Article section document
 weight: 2
 createdAt: "2022-01-28T02:16:34.481Z"
 createdBy: thanh.vinh@hotmail.com

@@ -1,0 +1,42 @@
+// https://www.w3schools.com/howto/howto_js_tabs.asp
+.tab {
+  overflow: hidden;
+  border-bottom: 1px solid var(--md-sys-color-surface-variant);
+
+  button {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding-top: var(--space-medium);
+    padding-right: var(--space-medium);
+    padding-bottom: var(--space-small);
+    padding-left: var(--space-medium);
+
+    transition: 0.3s;
+  }
+
+  button:hover {
+    background: none;
+  }
+
+  button.active {
+    border-bottom: 1px solid var(--md-sys-color-primary);
+  }
+}
+
+/* Style the tab content */
+.tab-content {
+  // Fading effect takes 1 second
+  animation: fadeEffect 1s;
+}
+
+// Go from zero to full opacity
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

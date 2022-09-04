@@ -9,9 +9,19 @@
     color: var(--md-sys-color-on-surface-variant);
   }
 
-  img {
-    width: 32px;
+  img,
+  .avatar {
+    width: var(--space-large);
+    height: var(--space-large);
     margin-right: var(--space-small);
+    background: var(--md-sys-color-primary-container);
+    border-radius: 50%;
+  }
+
+  .avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .dot {

@@ -3,10 +3,5 @@
         "main",
         "dev"
     ],
-    "editor.experimental.stickyScroll.enabled": true
-    // "editor.formatOnSave": true,
-    // "editor.defaultFormatter": "esbenp.prettier-vscode",
-    // "[Html]": {
-    //     "editor.defaultFormatter": "esbenp.prettier-vscode"
-    // }
+    "editor.stickyScroll.enabled": true,
 }

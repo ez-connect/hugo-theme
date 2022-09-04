@@ -1,6 +1,15 @@
-{{- $.Scratch.Add "index" slice -}}
-{{- range where .Site.RegularPages "Section" .Section -}}
-  {{ $item := (dict "title" .Title "date" .Params.date "content" .Plain "url" .RelPermalink) }}
-  {{- $.Scratch.Add "index" $item -}}
-{{- end -}}
-{{- $.Scratch.Get "index" | jsonify -}}
+{{ $contributors := where $.Site.RegularPages "Section" "contributor" }}
+
+{{ $.Scratch.Add "index" slice }}
+{{ range where .Site.RegularPages "Section" .Section }}
+  {{ $tags := .Params.tags }}
+  {{ $categories := .Params.categories }}
+  {{ $updatedAt := default .Params.createdAt .Params.updatedAt }}
+  {{ $createdBy := index (where $contributors "Params.user.username" .Params.createdBy) 0 }}
+  {{ $updatedBy := index (where $contributors "Params.user.username" .Params.updatedBy) 0 }}
+  {{ $updatedBy = default $createdBy $updatedBy }}
+
+  {{ $item := (dict "title" .Title "summary" .Summary "content" .Plain "tags" $tags "categories" $categories "url" .RelPermalink "updatedAt" $updatedAt "updatedBy" $updatedBy.Params.user ) }}
+  {{ $.Scratch.Add "index" $item }}
+{{ end }}
+{{ $.Scratch.Get "index" | jsonify }}
