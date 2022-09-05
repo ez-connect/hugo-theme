@@ -26,7 +26,9 @@ function initApplicant() {
     const method = button.getAttribute('data-method');
     const url = button.getAttribute('data-url');
 
+    const success = form.querySelector('.success');
     const error = form.querySelector('.error');
+
     try {
       const res = await fetch(url, {
         method,
@@ -38,39 +40,41 @@ function initApplicant() {
       util.hide('.loading');
 
       if (res.status == 200) {
-        error.classList.remove('error');
-        error.classList.add('success');
-        error.innerHTML = `
-        Thanks for taking the time to apply for our position.
-        We appreciate your interest in our company.
-        We're currently in the process of taking applications for this position.
-      `;
+        error.classList.add('hide');
+        success.classList.remove('hide');
+        success.querySelector('span').textContent = `
+          Thanks for taking the time to apply for our position.
+          We appreciate your interest in our company.
+          We're currently in the process of taking applications for this position.
+        `;
         return;
       }
 
-      error.classList.remove('success');
-      error.classList.add('error');
+      success.classList.add('hide');
+      error.classList.remove('hide');
       const messages = Object.entries(data.data.errors).map(function ([k, v]) {
         return `<li>${v}</li>`;
       });
 
-      error.innerHTML = `
-      <strong>${data.error}</strong>
-      <ul>
-        ${messages.join('')}
-      </ul>
-    `;
+      error.querySelector('span').textContent = `
+        <strong>${data.error}</strong>
+        <ul>
+          ${messages.join('')}
+        </ul>
+      `;
     } catch (err) {
-      error.classList.remove('success');
-      error.classList.add('error');
-      error.textContent = err;
+      success.classList.add('hide');
+      error.classList.remove('hide');
+      error.querySelector('span').textContent = err;
       util.hide('.loading');
     }
   };
 
   const button = document.querySelector('#applyJobButton');
-  console.assert(button != null);
-  button.addEventListener('click', _onSubmit);
+  // console.assert(button != null);
+  if (button) {
+    button.addEventListener('click', _onSubmit);
+  }
 }
 
 initQuillJS();

@@ -34,10 +34,10 @@ Params:
 <div class="recommended">
   <h3>
     <span class="dot">⦁</span>
-    {{ $site.recommended.page.title }}
+    {{ i18n "recommendedPosts" }}
   </h3>
 
-  {{ range first $site.recommended.page.length $pages }}
+  {{ range first $site.recommended $pages }}
     <ul>
       <li>
         {{ if not (eq .Section "career") }}
@@ -54,5 +54,5 @@ Params:
 <hr />
 
 <!-- All taxonomies -->
-<h3>{{ $site.recommended.taxonomy.title }}</h3>
+<h3>{{ i18n "recommendedTopics" }}</h3>
 {{ partial "shared/taxonomy-list" (dict "items" $taxonomies "name" $name) }}

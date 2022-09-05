@@ -23,7 +23,7 @@
   }
 }
 
-.resume {
+.resume-page {
   box-sizing: border-box;
   max-width: map-get($breakpoint, 'lg');
   margin-left: auto;
@@ -49,6 +49,11 @@
     padding-left: 8px;
 
     font-size: 1.125rem;
+  }
+
+  ul,
+  li {
+    list-style: disc;
   }
 
   .resume-left {

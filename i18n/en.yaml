@@ -1,12 +1,45 @@
+##
 # https://gohugo.io/content-management/multilingual/#translation-of-strings
-search:
-  other: Search
-resultsFor:
-  other: Results for <span>{{ . }}</span>
+##
+
+###############################################################################
+# Common
+###############################################################################
+contactUs: Contact us
+
+###############################################################################
+# Default list page
+###############################################################################
+recommendedPosts: What We’re Reading Today
+recommendedTopics: Recommended topics
+
+###############################################################################
+# Resume
+###############################################################################
+workExperiences: Work experiences
+projects: Projects
+skills: Skills
+educations: Educations
+awards: Awards
+languages: Languages
+interests: Interests
+
+###############################################################################
+# Career
+###############################################################################
+applyThisJob: Apply this job
+apply: Apply
+
+###############################################################################
+# Search
+###############################################################################
+search: Search
+resultsFor: Results for <span>{{ . }}</span>
 readingTime:
   one: 1 min read
   other: '{{ .Count }} mins read'
 # timeago: {}
+
 ###############################################################################
 # 404
 ###############################################################################

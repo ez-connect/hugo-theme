@@ -1,6 +1,48 @@
+##
 # https://gohugo.io/content-management/multilingual/#translation-of-strings
-search:
-  other: Tìm kiếm
+##
+
+###############################################################################
+# Common
+###############################################################################
+contactUs: Liên hệ
+
+###############################################################################
+# Default list page
+###############################################################################
+recommendedPosts: Đọc gì hôm nay
+recommendedTopics: Các chủ đề
+
+###############################################################################
+# Resume
+###############################################################################
+workExperiences: Kinh nghiệm làm việc
+projects: Dự án
+skills: Kỹ năng
+educations: Bằng cấp
+awards: Giải thưởng
+languages: Ngôn ngữ
+interests: Sở thích
+
+###############################################################################
+# Career
+###############################################################################
+applyThisJob: Nộp hồ sơ
+apply: Nộp hồ sơ
+
+###############################################################################
+# Search
+###############################################################################
+search: Tìm kiếm
+resultsFor: Kết quả tìm <span>{{ . }}</span>
 readingTime:
   one: 1 phút đọc
   other: '{{ .Count }} phút đọc'
+# timeago: {}
+
+###############################################################################
+# 404
+###############################################################################
+notfoundTitle: Oops! Page Not Be Found
+notfoundBody: Sorry but the page you are looking for does not exist, have been removed. name changed or is temporarily unavailable.
+notfoundBack: Quay về trang chủ

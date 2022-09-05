@@ -1,10 +1,10 @@
 import { util } from './util';
 
-function Modal(id) {
+function Modal(selector) {
   const content = document.querySelector('#modalContent');
 
   _getModal = () => {
-    return document.querySelector(id);
+    return document.querySelector(selector);
   };
 
   _onClickModal = () => {
@@ -14,7 +14,7 @@ function Modal(id) {
   show = (body) => {
     content.classList.remove('close');
     content.classList.add('open');
-    util.show(id);
+    util.show(selector);
     if (body) {
       content.appendChild(body.cloneNode(true));
     }
@@ -28,7 +28,7 @@ function Modal(id) {
 
   _onAnimationEnd = () => {
     content.removeEventListener('animationend', _onAnimationEnd);
-    util.hide(id);
+    util.hide(selector);
     content.remo;
     content.childNodes.forEach(function (e) {
       content.removeChild(e);

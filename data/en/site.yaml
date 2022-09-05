@@ -1,16 +1,9 @@
+##
 # Site configuration
+##
 title: Ez-Connect
 description: Site description
 logo:
   name: hugo_logo_wide.svg
   url: /uploads/logo.svg
-# Recommended items
-recommended:
-  # Recommended pages
-  page:
-    title: What We’re Reading Today
-    length: 5
-  # Recommended
-  taxonomy:
-    title: Recommended topics
-    # length: 10
+recommended: 5 # Maximum recommended posts

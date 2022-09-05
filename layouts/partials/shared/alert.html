@@ -8,7 +8,7 @@
 {{ end }}
 
 
-<div class="alert {{ .type }}">
+<div class="alert {{ .type }} {{ .class }}">
   {{ partial "shared/ionicons" $icon }}
-  {{ .message }}
+  <span>{{ .message }}</span>
 </div>
