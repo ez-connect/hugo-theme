@@ -1,18 +1,11 @@
-.notfound {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  box-sizing: border-box;
-  align-items: center;
-  padding-left: 64px;
-  padding-right: 64px;
-  min-height: 100vh;
-  line-height: 1.4;
+.notfound-page {
+  min-height: 100%;
+  margin: auto;
   text-align: center;
 
   h1 {
-    font-size: 8rem;
-    margin: -48px;
+    font-size: 96px;
+    margin: -32px;
     color: var(--md-sys-color-primary);
     z-index: 0;
   }
