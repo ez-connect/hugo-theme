@@ -132,7 +132,3 @@ restart:
 #: Uninstalls the service
 uninstall:
 	helm uninstall $(IMAGE) -n $(HELM_NAMESPACE) $(args)
-
-#: Upload to surge.sh
-surge: build
-	surge public/ https://hugo-theme.ez-connect.net

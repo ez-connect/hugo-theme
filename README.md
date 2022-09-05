@@ -86,6 +86,20 @@ The site use the `config.yaml` as the Hugo config file. [^5]
 
 Hugo uses the `content` directory for building pages, each directory is a section.
 
+### Seperate SCSS/JS for a section
+
+- `assets/scss/main.scss` — used for all pages
+- `assets/scss/<section>.scss` — load for that `section` only if it exists
+- `assets/js/main.js` — used for all pages
+- `assets/js/<section>.js` — used for that `section` only if it exists
+
+For example, for overwrite the home page:
+
+- Write your SCSS in `assets/scss/sections/home/*.scss`
+- Import them into `assets/scss/home.scss`
+- Write your JS code in `assets/js/sections/home/*.js`
+- Import them into `assets/js/home.js`
+
 ### Templates
 
  Hugo uses Go’s `html/template` and `text/template` libraries as the basis for the templating. [^6]
@@ -99,7 +113,6 @@ Hugo uses the `content` directory for building pages, each directory is a sectio
   {{/* The context, ".", is now each one of the pages as it goes through the loop */}}
   {{ printf "%#v" . }}
 {{ end }}
-
  ```
 
 ### Template Debugging
