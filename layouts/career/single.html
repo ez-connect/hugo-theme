@@ -20,7 +20,7 @@
 
     <div class="applicant">
       <form id="applyJobForm">
-        <h2>Apply this job</h2>
+        <h2>{{ i18n "applyThisJob" }}</h2>
         <input type="text" name="title" placeholder="Your name" />
         <input type="tel" name="phone" placeholder="Your phone number" />
         <input type="email" name="email" placeholder="Your email" />
@@ -35,14 +35,16 @@
           data-method="POST"
           data-url="{{ $webhook.applyJob }}"
         >
-          Apply
+          {{ i18n "apply" }}
         </button>
 
-        <small><div class="error"></div></small>
+        {{ partial "shared/alert" (dict "type" "success" "class" "hide") }}
+        {{ partial "shared/alert" (dict "type" "error" "class" "hide") }}
+
       </form>
 
       <div class="contact">
-        <h2>Contact us</h2>
+        <h2>{{ i18n "contactUs" }}</h2>
 
         {{ $contact := default $defaultData.contact $data.contact }}
 

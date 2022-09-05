@@ -4,12 +4,12 @@ button {
   box-sizing: border-box;
   padding: var(--space-small) var(--space-medium);
   border: solid 1px var(--md-sys-color-surface-variant);
+  font-size: var(--md-sys-typescale-body-large-font-size);
+
   &:focus {
     outline: solid 1px var(--md-sys-color-primary);
     border-radius: 0;
   }
-
-  @extend .body-large;
 }
 
 input::placeholder {

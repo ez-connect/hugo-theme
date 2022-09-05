@@ -1,10 +1,10 @@
 <section>
-  <h3>AWARDS</h3>
+  <h3>{{ upper (i18n "awards") }}</h3>
 
-  {{ range $item := .Params.awards }}
-    <strong>{{ $item.name }}</strong>
+  {{ range .Params.awards }}
+    <strong>{{ .name }}</strong>
     <ul>
-      <li>{{ $item.body }}</li>
+      <li>{{ .body }}</li>
     </ul>
   {{ end }}
 </section>
