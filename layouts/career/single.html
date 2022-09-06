@@ -1,6 +1,7 @@
 {{ define "main" }}
   {{ $defaultData := index $.Site.Data $.Site.Params.defaultLanguage }}
   {{ $data := default $defaultData (index $.Site.Data $.Site.Language.Lang) }}
+  {{ $address := default $defaultData.address $data.address }}
   {{ $webhook := default $defaultData.webhook $data.webhook }}
 
 
@@ -46,27 +47,25 @@
       <div class="contact">
         <h2>{{ i18n "contactUs" }}</h2>
 
-        {{ $contact := default $defaultData.contact $data.contact }}
-
-
-        <div class="item">
-          {{ partial "shared/ionicons" "location-outline" }}
-          <a
-            target="_blank"
-            href="https://www.google.com/maps/search/{{ $contact.address }}"
-            >{{ $contact.address }}</a
-          >
-        </div>
-        <div class="item">
-          {{ partial "shared/ionicons" "call-outline" }}
-
-
-          <a href="tel:{{ $contact.tel }}">{{ $contact.phone }}</a>
-        </div>
-        <div class="item">
-          {{ partial "shared/ionicons" "mail-outline" }}
-          <a href="mailto:{{ $contact.email }}">{{ $contact.email }}</a>
-        </div>
+        {{ with $address }}
+          <div class="item">
+            {{ partial "shared/ionicons" "location-outline" }}
+            <a
+              target="_blank"
+              href="https://www.google.com/maps/search/{{ .office }}"
+            >
+              {{ .office }}
+            </a>
+          </div>
+          <div class="item">
+            {{ partial "shared/ionicons" "call-outline" }}
+            <a href="tel:{{ .tel }}">{{ .phone }}</a>
+          </div>
+          <div class="item">
+            {{ partial "shared/ionicons" "mail-outline" }}
+            <a href="mailto:{{ .email }}">{{ .email }}</a>
+          </div>
+        {{ end }}
       </div>
     </div>
 

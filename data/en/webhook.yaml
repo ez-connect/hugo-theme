@@ -1,4 +1,4 @@
 applyJob: http://localhost:1337/applicants
 contact: http://localhost:1337/contacts
 forgotPassword: http://localhost:1337/admin/auth/forgot-password
-signin: http://localhost:1337/admin/login
+subscribe: http://localhost:1337/subscribe
