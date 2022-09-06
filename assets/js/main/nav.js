@@ -1,13 +1,15 @@
+import { util } from '../helpers/util';
+
 export function initNav() {
-  const navMenuButtonID = '#navMenuButton';
-  const navMenu = '.nav-menu';
+  const navMenuBtnSel = '#navMenuButton';
+  const navMenuItemSel = '.nav-menu';
 
   // Menu
-  const menu = document.querySelector(navMenu);
+  const menu = document.querySelector(navMenuItemSel);
   if (!menu) {
-    util.hide(navMenuButtonID);
+    util.hide(navMenuBtnSel);
   }
 
-  const menuButton = document.querySelector(navMenuButtonID);
-  menuButton.addEventListener('click', () => util.toogle(navMenu));
+  const menuButton = document.getElementById('navMenuButton');
+  menuButton.addEventListener('click', () => util.toogle(navMenuItemSel));
 }
