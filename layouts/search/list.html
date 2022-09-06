@@ -1,18 +1,17 @@
 {{ define "main" }}
   {{ $defaultData := index $.Site.Data $.Site.Params.defaultLanguage }}
   {{ $data := default $defaultData (index $.Site.Data $.Site.Language.Lang) }}
-  {{ $search := default $defaultData.search $data.search }}
+  {{ $section := default $defaultData.section $data.section }}
 
   {{ $tabs := slice }}
-  {{ range $search.sections }}
-    {{ $tab := dict "id" .  "title" (title .) }}
-    {{ $tabs = $tabs | append $tab }}
+  {{ range $k, $v := $section }}
+    {{ if $v.searchEnabled }}
+      {{ $tab := dict "id" $k  "title" (title $k) }}
+      {{ $tabs = $tabs | append $tab }}
+    {{ end }}
   {{ end }}
-  {{/* {{ $tabs = $tabs | append (dict "id" "topic" "title" (title (i18n "topic"))) }}
 
-  */}}
 
-  <!-- https://www.algolia.com/search/ -->
   <div class="search-page">
     <div class="content-container">
       <!--  <h1>{{ i18n "recentSearches" }}</h1>  -->
