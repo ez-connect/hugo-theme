@@ -2,8 +2,10 @@ import { initTimeago } from './helpers/timeago';
 import { flexsearchHelper } from './helpers/flexsearch';
 import { util } from './helpers/util';
 
-// Text search input
-export function initSearch() {
+/**
+ * Search page, use flexsearch + json
+ */
+function _initSearch() {
   /**
    * Use `flexsearch` to search, then update tab content
    * @param {string} section
@@ -13,7 +15,11 @@ export function initSearch() {
     if (!section) return;
 
     util.setLoading(true);
+
+    // let measure = performance.now();
     const items = await flexsearchHelper.search(section, query);
+    // measure = (performance.now() - measure) / 1000; // to s
+    // console.log(measure);
     // console.log(
     //   'search results: section =',
     //   section,
@@ -25,6 +31,8 @@ export function initSearch() {
 
     // Update url
     _updatePageState(section, query);
+    // Header: Results for <query>
+    document.querySelector('h1 span').textContent = query;
 
     if (items.length > 0) {
       util.hide('.not-found');
@@ -97,7 +105,6 @@ export function initSearch() {
     }
 
     // Append the topics
-    console.log(topicResult);
     const taxonomyResultListNode = document.querySelector(
       '.menu-container .taxonomy-list',
     );
@@ -192,4 +199,4 @@ export function initSearch() {
   updateTabs();
 }
 
-initSearch();
+_initSearch();

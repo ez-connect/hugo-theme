@@ -39,6 +39,11 @@ readingTime:
   one: 1 min read
   other: '{{ .Count }} mins read'
 # timeago: {}
+resultTopics: Topics matching
+resultsNotFound: |
+  <p>Make sure all words are spelled correctly.</p>
+  <p>Try different keywords.</p>
+  <p>Try more general keywords.</p>
 
 ###############################################################################
 # 404

@@ -1,7 +1,10 @@
 import { util } from './helpers/util';
 import { initQuillJS } from './helpers/quill';
 
-function initApplicant() {
+function _initCareer() {
+  /**
+   * Submit a CV
+   */
   _onSubmit = async (e) => {
     e.preventDefault();
     util.show('.loading');
@@ -78,4 +81,4 @@ function initApplicant() {
 }
 
 initQuillJS();
-initApplicant();
+_initCareer();

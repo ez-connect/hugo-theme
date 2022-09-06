@@ -12,7 +12,9 @@
     <a id="navMenuButton" class="menu-btn" href="#">
       {{ partial "shared/ionicons" "menu-outline" }}
     </a>
-    <img alt="{{ $nav.logo.name }}" src="{{ $site.logo.url }}" />
+    <a href="/">
+      <img alt="{{ $nav.logo.name }}" src="{{ $site.logo.url }}" />
+    </a>
     <a href="/"><strong>{{ $site.title }}</strong></a>
   </div>
 
