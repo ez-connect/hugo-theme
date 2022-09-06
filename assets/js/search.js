@@ -59,8 +59,10 @@ export function initSearch() {
           '${updatedBy.firstname}',
           res.doc.updatedBy.firstname,
         );
+
         html = html.replace('${updatedAt}', res.doc.updatedAt);
         html = html.replace('${title}', res.doc.title);
+        html = html.replace('${url}', res.doc.url);
         html = html.replace('${summary}', res.doc.summary);
         // ...
 
