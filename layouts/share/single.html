@@ -1,0 +1,21 @@
+{{ define "main" }}
+  {{ $defaultData := index $.Site.Data $.Site.Params.defaultLanguage }}
+  {{ $data := default $defaultData (index $.Site.Data $.Site.Language.Lang) }}
+  {{ $webhook := default $defaultData.webhook $data.webhook }}
+
+  {{ $clientData := dict "content" .RawContent }}
+
+
+  <div class="content-page">
+    <div class="content"></div>
+
+    <button id="editBtn" data-url="{{ $webhook.share }}">Edit</button>
+  </div>
+
+  <script>
+    window.data = "{{ jsonify $clientData }}"
+  </script>
+
+  <script src=" https://unpkg.com/showdown/dist/showdown.min.js"></script>
+  <script src="https://unpkg.com/stackedit-js@1.0.7/docs/lib/stackedit.min.js"></script>
+{{ end }}
