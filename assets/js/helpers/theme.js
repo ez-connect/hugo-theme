@@ -8,22 +8,14 @@ export function setTheme(value) {
     value = window.localStorage.getItem('brightness');
   }
 
-  const darkCssExts = [
-    'link[href="/theme.dark.css"]',
-    'link[href="/monokai.css"]',
-  ];
-
   // Enable or disable dark css externals
-  for (const selector of darkCssExts) {
-    const el = document.querySelector(selector);
-    console.assert(el != null, 'external dark mode css is missing', selector);
-
+  document.querySelectorAll('link[data-mode="dark"').forEach((e) => {
     if (value == 'dark') {
-      el.removeAttribute('disabled');
+      e.removeAttribute('disabled');
     } else {
-      el.setAttribute('disabled', '');
+      e.setAttribute('disabled', '');
     }
-  }
+  });
 
   // Save to storage
   window.localStorage.setItem('brightness', value);
