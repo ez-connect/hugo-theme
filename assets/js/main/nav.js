@@ -1,3 +1,4 @@
+import { initMermaid } from '../helpers/mermaid';
 import { setTheme } from '../helpers/theme';
 
 export function initNav() {
@@ -9,6 +10,7 @@ export function initNav() {
     const brightness =
       window.localStorage.getItem('brightness') == 'dark' ? 'light' : 'dark';
     setTheme(brightness);
+    initMermaid(brightness);
   }
 
   // Show/hide mobile menu
