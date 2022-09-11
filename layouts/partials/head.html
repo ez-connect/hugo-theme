@@ -52,11 +52,17 @@
 {{ $options = (dict "targetPath" "theme.dark.css" "outputStyle" "compressed" "enableSourceMap" true) }}
 {{ $css = resources.Get "scss/vendors/material-theme/theme.dark.css" | resources.ToCSS $options }}
 {{ if eq (hugo.Environment) "development" -}}
-  <link disabled rel="stylesheet" href="{{ $css.RelPermalink }}" />
+  <link
+    disabled
+    data-mode="dark"
+    rel="stylesheet"
+    href="{{ $css.RelPermalink }}"
+  />
 {{ else }}
   {{ $css = $css | minify | fingerprint }}
   <link
     disabled
+    data-mode="dark"
     rel="stylesheet"
     href="{{ $css.RelPermalink }}"
     crossorigin="anonymous"
@@ -68,11 +74,17 @@
 {{ $options = (dict "targetPath" "monokai.css" "outputStyle" "compressed" "enableSourceMap" true) }}
 {{ $css = resources.Get "scss/vendors/chroma/monokai.css" | resources.ToCSS $options }}
 {{ if eq (hugo.Environment) "development" -}}
-  <link disabled rel="stylesheet" href="{{ $css.RelPermalink }}" />
+  <link
+    disabled
+    data-mode="dark"
+    rel="stylesheet"
+    href="{{ $css.RelPermalink }}"
+  />
 {{ else }}
   {{ $css = $css | minify | fingerprint }}
   <link
     disabled
+    data-mode="dark"
     rel="stylesheet"
     href="{{ $css.RelPermalink }}"
     crossorigin="anonymous"
