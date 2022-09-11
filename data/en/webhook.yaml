@@ -1,4 +1,5 @@
-applyJob: http://localhost:1337/applicants
-contact: http://localhost:1337/contacts
+applyJob: http://localhost:1337/api/applicants
+contact: http://localhost:1337/api/contacts
+share: http://localhost:1337/api/shares
+subscribe: http://localhost:1337/api/subscribe
 forgotPassword: http://localhost:1337/admin/auth/forgot-password
-subscribe: http://localhost:1337/subscribe

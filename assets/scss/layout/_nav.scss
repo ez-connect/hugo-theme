@@ -32,7 +32,12 @@
     }
   }
 
-  .nav-menu {
+  // Like a button for svgs
+  svg {
+    cursor: pointer;
+  }
+
+  .menu {
     display: none;
 
     @include media-breakpoint-down(md) {
@@ -78,35 +83,14 @@
     @include media-breakpoint-down(md) {
       display: block !important;
     }
-
-    // Override ionicons style
-    .ionicon-stroke-width {
-      stroke: var(--md-sys-color-background);
-    }
   }
 
-  // .search {
-  //   padding-left: var(--space-medium);
-  //   // border-width: 1px;
+  // Override ionicons style
+  .ionicon {
+    fill: var(--md-sys-color-background);
+  }
 
-  //   svg {
-  //     position: absolute;
-  //     padding: 8px var(--space-medium);
-  //     fill: var(--md-ref-palette-tertiary50);
-  //     padding-left: 8px;
-  //   }
-
-  //   input {
-  //     height: var(--space-large);
-  //     padding-left: var(--space-large);
-  //     margin-bottom: 0;
-  //     color: var(--md-ref-palette-tertiary50);
-  //   }
-
-  //   span {
-  //     @include media-breakpoint-down(md) {
-  //       display: none;
-  //     }
-  //   }
-  // }
+  .ionicon-stroke-width {
+    stroke: var(--md-sys-color-background);
+  }
 }

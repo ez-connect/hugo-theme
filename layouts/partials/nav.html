@@ -24,11 +24,15 @@
       <li><a href="{{ .url }}">{{ .name }}</a></li>
     {{ end }}
   </ul>
+
+  <div id="toogleDarkModeBtn">
+    {{ partial "shared/ionicons" "contrast" }}
+  </div>
 </nav>
 
 <!-- Menu for mobile -->
 <div class="nav">
-  <div class=" nav-menu">
+  <div class="menu">
     <ul>
       {{ range $items }}
         <li><a href="{{ .url }}">{{ .name }}</a></li>
