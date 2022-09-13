@@ -6,11 +6,11 @@ import { initTab } from './main/tab';
 
 import { setTheme } from './helpers/theme';
 
+setTheme();
+
 initNav();
 initContent();
 initToc();
 
 initSearchInput();
 initTab();
-
-setTheme();

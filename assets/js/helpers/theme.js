@@ -19,4 +19,7 @@ export function setTheme(value) {
 
   // Save to storage
   window.localStorage.setItem('brightness', value);
+
+  // Show body
+  document.body.classList.remove('invisibility');
 }
