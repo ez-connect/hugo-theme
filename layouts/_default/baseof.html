@@ -4,7 +4,9 @@
     {{ partial "head.html" . }}
   </head>
 
-  <body>
+  <body class="invisibility">
+    {{ partial "loading" . }}
+
     {{ partial "nav" . }}
 
 
@@ -16,7 +18,6 @@
     {{ partial "footer" . }}
 
     {{ partial "modal" . }}
-    {{ partial "loading" . }}
 
     {{ partial "js" . }}
   </body>
