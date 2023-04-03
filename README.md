@@ -4,9 +4,11 @@
 
 ### Hugo, GNU Make
 
-- Windows: `scoop install hugo-extended make`
-- Linux: `sudo apt install hugo make`
-- MacOS: `brew install hugo make`
+- Windows: `scoop make install hugo-extended`
+- Linux:
+  - Debian: `sudo apt install make hugo`
+  - Arch: `yay -S make hugo`
+- MacOS: `brew install make hugo`
 
 Or [install Hugo from Tarbal](https://gohugo.io/getting-started/installing/#install-hugo-from-tarball)
 
@@ -49,7 +51,7 @@ Hugo is a fast and modern static site generator written in Go, and designed to m
 
 ### Directory structure [^3]
 
-```
+```md
 ├── archetypes
 ├── config.toml
 ├── content
@@ -61,7 +63,7 @@ Hugo is a fast and modern static site generator written in Go, and designed to m
 
 `layouts`: stores templates in the form of `.html` files.
 
-```
+```md
 ├── layouts
     ├── partials
     ├── shortcodes
