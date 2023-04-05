@@ -6,7 +6,9 @@
       <li>
         <a href="{{ .Permalink }}">
           {{ .Lang }}:
-          {{ .Title }}{{ if .IsPage }}({{ i18n "wordCount" . }}){{ end }}
+          {{ .Title }}{{ if .IsPage }}
+            ({{ i18n "wordCount" . }})
+          {{ end }}
         </a>
       </li>
     {{ end }}
