@@ -1,5 +1,7 @@
 baseURL: /
 title: Ez-Connect
+theme: default
+
 summaryLength: 30
 # paginate: 2 # default 10
 

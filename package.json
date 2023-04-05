@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "lint": "prettier -c -w assets/js/ assets/scss/ layouts/",
+    "lint": "prettier -c -w assets/js/ assets/scss/ layouts/ themes/default/assets/js/ themes/default/assets/scss/ themes/default/layouts/",
     "syntax": "hugo gen chromastyles --style=dracula > assets/scss/components/_syntax.scss"
   },
   "devDependencies": {
