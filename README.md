@@ -4,21 +4,26 @@
 
 ### Hugo, GNU Make
 
-- Windows: `scoop make install hugo-extended`
-- Linux:
-  - Debian: `sudo apt install make hugo`
-  - Arch: `yay -S make hugo`
-- MacOS: `brew install make hugo`
+- Windows: `scoop install make yq hugo-extended`
+- Debian: `sudo apt install make yq hugo`
+- Arch: `yay -S make yq hugo`
+- MacOS: `brew install make yq hugo`
 
 Or [install Hugo from Tarbal](https://gohugo.io/getting-started/installing/#install-hugo-from-tarball)
 
 ## Development
 
 ```bash
-# To launch the debug server
+# Run the linters
+make lint
+
+# Download ionicons
+make svg
+
+# Launch the debug server
 make run
 
-# To build the site for production
+# Build the site for production
 make build
 ```
 
