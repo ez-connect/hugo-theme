@@ -5,6 +5,10 @@
   {{ $webhook := default $defaultData.webhook $data.webhook }}
 
 
+  <!-- Use Quill for the editor: https://quilljs.com/ -->
+  {{ .Page.Store.Set "hasQuill" true }}
+
+
   <div class="career-page">
     {{ if .Site.Params.options.breadcrumb }}
       {{ partial "shared/breadcrumb" . }}
@@ -68,8 +72,5 @@
         {{ end }}
       </div>
     </div>
-
-    <!-- Use Quill for the editor: https://quilljs.com/ -->
-    {{ .Page.Store.Set "hasQuill" true }}
   </div>
 {{ end }}
