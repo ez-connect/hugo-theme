@@ -59,6 +59,10 @@ markup:
 #     path: github.com/kaushalmodi/hugo-debugprint
 
 params:
+  favicon:
+    type: image/svg+xml
+    href: https://github.githubassets.com/favicons/favicon-dark.svg
+
   # Fallback to the default language
   # The same value as `defaultContentLanguage`
   defaultLanguage: en
