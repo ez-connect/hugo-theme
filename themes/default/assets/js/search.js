@@ -14,7 +14,7 @@ function _initSearch() {
   async function _search(section, query) {
     if (!section) return;
 
-    util.setLoading(true);
+    util.showLoading();
 
     // let measure = performance.now();
     const items = await flexsearchHelper.search(section, query);
@@ -120,7 +120,7 @@ function _initSearch() {
     });
 
     initTimeago(); // update timeago
-    util.setLoading(false); // hide loading indicator
+    util.hideLoading(); // hide loading indicator
   }
 
   /**

@@ -70,5 +70,5 @@ params:
   options:
     # https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity
     useSRI: true
-    darkMode: false
+    brightness: 'dark' # light | dark
     breadCrumb: true
