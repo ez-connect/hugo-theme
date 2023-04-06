@@ -92,6 +92,21 @@
 {{ end }}
 
 
+<!-- ASO -->
+{{ if .Page.Store.Get "hasAOS" }}
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+{{ end }}
+
+
+<!-- Swiper -->
+{{ if .Page.Store.Get "hasSwiper" }}
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+  />
+{{ end }}
+
+
 <!-- Seperate section css -->
 {{ partial "shared/css-section" . }}
 
