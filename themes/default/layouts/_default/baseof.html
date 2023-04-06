@@ -4,7 +4,7 @@
     {{ partial "head.html" . }}
   </head>
 
-  <body class="invisibility">
+  <body data-brightness="{{ .Site.Params.options.brightness }}">
     {{ partial "loading" . }}
 
     {{ partial "nav" . }}

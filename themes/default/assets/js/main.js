@@ -5,6 +5,7 @@ import { initSearchInput } from './main/search-input';
 import { initTab } from './main/tab';
 
 import { setTheme } from './helpers/theme';
+import { util } from './helpers/util';
 
 setTheme();
 
@@ -14,3 +15,5 @@ initToc();
 
 initSearchInput();
 initTab();
+
+util.hideLoading();

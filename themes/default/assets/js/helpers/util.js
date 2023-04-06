@@ -54,14 +54,18 @@ function Util() {
   }
 
   /**
-   * Show, hide the loading indicator.
+   * Show, hide the loading indicator
    */
-  function setLoading(visible) {
-    if (visible) {
-      show('.loading');
-    } else {
-      hide('.loading');
-    }
+  function showLoading() {
+    show('.loading');
+  }
+
+  /**
+   * Hide the loading indicator
+   */
+
+  function hideLoading() {
+    hide('.loading');
   }
 
   return {
@@ -73,7 +77,8 @@ function Util() {
     hide,
     toogle,
     scrollToElement,
-    setLoading,
+    showLoading,
+    hideLoading,
   };
 }
 
