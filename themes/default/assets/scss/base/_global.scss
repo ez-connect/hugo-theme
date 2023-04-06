@@ -1,0 +1,54 @@
+// Theme - Extended colors
+:root {
+  @each $k, $v in $theme-extended-color {
+    --#{$k}: #{$v};
+  }
+
+  @each $k, $v in $space {
+    --#{$k}: #{$v};
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.invisibility {
+  visibility: hidden;
+}
+
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
+}
+
+// Add to timeago
+.timeago {
+  @extend .body-medium;
+  @extend .on-surface-variant-text;
+}
+
+// For /document/introduction/theme#your-theme
+.theme-showcase {
+  display: flex;
+
+  div {
+    padding: var(--space-medium);
+    margin-bottom: var(--space-small);
+    width: 128px;
+  }
+}
+
+// For /document/introduction/theme#typography
+.typography-showcase {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  div {
+    padding-right: var(--space-medium);
+  }
+}
