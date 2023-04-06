@@ -23,7 +23,7 @@ git_clone() {
 	echo "GIT_REPO=$GIT_REPO"
 	echo "GIT_BRANCH=$GIT_BRANCH"
 
-	git clone --branch=$GIT_BRANCH $GIT_REPO web
+	git clone --branch=$GIT_BRANCH $GIT_REPO /home/web
 	echo 'done'
 }
 

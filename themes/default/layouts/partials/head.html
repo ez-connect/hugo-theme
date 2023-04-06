@@ -12,6 +12,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="description" content="{{ .Summary }}" />
 
+<!-- Favicon -->
+{{ with .Site.Params.favicon }}
+  <link rel="icon" type="{{ .type }}" href="{{ .href }}" />
+{{ end }}
+
+
 <!-- Sharing meta -->
 <!-- Facebook -->
 <meta property="og:title" content="{{ .Title }}" />
@@ -30,8 +36,6 @@
   "image" : {{ absURL .Params.thumbnail.formats.small.url }}
 }
 </script>
-
-<link rel="shortcut icon" href="favicon.ico" />
 
 <!-- SCSS -->
 {{ $options := (dict "targetPath" "main.css" "outputStyle" "compressed" "enableSourceMap" true) }}
@@ -109,12 +113,3 @@
 
 <!-- Seperate section css -->
 {{ partial "shared/css-section" . }}
-
-
-<!-- Favicon -->
-<link
-  rel="icon"
-  class="js-site-favicon"
-  type="image/svg+xml"
-  href="https://github.githubassets.com/favicons/favicon-dark.svg"
-/>
