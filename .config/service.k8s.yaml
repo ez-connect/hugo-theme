@@ -60,11 +60,11 @@ ingress:
 persistent:
   enabled: true
   volumes:
-    hugo-theme:
+    data:
       accessModes:
         - ReadWriteOnce
       size: 256Mi
-      path: /home/webhook
+      path: /home/web
 podSecurityContext: {}
 securityContext: {}
 nodeSelector: {}
