@@ -5,7 +5,10 @@ deployment:
   imagePullSecrets: []
   pullPolicy: IfNotPresent
   env:
+    CMD: echo 'build the site'; hugo --gc --minify;
     COLLECTION_TYPES: contributor,article,document,career,project,page,resume
+    DEBOUNCED_CMD: echo 'debounced cmd'
+    DEBOUNCED_TIMEOUT: "300"
     DEFAULT_LOCALE: en
     GIT_BRANCH: main
     GIT_COMMIT: Sync CMS
