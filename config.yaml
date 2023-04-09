@@ -27,6 +27,8 @@ outputs:
   home: [HTML, ROBOTS, Sitemap]
   section: [HTML, JSON]
 
+enableRobotsTXT: true
+
 # https://gohugo.io/getting-started/configuration-markup#configure-markup
 markup:
   goldmark:
