@@ -6,9 +6,9 @@
   a {
     padding: var(--space-tiny) var(--space-small);
     border-radius: var(--space-medium);
-    background: var(--md-sys-color-surface-variant);
+    background: var(--md-sys-color-secondary);
     font-size: var(--md-sys-typescale-body-medium-font-size);
-    color: var(--md-ref-palette-tertiary50);
+    color: var(--md-sys-color-on-secondary);
   }
 
   a:hover {

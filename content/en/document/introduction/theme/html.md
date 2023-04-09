@@ -41,7 +41,7 @@ updatedAt: 2022-08-26T15:59:43+07:00
 <p class="body-small">Etiam eget laoreet orci.</p>
 ```
 
-# Anchor
+## Anchor
 
 ```html
 <a href="https://hugo-theme.ez-connect.net">Home page</a>
@@ -67,4 +67,20 @@ updatedAt: 2022-08-26T15:59:43+07:00
 <button>Click me</button>
 <button class="btn-outline">Click me </button>
 <button class="btn-primary">Click me </button>
+```
+
+## Details
+
+```html
+<details>
+  <summary>Epcot Center</summary>
+  <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+</details>
+```
+
+```safehtml
+<details>
+  <summary>Epcot Center</summary>
+  <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+</details>
 ```

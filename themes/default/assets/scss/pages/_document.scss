@@ -66,12 +66,44 @@
     list-style: none;
   }
 
+  // Cutomize the default `details`
+  details {
+    summary {
+      list-style: none;
+    }
+
+    // summary > * {
+    //   display: inline;
+    // }
+
+    summary::before {
+      display: none;
+    }
+
+    // summary::after {
+    //   content: '▶';
+    //   position: absolute;
+    //   right: 0;
+    //   color: var(--md-sys-color-outline);
+    // }
+
+    // Hide marker on webkit
+    summary::-webkit-details-marker {
+      display: none;
+    }
+  }
+
+  // details[open] {
+  //   summary::after {
+  //     content: '▼';
+  //   }
+  // }
+
   .category {
     p {
       margin-block-end: 0;
-      font-weight: 700;
       color: var(--md-sys-color-outline);
-      text-transform: uppercase;
+      // text-transform: uppercase;
     }
 
     .item {
