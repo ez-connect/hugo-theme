@@ -3,7 +3,7 @@
 #
 
 # Environments
--include .makerc
+-include .env
 
 # Get the value from a key of an yaml file
 define get_yaml
@@ -25,7 +25,7 @@ DOCKERFILE			?= Dockerfile
 RELEASE_NAME		= $(NAME)
 TAG					?= $(VERSION)
 
-DEPLOYMENT_KIND		?= $(call get_yaml,kind,k8s)
+DEPLOYMENT_KIND		?= $(call get_yaml,deployment.kind,k8s)
 HELM_REPO			?= freemind
 HELM_NAMESPACE		?= dev
 
@@ -140,8 +140,12 @@ uninstall:
 
 #: execute the release
 exec:
-	kubectl exec -it deployment/$(RELEASE_NAME) -n $(HELM_NAMESPACE) -- sh
+	kubectl exec -it $(DEPLOYMENT_KIND)/$(RELEASE_NAME) -n $(HELM_NAMESPACE) -- sh
 
 #: print the logs for the deployment
 logs:
-	kubectl logs deploy/$(RELEASE_NAME) -f -n $(HELM_NAMESPACE)
+	kubectl logs $(DEPLOYMENT_KIND)/$(RELEASE_NAME) -f -n $(HELM_NAMESPACE) --timestamps
+
+#: stop the release
+stop:
+	kubectl scale --replicas=0 $(DEPLOYMENT_KIND)/$(RELEASE_NAME) -n $(HELM_NAMESPACE)
