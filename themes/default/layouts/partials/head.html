@@ -113,3 +113,13 @@
 
 <!-- Seperate section css -->
 {{ partial "shared/css-section" . }}
+
+
+<script>
+  const theme = window.localStorage.getItem('theme');
+  if (theme == 'dark') {
+    document.querySelectorAll('link[data-mode="dark"').forEach((e) => {
+      e.removeAttribute('disabled');
+    });
+  }
+</script>

@@ -57,11 +57,12 @@ lint:
 
 #: download svg icons
 svg:
-	@icons="$(shell cat assets/ionicons/_icons | tr '\n' ' ')"; \
+	@icons="$(shell cat themes/default/assets/ionicons/_icons | tr '\n' ' ')"; \
 	echo $${icons}; \
 	for icon in $${icons}; do \
 		echo "Download icon: $${icon}"; \
-		curl -s -o assets/ionicons/$${icon}.svg https://unpkg.com/ionicons@5.5.2/dist/ionicons/svg/$${icon}.svg; \
+		curl -s -o themes/default/assets/ionicons/$${icon}.svg \
+			https://unpkg.com/ionicons@7.1.0/dist/ionicons/svg/$${icon}.svg; \
 	done
 
 #: hugo provides its own webserver which builds and serves the site

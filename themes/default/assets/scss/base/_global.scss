@@ -36,8 +36,8 @@
   display: flex;
 
   div {
-    padding: var(--space-medium);
-    margin-bottom: var(--space-small);
+    padding: var(--space-md);
+    margin-bottom: var(--space-sm);
     width: 128px;
   }
 }
@@ -49,6 +49,6 @@
   align-items: center;
 
   div {
-    padding-right: var(--space-medium);
+    padding-right: var(--space-md);
   }
 }

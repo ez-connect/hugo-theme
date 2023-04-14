@@ -6,7 +6,7 @@
   align-items: center;
   box-sizing: border-box;
   width: 100%;
-  padding: 0 var(--space-medium);
+  padding: 0 var(--space-md);
   background: var(--md-sys-color-primary);
 
   @media print {
@@ -21,14 +21,14 @@
   ul {
     display: flex;
     flex: 1;
-    padding-left: var(--space-large);
+    padding-left: var(--space-xl);
 
     @include media-breakpoint-down(md) {
       display: none;
     }
 
     li {
-      padding-right: var(--space-medium);
+      padding-right: var(--space-md);
     }
   }
 
@@ -52,7 +52,7 @@
     }
 
     li {
-      padding: var(--space-small);
+      padding: var(--space-sm);
     }
   }
 
@@ -78,7 +78,7 @@
   // Display a menu on mobile
   .menu-btn {
     display: none;
-    padding-right: var(--space-medium);
+    padding-right: var(--space-md);
 
     @include media-breakpoint-down(md) {
       display: block !important;

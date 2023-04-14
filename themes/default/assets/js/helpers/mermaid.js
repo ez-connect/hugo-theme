@@ -1,3 +1,5 @@
+import { getTheme } from './theme';
+
 /**
  * Init mermaid with dark/light mode
  * @param {string} theme - dark or light
@@ -5,16 +7,12 @@
  */
 export function initMermaid(theme) {
   if (!window.mermaid) return;
-
-  if (!theme) {
-    theme = window.localStorage.getItem('brightness');
-  }
-
-  theme = theme == 'light' ? 'neutral' : 'dark';
+  theme = theme ?? getTheme();
+  const mermaidTheme = theme == 'light' ? 'neutral' : 'dark';
 
   mermaid.initialize({
     // startOnLoad: false,
-    theme,
+    theme: mermaidTheme,
     flowchart: {
       useMaxWidth: true,
     },

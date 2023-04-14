@@ -1,9 +1,14 @@
-/* https://m3.material.io/theme-builder#/custom */
+/*
+@import url(tokens.css);
+@import url(colors.module.css);
+@import url(typography.module.css);
+*/
 
 @import 'tokens';
 @import 'colors.module';
 @import 'typography.module';
+
 @import 'theme.light';
 
-/* @import url(/css/theme.light.css) (prefers-color-scheme: light); */
-/* @import url(/css/theme.dark.css) (prefers-color-scheme: dark); */
+/* @import url(theme.light.css) (prefers-color-scheme: light); */
+/* @import url(theme.dark.css) (prefers-color-scheme: dark); */

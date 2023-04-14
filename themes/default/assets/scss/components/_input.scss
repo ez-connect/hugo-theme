@@ -2,7 +2,7 @@ input,
 textarea,
 button {
   box-sizing: border-box;
-  padding: var(--space-small) var(--space-medium);
+  padding: var(--space-sm) var(--space-md);
   border: solid 1px var(--md-sys-color-surface-variant);
   font-size: var(--md-sys-typescale-body-large-font-size);
 
@@ -16,13 +16,13 @@ input::placeholder {
   @extend .body-medium;
 }
 
-///////////////////////////////////////////////////////////////////////////////
+//---------------------------------------------------------
 // Button
-///////////////////////////////////////////////////////////////////////////////
-input[type='button'],
-button {
-  font-weight: bold;
-}
+//---------------------------------------------------------
+// input[type='button'],
+// button {
+//   font-weight: bold;
+// }
 
 .btn-outline {
   border: solid 1px var(--md-sys-color-primary);
@@ -34,45 +34,44 @@ button {
   color: var(--md-sys-color-on-primary);
 }
 
-///////////////////////////////////////////////////////////////////////////////
+//---------------------------------------------------------
 // partials/shared/search.html
 // Display an input to launch /search in a new tab
-///////////////////////////////////////////////////////////////////////////////
+//---------------------------------------------------------
 .search-input {
   display: flex;
   align-items: center;
 
   svg {
     position: absolute;
-    width: 20px; //var(--space-medium);
-    margin-left: var(--space-medium);
+    margin-left: var(--space-md);
   }
 
   input {
     width: 100%;
     padding-left: 40px;
-    border-radius: var(--space-large);
+    border-radius: var(--space-xl);
   }
 }
 
 // .search-button {
 //   display: flex;
 //   align-items: center;
-//   padding-top: var(--space-small);
-//   padding-right: var(--space-small);
-//   padding-bottom: var(--space-small);
-//   padding-left: var(--space-medium);
-//   border-radius: var(--space-large);
+//   padding-top: var(--space-sm);
+//   padding-right: var(--space-sm);
+//   padding-bottom: var(--space-sm);
+//   padding-left: var(--space-md);
+//   border-radius: var(--space-xl);
 //   border: solid 1px var(--md-sys-color-surface-variant);
 //   color: var(--md-sys-color-outline) !important;
 //   text-decoration: none !important;
 
 //   svg {
 //     position: absolute;
-//     width: 20px; //var(--space-medium);
+//     width: 20px; //var(--space-md);
 //   }
 
 //   span {
-//     margin-left: var(--space-large);
+//     margin-left: var(--space-xl);
 //   }
 // }

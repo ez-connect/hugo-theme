@@ -1,11 +1,11 @@
 .taxonomy-list {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-tiny);
+  gap: var(--space-xs);
 
   a {
-    padding: var(--space-tiny) var(--space-small);
-    border-radius: var(--space-medium);
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--space-md);
     background: var(--md-sys-color-secondary);
     font-size: var(--md-sys-typescale-body-medium-font-size);
     color: var(--md-sys-color-on-secondary);

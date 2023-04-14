@@ -1,6 +1,28 @@
 import { initMermaid } from './mermaid';
 
-const _brightnessKey = 'brightness';
+const _themeKey = 'theme';
+
+/**
+ * Get the current theme
+ */
+export function getTheme() {
+  // Find the settings first if called `saveTheme`
+  let value = window.localStorage.getItem(_themeKey);
+
+  // Use the options default
+  if (!value) {
+    value = document.body.getAttribute('data-theme');
+  }
+
+  // Or, automatically
+  if (!value) {
+    value = window.matchMedia('(prefers-color-scheme: dark)').matches
+      ? 'dark'
+      : 'light';
+  }
+
+  return value;
+}
 
 /**
  * Set Dark/Light theme.
@@ -8,34 +30,38 @@ const _brightnessKey = 'brightness';
  * @param {string} value - Brightness: `null`, `dark` or `light`
  */
 export function setTheme(value) {
-  // Find the settings first if called `saveBrightness`
-  if (!value) {
-    value = window.localStorage.getItem(_brightnessKey);
-  }
-
-  // Use the options default
-  if (!value) {
-    value = document.body.getAttribute('data-brightness');
-  }
+  const theme = value ?? getTheme();
 
   // Enable or disable dark css externals
   document.querySelectorAll('link[data-mode="dark"').forEach((e) => {
-    if (value == 'dark') {
+    if (theme == 'dark') {
       e.removeAttribute('disabled');
     } else {
       e.setAttribute('disabled', '');
     }
   });
 
-  initMermaid(value);
+  // Update light/dark icon on the Nav
+  document
+    .querySelector('#toogleDarkModeBtn')
+    ?.querySelectorAll('span')
+    .forEach((e) => {
+      if (e.getAttribute('data-theme') == theme) {
+        e.classList.remove('hide');
+      } else {
+        e.classList.add('hide');
+      }
+    });
+
+  initMermaid(theme);
 }
 
 /**
- * Save `brightness` to the local storage
+ * Save `theme` to the local storage
  * @param {string} value dark or light
  */
-export function saveBrightness(value) {
+export function saveTheme(value) {
   if (value) {
-    window.localStorage.setItem(_brightnessKey, value);
+    window.localStorage.setItem(_themeKey, value);
   }
 }

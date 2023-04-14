@@ -1,6 +1,6 @@
 // List of resumes
 .resume-list-page {
-  padding: var(--space-large);
+  padding: var(--space-xl);
 
   a {
     text-decoration: none;
@@ -10,7 +10,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: var(--space-medium) 0;
+    padding: var(--space-md) 0;
     border-bottom: 0.5px solid var(--md-sys-color-surface-variant-variant);
     color: var(--md-sys-color-on-background);
 
@@ -18,7 +18,7 @@
       max-width: 192px;
       max-height: 192px;
 
-      padding: var(--space-medium);
+      padding: var(--space-md);
     }
   }
 }
@@ -28,7 +28,7 @@
   max-width: map-get($breakpoint, 'lg');
   margin-left: auto;
   margin-right: auto;
-  padding: var(--space-large);
+  padding: var(--space-xl);
   border: 1px solid rgba(0, 0, 0, 0.025);
   // box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
 
@@ -59,7 +59,7 @@
   .resume-left {
     box-sizing: border-box;
     width: 70%;
-    padding-right: 24px;
+    padding-right: var(--space-lg);
 
     @include media-breakpoint-down(sm) {
       width: 100%;
@@ -70,7 +70,7 @@
   .resume-right {
     box-sizing: border-box;
     width: 30%;
-    padding-left: 24px;
+    padding-left: var(--space-lg);
     border-left: 1px solid rgba(0, 0, 0, 0.08);
 
     @include media-breakpoint-down(sm) {
@@ -148,7 +148,7 @@
         padding-inline-start: 0;
       }
 
-      padding-bottom: var(--space-medium);
+      padding-bottom: var(--space-md);
     }
   }
 
@@ -161,8 +161,8 @@
     }
 
     svg {
-      width: 24px;
-      height: 24px;
+      width: var(--space-lg);
+      height: var(--space-lg);
     }
   }
 }

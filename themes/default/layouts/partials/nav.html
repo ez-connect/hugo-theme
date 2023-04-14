@@ -26,7 +26,10 @@
   </ul>
 
   <div id="toogleDarkModeBtn">
-    {{ partial "shared/ionicons" "contrast" }}
+    <span data-theme="light">{{ partial "shared/ionicons" "sunny" }}</span>
+    <span data-theme="dark" class="hide">
+      {{ partial "shared/ionicons" "moon" }}
+    </span>
   </div>
 </nav>
 

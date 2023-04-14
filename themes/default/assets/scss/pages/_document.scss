@@ -6,7 +6,7 @@
   box-sizing: border-box;
   display: flex;
   width: 100%;
-  padding: var(--space-medium) var(--space-large);
+  padding: var(--space-md) var(--space-xl);
 
   @include media-breakpoint-down(md) {
     margin: 0;
@@ -15,7 +15,7 @@
   // Override content
   .content-container {
     width: 65%;
-    padding: 0 var(--space-large);
+    padding: 0 var(--space-xl);
 
     // Full with on mobile
     @include media-breakpoint-down(md) {
@@ -38,8 +38,8 @@
   width: 20%;
   height: 100vh;
 
-  padding: var(--space-medium);
-  line-height: var(--space-large);
+  padding: var(--space-md);
+  line-height: var(--space-xl);
   border-right: 1px solid var(--md-sys-color-surface-variant);
 
   overflow: auto;

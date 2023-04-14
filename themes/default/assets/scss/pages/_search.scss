@@ -3,7 +3,7 @@
 .search-page {
   display: flex;
   width: 100%;
-  padding: 0 var(--space-large);
+  padding: 0 var(--space-xl);
 
   @include media-breakpoint-down(md) {
     flex-direction: column-reverse;
@@ -12,7 +12,7 @@
 
   .content-container {
     width: 70%;
-    padding-right: var(--space-large);
+    padding-right: var(--space-xl);
 
     @include media-breakpoint-down(md) {
       width: 100%;
@@ -31,18 +31,18 @@
     }
 
     .tab {
-      margin-bottom: var(--space-large);
+      margin-bottom: var(--space-xl);
     }
 
     .tab-content {
       h3 {
-        margin-top: var(--space-small);
-        margin-bottom: var(--space-small);
+        margin-top: var(--space-sm);
+        margin-bottom: var(--space-sm);
       }
 
       article {
-        padding-bottom: var(--space-large);
-        margin-bottom: var(--space-medium);
+        padding-bottom: var(--space-xl);
+        margin-bottom: var(--space-md);
         border-bottom: 1px solid var(--md-sys-color-surface-variant);
       }
     }
@@ -50,7 +50,7 @@
 
   .menu-container {
     width: 30%;
-    margin-top: var(--space-large);
+    margin-top: var(--space-xl);
 
     // Text input
     .input {
@@ -60,15 +60,15 @@
 
       svg {
         position: absolute;
-        width: 20px; //var(--space-medium);
-        margin-left: var(--space-small);
+        width: 20px; //var(--space-md);
+        margin-left: var(--space-sm);
       }
 
       input {
         width: 100%;
-        padding-left: var(--space-large) !important;
-        padding: var(--space-small);
-        border-radius: var(--space-large);
+        padding-left: var(--space-xl) !important;
+        padding: var(--space-sm);
+        border-radius: var(--space-xl);
         border: solid 1px var(--md-sys-color-surface-variant);
         background: var(--md-sys-color-surface);
       }

@@ -11,8 +11,8 @@
     "syntax": "hugo gen chromastyles --style=dracula > assets/scss/components/_syntax.scss"
   },
   "devDependencies": {
-    "eslint": "^8.29.0",
-    "prettier": "^2.8.1",
+    "eslint": "^8.38.0",
+    "prettier": "^2.8.7",
     "prettier-plugin-go-template": "^0.0.13"
   }
 }

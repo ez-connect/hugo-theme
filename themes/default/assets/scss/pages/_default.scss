@@ -5,12 +5,12 @@
 
   // Reduce padding top
   h3 {
-    margin-top: var(--space-small);
-    margin-bottom: var(--space-small);
+    margin-top: var(--space-sm);
+    margin-bottom: var(--space-sm);
   }
 
   hr {
-    margin-bottom: var(--space-large);
+    margin-bottom: var(--space-xl);
   }
 
   // Left: List items
@@ -26,19 +26,19 @@
   // Righ: Search + Recommended items + Taxonomies
   .menu-container {
     width: 30%;
-    padding: var(--space-large);
+    padding: var(--space-xl);
 
     @include media-breakpoint-down(md) {
       display: none;
     }
 
     h3 {
-      margin-bottom: var(--space-large);
+      margin-bottom: var(--space-xl);
     }
 
     .recommended {
-      margin-top: var(--space-large);
-      padding-bottom: var(--space-medium);
+      margin-top: var(--space-xl);
+      padding-bottom: var(--space-md);
 
       ul {
         padding: 0;
@@ -61,24 +61,24 @@
   }
 
   .reading-time {
-    margin-left: var(--space-tiny);
+    margin-left: var(--space-xs);
   }
 
   // Override
   .content-list {
-    padding: var(--space-large);
+    padding: var(--space-xl);
   }
 }
 
 // Default single content template
 .content-page {
-  padding-left: var(--space-large);
-  padding-right: var(--space-large);
-  padding-bottom: var(--space-large);
+  padding-left: var(--space-xl);
+  padding-right: var(--space-xl);
+  padding-bottom: var(--space-xl);
 
   // Override .toc
   .toc {
     width: 30%;
-    padding-left: var(--space-large);
+    padding-left: var(--space-xl);
   }
 }

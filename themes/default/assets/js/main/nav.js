@@ -1,5 +1,5 @@
 import { initMermaid } from '../helpers/mermaid';
-import { saveBrightness, setTheme } from '../helpers/theme';
+import { getTheme, saveTheme, setTheme } from '../helpers/theme';
 
 export function initNav() {
   /**
@@ -7,12 +7,9 @@ export function initNav() {
    * Save `brightness = light|dark` to localstorage
    */
   function _toogleDarkMode() {
-    const brightness =
-      window.localStorage.getItem('brightness') == 'dark' ? 'light' : 'dark';
-    setTheme(brightness);
-    initMermaid(brightness);
-
-    saveBrightness(brightness);
+    const theme = getTheme() == 'light' ? 'dark' : 'light';
+    setTheme(theme);
+    saveTheme(theme);
   }
 
   // Show/hide mobile menu

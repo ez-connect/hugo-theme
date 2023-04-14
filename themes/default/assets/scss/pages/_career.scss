@@ -1,12 +1,12 @@
 .career-page {
-  padding-left: var(--space-large);
-  padding-right: var(--space-large);
-  padding-bottom: var(--space-large);
+  padding-left: var(--space-xl);
+  padding-right: var(--space-xl);
+  padding-bottom: var(--space-xl);
 
   // Override .toc
   .toc {
     width: 30%;
-    padding-left: var(--space-large);
+    padding-left: var(--space-xl);
   }
 
   .applicant {
@@ -28,23 +28,23 @@
       button {
         display: block;
         width: 100%;
-        margin: var(--space-medium) 0;
+        margin: var(--space-md) 0;
       }
 
       input {
         width: 100%;
-        margin-bottom: var(--space-small);
+        margin-bottom: var(--space-sm);
       }
     }
 
     svg {
-      padding-right: var(--space-medium);
+      padding-right: var(--space-md);
     }
 
     .contact {
       box-sizing: border-box;
       width: 50%;
-      margin-left: var(--space-large);
+      margin-left: var(--space-xl);
 
       @include media-breakpoint-down(md) {
         width: 100%;

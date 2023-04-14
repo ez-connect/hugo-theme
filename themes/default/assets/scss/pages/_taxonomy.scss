@@ -1,16 +1,16 @@
 // Default taxonomy page
 .taxonomy-page {
-  padding: var(--space-large);
+  padding: var(--space-xl);
 
   .spanborder {
     border-bottom: 1px solid var(--md-sys-color-surface-variant);
-    margin-bottom: var(--space-large);
+    margin-bottom: var(--space-xl);
 
     span {
       display: inline-block;
       border-bottom: 1px solid var(--md-sys-color-primary);
       margin-bottom: -1px;
-      padding-bottom: var(--space-medium);
+      padding-bottom: var(--space-md);
     }
   }
 }

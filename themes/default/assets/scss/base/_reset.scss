@@ -26,7 +26,7 @@ li {
 hr {
   border-top: 1px;
   border-color: var(--md-sys-color-surface-variant);
-  margin-block: var(--space-medium);
+  margin-block: var(--space-md);
 }
 
 a {
@@ -72,7 +72,7 @@ table {
   caption-side: bottom;
   border-collapse: collapse;
   width: 100%;
-  margin-bottom: var(--space-medium);
+  margin-bottom: var(--space-md);
 
   @extend .body-medium;
 }
