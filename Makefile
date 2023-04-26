@@ -68,9 +68,17 @@ svg:
 run:
 	hugo serve --bind 0.0.0.0 --panicOnWarning
 
+#: build Tina and start the dev server
+run-cms:
+	npx tinacms dev -c 'make run'
+
 #: build the site
 build:
 	hugo --gc --minify
+
+#: build the CMS
+build-cms:
+	npx tinacms build --noTelemetry
 
 #: share site via ngrok
 share: build
