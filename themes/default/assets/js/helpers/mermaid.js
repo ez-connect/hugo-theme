@@ -11,7 +11,7 @@ export function initMermaid(theme) {
   const mermaidTheme = theme == 'light' ? 'neutral' : 'dark';
 
   mermaid.initialize({
-    // startOnLoad: false,
+    startOnLoad: false,
     theme: mermaidTheme,
     flowchart: {
       useMaxWidth: true,
@@ -25,5 +25,5 @@ export function initMermaid(theme) {
     },
   });
 
-  // mermaid.init();
+  mermaid.init();
 }
