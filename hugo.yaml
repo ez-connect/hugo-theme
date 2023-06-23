@@ -12,11 +12,11 @@ defaultContentLanguageInSubdir: false
 languages:
   en:
     languageName: EN
-    dataDir: data/en # not work, use index $.Site.Data
+    # dataDir: data/en
     contentDir: content/en
   vi:
     languageName: VI
-    dataDir: data/vi
+    # dataDir: data/vi
     contentDir: content/vi
 
 taxonomies:

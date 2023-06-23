@@ -16,20 +16,21 @@ VERSION				= $(call get_yaml,version,base)
 DESCRIPTION			= $(call get_yaml,description,base)
 README				= $(call get_yaml,readme,base)
 
+ARCH				?= amd64 arm64
+
 # Registry
 REGISTRY			?= docker.io
 REGISTRY_REPO		?= ezconnect
 DOCKERFILE			?= Dockerfile
 
-# Override the image & helm package names or the image tag
+# Override the image & the helm package names
 RELEASE_NAME		= $(NAME)
-TAG					?= $(VERSION)
 
 DEPLOYMENT_KIND		?= $(call get_yaml,deployment.kind,k8s)
 HELM_REPO			?= freemind
 HELM_NAMESPACE		?= dev
 
-# list all targets
+#: list all targets
 help:
 	@grep -B1 -E "^[a-zA-Z0-9_%-]+:([^\=]|$$)" Makefile \
 		| grep -v -- -- \
@@ -39,7 +40,7 @@ help:
 
 #: remove untracked files from the working tree
 clean:
-	git clean -fdx
+	hugo --gc
 
 #: install hugo module & npm packages
 init:
@@ -71,7 +72,7 @@ run:
 
 #: build the site
 build:
-	hugo --gc --minify
+	hugo --minify
 
 #: share site via ngrok
 share: build
@@ -84,10 +85,15 @@ share: build
 # -----------------------------------------------------------------------------
 #: build the image
 oci:
-	podman build -t $(RELEASE_NAME):$(VERSION) -f $(DOCKERFILE) $(args) \
-		--annotation org.opencontainers.image.created="$(shell date -I'seconds')" \
-		--annotation org.opencontainers.image.description="$(DESCRIPTION)" \
-		--annotation io.artifacthub.package.readme-url="$(README)"
+	@$(foreach arch,$(ARCH), \
+		echo "build: $(RELEASE_NAME):$(VERSION)-$(arch)"; \
+		podman build -t $(RELEASE_NAME):$(VERSION)-$(arch) -f $(DOCKERFILE) \
+			--arch $(arch) $(args) \
+			--build-arg arch=$(arch) \
+			--annotation org.opencontainers.image.created="$(shell date -I'seconds')" \
+			--annotation org.opencontainers.image.description="$(DESCRIPTION)" \
+			--annotation io.artifacthub.package.readme-url="$(README)"; \
+	)
 
 #: push an image to a specified location that defined in '.makerc'
 oci-push:
@@ -97,7 +103,19 @@ else
 	podman login $(REGISTRY)
 endif
 
-	podman push $(RELEASE_NAME):$(VERSION) $(REGISTRY)/$(REGISTRY_REPO)/$(RELEASE_NAME):$(TAG)
+	-podman manifest rm $(RELEASE_NAME):$(VERSION)
+	podman manifest create $(RELEASE_NAME):$(VERSION)
+
+	@$(foreach arch,$(ARCH), \
+		echo "push: $(REGISTRY)/$(REGISTRY_REPO)/$(RELEASE_NAME):$(VERSION)-$(arch)"; \
+		podman push $(RELEASE_NAME):$(VERSION)-$(arch) \
+			$(REGISTRY)/$(REGISTRY_REPO)/$(RELEASE_NAME):$(VERSION)-$(arch); \
+		podman manifest add $(RELEASE_NAME):$(VERSION) \
+			$(REGISTRY)/$(REGISTRY_REPO)/$(RELEASE_NAME):$(VERSION)-$(arch); \
+	)
+
+	@echo "push: $(REGISTRY)/$(REGISTRY_REPO)/$(RELEASE_NAME):$(VERSION)"
+	podman manifest push $(RELEASE_NAME):$(VERSION) $(REGISTRY)/$(REGISTRY_REPO)/$(RELEASE_NAME):$(VERSION)
 
 # -----------------------------------------------------------------------------
 # Helm
