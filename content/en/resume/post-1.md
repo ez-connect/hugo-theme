@@ -3,7 +3,7 @@ title: Simon Doe
 avatar:
   url: /uploads/avatar.svg
 position: Senior Software Engineer
-tel: 0123 4567 890
+phone: 0123 4567 890
 email: name@example.com
 webpage: www.example.com
 address: New York

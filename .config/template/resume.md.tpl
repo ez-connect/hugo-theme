@@ -9,6 +9,6 @@ createdBy: {{ .createdBy.username }}
 createdAt: {{ .createdAt }}
 updatedBy: {{ .updatedBy.username }}
 updatedAt: {{ .updatedAt }}
-{{ toYamlByFields . "social" "experiences" "projects" "skills" "educations" "awards" "lang" "draft" }}
+{{ toYamlByFields . "social" "experiences" "projects" "skills" "educations" "awards" "languages" "lang" "draft" }}
 ---
 {{- end }}

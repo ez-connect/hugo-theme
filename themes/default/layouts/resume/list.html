@@ -5,11 +5,11 @@
   <div class="resume-list-page">
     {{ range $pages }}
       <a class="item" href="{{ .RelPermalink }}">
-        <img src="{{ .Params.avatar.url }}" />
+        <img class="avatar" src="{{ .Params.avatar.url }}" />
 
         <h3>{{ .Params.title }}</h3>
         <div>{{ .Params.position }}</div>
-        {{ .Params.bio }}
+        <p>{{ .Params.bio }}</p>
       </a>
 
       <hr />

@@ -2,6 +2,10 @@
 .resume-list-page {
   padding: var(--space-xl);
 
+  h3 {
+    margin-bottom: 0
+  }
+
   a {
     text-decoration: none;
   }
@@ -108,6 +112,7 @@
   .bio {
     box-sizing: border-box;
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
 
     img {

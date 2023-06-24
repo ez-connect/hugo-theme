@@ -25,6 +25,14 @@
   display: block !important;
 }
 
+.avatar {
+  width: var(--space-xxl);
+  height: var(--space-xxl);
+  margin-right: var(--space-sm);
+  background: var(--md-sys-color-primary-container);
+  border-radius: 50%;
+}
+
 // Add to timeago
 .timeago {
   @extend .body-medium;
