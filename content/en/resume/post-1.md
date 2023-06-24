@@ -7,6 +7,18 @@ tel: 0123 4567 890
 email: name@example.com
 webpage: www.example.com
 address: New York
+bio: |-
+  Summarise your career here.
+  You can make a PDF version of your resume using our free Sketch template here.
+  Donec quam felis, ultricies nec, pellentesque eu.
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+  Aenean commodo ligula eget dolor. Aenean massa.
+  Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+  Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+  Maecenas nec odio et ante tincidunt tempus.
+  Donec vitae sapien ut libero venenatis faucibus.
+  Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt.
+  Duis leo. Sed fringilla mauris sit amet nibh.
 
 # Social
 social:
@@ -71,13 +83,13 @@ educations:
     dates: 2007 - 2010
 
 # Awards
-awards:
-  - name: Award Lorem Ipsum
-    body: Microsoft lorem ipsum
-    createdAt: 2019
-  - name: Award Donec Sodales
-    body: Oracle Aenean
-    createdAt: 2017
+awards: []
+  # - name: Award Lorem Ipsum
+  #   body: Microsoft lorem ipsum
+  #   createdAt: 2019
+  # - name: Award Donec Sodales
+  #   body: Oracle Aenean
+  #   createdAt: 2017
 
 # Languages
 languages:
@@ -93,5 +105,3 @@ interests: |-
   - Photography
   - Travelling
 ---
-
-Summarise your career here. You can make a PDF version of your resume using our free Sketch template here. Donec quam felis, ultricies nec, pellentesque eu. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.

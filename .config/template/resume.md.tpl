@@ -1,29 +1,14 @@
-{{- $data := delete . "title" "position" "tel" "email" "webpage" "address" }}
-{{- $data = delete $data "createdBy" "createdAt", "updatedBy" "updatedAt"
-{{- $data = delete $data "draft" "content" }}
+{{- $data := set . "draft" (not .publishedAt) -}}
 
-{{- $draft := true -}}
-{{- if .publishedAt }}
-	{{- $draft = false -}}
-{{- end -}}
-
+{{- with $data -}}
 ---
-title: {{ .title }}
+{{ toYamlByFields . "title" "position" "tel" "email" "webpage" "address" }}
 avatar:
-  url: {{ index .avatar url }}
-position: {{ .position }}
-tel: {{ .tel }}
-email: {{ .email }}
-webpage: {{ .webpage }}
-address: {{ .address }}
+  url: {{ index .avatar "url" }}
 createdBy: {{ .createdBy.username }}
 createdAt: {{ .createdAt }}
 updatedBy: {{ .updatedBy.username }}
 updatedAt: {{ .updatedAt }}
-locale: {{ .locale }}
-draft: {{ $draft }}
-
-{{- toYaml $data }}
+{{ toYamlByFields . "social" "experiences" "projects" "skills" "educations" "awards" "lang>
 ---
-
-{{ .content }}
+{{- end }}
