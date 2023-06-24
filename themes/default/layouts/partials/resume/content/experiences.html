@@ -4,7 +4,7 @@
   {{ range $item := .Params.experiences }}
     <div class="experience-title">
       <strong>{{ $item.title }}</strong>
-      <small>{{ $item.company }} | {{ $item.Params.createdAts }}</small>
+      <small>{{ $item.company }} | {{ $item.dates }}</small>
     </div>
 
     <p>{{ markdownify  $item.detail }}</p>
