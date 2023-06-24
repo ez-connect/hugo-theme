@@ -2,13 +2,13 @@
 
 {{- with $data -}}
 ---
-{{ toYamlByFields . "title" "position" "tel" "email" "webpage" "address" }}
+{{ toYamlByFields . "title" "position" "tel" "email" "webpage" "address" "bio" }}
 avatar:
   url: {{ index .avatar "url" }}
 createdBy: {{ .createdBy.username }}
 createdAt: {{ .createdAt }}
 updatedBy: {{ .updatedBy.username }}
 updatedAt: {{ .updatedAt }}
-{{ toYamlByFields . "social" "experiences" "projects" "skills" "educations" "awards" "lang>
+{{ toYamlByFields . "social" "experiences" "projects" "skills" "educations" "awards" "lang" "draft" }}
 ---
 {{- end }}
