@@ -1,12 +1,12 @@
 <section>
   <h3>{{ upper (i18n "projects") }}</h3>
 
-  {{ range $item := .Params.projects }}
+  {{ range .Params.projects }}
     <div class="experience-title">
-      <strong>{{ $item.title }}</strong>
-      <small>{{ $item.meta }}</small>
+      <strong>{{ .name }}</strong>
+      <small>{{ .meta }}</small>
     </div>
 
-    <p>{{ $item.detail }}</p>
+    <p>{{ .descripiton }}</p>
   {{ end }}
 </section>

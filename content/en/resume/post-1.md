@@ -48,17 +48,17 @@ experiences:
 
 # Projects
 projects:
-  - title: Project Lorem Ipsum
+  - name: Project Lorem Ipsum
     meta: Open source
-    detail: You can use this section for your side projects. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-  - title: Project Sed Fringilla
+    descripiton: You can use this section for your side projects. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+  - name: Project Sed Fringilla
     meta: Open source
-    detail: You can use this section for your side projects. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+    descripiton: You can use this section for your side projects. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
 
 # Skills
 skills:
-  - title: Technical
-    items: |-
+  - name: Technical
+    description: |-
       - JavaScript/Angular/React/Vue
       - Python/Ruby/PHP
       - Node.js/ASP.NET
@@ -66,8 +66,8 @@ skills:
       - Object-oriented design
       - Design and implement database structures
       - Lead and deliver complex software systems
-  - title: Professional
-    items: |-
+  - name: Professional
+    description: |-
       - Effective communication
       - Team player
       - Strong problem solver

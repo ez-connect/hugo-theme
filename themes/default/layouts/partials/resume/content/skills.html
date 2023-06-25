@@ -1,8 +1,8 @@
 <section>
   <h3>SKILLS</h3>
 
-  {{ range $skill := .Params.skills }}
-    <strong>{{ $skill.title }}</strong>
-    <p>{{ markdownify $skill.items }}</p>
+  {{ range .Params.skills }}
+    <strong>{{ .name }}</strong>
+    <p>{{ markdownify .description }}</p>
   {{ end }}
 </section>
